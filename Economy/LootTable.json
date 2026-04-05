@@ -315,7 +315,7 @@
         "Rarity": "Rare",
         "SellPrice": 2,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1.02
+        "BoostValue": 1.0
     },
     {
         "ID": 45,
@@ -333,7 +333,7 @@
         "Rarity": "Rare",
         "SellPrice": 2,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1.03
+        "BoostValue": 1.05
     },
     {
         "ID": 47,
@@ -351,7 +351,7 @@
         "Rarity": "Rare",
         "SellPrice": 2,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1.0
+        "BoostValue": 1.04
     },
     {
         "ID": 49,
@@ -369,7 +369,7 @@
         "Rarity": "Rare",
         "SellPrice": 2,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1.04
+        "BoostValue": 1.0
     },
     {
         "ID": 51,
@@ -387,7 +387,7 @@
         "Rarity": "Epic",
         "SellPrice": 16,
         "BoostType": "Flat_IPS",
-        "BoostValue": 4.99
+        "BoostValue": 5.07
     },
     {
         "ID": 53,
@@ -405,7 +405,7 @@
         "Rarity": "Epic",
         "SellPrice": 16,
         "BoostType": "Flat_IPS",
-        "BoostValue": 5.01
+        "BoostValue": 4.85
     },
     {
         "ID": 55,
@@ -423,7 +423,7 @@
         "Rarity": "Epic",
         "SellPrice": 16,
         "BoostType": "Flat_IPS",
-        "BoostValue": 4.82
+        "BoostValue": 4.96
     },
     {
         "ID": 57,
@@ -441,7 +441,7 @@
         "Rarity": "Legendary",
         "SellPrice": 54,
         "BoostType": "Flat_IPS",
-        "BoostValue": 24.66
+        "BoostValue": 25.6
     },
     {
         "ID": 59,
@@ -459,7 +459,7 @@
         "Rarity": "Unique",
         "SellPrice": 537,
         "BoostType": "Flat_IPS",
-        "BoostValue": 157.0
+        "BoostValue": 148.0
     },
     {
         "ID": 61,
@@ -750,7 +750,7 @@
         "Rarity": "Rare",
         "SellPrice": 30,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1.0
+        "BoostValue": 1.01
     },
     {
         "ID": 102,
@@ -768,7 +768,7 @@
         "Rarity": "Rare",
         "SellPrice": 30,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1.0
+        "BoostValue": 1.05
     },
     {
         "ID": 104,
@@ -786,7 +786,7 @@
         "Rarity": "Rare",
         "SellPrice": 32,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1.03
+        "BoostValue": 1.02
     },
     {
         "ID": 106,
@@ -804,7 +804,7 @@
         "Rarity": "Rare",
         "SellPrice": 31,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1.04
+        "BoostValue": 1.0
     },
     {
         "ID": 108,
@@ -840,7 +840,7 @@
         "Rarity": "Rare",
         "SellPrice": 28,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1.0
+        "BoostValue": 1.04
     },
     {
         "ID": 112,
@@ -858,7 +858,7 @@
         "Rarity": "Epic",
         "SellPrice": 215,
         "BoostType": "Flat_IPS",
-        "BoostValue": 5.14
+        "BoostValue": 5.17
     },
     {
         "ID": 114,
@@ -876,7 +876,7 @@
         "Rarity": "Epic",
         "SellPrice": 233,
         "BoostType": "Flat_IPS",
-        "BoostValue": 4.84
+        "BoostValue": 4.94
     },
     {
         "ID": 116,
@@ -894,7 +894,7 @@
         "Rarity": "Epic",
         "SellPrice": 207,
         "BoostType": "Flat_IPS",
-        "BoostValue": 5.09
+        "BoostValue": 5.25
     },
     {
         "ID": 118,
@@ -912,7 +912,7 @@
         "Rarity": "Legendary",
         "SellPrice": 725,
         "BoostType": "Flat_IPS",
-        "BoostValue": 25.24
+        "BoostValue": 24.03
     },
     {
         "ID": 120,
@@ -930,7 +930,7 @@
         "Rarity": "Unique",
         "SellPrice": 7862,
         "BoostType": "Flat_IPS",
-        "BoostValue": 150.0
+        "BoostValue": 145.0
     },
     {
         "ID": 122,
@@ -1257,7 +1257,7 @@
         "Rarity": "Rare",
         "SellPrice": 259,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1.04
+        "BoostValue": 1.0
     },
     {
         "ID": 167,
@@ -1275,7 +1275,7 @@
         "Rarity": "Rare",
         "SellPrice": 240,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1.0
+        "BoostValue": 1.03
     },
     {
         "ID": 169,
@@ -1311,7 +1311,7 @@
         "Rarity": "Rare",
         "SellPrice": 224,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1.0
+        "BoostValue": 1.04
     },
     {
         "ID": 173,
@@ -1329,7 +1329,7 @@
         "Rarity": "Epic",
         "SellPrice": 1784,
         "BoostType": "Flat_IPS",
-        "BoostValue": 4.84
+        "BoostValue": 4.81
     },
     {
         "ID": 175,
@@ -1347,7 +1347,7 @@
         "Rarity": "Epic",
         "SellPrice": 1962,
         "BoostType": "Flat_IPS",
-        "BoostValue": 4.96
+        "BoostValue": 4.84
     },
     {
         "ID": 177,
@@ -1365,7 +1365,7 @@
         "Rarity": "Epic",
         "SellPrice": 1919,
         "BoostType": "Flat_IPS",
-        "BoostValue": 4.82
+        "BoostValue": 4.97
     },
     {
         "ID": 179,
@@ -1383,7 +1383,7 @@
         "Rarity": "Legendary",
         "SellPrice": 5711,
         "BoostType": "Flat_IPS",
-        "BoostValue": 25.34
+        "BoostValue": 26.22
     },
     {
         "ID": 181,
@@ -1401,7 +1401,7 @@
         "Rarity": "Unique",
         "SellPrice": 61521,
         "BoostType": "Flat_IPS",
-        "BoostValue": 143.0
+        "BoostValue": 155.0
     },
     {
         "ID": 183,
@@ -1692,7 +1692,7 @@
         "Rarity": "Rare",
         "SellPrice": 3070,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1.02
+        "BoostValue": 1.0
     },
     {
         "ID": 224,
@@ -1710,7 +1710,7 @@
         "Rarity": "Rare",
         "SellPrice": 2893,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1.0
+        "BoostValue": 1.03
     },
     {
         "ID": 226,
@@ -1764,7 +1764,7 @@
         "Rarity": "Rare",
         "SellPrice": 2827,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1.02
+        "BoostValue": 1.0
     },
     {
         "ID": 232,
@@ -1782,7 +1782,7 @@
         "Rarity": "Rare",
         "SellPrice": 3033,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1.04
+        "BoostValue": 1.0
     },
     {
         "ID": 234,
@@ -1800,7 +1800,7 @@
         "Rarity": "Epic",
         "SellPrice": 23490,
         "BoostType": "Flat_IPS",
-        "BoostValue": 4.98
+        "BoostValue": 4.77
     },
     {
         "ID": 236,
@@ -1818,7 +1818,7 @@
         "Rarity": "Epic",
         "SellPrice": 23157,
         "BoostType": "Flat_IPS",
-        "BoostValue": 4.79
+        "BoostValue": 5.1
     },
     {
         "ID": 238,
@@ -1836,7 +1836,7 @@
         "Rarity": "Epic",
         "SellPrice": 21574,
         "BoostType": "Flat_IPS",
-        "BoostValue": 5.17
+        "BoostValue": 5.25
     },
     {
         "ID": 240,
@@ -1854,7 +1854,7 @@
         "Rarity": "Legendary",
         "SellPrice": 74599,
         "BoostType": "Flat_IPS",
-        "BoostValue": 25.39
+        "BoostValue": 25.56
     },
     {
         "ID": 242,
@@ -1872,7 +1872,7 @@
         "Rarity": "Unique",
         "SellPrice": 727772,
         "BoostType": "Flat_IPS",
-        "BoostValue": 148.0
+        "BoostValue": 147.0
     },
     {
         "ID": 244,
@@ -2163,7 +2163,7 @@
         "Rarity": "Rare",
         "SellPrice": 39597,
         "BoostType": "Flat_IPS",
-        "BoostValue": 9.65
+        "BoostValue": 9.35
     },
     {
         "ID": 285,
@@ -2181,7 +2181,7 @@
         "Rarity": "Rare",
         "SellPrice": 36137,
         "BoostType": "Flat_IPS",
-        "BoostValue": 8.83
+        "BoostValue": 9.1
     },
     {
         "ID": 287,
@@ -2199,7 +2199,7 @@
         "Rarity": "Rare",
         "SellPrice": 36970,
         "BoostType": "Flat_IPS",
-        "BoostValue": 9.61
+        "BoostValue": 9.06
     },
     {
         "ID": 289,
@@ -2217,7 +2217,7 @@
         "Rarity": "Rare",
         "SellPrice": 35340,
         "BoostType": "Flat_IPS",
-        "BoostValue": 9.16
+        "BoostValue": 8.91
     },
     {
         "ID": 291,
@@ -2235,7 +2235,7 @@
         "Rarity": "Rare",
         "SellPrice": 35364,
         "BoostType": "Flat_IPS",
-        "BoostValue": 8.88
+        "BoostValue": 9.61
     },
     {
         "ID": 293,
@@ -2253,7 +2253,7 @@
         "Rarity": "Rare",
         "SellPrice": 35675,
         "BoostType": "Flat_IPS",
-        "BoostValue": 9.31
+        "BoostValue": 8.89
     },
     {
         "ID": 295,
@@ -2271,7 +2271,7 @@
         "Rarity": "Epic",
         "SellPrice": 289705,
         "BoostType": "Flat_IPS",
-        "BoostValue": 45.16
+        "BoostValue": 44.42
     },
     {
         "ID": 297,
@@ -2289,7 +2289,7 @@
         "Rarity": "Epic",
         "SellPrice": 265315,
         "BoostType": "Flat_IPS",
-        "BoostValue": 44.61
+        "BoostValue": 48.3
     },
     {
         "ID": 299,
@@ -2307,7 +2307,7 @@
         "Rarity": "Epic",
         "SellPrice": 276622,
         "BoostType": "Flat_IPS",
-        "BoostValue": 47.06
+        "BoostValue": 47.35
     },
     {
         "ID": 301,
@@ -2325,7 +2325,7 @@
         "Rarity": "Legendary",
         "SellPrice": 858070,
         "BoostType": "Flat_IPS",
-        "BoostValue": 241.0
+        "BoostValue": 231.0
     },
     {
         "ID": 303,
@@ -2343,7 +2343,7 @@
         "Rarity": "Unique",
         "SellPrice": 9685524,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1408.0
+        "BoostValue": 1373.0
     },
     {
         "ID": 305,
@@ -2634,7 +2634,7 @@
         "Rarity": "Rare",
         "SellPrice": 513894,
         "BoostType": "Flat_IPS",
-        "BoostValue": 29917.0
+        "BoostValue": 29789.0
     },
     {
         "ID": 346,
@@ -2652,7 +2652,7 @@
         "Rarity": "Rare",
         "SellPrice": 469922,
         "BoostType": "Flat_IPS",
-        "BoostValue": 32098.0
+        "BoostValue": 31807.0
     },
     {
         "ID": 348,
@@ -2670,7 +2670,7 @@
         "Rarity": "Rare",
         "SellPrice": 488136,
         "BoostType": "Flat_IPS",
-        "BoostValue": 29836.0
+        "BoostValue": 31450.0
     },
     {
         "ID": 350,
@@ -2688,7 +2688,7 @@
         "Rarity": "Rare",
         "SellPrice": 452194,
         "BoostType": "Flat_IPS",
-        "BoostValue": 32123.0
+        "BoostValue": 30708.0
     },
     {
         "ID": 352,
@@ -2706,7 +2706,7 @@
         "Rarity": "Rare",
         "SellPrice": 541062,
         "BoostType": "Flat_IPS",
-        "BoostValue": 30760.0
+        "BoostValue": 29769.0
     },
     {
         "ID": 354,
@@ -2724,7 +2724,7 @@
         "Rarity": "Rare",
         "SellPrice": 510706,
         "BoostType": "Flat_IPS",
-        "BoostValue": 30750.0
+        "BoostValue": 29816.0
     },
     {
         "ID": 356,
@@ -2742,7 +2742,7 @@
         "Rarity": "Epic",
         "SellPrice": 3883323,
         "BoostType": "Flat_IPS",
-        "BoostValue": 158353.0
+        "BoostValue": 146844.0
     },
     {
         "ID": 358,
@@ -2760,7 +2760,7 @@
         "Rarity": "Epic",
         "SellPrice": 3606700,
         "BoostType": "Flat_IPS",
-        "BoostValue": 153238.0
+        "BoostValue": 156858.0
     },
     {
         "ID": 360,
@@ -2778,7 +2778,7 @@
         "Rarity": "Epic",
         "SellPrice": 3442600,
         "BoostType": "Flat_IPS",
-        "BoostValue": 157085.0
+        "BoostValue": 150888.0
     },
     {
         "ID": 362,
@@ -2796,7 +2796,7 @@
         "Rarity": "Legendary",
         "SellPrice": 11751987,
         "BoostType": "Flat_IPS",
-        "BoostValue": 771074.0
+        "BoostValue": 765593.0
     },
     {
         "ID": 364,
@@ -2814,7 +2814,7 @@
         "Rarity": "Unique",
         "SellPrice": 118924252,
         "BoostType": "Flat_IPS",
-        "BoostValue": 4589391.0
+        "BoostValue": 4465143.0
     },
     {
         "ID": 366,
@@ -3105,7 +3105,7 @@
         "Rarity": "Rare",
         "SellPrice": 694126000,
         "BoostType": "Flat_IPS",
-        "BoostValue": 225033.0
+        "BoostValue": 15583023.0
     },
     {
         "ID": 407,
@@ -3123,7 +3123,7 @@
         "Rarity": "Rare",
         "SellPrice": 748621800,
         "BoostType": "Flat_IPS",
-        "BoostValue": 226059.0
+        "BoostValue": 15841620.0
     },
     {
         "ID": 409,
@@ -3141,7 +3141,7 @@
         "Rarity": "Rare",
         "SellPrice": 640288700,
         "BoostType": "Flat_IPS",
-        "BoostValue": 223615.0
+        "BoostValue": 15228801.0
     },
     {
         "ID": 411,
@@ -3159,7 +3159,7 @@
         "Rarity": "Rare",
         "SellPrice": 639195500,
         "BoostType": "Flat_IPS",
-        "BoostValue": 214790.0
+        "BoostValue": 15475432.0
     },
     {
         "ID": 413,
@@ -3177,7 +3177,7 @@
         "Rarity": "Rare",
         "SellPrice": 683326600,
         "BoostType": "Flat_IPS",
-        "BoostValue": 222531.0
+        "BoostValue": 15702940.0
     },
     {
         "ID": 415,
@@ -3195,7 +3195,7 @@
         "Rarity": "Rare",
         "SellPrice": 643885000,
         "BoostType": "Flat_IPS",
-        "BoostValue": 222111.0
+        "BoostValue": 16048664.0
     },
     {
         "ID": 417,
@@ -3213,7 +3213,7 @@
         "Rarity": "Epic",
         "SellPrice": 5176573400,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1119360.0
+        "BoostValue": 80544998.0
     },
     {
         "ID": 419,
@@ -3231,7 +3231,7 @@
         "Rarity": "Epic",
         "SellPrice": 5593790200,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1129973.0
+        "BoostValue": 75395002.0
     },
     {
         "ID": 421,
@@ -3249,7 +3249,7 @@
         "Rarity": "Epic",
         "SellPrice": 5173102200,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1062571.0
+        "BoostValue": 74385540.0
     },
     {
         "ID": 423,
@@ -3267,7 +3267,7 @@
         "Rarity": "Legendary",
         "SellPrice": 15984966600,
         "BoostType": "Flat_IPS",
-        "BoostValue": 5484287.0
+        "BoostValue": 385005882.0
     },
     {
         "ID": 425,
@@ -3285,7 +3285,7 @@
         "Rarity": "Unique",
         "SellPrice": 160879755100,
         "BoostType": "Flat_IPS",
-        "BoostValue": 32127050.0
+        "BoostValue": 2252562985.0
     },
     {
         "ID": 427,
@@ -3576,7 +3576,7 @@
         "Rarity": "Rare",
         "SellPrice": 25052416500,
         "BoostType": "Flat_IPS",
-        "BoostValue": 17508057.0
+        "BoostValue": 1797921462.0
     },
     {
         "ID": 468,
@@ -3594,7 +3594,7 @@
         "Rarity": "Rare",
         "SellPrice": 27029613750,
         "BoostType": "Flat_IPS",
-        "BoostValue": 17220667.0
+        "BoostValue": 1720651511.0
     },
     {
         "ID": 470,
@@ -3612,7 +3612,7 @@
         "Rarity": "Rare",
         "SellPrice": 23681344250,
         "BoostType": "Flat_IPS",
-        "BoostValue": 18386900.0
+        "BoostValue": 1719179822.0
     },
     {
         "ID": 472,
@@ -3630,7 +3630,7 @@
         "Rarity": "Rare",
         "SellPrice": 23367495000,
         "BoostType": "Flat_IPS",
-        "BoostValue": 16985465.0
+        "BoostValue": 1684340303.0
     },
     {
         "ID": 474,
@@ -3648,7 +3648,7 @@
         "Rarity": "Rare",
         "SellPrice": 23385730750,
         "BoostType": "Flat_IPS",
-        "BoostValue": 17262936.0
+        "BoostValue": 1785493640.0
     },
     {
         "ID": 476,
@@ -3666,7 +3666,7 @@
         "Rarity": "Rare",
         "SellPrice": 25905667500,
         "BoostType": "Flat_IPS",
-        "BoostValue": 18245796.0
+        "BoostValue": 1796054541.0
     },
     {
         "ID": 478,
@@ -3684,7 +3684,7 @@
         "Rarity": "Epic",
         "SellPrice": 185241105500,
         "BoostType": "Flat_IPS",
-        "BoostValue": 84591836.0
+        "BoostValue": 8426085000.0
     },
     {
         "ID": 480,
@@ -3702,7 +3702,7 @@
         "Rarity": "Epic",
         "SellPrice": 190928241000,
         "BoostType": "Flat_IPS",
-        "BoostValue": 92164237.0
+        "BoostValue": 8887107579.0
     },
     {
         "ID": 482,
@@ -3720,7 +3720,7 @@
         "Rarity": "Epic",
         "SellPrice": 185696770000,
         "BoostType": "Flat_IPS",
-        "BoostValue": 91392750.0
+        "BoostValue": 9020589241.0
     },
     {
         "ID": 484,
@@ -3738,7 +3738,7 @@
         "Rarity": "Legendary",
         "SellPrice": 572091375250,
         "BoostType": "Flat_IPS",
-        "BoostValue": 450799535.0
+        "BoostValue": 42565835518.0
     },
     {
         "ID": 486,
@@ -3756,7 +3756,7 @@
         "Rarity": "Unique",
         "SellPrice": 6203389573750,
         "BoostType": "Flat_IPS",
-        "BoostValue": 2698137450.0
+        "BoostValue": 269376692166.0
     },
     {
         "ID": 488,
@@ -4047,7 +4047,7 @@
         "Rarity": "Rare",
         "SellPrice": 629106804000,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1446134585.0
+        "BoostValue": 31564077015.0
     },
     {
         "ID": 529,
@@ -4065,7 +4065,7 @@
         "Rarity": "Rare",
         "SellPrice": 703299244800,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1498011868.0
+        "BoostValue": 29336424771.0
     },
     {
         "ID": 531,
@@ -4083,7 +4083,7 @@
         "Rarity": "Rare",
         "SellPrice": 683414564800,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1525999976.0
+        "BoostValue": 29601031058.0
     },
     {
         "ID": 533,
@@ -4101,7 +4101,7 @@
         "Rarity": "Rare",
         "SellPrice": 612720562800,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1414926772.0
+        "BoostValue": 31297076751.0
     },
     {
         "ID": 535,
@@ -4119,7 +4119,7 @@
         "Rarity": "Rare",
         "SellPrice": 633420988800,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1499652026.0
+        "BoostValue": 30941127340.0
     },
     {
         "ID": 537,
@@ -4137,7 +4137,7 @@
         "Rarity": "Rare",
         "SellPrice": 608758262800,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1459193398.0
+        "BoostValue": 30804437353.0
     },
     {
         "ID": 539,
@@ -4155,7 +4155,7 @@
         "Rarity": "Epic",
         "SellPrice": 4426739386000,
         "BoostType": "Flat_IPS",
-        "BoostValue": 7530156369.0
+        "BoostValue": 158970474852.0
     },
     {
         "ID": 541,
@@ -4173,7 +4173,7 @@
         "Rarity": "Epic",
         "SellPrice": 4548901923200,
         "BoostType": "Flat_IPS",
-        "BoostValue": 7652845664.0
+        "BoostValue": 152360277260.0
     },
     {
         "ID": 543,
@@ -4191,7 +4191,7 @@
         "Rarity": "Epic",
         "SellPrice": 4926676744400,
         "BoostType": "Flat_IPS",
-        "BoostValue": 7048380915.0
+        "BoostValue": 155169703837.0
     },
     {
         "ID": 545,
@@ -4209,7 +4209,7 @@
         "Rarity": "Legendary",
         "SellPrice": 15773564458000,
         "BoostType": "Flat_IPS",
-        "BoostValue": 36857391177.0
+        "BoostValue": 749616043544.0
     },
     {
         "ID": 547,
@@ -4227,7 +4227,7 @@
         "Rarity": "Unique",
         "SellPrice": 165259881655600,
         "BoostType": "Flat_IPS",
-        "BoostValue": 223810624953.0
+        "BoostValue": 4747873487945.0
     },
     {
         "ID": 549,
@@ -4518,7 +4518,7 @@
         "Rarity": "Rare",
         "SellPrice": 14285330030000,
         "BoostType": "Flat_IPS",
-        "BoostValue": 118522055378.0
+        "BoostValue": 833602527254.0
     },
     {
         "ID": 590,
@@ -4536,7 +4536,7 @@
         "Rarity": "Rare",
         "SellPrice": 15581941923000,
         "BoostType": "Flat_IPS",
-        "BoostValue": 123877304273.0
+        "BoostValue": 856038528817.0
     },
     {
         "ID": 592,
@@ -4554,7 +4554,7 @@
         "Rarity": "Rare",
         "SellPrice": 14856128055500,
         "BoostType": "Flat_IPS",
-        "BoostValue": 117647739308.0
+        "BoostValue": 817434794288.0
     },
     {
         "ID": 594,
@@ -4572,7 +4572,7 @@
         "Rarity": "Rare",
         "SellPrice": 15503519371500,
         "BoostType": "Flat_IPS",
-        "BoostValue": 126392809282.0
+        "BoostValue": 811601483007.0
     },
     {
         "ID": 596,
@@ -4590,7 +4590,7 @@
         "Rarity": "Rare",
         "SellPrice": 16173995047000,
         "BoostType": "Flat_IPS",
-        "BoostValue": 120259517481.0
+        "BoostValue": 823109147141.0
     },
     {
         "ID": 598,
@@ -4608,7 +4608,7 @@
         "Rarity": "Rare",
         "SellPrice": 15881089151500,
         "BoostType": "Flat_IPS",
-        "BoostValue": 123126952046.0
+        "BoostValue": 872470750916.0
     },
     {
         "ID": 600,
@@ -4626,7 +4626,7 @@
         "Rarity": "Epic",
         "SellPrice": 119071477656500,
         "BoostType": "Flat_IPS",
-        "BoostValue": 600633028648.0
+        "BoostValue": 4143655101822.0
     },
     {
         "ID": 602,
@@ -4644,7 +4644,7 @@
         "Rarity": "Epic",
         "SellPrice": 109370171800000,
         "BoostType": "Flat_IPS",
-        "BoostValue": 623522187270.0
+        "BoostValue": 4171519359637.0
     },
     {
         "ID": 604,
@@ -4662,7 +4662,7 @@
         "Rarity": "Epic",
         "SellPrice": 115018838159000,
         "BoostType": "Flat_IPS",
-        "BoostValue": 622674352998.0
+        "BoostValue": 4101054314192.0
     },
     {
         "ID": 606,
@@ -4680,7 +4680,7 @@
         "Rarity": "Legendary",
         "SellPrice": 367361998558000,
         "BoostType": "Flat_IPS",
-        "BoostValue": 2934379595372.0
+        "BoostValue": 21227839351386.0
     },
     {
         "ID": 608,
@@ -4698,7 +4698,7 @@
         "Rarity": "Unique",
         "SellPrice": 3468995086694500,
         "BoostType": "Flat_IPS",
-        "BoostValue": 18424057290869.0
+        "BoostValue": 125658981416770.0
     },
     {
         "ID": 610,

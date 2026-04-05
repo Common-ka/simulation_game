@@ -120,6 +120,9 @@ public class SimulationController : MonoBehaviour
     private bool cp1M = false;
     private bool cp1B = false;
 
+    // Кулдаун ключей Черного рынка: мин. 2 часа между дропами
+    private double lastKeyDropTime = -999999;
+
     public void Initialize(int epoch, RetainedData retainedData)
     {
         currentEpoch = epoch;
@@ -261,9 +264,10 @@ public class SimulationController : MonoBehaviour
 
     private void OpenBox(CategoryData cat)
     {
-        // Механика случайного дропа ключей (шанс условно 0.05%)
-        if (UnityEngine.Random.value * 100.0 < 0.05) 
+        // Кулдаун ключей: шанс 0.05%, но не чаще одного раза в 2 часа (7200с)
+        if (timeInSeconds - lastKeyDropTime > 7200 && UnityEngine.Random.value * 100.0 < 0.05) 
         {
+            lastKeyDropTime = timeInSeconds;
             LogEvent("Глобальный дроп: Выпал Ключ Черного Рынка! Тратим...");
             SpendBlackMarketKey(false);
         }
@@ -282,9 +286,9 @@ public class SimulationController : MonoBehaviour
         {
             var item = possible[UnityEngine.Random.Range(0, possible.Count)];
             
-            // 5% Шанс на стикер
+            // 5% шанс на стикер за предмет любой редкости
             if (UnityEngine.Random.value * 100.0 < 5.0) {
-                ProcessStickerDrop(item);
+                TryDropSticker(item);
             }
 
             ProcessLoot(item);
@@ -383,33 +387,36 @@ public class SimulationController : MonoBehaviour
 
     private void RecalculateCoreStats()
     {
-        // Черный рынок: накапливаем множители грязного дохода
-        double bmIpsModifiers = 0;
+        // Черный рынок: суммируем %бонус всех артефактов +Total_IPS%
+        double bmIpsBonusPercent = 0;
         foreach (var art in getOwnedArtifacts) {
             if (art.EffectType == "+Total_IPS%") {
-                bmIpsModifiers += art.EffectValue;
+                bmIpsBonusPercent += art.EffectValue;
             }
         }
-        
-        double percentMulti = bmIpsModifiers / 100.0;
-        double maxPercentMulti = bmConfig != null && bmConfig.BM_Global_IPS_Limit != null 
-                                 ? bmConfig.BM_Global_IPS_Limit.BaseHardCapPercent / 100.0 
-                                 : 3.0;
+        // Ключево: нормализуем в долю (4.3 % -> 0.043)
+        double bmBonus = bmIpsBonusPercent / 100.0;
+        double maxBmBonus = bmConfig != null && bmConfig.BM_Global_IPS_Limit != null 
+                           ? bmConfig.BM_Global_IPS_Limit.BaseHardCapPercent / 100.0 
+                           : 3.0;
+        if (bmBonus > maxBmBonus) bmBonus = maxBmBonus;
 
-        if (percentMulti > maxPercentMulti) percentMulti = maxPercentMulti;
-
-        // Расчет множителя сетов (пробегаемся по полке: если элемент из CompletedSet, умножаем его локально)
+        // Сеты стикеров: применяем бонус x1.2 локально к каждому предмету на полке
         double adjustedBaseIps = 0;
         foreach (var itm in shelf) {
             double v = (itm.BoostType == "Flat_IPS") ? itm.BoostValue : 0;
-            if (persistentData.CompletedSets.Contains(itm.Category) && gachaMath != null) {
-                v *= gachaMath.SynergyBonuses.StandardSetMultiplier;
+            if (v > 0 && persistentData.CompletedSets.Contains(itm.Category) && gachaMath != null) {
+                v *= gachaMath.SynergyBonuses.StandardSetMultiplier; // 1.2x
             }
             adjustedBaseIps += v;
         }
 
-        // Итоговый доход = AdjustedBaseIPS * (1 + Сумма(Total_IPS_Artifacts / 100)) * Престиж
-        currentIPS = adjustedBaseIps * (1.0 + percentMulti) * persistentData.PermanentPrestigeMultiplier;
+        // ИТОГОВАЯ ФОРМУЛА (аддитивная, не перемножение):
+        // TotalMultiplier = 1.0 + PrestigeBonus + BlackMarketBonus
+        // PrestigeBonus = PermanentPrestigeMultiplier - 1.0 (т.к. домен престижа уже хранит +1)
+        double prestigeBonus = persistentData.PermanentPrestigeMultiplier - 1.0;
+        double totalMultiplier = 1.0 + prestigeBonus + bmBonus;
+        currentIPS = adjustedBaseIps * totalMultiplier;
         
         double manualTapPower = GetUpgradeLevel("manual_tap_power") * 1.5;
         // baseClickPower держит в себе "Mult_MPC" прибавки от полок (согласно графу)
@@ -495,14 +502,22 @@ public class SimulationController : MonoBehaviour
         }
     }
 
-    private void ProcessStickerDrop(LootItem item)
+    private void TryDropSticker(LootItem item)
     {
         if (persistentData.UnlockedStickers.Contains(item.ID)) {
+            // Дубликат -> пыль
             if (gachaMath != null && gachaMath.DustBurnTable.ContainsKey(item.Rarity)) {
-                persistentData.CurrencyStardust += gachaMath.DustBurnTable[item.Rarity];
+                double dust = gachaMath.DustBurnTable[item.Rarity];
+                persistentData.CurrencyStardust += dust;
+                // Логируем разбор дубликата только для редких (не спамим лог Common)
+                if (item.Rarity == "Rare" || item.Rarity == "Epic" || item.Rarity == "Legendary" || item.Rarity == "Unique") {
+                    LogEvent($"Стикер [{item.Rarity}] {item.Name} — дубликат! Разобрано в {dust} пыли (итого: {persistentData.CurrencyStardust:F0})");
+                }
             }
         } else {
+            // Новый стикер!
             persistentData.UnlockedStickers.Add(item.ID);
+            LogEvent($"Стикер [{item.Rarity}] {item.Name} — новый! ({persistentData.UnlockedStickers.Count} стикеров всего)");
             CheckIfSetIsComplete(item.Category);
         }
     }
@@ -510,7 +525,6 @@ public class SimulationController : MonoBehaviour
     private void AutoCraftStickers()
     {
         if (gachaMath == null) return;
-        // Check only unlocked categories to emulate realistic behavior
         for (int i = 0; i <= unlockedCategoryIndex && i < categories.Count; i++) {
             var cat = categories[i];
             if (persistentData.CompletedSets.Contains(cat.Name)) continue;
@@ -521,15 +535,14 @@ public class SimulationController : MonoBehaviour
                 double cost = gachaMath.StickerCraftCost[r];
                 
                 if (persistentData.CurrencyStardust >= cost) {
-                    // find missing sticker of this rarity
                     var possible = lootLookup[$"{cat.Name}_{r}"];
                     foreach (var itm in possible) {
                         if (!persistentData.UnlockedStickers.Contains(itm.ID)) {
-                            // craft it!
                             persistentData.CurrencyStardust -= cost;
                             persistentData.UnlockedStickers.Add(itm.ID);
+                            LogEvent($"Крафт: куплен стикер [{r}] {itm.Name} за {cost:F0} пыли (остаток: {persistentData.CurrencyStardust:F0})");
                             CheckIfSetIsComplete(cat.Name);
-                            return; // only 1 craft per tick to simulate flow
+                            return;
                         }
                     }
                 }
