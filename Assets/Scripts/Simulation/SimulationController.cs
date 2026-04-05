@@ -59,6 +59,28 @@ public class SimulationController : MonoBehaviour
         public double BaseHardCapPercent;
     }
 
+    [Serializable]
+    public class GachaMathModel {
+        public Dictionary<string, double> DustBurnTable;
+        public Dictionary<string, double> StickerCraftCost;
+        public SynergyModel SynergyBonuses;
+    }
+
+    [Serializable]
+    public class SynergyModel {
+        public double StandardSetMultiplier;
+        public double BlackMarketSetMultiplier;
+    }
+
+    public class RetainedData {
+        public double LifetimeEarnings = 0.0;
+        public double PermanentPrestigeMultiplier = 1.0;
+        public List<BlackMarketArtifact> OwnedArtifacts = new List<BlackMarketArtifact>();
+        public HashSet<double> UnlockedStickers = new HashSet<double>();
+        public HashSet<string> CompletedSets = new HashSet<string>();
+        public double CurrencyStardust = 0.0;
+    }
+
     // --- State Variables ---
     [Header("Simulation State")]
     public double softCurrency = 0.0;
@@ -67,6 +89,8 @@ public class SimulationController : MonoBehaviour
     public double baseClickPower = 1.0; 
     public double currentClickPower = 1.0;
     public double autoCPS = 0.0; 
+    public RetainedData persistentData;
+    private int currentEpoch = 1;
 
     private double timeInSeconds = 0;
     private int unlockedCategoryIndex = 0;
@@ -81,11 +105,13 @@ public class SimulationController : MonoBehaviour
     private List<CategoryData> categories;
     private List<BlackMarketArtifact> bmArtifactsDB;
     private BMConfigModel bmConfig;
+    private GachaMathModel gachaMath;
+    private Dictionary<string, int> categorySizeMap = new Dictionary<string, int>();
     
     // --- Cached Logic Data ---
     private Dictionary<string, double> upgradeLevels = new Dictionary<string, double>();
     private List<LootItem> shelf = new List<LootItem>(); 
-    public List<BlackMarketArtifact> ownedArtifacts = new List<BlackMarketArtifact>(); 
+    public List<BlackMarketArtifact> getOwnedArtifacts => persistentData != null ? persistentData.OwnedArtifacts : new List<BlackMarketArtifact>(); 
     private StreamWriter logWriter;
     private Dictionary<string, List<LootItem>> lootLookup = new Dictionary<string, List<LootItem>>();
 
@@ -94,8 +120,11 @@ public class SimulationController : MonoBehaviour
     private bool cp1M = false;
     private bool cp1B = false;
 
-    private void Start()
+    public void Initialize(int epoch, RetainedData retainedData)
     {
+        currentEpoch = epoch;
+        persistentData = retainedData ?? new RetainedData();
+
         string projRoot = string.IsNullOrEmpty(overrideEconomyFolderPath) 
                             ? Path.Combine(Application.dataPath, "../Economy") 
                             : overrideEconomyFolderPath;
@@ -105,10 +134,9 @@ public class SimulationController : MonoBehaviour
 
         string logFolderPath = Path.Combine(Application.dataPath, "../Logs");
         if (!Directory.Exists(logFolderPath)) Directory.CreateDirectory(logFolderPath);
-        logWriter = new StreamWriter(Path.Combine(logFolderPath, $"SimulationLog_{DateTime.Now:MM-dd_HH-mm-ss}.txt"), false);
+        logWriter = new StreamWriter(Path.Combine(logFolderPath, $"SimulationLog_Epoch{epoch}_{DateTime.Now:HH-mm-ss}.txt"), false);
 
-        LogEvent("=== ИНИЦИАЛИЗАЦИЯ И ЗАПУСК СИМУЛЯЦИИ ===");
-        StartCoroutine(RunSimulation());
+        LogEvent($"=== ИНИЦИАЛИЗАЦИЯ СИМУЛЯЦИИ ЭПОХИ {epoch} ===");
     }
 
     private void LoadJSON(string path)
@@ -118,6 +146,7 @@ public class SimulationController : MonoBehaviour
         categories = JsonConvert.DeserializeObject<List<CategoryData>>(File.ReadAllText(Path.Combine(path, "Categories.json")));
         bmArtifactsDB = JsonConvert.DeserializeObject<List<BlackMarketArtifact>>(File.ReadAllText(Path.Combine(path, "BlackMarketArtifacts.json")));
         bmConfig = JsonConvert.DeserializeObject<BMConfigModel>(File.ReadAllText(Path.Combine(path, "BlackMarketConfig.json")));
+        gachaMath = JsonConvert.DeserializeObject<GachaMathModel>(File.ReadAllText(Path.Combine(path, "GachaMath.json")));
     }
 
     private void InitCategoriesAndCache()
@@ -129,13 +158,17 @@ public class SimulationController : MonoBehaviour
 
         string[] rarities = { "Common", "Uncommon", "Rare", "Epic", "Legendary", "Unique" };
         foreach (var c in categories) {
+            int uniqueItemsInCategory = 0;
             foreach (var r in rarities) {
-                lootLookup[$"{c.Name}_{r}"] = lootTable.Where(x => x.Category == c.Name && x.Rarity == r).ToList();
+                var items = lootTable.Where(x => x.Category == c.Name && x.Rarity == r).ToList();
+                lootLookup[$"{c.Name}_{r}"] = items;
+                uniqueItemsInCategory += items.Count;
             }
+            categorySizeMap[c.Name] = uniqueItemsInCategory;
         }
     }
 
-    private IEnumerator RunSimulation()
+    public IEnumerator RunEpoch()
     {
         double totalIterations = 14.0 * 24.0 * 60.0 * 60.0; // Исключительно double во избежание int overflow
 
@@ -143,12 +176,13 @@ public class SimulationController : MonoBehaviour
         {
             timeInSeconds = i;
 
-            if (i == 0) {
+            if (i == 0 && currentEpoch == 1) {
                 LogEvent("ТУТОРИАЛ: Получен стартовый ключ Черного рынка!");
                 SpendBlackMarketKey(true);
             }
 
             UpdateBotState();
+            AutoCraftStickers();
 
             if (i > 0 && i % 3600 == 0)
             {
@@ -156,15 +190,16 @@ public class SimulationController : MonoBehaviour
             }
         }
 
-        LogEvent("=== СИМУЛЯЦИЯ ЗАВЕРШЕНА ===");
+        LogEvent($"=== СИМУЛЯЦИЯ ЭПОХИ {currentEpoch} ЗАВЕРШЕНА ===");
         logWriter?.Close();
-        Debug.Log("Simulation complete. Check Logs folder for details.");
+        Debug.Log($"Epoch {currentEpoch} Simulation complete.");
     }
 
     private void UpdateBotState()
     {
         // --- БЛОК 0: Фарминг (Начисление пассивного и клик-дохода) ---
         softCurrency += currentIPS;
+        persistentData.LifetimeEarnings += currentIPS;
 
         double manualCPS = (timeInSeconds < 1800) ? 5.0 : 0.0;
         double totalCPS = manualCPS + autoCPS;
@@ -178,6 +213,7 @@ public class SimulationController : MonoBehaviour
                 tickGain += autoCPS * (currentClickPower * autoMultiplier);
             }
             softCurrency += tickGain;
+            persistentData.LifetimeEarnings += tickGain;
         }
 
         // --- БЛОК 1: ПРИОРИТЕТ 1 - Проверка апгрейдов ---
@@ -245,6 +281,12 @@ public class SimulationController : MonoBehaviour
         if (possible.Count > 0)
         {
             var item = possible[UnityEngine.Random.Range(0, possible.Count)];
+            
+            // 5% Шанс на стикер
+            if (UnityEngine.Random.value * 100.0 < 5.0) {
+                ProcessStickerDrop(item);
+            }
+
             ProcessLoot(item);
         }
     }
@@ -343,7 +385,7 @@ public class SimulationController : MonoBehaviour
     {
         // Черный рынок: накапливаем множители грязного дохода
         double bmIpsModifiers = 0;
-        foreach (var art in ownedArtifacts) {
+        foreach (var art in getOwnedArtifacts) {
             if (art.EffectType == "+Total_IPS%") {
                 bmIpsModifiers += art.EffectValue;
             }
@@ -356,8 +398,18 @@ public class SimulationController : MonoBehaviour
 
         if (percentMulti > maxPercentMulti) percentMulti = maxPercentMulti;
 
-        // Итоговый доход = BaseIPS * (1 + Сумма(Total_IPS_Artifacts / 100))
-        currentIPS = baseIPS * (1.0 + percentMulti);
+        // Расчет множителя сетов (пробегаемся по полке: если элемент из CompletedSet, умножаем его локально)
+        double adjustedBaseIps = 0;
+        foreach (var itm in shelf) {
+            double v = (itm.BoostType == "Flat_IPS") ? itm.BoostValue : 0;
+            if (persistentData.CompletedSets.Contains(itm.Category) && gachaMath != null) {
+                v *= gachaMath.SynergyBonuses.StandardSetMultiplier;
+            }
+            adjustedBaseIps += v;
+        }
+
+        // Итоговый доход = AdjustedBaseIPS * (1 + Сумма(Total_IPS_Artifacts / 100)) * Престиж
+        currentIPS = adjustedBaseIps * (1.0 + percentMulti) * persistentData.PermanentPrestigeMultiplier;
         
         double manualTapPower = GetUpgradeLevel("manual_tap_power") * 1.5;
         // baseClickPower держит в себе "Mult_MPC" прибавки от полок (согласно графу)
@@ -430,15 +482,78 @@ public class SimulationController : MonoBehaviour
             // Жестко вытягиваем артефакт со свойством +Total_IPS% (ID 1005: Теневой Артефакт #5)
             var art = bmArtifactsDB.FirstOrDefault(x => x.ID == 1005);
             if (art != null) {
-                ownedArtifacts.Add(art);
+                persistentData.OwnedArtifacts.Add(art);
                 LogEvent($"Черный рынок: куплен туториал-артефакт {art.Name} ({art.EffectType} {art.EffectValue})");
                 RecalculateCoreStats();
             }
         } else {
             // Случайный мидгейм-дроп
             var art = bmArtifactsDB[UnityEngine.Random.Range(0, bmArtifactsDB.Count)];
-            ownedArtifacts.Add(art);
+            persistentData.OwnedArtifacts.Add(art);
             LogEvent($"Черный рынок: случайная покупка {art.Name} ({art.EffectType} {art.EffectValue})");
+            RecalculateCoreStats();
+        }
+    }
+
+    private void ProcessStickerDrop(LootItem item)
+    {
+        if (persistentData.UnlockedStickers.Contains(item.ID)) {
+            if (gachaMath != null && gachaMath.DustBurnTable.ContainsKey(item.Rarity)) {
+                persistentData.CurrencyStardust += gachaMath.DustBurnTable[item.Rarity];
+            }
+        } else {
+            persistentData.UnlockedStickers.Add(item.ID);
+            CheckIfSetIsComplete(item.Category);
+        }
+    }
+
+    private void AutoCraftStickers()
+    {
+        if (gachaMath == null) return;
+        // Check only unlocked categories to emulate realistic behavior
+        for (int i = 0; i <= unlockedCategoryIndex && i < categories.Count; i++) {
+            var cat = categories[i];
+            if (persistentData.CompletedSets.Contains(cat.Name)) continue;
+
+            string[] rarities = { "Common", "Uncommon", "Rare", "Epic", "Legendary", "Unique" };
+            foreach (var r in rarities) {
+                if (!gachaMath.StickerCraftCost.ContainsKey(r)) continue;
+                double cost = gachaMath.StickerCraftCost[r];
+                
+                if (persistentData.CurrencyStardust >= cost) {
+                    // find missing sticker of this rarity
+                    var possible = lootLookup[$"{cat.Name}_{r}"];
+                    foreach (var itm in possible) {
+                        if (!persistentData.UnlockedStickers.Contains(itm.ID)) {
+                            // craft it!
+                            persistentData.CurrencyStardust -= cost;
+                            persistentData.UnlockedStickers.Add(itm.ID);
+                            CheckIfSetIsComplete(cat.Name);
+                            return; // only 1 craft per tick to simulate flow
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    private void CheckIfSetIsComplete(string catName)
+    {
+        if (persistentData.CompletedSets.Contains(catName)) return;
+
+        int totalRequired = categorySizeMap.ContainsKey(catName) ? categorySizeMap[catName] : 9999;
+        int currentlyOwned = 0;
+        foreach (var r in new string[] { "Common", "Uncommon", "Rare", "Epic", "Legendary", "Unique" }) {
+            foreach (var itm in lootLookup[$"{catName}_{r}"]) {
+                if (persistentData.UnlockedStickers.Contains(itm.ID)) {
+                    currentlyOwned++;
+                }
+            }
+        }
+
+        if (currentlyOwned >= totalRequired) {
+            persistentData.CompletedSets.Add(catName);
+            LogEvent($"Собран сет категории {catName}! Применен множитель 1.2x.");
             RecalculateCoreStats();
         }
     }

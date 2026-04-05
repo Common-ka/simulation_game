@@ -160,16 +160,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1911339}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f05512752d367944a86ccc1d160e115, type: 3}
+  m_Script: {fileID: 11500000, guid: 2727217302082e24eb9c39a8116957e5, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SimulationController
-  softCurrency: 0
-  baseIPS: 0
-  currentIPS: 0
-  baseClickPower: 1
-  autoCPS: 0
-  overrideEconomyFolderPath: 
-  maxUnpacksPerSecond: 5
+  m_EditorClassIdentifier: Assembly-CSharp::MetaSimulationController
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
