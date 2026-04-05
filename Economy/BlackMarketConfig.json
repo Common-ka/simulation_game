@@ -1,0 +1,9 @@
+{
+    "MultiplierHandlingRules": "Float multiplier additions. Example: BoostValue: 0.05 means +5% to the specific stat when in game code. Do NOT multiply current stat by 0.05.",
+    "BM_Global_IPS_Limit": {
+        "BaseHardCapPercent": 300,
+        "PrestigeScaling": 0.1,
+        "MaxBonusFormula": "300 * (1 + 0.1 * PrestigeCount)",
+        "AppliedFormula": "1 + min(Sum of All Artifact EffectValues, 3.0 * (1 + 0.1 * PrestigeCount))"
+    }
+}

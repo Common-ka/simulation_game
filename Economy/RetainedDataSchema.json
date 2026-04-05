@@ -1,0 +1,25 @@
+{
+    "RetainedData_Class_Structure": {
+        "MetaProgression": {
+            "PrestigeCount": "int",
+            "LifetimeEarnings": "double",
+            "PrestigePoints": "double",
+            "PermanentPrestigeMultiplier": "double (Formula: 1 + (PrestigePoints * 0.02))"
+        },
+        "GachaSystem": {
+            "UnlockedStickers": "Dictionary<int, bool>",
+            "CompletedSets": "Dictionary<int, bool>",
+            "CurrencyStardust": "int"
+        },
+        "BlackMarket": {
+            "PremiumBMKeys": "int",
+            "AcquiredArtifactIDs": "List<int>",
+            "StackedBlackMarketMultiplier": "double"
+        },
+        "MonetizationState": {
+            "HardCurrencyGems": "int",
+            "AdFreePurchased": "bool",
+            "UnlockedPremiumShelves": "List<int>"
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "PityMechanism": {
+        "ExpectedBoxesForSet": 228,
+        "ExpectedDustPerBox": 12.0,
+        "HardPityThresholdBoxes": 250
+    },
+    "DustBurnTable": {
+        "Common": 1,
+        "Uncommon": 3,
+        "Rare": 10,
+        "Epic": 50,
+        "Legendary": 250,
+        "Unique": 1000,
+        "Black_Market_Exclusive": 2000
+    },
+    "StickerCraftCost": {
+        "Common": 5,
+        "Uncommon": 15,
+        "Rare": 50,
+        "Epic": 250,
+        "Legendary": 1250,
+        "Unique": 5000,
+        "Black_Market_Exclusive": 10000
+    },
+    "SynergyBonuses": {
+        "StandardSetMultiplier": 1.2,
+        "BlackMarketSetMultiplier": 1.05
+    }
+}

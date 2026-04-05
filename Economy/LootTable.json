@@ -1,0 +1,4712 @@
+[
+    {
+        "ID": 1,
+        "Category": "Барахло",
+        "Name": "Мятый Спиннер",
+        "Rarity": "Common",
+        "SellPrice": 1
+    },
+    {
+        "ID": 2,
+        "Category": "Барахло",
+        "Name": "Ржавый Чехол Abibas",
+        "Rarity": "Common",
+        "SellPrice": 1
+    },
+    {
+        "ID": 3,
+        "Category": "Барахло",
+        "Name": "Мятый Каменный USB",
+        "Rarity": "Common",
+        "SellPrice": 1
+    },
+    {
+        "ID": 4,
+        "Category": "Барахло",
+        "Name": "Липкий Спиннер",
+        "Rarity": "Common",
+        "SellPrice": 1
+    },
+    {
+        "ID": 5,
+        "Category": "Барахло",
+        "Name": "Ржавый Чехол Abibas",
+        "Rarity": "Common",
+        "SellPrice": 1
+    },
+    {
+        "ID": 6,
+        "Category": "Барахло",
+        "Name": "Сломанный Каменный USB",
+        "Rarity": "Common",
+        "SellPrice": 1
+    },
+    {
+        "ID": 7,
+        "Category": "Барахло",
+        "Name": "Липкий Чехол Abibas",
+        "Rarity": "Common",
+        "SellPrice": 1
+    },
+    {
+        "ID": 8,
+        "Category": "Барахло",
+        "Name": "Старый Спиннер",
+        "Rarity": "Common",
+        "SellPrice": 1
+    },
+    {
+        "ID": 9,
+        "Category": "Барахло",
+        "Name": "Пыльный Скрепка",
+        "Rarity": "Common",
+        "SellPrice": 1
+    },
+    {
+        "ID": 10,
+        "Category": "Барахло",
+        "Name": "Пыльный Чехол Abibas",
+        "Rarity": "Common",
+        "SellPrice": 1
+    },
+    {
+        "ID": 11,
+        "Category": "Барахло",
+        "Name": "Китайский Спиннер",
+        "Rarity": "Common",
+        "SellPrice": 1
+    },
+    {
+        "ID": 12,
+        "Category": "Барахло",
+        "Name": "Мятый Слайм",
+        "Rarity": "Common",
+        "SellPrice": 1
+    },
+    {
+        "ID": 13,
+        "Category": "Барахло",
+        "Name": "Старый Спиннер",
+        "Rarity": "Common",
+        "SellPrice": 1
+    },
+    {
+        "ID": 14,
+        "Category": "Барахло",
+        "Name": "Мятый Скрепка",
+        "Rarity": "Common",
+        "SellPrice": 1
+    },
+    {
+        "ID": 15,
+        "Category": "Барахло",
+        "Name": "Старый Каменный USB",
+        "Rarity": "Common",
+        "SellPrice": 1
+    },
+    {
+        "ID": 16,
+        "Category": "Барахло",
+        "Name": "Китайский Каменный USB",
+        "Rarity": "Common",
+        "SellPrice": 1
+    },
+    {
+        "ID": 17,
+        "Category": "Барахло",
+        "Name": "Мятый Спиннер",
+        "Rarity": "Common",
+        "SellPrice": 1
+    },
+    {
+        "ID": 18,
+        "Category": "Барахло",
+        "Name": "Старый Спиннер",
+        "Rarity": "Common",
+        "SellPrice": 1
+    },
+    {
+        "ID": 19,
+        "Category": "Барахло",
+        "Name": "Мятый Скрепка",
+        "Rarity": "Common",
+        "SellPrice": 1
+    },
+    {
+        "ID": 20,
+        "Category": "Барахло",
+        "Name": "Китайский Чехол Abibas",
+        "Rarity": "Common",
+        "SellPrice": 1
+    },
+    {
+        "ID": 21,
+        "Category": "Барахло",
+        "Name": "Ржавый Слайм",
+        "Rarity": "Common",
+        "SellPrice": 1
+    },
+    {
+        "ID": 22,
+        "Category": "Барахло",
+        "Name": "Мятый Каменный USB",
+        "Rarity": "Common",
+        "SellPrice": 1
+    },
+    {
+        "ID": 23,
+        "Category": "Барахло",
+        "Name": "Ржавый Чехол Abibas",
+        "Rarity": "Common",
+        "SellPrice": 1
+    },
+    {
+        "ID": 24,
+        "Category": "Барахло",
+        "Name": "Старый Каменный USB",
+        "Rarity": "Common",
+        "SellPrice": 1
+    },
+    {
+        "ID": 25,
+        "Category": "Барахло",
+        "Name": "Китайский Спиннер",
+        "Rarity": "Common",
+        "SellPrice": 1
+    },
+    {
+        "ID": 26,
+        "Category": "Барахло",
+        "Name": "Сломанный Слайм",
+        "Rarity": "Common",
+        "SellPrice": 1
+    },
+    {
+        "ID": 27,
+        "Category": "Барахло",
+        "Name": "Мятый Чехол Abibas",
+        "Rarity": "Common",
+        "SellPrice": 1
+    },
+    {
+        "ID": 28,
+        "Category": "Барахло",
+        "Name": "Абсурдный Слайм",
+        "Rarity": "Uncommon",
+        "SellPrice": 1
+    },
+    {
+        "ID": 29,
+        "Category": "Барахло",
+        "Name": "Дешевый Скрепка",
+        "Rarity": "Uncommon",
+        "SellPrice": 1
+    },
+    {
+        "ID": 30,
+        "Category": "Барахло",
+        "Name": "Пахучий Скрепка",
+        "Rarity": "Uncommon",
+        "SellPrice": 1
+    },
+    {
+        "ID": 31,
+        "Category": "Барахло",
+        "Name": "Исцарапанный Чехол Abibas",
+        "Rarity": "Uncommon",
+        "SellPrice": 1
+    },
+    {
+        "ID": 32,
+        "Category": "Барахло",
+        "Name": "Абсурдный Слайм",
+        "Rarity": "Uncommon",
+        "SellPrice": 1
+    },
+    {
+        "ID": 33,
+        "Category": "Барахло",
+        "Name": "Дешевый Каменный USB",
+        "Rarity": "Uncommon",
+        "SellPrice": 1
+    },
+    {
+        "ID": 34,
+        "Category": "Барахло",
+        "Name": "Исцарапанный Чехол Abibas",
+        "Rarity": "Uncommon",
+        "SellPrice": 1
+    },
+    {
+        "ID": 35,
+        "Category": "Барахло",
+        "Name": "Поддельный Спиннер",
+        "Rarity": "Uncommon",
+        "SellPrice": 1
+    },
+    {
+        "ID": 36,
+        "Category": "Барахло",
+        "Name": "Исцарапанный Чехол Abibas",
+        "Rarity": "Uncommon",
+        "SellPrice": 1
+    },
+    {
+        "ID": 37,
+        "Category": "Барахло",
+        "Name": "Дешевый Каменный USB",
+        "Rarity": "Uncommon",
+        "SellPrice": 1
+    },
+    {
+        "ID": 38,
+        "Category": "Барахло",
+        "Name": "Дешевый Каменный USB",
+        "Rarity": "Uncommon",
+        "SellPrice": 1
+    },
+    {
+        "ID": 39,
+        "Category": "Барахло",
+        "Name": "Абсурдный Слайм",
+        "Rarity": "Uncommon",
+        "SellPrice": 1
+    },
+    {
+        "ID": 40,
+        "Category": "Барахло",
+        "Name": "Блестящий Спиннер",
+        "Rarity": "Rare",
+        "SellPrice": 2,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 0.98
+    },
+    {
+        "ID": 41,
+        "Category": "Барахло",
+        "Name": "Блестящий Спиннер",
+        "Rarity": "Rare",
+        "SellPrice": 2,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.01
+    },
+    {
+        "ID": 42,
+        "Category": "Барахло",
+        "Name": "Винтажный Спиннер",
+        "Rarity": "Rare",
+        "SellPrice": 2,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 0.96
+    },
+    {
+        "ID": 43,
+        "Category": "Барахло",
+        "Name": "Винтажный Спиннер",
+        "Rarity": "Rare",
+        "SellPrice": 2,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.011
+    },
+    {
+        "ID": 44,
+        "Category": "Барахло",
+        "Name": "Хайповый Спиннер",
+        "Rarity": "Rare",
+        "SellPrice": 2,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 0.98
+    },
+    {
+        "ID": 45,
+        "Category": "Барахло",
+        "Name": "Хайповый Спиннер",
+        "Rarity": "Rare",
+        "SellPrice": 2,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.011
+    },
+    {
+        "ID": 46,
+        "Category": "Барахло",
+        "Name": "ASMR-ный Каменный USB",
+        "Rarity": "Rare",
+        "SellPrice": 2,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 0.91
+    },
+    {
+        "ID": 47,
+        "Category": "Барахло",
+        "Name": "ASMR-ный Каменный USB",
+        "Rarity": "Rare",
+        "SellPrice": 2,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.011
+    },
+    {
+        "ID": 48,
+        "Category": "Барахло",
+        "Name": "Непонятный Каменный USB",
+        "Rarity": "Rare",
+        "SellPrice": 2,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 0.95
+    },
+    {
+        "ID": 49,
+        "Category": "Барахло",
+        "Name": "Непонятный Каменный USB",
+        "Rarity": "Rare",
+        "SellPrice": 2,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.01
+    },
+    {
+        "ID": 50,
+        "Category": "Барахло",
+        "Name": "Непонятный Каменный USB",
+        "Rarity": "Rare",
+        "SellPrice": 2,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 0.97
+    },
+    {
+        "ID": 51,
+        "Category": "Барахло",
+        "Name": "Непонятный Каменный USB",
+        "Rarity": "Rare",
+        "SellPrice": 2,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.011
+    },
+    {
+        "ID": 52,
+        "Category": "Барахло",
+        "Name": "Дизайнерский Слайм",
+        "Rarity": "Epic",
+        "SellPrice": 16,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 4.9
+    },
+    {
+        "ID": 53,
+        "Category": "Барахло",
+        "Name": "Дизайнерский Слайм",
+        "Rarity": "Epic",
+        "SellPrice": 16,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.052
+    },
+    {
+        "ID": 54,
+        "Category": "Барахло",
+        "Name": "Золотой Каменный USB",
+        "Rarity": "Epic",
+        "SellPrice": 16,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 4.64
+    },
+    {
+        "ID": 55,
+        "Category": "Барахло",
+        "Name": "Золотой Каменный USB",
+        "Rarity": "Epic",
+        "SellPrice": 16,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.055
+    },
+    {
+        "ID": 56,
+        "Category": "Барахло",
+        "Name": "Гиковский Спиннер",
+        "Rarity": "Epic",
+        "SellPrice": 16,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 4.58
+    },
+    {
+        "ID": 57,
+        "Category": "Барахло",
+        "Name": "Гиковский Спиннер",
+        "Rarity": "Epic",
+        "SellPrice": 16,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.051
+    },
+    {
+        "ID": 58,
+        "Category": "Барахло",
+        "Name": "Секретный Скрепка",
+        "Rarity": "Legendary",
+        "SellPrice": 54,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 23
+    },
+    {
+        "ID": 59,
+        "Category": "Барахло",
+        "Name": "Секретный Скрепка",
+        "Rarity": "Legendary",
+        "SellPrice": 54,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.263
+    },
+    {
+        "ID": 60,
+        "Category": "Барахло",
+        "Name": "Мертвого Моря Каменный USB",
+        "Rarity": "Unique",
+        "SellPrice": 537,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 146
+    },
+    {
+        "ID": 61,
+        "Category": "Барахло",
+        "Name": "Мертвого Моря Каменный USB",
+        "Rarity": "Unique",
+        "SellPrice": 537,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 1.647
+    },
+    {
+        "ID": 62,
+        "Category": "Возвраты электроники",
+        "Name": "Ржавый Повербанк на 10mAh",
+        "Rarity": "Common",
+        "SellPrice": 3
+    },
+    {
+        "ID": 63,
+        "Category": "Возвраты электроники",
+        "Name": "Китайский Вейп-калькулятор",
+        "Rarity": "Common",
+        "SellPrice": 3
+    },
+    {
+        "ID": 64,
+        "Category": "Возвраты электроники",
+        "Name": "Б/У Наушники Sany",
+        "Rarity": "Common",
+        "SellPrice": 3
+    },
+    {
+        "ID": 65,
+        "Category": "Возвраты электроники",
+        "Name": "Мятый Повербанк на 10mAh",
+        "Rarity": "Common",
+        "SellPrice": 3
+    },
+    {
+        "ID": 66,
+        "Category": "Возвраты электроники",
+        "Name": "Ржавый Геймпад без кнопок",
+        "Rarity": "Common",
+        "SellPrice": 3
+    },
+    {
+        "ID": 67,
+        "Category": "Возвраты электроники",
+        "Name": "Сломанный Геймпад без кнопок",
+        "Rarity": "Common",
+        "SellPrice": 3
+    },
+    {
+        "ID": 68,
+        "Category": "Возвраты электроники",
+        "Name": "Сломанный Повербанк на 10mAh",
+        "Rarity": "Common",
+        "SellPrice": 3
+    },
+    {
+        "ID": 69,
+        "Category": "Возвраты электроники",
+        "Name": "Ржавый Повербанк на 10mAh",
+        "Rarity": "Common",
+        "SellPrice": 3
+    },
+    {
+        "ID": 70,
+        "Category": "Возвраты электроники",
+        "Name": "Ржавый Геймпад без кнопок",
+        "Rarity": "Common",
+        "SellPrice": 3
+    },
+    {
+        "ID": 71,
+        "Category": "Возвраты электроники",
+        "Name": "Б/У Геймпад без кнопок",
+        "Rarity": "Common",
+        "SellPrice": 3
+    },
+    {
+        "ID": 72,
+        "Category": "Возвраты электроники",
+        "Name": "Липкий Геймпад без кнопок",
+        "Rarity": "Common",
+        "SellPrice": 3
+    },
+    {
+        "ID": 73,
+        "Category": "Возвраты электроники",
+        "Name": "Липкий Повербанк на 10mAh",
+        "Rarity": "Common",
+        "SellPrice": 3
+    },
+    {
+        "ID": 74,
+        "Category": "Возвраты электроники",
+        "Name": "Б/У Наушники Sany",
+        "Rarity": "Common",
+        "SellPrice": 3
+    },
+    {
+        "ID": 75,
+        "Category": "Возвраты электроники",
+        "Name": "Мятый Наушники Sany",
+        "Rarity": "Common",
+        "SellPrice": 3
+    },
+    {
+        "ID": 76,
+        "Category": "Возвраты электроники",
+        "Name": "Китайский Наушники Sany",
+        "Rarity": "Common",
+        "SellPrice": 3
+    },
+    {
+        "ID": 77,
+        "Category": "Возвраты электроники",
+        "Name": "Ржавый Вейп-калькулятор",
+        "Rarity": "Common",
+        "SellPrice": 3
+    },
+    {
+        "ID": 78,
+        "Category": "Возвраты электроники",
+        "Name": "Пыльный Повербанк на 10mAh",
+        "Rarity": "Common",
+        "SellPrice": 3
+    },
+    {
+        "ID": 79,
+        "Category": "Возвраты электроники",
+        "Name": "Мятый Вейп-калькулятор",
+        "Rarity": "Common",
+        "SellPrice": 3
+    },
+    {
+        "ID": 80,
+        "Category": "Возвраты электроники",
+        "Name": "Мятый Наушники Sany",
+        "Rarity": "Common",
+        "SellPrice": 3
+    },
+    {
+        "ID": 81,
+        "Category": "Возвраты электроники",
+        "Name": "Сломанный Наушники Sany",
+        "Rarity": "Common",
+        "SellPrice": 3
+    },
+    {
+        "ID": 82,
+        "Category": "Возвраты электроники",
+        "Name": "Ржавый Геймпад без кнопок",
+        "Rarity": "Common",
+        "SellPrice": 3
+    },
+    {
+        "ID": 83,
+        "Category": "Возвраты электроники",
+        "Name": "Б/У Геймпад без кнопок",
+        "Rarity": "Common",
+        "SellPrice": 3
+    },
+    {
+        "ID": 84,
+        "Category": "Возвраты электроники",
+        "Name": "Сломанный Геймпад без кнопок",
+        "Rarity": "Common",
+        "SellPrice": 3
+    },
+    {
+        "ID": 85,
+        "Category": "Возвраты электроники",
+        "Name": "Липкий Повербанк на 10mAh",
+        "Rarity": "Common",
+        "SellPrice": 3
+    },
+    {
+        "ID": 86,
+        "Category": "Возвраты электроники",
+        "Name": "Б/У Повербанк на 10mAh",
+        "Rarity": "Common",
+        "SellPrice": 3
+    },
+    {
+        "ID": 87,
+        "Category": "Возвраты электроники",
+        "Name": "Б/У Геймпад без кнопок",
+        "Rarity": "Common",
+        "SellPrice": 3
+    },
+    {
+        "ID": 88,
+        "Category": "Возвраты электроники",
+        "Name": "Ржавый Наушники Sany",
+        "Rarity": "Common",
+        "SellPrice": 3
+    },
+    {
+        "ID": 89,
+        "Category": "Возвраты электроники",
+        "Name": "Абсурдный Наушники Sany",
+        "Rarity": "Uncommon",
+        "SellPrice": 8
+    },
+    {
+        "ID": 90,
+        "Category": "Возвраты электроники",
+        "Name": "Поддельный Наушники Sany",
+        "Rarity": "Uncommon",
+        "SellPrice": 8
+    },
+    {
+        "ID": 91,
+        "Category": "Возвраты электроники",
+        "Name": "Абсурдный Геймпад без кнопок",
+        "Rarity": "Uncommon",
+        "SellPrice": 7
+    },
+    {
+        "ID": 92,
+        "Category": "Возвраты электроники",
+        "Name": "Абсурдный Наушники Sany",
+        "Rarity": "Uncommon",
+        "SellPrice": 8
+    },
+    {
+        "ID": 93,
+        "Category": "Возвраты электроники",
+        "Name": "Поддельный Наушники Sany",
+        "Rarity": "Uncommon",
+        "SellPrice": 8
+    },
+    {
+        "ID": 94,
+        "Category": "Возвраты электроники",
+        "Name": "Исцарапанный Вейп-калькулятор",
+        "Rarity": "Uncommon",
+        "SellPrice": 7
+    },
+    {
+        "ID": 95,
+        "Category": "Возвраты электроники",
+        "Name": "Абсурдный Геймпад без кнопок",
+        "Rarity": "Uncommon",
+        "SellPrice": 8
+    },
+    {
+        "ID": 96,
+        "Category": "Возвраты электроники",
+        "Name": "Поддельный Наушники Sany",
+        "Rarity": "Uncommon",
+        "SellPrice": 7
+    },
+    {
+        "ID": 97,
+        "Category": "Возвраты электроники",
+        "Name": "Абсурдный Повербанк на 10mAh",
+        "Rarity": "Uncommon",
+        "SellPrice": 8
+    },
+    {
+        "ID": 98,
+        "Category": "Возвраты электроники",
+        "Name": "Исцарапанный Повербанк на 10mAh",
+        "Rarity": "Uncommon",
+        "SellPrice": 7
+    },
+    {
+        "ID": 99,
+        "Category": "Возвраты электроники",
+        "Name": "Дешевый Геймпад без кнопок",
+        "Rarity": "Uncommon",
+        "SellPrice": 8
+    },
+    {
+        "ID": 100,
+        "Category": "Возвраты электроники",
+        "Name": "Странный Вейп-калькулятор",
+        "Rarity": "Uncommon",
+        "SellPrice": 7
+    },
+    {
+        "ID": 101,
+        "Category": "Возвраты электроники",
+        "Name": "Блестящий Наушники Sany",
+        "Rarity": "Rare",
+        "SellPrice": 30,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 8.58
+    },
+    {
+        "ID": 102,
+        "Category": "Возвраты электроники",
+        "Name": "Блестящий Наушники Sany",
+        "Rarity": "Rare",
+        "SellPrice": 30,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.008
+    },
+    {
+        "ID": 103,
+        "Category": "Возвраты электроники",
+        "Name": "Блестящий Геймпад без кнопок",
+        "Rarity": "Rare",
+        "SellPrice": 30,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 8.45
+    },
+    {
+        "ID": 104,
+        "Category": "Возвраты электроники",
+        "Name": "Блестящий Геймпад без кнопок",
+        "Rarity": "Rare",
+        "SellPrice": 30,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.009
+    },
+    {
+        "ID": 105,
+        "Category": "Возвраты электроники",
+        "Name": "Винтажный Наушники Sany",
+        "Rarity": "Rare",
+        "SellPrice": 32,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 7.92
+    },
+    {
+        "ID": 106,
+        "Category": "Возвраты электроники",
+        "Name": "Винтажный Наушники Sany",
+        "Rarity": "Rare",
+        "SellPrice": 32,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.009
+    },
+    {
+        "ID": 107,
+        "Category": "Возвраты электроники",
+        "Name": "Хайповый Повербанк на 10mAh",
+        "Rarity": "Rare",
+        "SellPrice": 31,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 8.06
+    },
+    {
+        "ID": 108,
+        "Category": "Возвраты электроники",
+        "Name": "Хайповый Повербанк на 10mAh",
+        "Rarity": "Rare",
+        "SellPrice": 31,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.008
+    },
+    {
+        "ID": 109,
+        "Category": "Возвраты электроники",
+        "Name": "Базированный Повербанк на 10mAh",
+        "Rarity": "Rare",
+        "SellPrice": 33,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 8.4
+    },
+    {
+        "ID": 110,
+        "Category": "Возвраты электроники",
+        "Name": "Базированный Повербанк на 10mAh",
+        "Rarity": "Rare",
+        "SellPrice": 33,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.008
+    },
+    {
+        "ID": 111,
+        "Category": "Возвраты электроники",
+        "Name": "ASMR-ный Повербанк на 10mAh",
+        "Rarity": "Rare",
+        "SellPrice": 28,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 8.35
+    },
+    {
+        "ID": 112,
+        "Category": "Возвраты электроники",
+        "Name": "ASMR-ный Повербанк на 10mAh",
+        "Rarity": "Rare",
+        "SellPrice": 28,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.008
+    },
+    {
+        "ID": 113,
+        "Category": "Возвраты электроники",
+        "Name": "Тактический Геймпад без кнопок",
+        "Rarity": "Epic",
+        "SellPrice": 215,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 40
+    },
+    {
+        "ID": 114,
+        "Category": "Возвраты электроники",
+        "Name": "Тактический Геймпад без кнопок",
+        "Rarity": "Epic",
+        "SellPrice": 215,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.044
+    },
+    {
+        "ID": 115,
+        "Category": "Возвраты электроники",
+        "Name": "Светящийся Геймпад без кнопок",
+        "Rarity": "Epic",
+        "SellPrice": 233,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 43
+    },
+    {
+        "ID": 116,
+        "Category": "Возвраты электроники",
+        "Name": "Светящийся Геймпад без кнопок",
+        "Rarity": "Epic",
+        "SellPrice": 233,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.041
+    },
+    {
+        "ID": 117,
+        "Category": "Возвраты электроники",
+        "Name": "Светящийся Наушники Sany",
+        "Rarity": "Epic",
+        "SellPrice": 207,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 41
+    },
+    {
+        "ID": 118,
+        "Category": "Возвраты электроники",
+        "Name": "Светящийся Наушники Sany",
+        "Rarity": "Epic",
+        "SellPrice": 207,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.04
+    },
+    {
+        "ID": 119,
+        "Category": "Возвраты электроники",
+        "Name": "Святой Наушники Sany",
+        "Rarity": "Legendary",
+        "SellPrice": 725,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 199
+    },
+    {
+        "ID": 120,
+        "Category": "Возвраты электроники",
+        "Name": "Святой Наушники Sany",
+        "Rarity": "Legendary",
+        "SellPrice": 725,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.208
+    },
+    {
+        "ID": 121,
+        "Category": "Возвраты электроники",
+        "Name": "Мертвого Моря Геймпад без кнопок",
+        "Rarity": "Unique",
+        "SellPrice": 7862,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 1262
+    },
+    {
+        "ID": 122,
+        "Category": "Возвраты электроники",
+        "Name": "Мертвого Моря Геймпад без кнопок",
+        "Rarity": "Unique",
+        "SellPrice": 7862,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 1.201
+    },
+    {
+        "ID": 123,
+        "Category": "Забытый багаж",
+        "Name": "Мятый Чемодан с камнями",
+        "Rarity": "Common",
+        "SellPrice": 26
+    },
+    {
+        "ID": 124,
+        "Category": "Забытый багаж",
+        "Name": "Пыльный Чемодан с камнями",
+        "Rarity": "Common",
+        "SellPrice": 26
+    },
+    {
+        "ID": 125,
+        "Category": "Забытый багаж",
+        "Name": "Пыльный Зонт с дырками",
+        "Rarity": "Common",
+        "SellPrice": 22
+    },
+    {
+        "ID": 126,
+        "Category": "Забытый багаж",
+        "Name": "Старый Шампунь 3000 в 1",
+        "Rarity": "Common",
+        "SellPrice": 26
+    },
+    {
+        "ID": 127,
+        "Category": "Забытый багаж",
+        "Name": "Сломанный Шампунь 3000 в 1",
+        "Rarity": "Common",
+        "SellPrice": 23
+    },
+    {
+        "ID": 128,
+        "Category": "Забытый багаж",
+        "Name": "Ржавый Чемодан с камнями",
+        "Rarity": "Common",
+        "SellPrice": 23
+    },
+    {
+        "ID": 129,
+        "Category": "Забытый багаж",
+        "Name": "Липкий Кепка FBI",
+        "Rarity": "Common",
+        "SellPrice": 26
+    },
+    {
+        "ID": 130,
+        "Category": "Забытый багаж",
+        "Name": "Ржавый Кепка FBI",
+        "Rarity": "Common",
+        "SellPrice": 26
+    },
+    {
+        "ID": 131,
+        "Category": "Забытый багаж",
+        "Name": "Пыльный Зонт с дырками",
+        "Rarity": "Common",
+        "SellPrice": 22
+    },
+    {
+        "ID": 132,
+        "Category": "Забытый багаж",
+        "Name": "Китайский Зонт с дырками",
+        "Rarity": "Common",
+        "SellPrice": 25
+    },
+    {
+        "ID": 133,
+        "Category": "Забытый багаж",
+        "Name": "Ржавый Шампунь 3000 в 1",
+        "Rarity": "Common",
+        "SellPrice": 22
+    },
+    {
+        "ID": 134,
+        "Category": "Забытый багаж",
+        "Name": "Мятый Зонт с дырками",
+        "Rarity": "Common",
+        "SellPrice": 26
+    },
+    {
+        "ID": 135,
+        "Category": "Забытый багаж",
+        "Name": "Б/У Кепка FBI",
+        "Rarity": "Common",
+        "SellPrice": 23
+    },
+    {
+        "ID": 136,
+        "Category": "Забытый багаж",
+        "Name": "Б/У Шампунь 3000 в 1",
+        "Rarity": "Common",
+        "SellPrice": 23
+    },
+    {
+        "ID": 137,
+        "Category": "Забытый багаж",
+        "Name": "Ржавый Кепка FBI",
+        "Rarity": "Common",
+        "SellPrice": 22
+    },
+    {
+        "ID": 138,
+        "Category": "Забытый багаж",
+        "Name": "Ржавый Зонт с дырками",
+        "Rarity": "Common",
+        "SellPrice": 23
+    },
+    {
+        "ID": 139,
+        "Category": "Забытый багаж",
+        "Name": "Мятый Шампунь 3000 в 1",
+        "Rarity": "Common",
+        "SellPrice": 23
+    },
+    {
+        "ID": 140,
+        "Category": "Забытый багаж",
+        "Name": "Липкий Шампунь 3000 в 1",
+        "Rarity": "Common",
+        "SellPrice": 26
+    },
+    {
+        "ID": 141,
+        "Category": "Забытый багаж",
+        "Name": "Мятый Шампунь 3000 в 1",
+        "Rarity": "Common",
+        "SellPrice": 22
+    },
+    {
+        "ID": 142,
+        "Category": "Забытый багаж",
+        "Name": "Старый Чемодан с камнями",
+        "Rarity": "Common",
+        "SellPrice": 22
+    },
+    {
+        "ID": 143,
+        "Category": "Забытый багаж",
+        "Name": "Липкий Шампунь 3000 в 1",
+        "Rarity": "Common",
+        "SellPrice": 25
+    },
+    {
+        "ID": 144,
+        "Category": "Забытый багаж",
+        "Name": "Китайский Зонт с дырками",
+        "Rarity": "Common",
+        "SellPrice": 25
+    },
+    {
+        "ID": 145,
+        "Category": "Забытый багаж",
+        "Name": "Мятый Зонт с дырками",
+        "Rarity": "Common",
+        "SellPrice": 26
+    },
+    {
+        "ID": 146,
+        "Category": "Забытый багаж",
+        "Name": "Ржавый Шампунь 3000 в 1",
+        "Rarity": "Common",
+        "SellPrice": 22
+    },
+    {
+        "ID": 147,
+        "Category": "Забытый багаж",
+        "Name": "Липкий Чемодан с камнями",
+        "Rarity": "Common",
+        "SellPrice": 24
+    },
+    {
+        "ID": 148,
+        "Category": "Забытый багаж",
+        "Name": "Ржавый Шампунь 3000 в 1",
+        "Rarity": "Common",
+        "SellPrice": 24
+    },
+    {
+        "ID": 149,
+        "Category": "Забытый багаж",
+        "Name": "Китайский Шампунь 3000 в 1",
+        "Rarity": "Common",
+        "SellPrice": 25
+    },
+    {
+        "ID": 150,
+        "Category": "Забытый багаж",
+        "Name": "Поддельный Шампунь 3000 в 1",
+        "Rarity": "Uncommon",
+        "SellPrice": 60
+    },
+    {
+        "ID": 151,
+        "Category": "Забытый багаж",
+        "Name": "Пахучий Зонт с дырками",
+        "Rarity": "Uncommon",
+        "SellPrice": 58
+    },
+    {
+        "ID": 152,
+        "Category": "Забытый багаж",
+        "Name": "Пахучий Шампунь 3000 в 1",
+        "Rarity": "Uncommon",
+        "SellPrice": 61
+    },
+    {
+        "ID": 153,
+        "Category": "Забытый багаж",
+        "Name": "Исцарапанный Зонт с дырками",
+        "Rarity": "Uncommon",
+        "SellPrice": 62
+    },
+    {
+        "ID": 154,
+        "Category": "Забытый багаж",
+        "Name": "Дешевый Кепка FBI",
+        "Rarity": "Uncommon",
+        "SellPrice": 61
+    },
+    {
+        "ID": 155,
+        "Category": "Забытый багаж",
+        "Name": "Странный Зонт с дырками",
+        "Rarity": "Uncommon",
+        "SellPrice": 61
+    },
+    {
+        "ID": 156,
+        "Category": "Забытый багаж",
+        "Name": "Поддельный Шампунь 3000 в 1",
+        "Rarity": "Uncommon",
+        "SellPrice": 57
+    },
+    {
+        "ID": 157,
+        "Category": "Забытый багаж",
+        "Name": "Дешевый Шампунь 3000 в 1",
+        "Rarity": "Uncommon",
+        "SellPrice": 60
+    },
+    {
+        "ID": 158,
+        "Category": "Забытый багаж",
+        "Name": "Дешевый Кепка FBI",
+        "Rarity": "Uncommon",
+        "SellPrice": 60
+    },
+    {
+        "ID": 159,
+        "Category": "Забытый багаж",
+        "Name": "Мягкий Кепка FBI",
+        "Rarity": "Uncommon",
+        "SellPrice": 62
+    },
+    {
+        "ID": 160,
+        "Category": "Забытый багаж",
+        "Name": "Странный Шампунь 3000 в 1",
+        "Rarity": "Uncommon",
+        "SellPrice": 55
+    },
+    {
+        "ID": 161,
+        "Category": "Забытый багаж",
+        "Name": "Мягкий Кепка FBI",
+        "Rarity": "Uncommon",
+        "SellPrice": 62
+    },
+    {
+        "ID": 162,
+        "Category": "Забытый багаж",
+        "Name": "ASMR-ный Кепка FBI",
+        "Rarity": "Rare",
+        "SellPrice": 223,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 59
+    },
+    {
+        "ID": 163,
+        "Category": "Забытый багаж",
+        "Name": "ASMR-ный Кепка FBI",
+        "Rarity": "Rare",
+        "SellPrice": 223,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.008
+    },
+    {
+        "ID": 164,
+        "Category": "Забытый багаж",
+        "Name": "ASMR-ный Зонт с дырками",
+        "Rarity": "Rare",
+        "SellPrice": 245,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 60
+    },
+    {
+        "ID": 165,
+        "Category": "Забытый багаж",
+        "Name": "ASMR-ный Зонт с дырками",
+        "Rarity": "Rare",
+        "SellPrice": 245,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.008
+    },
+    {
+        "ID": 166,
+        "Category": "Забытый багаж",
+        "Name": "Хайповый Зонт с дырками",
+        "Rarity": "Rare",
+        "SellPrice": 259,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 61
+    },
+    {
+        "ID": 167,
+        "Category": "Забытый багаж",
+        "Name": "Хайповый Зонт с дырками",
+        "Rarity": "Rare",
+        "SellPrice": 259,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.008
+    },
+    {
+        "ID": 168,
+        "Category": "Забытый багаж",
+        "Name": "Базированный Зонт с дырками",
+        "Rarity": "Rare",
+        "SellPrice": 240,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 65
+    },
+    {
+        "ID": 169,
+        "Category": "Забытый багаж",
+        "Name": "Базированный Зонт с дырками",
+        "Rarity": "Rare",
+        "SellPrice": 240,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.008
+    },
+    {
+        "ID": 170,
+        "Category": "Забытый багаж",
+        "Name": "ASMR-ный Чемодан с камнями",
+        "Rarity": "Rare",
+        "SellPrice": 259,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 63
+    },
+    {
+        "ID": 171,
+        "Category": "Забытый багаж",
+        "Name": "ASMR-ный Чемодан с камнями",
+        "Rarity": "Rare",
+        "SellPrice": 259,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.008
+    },
+    {
+        "ID": 172,
+        "Category": "Забытый багаж",
+        "Name": "Хайповый Кепка FBI",
+        "Rarity": "Rare",
+        "SellPrice": 224,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 65
+    },
+    {
+        "ID": 173,
+        "Category": "Забытый багаж",
+        "Name": "Хайповый Кепка FBI",
+        "Rarity": "Rare",
+        "SellPrice": 224,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.008
+    },
+    {
+        "ID": 174,
+        "Category": "Забытый багаж",
+        "Name": "Золотой Чемодан с камнями",
+        "Rarity": "Epic",
+        "SellPrice": 1784,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 307
+    },
+    {
+        "ID": 175,
+        "Category": "Забытый багаж",
+        "Name": "Золотой Чемодан с камнями",
+        "Rarity": "Epic",
+        "SellPrice": 1784,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.039
+    },
+    {
+        "ID": 176,
+        "Category": "Забытый багаж",
+        "Name": "Тактический Шампунь 3000 в 1",
+        "Rarity": "Epic",
+        "SellPrice": 1962,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 314
+    },
+    {
+        "ID": 177,
+        "Category": "Забытый багаж",
+        "Name": "Тактический Шампунь 3000 в 1",
+        "Rarity": "Epic",
+        "SellPrice": 1962,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.039
+    },
+    {
+        "ID": 178,
+        "Category": "Забытый багаж",
+        "Name": "Тактический Зонт с дырками",
+        "Rarity": "Epic",
+        "SellPrice": 1919,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 304
+    },
+    {
+        "ID": 179,
+        "Category": "Забытый багаж",
+        "Name": "Тактический Зонт с дырками",
+        "Rarity": "Epic",
+        "SellPrice": 1919,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.041
+    },
+    {
+        "ID": 180,
+        "Category": "Забытый багаж",
+        "Name": "Радиоактивный Зонт с дырками",
+        "Rarity": "Legendary",
+        "SellPrice": 5711,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 1606
+    },
+    {
+        "ID": 181,
+        "Category": "Забытый багаж",
+        "Name": "Радиоактивный Зонт с дырками",
+        "Rarity": "Legendary",
+        "SellPrice": 5711,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.195
+    },
+    {
+        "ID": 182,
+        "Category": "Забытый багаж",
+        "Name": "Мертвого Моря Зонт с дырками",
+        "Rarity": "Unique",
+        "SellPrice": 61521,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 9664
+    },
+    {
+        "ID": 183,
+        "Category": "Забытый багаж",
+        "Name": "Мертвого Моря Зонт с дырками",
+        "Rarity": "Unique",
+        "SellPrice": 61521,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 1.239
+    },
+    {
+        "ID": 184,
+        "Category": "Складские остатки",
+        "Name": "Старый Одеяло с рукавами",
+        "Rarity": "Common",
+        "SellPrice": 286
+    },
+    {
+        "ID": 185,
+        "Category": "Складские остатки",
+        "Name": "Китайский Пицца-резак",
+        "Rarity": "Common",
+        "SellPrice": 278
+    },
+    {
+        "ID": 186,
+        "Category": "Складские остатки",
+        "Name": "Ржавый Коврик для мыши",
+        "Rarity": "Common",
+        "SellPrice": 312
+    },
+    {
+        "ID": 187,
+        "Category": "Складские остатки",
+        "Name": "Ржавый Пицца-резак",
+        "Rarity": "Common",
+        "SellPrice": 295
+    },
+    {
+        "ID": 188,
+        "Category": "Складские остатки",
+        "Name": "Китайский Коврик для мыши",
+        "Rarity": "Common",
+        "SellPrice": 295
+    },
+    {
+        "ID": 189,
+        "Category": "Складские остатки",
+        "Name": "Ржавый Коврик для мыши",
+        "Rarity": "Common",
+        "SellPrice": 293
+    },
+    {
+        "ID": 190,
+        "Category": "Складские остатки",
+        "Name": "Сломанный Коврик для мыши",
+        "Rarity": "Common",
+        "SellPrice": 299
+    },
+    {
+        "ID": 191,
+        "Category": "Складские остатки",
+        "Name": "Китайский Лечебные носки",
+        "Rarity": "Common",
+        "SellPrice": 315
+    },
+    {
+        "ID": 192,
+        "Category": "Складские остатки",
+        "Name": "Липкий Одеяло с рукавами",
+        "Rarity": "Common",
+        "SellPrice": 299
+    },
+    {
+        "ID": 193,
+        "Category": "Складские остатки",
+        "Name": "Старый Коврик для мыши",
+        "Rarity": "Common",
+        "SellPrice": 299
+    },
+    {
+        "ID": 194,
+        "Category": "Складские остатки",
+        "Name": "Липкий Лечебные носки",
+        "Rarity": "Common",
+        "SellPrice": 310
+    },
+    {
+        "ID": 195,
+        "Category": "Складские остатки",
+        "Name": "Липкий Одеяло с рукавами",
+        "Rarity": "Common",
+        "SellPrice": 320
+    },
+    {
+        "ID": 196,
+        "Category": "Складские остатки",
+        "Name": "Пыльный Пицца-резак",
+        "Rarity": "Common",
+        "SellPrice": 324
+    },
+    {
+        "ID": 197,
+        "Category": "Складские остатки",
+        "Name": "Сломанный Пицца-резак",
+        "Rarity": "Common",
+        "SellPrice": 309
+    },
+    {
+        "ID": 198,
+        "Category": "Складские остатки",
+        "Name": "Пыльный Коврик для мыши",
+        "Rarity": "Common",
+        "SellPrice": 281
+    },
+    {
+        "ID": 199,
+        "Category": "Складские остатки",
+        "Name": "Старый Коврик для мыши",
+        "Rarity": "Common",
+        "SellPrice": 290
+    },
+    {
+        "ID": 200,
+        "Category": "Складские остатки",
+        "Name": "Б/У Лечебные носки",
+        "Rarity": "Common",
+        "SellPrice": 290
+    },
+    {
+        "ID": 201,
+        "Category": "Складские остатки",
+        "Name": "Липкий Лечебные носки",
+        "Rarity": "Common",
+        "SellPrice": 315
+    },
+    {
+        "ID": 202,
+        "Category": "Складские остатки",
+        "Name": "Липкий Лечебные носки",
+        "Rarity": "Common",
+        "SellPrice": 320
+    },
+    {
+        "ID": 203,
+        "Category": "Складские остатки",
+        "Name": "Б/У Пицца-резак",
+        "Rarity": "Common",
+        "SellPrice": 315
+    },
+    {
+        "ID": 204,
+        "Category": "Складские остатки",
+        "Name": "Сломанный Лечебные носки",
+        "Rarity": "Common",
+        "SellPrice": 283
+    },
+    {
+        "ID": 205,
+        "Category": "Складские остатки",
+        "Name": "Мятый Пицца-резак",
+        "Rarity": "Common",
+        "SellPrice": 315
+    },
+    {
+        "ID": 206,
+        "Category": "Складские остатки",
+        "Name": "Ржавый Одеяло с рукавами",
+        "Rarity": "Common",
+        "SellPrice": 320
+    },
+    {
+        "ID": 207,
+        "Category": "Складские остатки",
+        "Name": "Пыльный Одеяло с рукавами",
+        "Rarity": "Common",
+        "SellPrice": 278
+    },
+    {
+        "ID": 208,
+        "Category": "Складские остатки",
+        "Name": "Мятый Одеяло с рукавами",
+        "Rarity": "Common",
+        "SellPrice": 298
+    },
+    {
+        "ID": 209,
+        "Category": "Складские остатки",
+        "Name": "Старый Лечебные носки",
+        "Rarity": "Common",
+        "SellPrice": 280
+    },
+    {
+        "ID": 210,
+        "Category": "Складские остатки",
+        "Name": "Мятый Одеяло с рукавами",
+        "Rarity": "Common",
+        "SellPrice": 328
+    },
+    {
+        "ID": 211,
+        "Category": "Складские остатки",
+        "Name": "Поддельный Пицца-резак",
+        "Rarity": "Uncommon",
+        "SellPrice": 814
+    },
+    {
+        "ID": 212,
+        "Category": "Складские остатки",
+        "Name": "Абсурдный Коврик для мыши",
+        "Rarity": "Uncommon",
+        "SellPrice": 734
+    },
+    {
+        "ID": 213,
+        "Category": "Складские остатки",
+        "Name": "Пахучий Одеяло с рукавами",
+        "Rarity": "Uncommon",
+        "SellPrice": 686
+    },
+    {
+        "ID": 214,
+        "Category": "Складские остатки",
+        "Name": "Пахучий Одеяло с рукавами",
+        "Rarity": "Uncommon",
+        "SellPrice": 690
+    },
+    {
+        "ID": 215,
+        "Category": "Складские остатки",
+        "Name": "Мягкий Лечебные носки",
+        "Rarity": "Uncommon",
+        "SellPrice": 803
+    },
+    {
+        "ID": 216,
+        "Category": "Складские остатки",
+        "Name": "Абсурдный Пицца-резак",
+        "Rarity": "Uncommon",
+        "SellPrice": 794
+    },
+    {
+        "ID": 217,
+        "Category": "Складские остатки",
+        "Name": "Абсурдный Пицца-резак",
+        "Rarity": "Uncommon",
+        "SellPrice": 727
+    },
+    {
+        "ID": 218,
+        "Category": "Складские остатки",
+        "Name": "Дешевый Лечебные носки",
+        "Rarity": "Uncommon",
+        "SellPrice": 685
+    },
+    {
+        "ID": 219,
+        "Category": "Складские остатки",
+        "Name": "Пахучий Лечебные носки",
+        "Rarity": "Uncommon",
+        "SellPrice": 677
+    },
+    {
+        "ID": 220,
+        "Category": "Складские остатки",
+        "Name": "Дешевый Коврик для мыши",
+        "Rarity": "Uncommon",
+        "SellPrice": 691
+    },
+    {
+        "ID": 221,
+        "Category": "Складские остатки",
+        "Name": "Странный Коврик для мыши",
+        "Rarity": "Uncommon",
+        "SellPrice": 781
+    },
+    {
+        "ID": 222,
+        "Category": "Складские остатки",
+        "Name": "Дешевый Одеяло с рукавами",
+        "Rarity": "Uncommon",
+        "SellPrice": 785
+    },
+    {
+        "ID": 223,
+        "Category": "Складские остатки",
+        "Name": "Базированный Лечебные носки",
+        "Rarity": "Rare",
+        "SellPrice": 3070,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 765
+    },
+    {
+        "ID": 224,
+        "Category": "Складские остатки",
+        "Name": "Базированный Лечебные носки",
+        "Rarity": "Rare",
+        "SellPrice": 3070,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.01
+    },
+    {
+        "ID": 225,
+        "Category": "Складские остатки",
+        "Name": "Базированный Лечебные носки",
+        "Rarity": "Rare",
+        "SellPrice": 2893,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 795
+    },
+    {
+        "ID": 226,
+        "Category": "Складские остатки",
+        "Name": "Базированный Лечебные носки",
+        "Rarity": "Rare",
+        "SellPrice": 2893,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.009
+    },
+    {
+        "ID": 227,
+        "Category": "Складские остатки",
+        "Name": "Блестящий Лечебные носки",
+        "Rarity": "Rare",
+        "SellPrice": 3229,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 760
+    },
+    {
+        "ID": 228,
+        "Category": "Складские остатки",
+        "Name": "Блестящий Лечебные носки",
+        "Rarity": "Rare",
+        "SellPrice": 3229,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.009
+    },
+    {
+        "ID": 229,
+        "Category": "Складские остатки",
+        "Name": "Хайповый Коврик для мыши",
+        "Rarity": "Rare",
+        "SellPrice": 2902,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 798
+    },
+    {
+        "ID": 230,
+        "Category": "Складские остатки",
+        "Name": "Хайповый Коврик для мыши",
+        "Rarity": "Rare",
+        "SellPrice": 2902,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.01
+    },
+    {
+        "ID": 231,
+        "Category": "Складские остатки",
+        "Name": "ASMR-ный Коврик для мыши",
+        "Rarity": "Rare",
+        "SellPrice": 2827,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 815
+    },
+    {
+        "ID": 232,
+        "Category": "Складские остатки",
+        "Name": "ASMR-ный Коврик для мыши",
+        "Rarity": "Rare",
+        "SellPrice": 2827,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.009
+    },
+    {
+        "ID": 233,
+        "Category": "Складские остатки",
+        "Name": "Непонятный Лечебные носки",
+        "Rarity": "Rare",
+        "SellPrice": 3033,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 793
+    },
+    {
+        "ID": 234,
+        "Category": "Складские остатки",
+        "Name": "Непонятный Лечебные носки",
+        "Rarity": "Rare",
+        "SellPrice": 3033,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.01
+    },
+    {
+        "ID": 235,
+        "Category": "Складские остатки",
+        "Name": "Дизайнерский Одеяло с рукавами",
+        "Rarity": "Epic",
+        "SellPrice": 23490,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 4173
+    },
+    {
+        "ID": 236,
+        "Category": "Складские остатки",
+        "Name": "Дизайнерский Одеяло с рукавами",
+        "Rarity": "Epic",
+        "SellPrice": 23490,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.049
+    },
+    {
+        "ID": 237,
+        "Category": "Складские остатки",
+        "Name": "Золотой Коврик для мыши",
+        "Rarity": "Epic",
+        "SellPrice": 23157,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 3856
+    },
+    {
+        "ID": 238,
+        "Category": "Складские остатки",
+        "Name": "Золотой Коврик для мыши",
+        "Rarity": "Epic",
+        "SellPrice": 23157,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.048
+    },
+    {
+        "ID": 239,
+        "Category": "Складские остатки",
+        "Name": "Дизайнерский Пицца-резак",
+        "Rarity": "Epic",
+        "SellPrice": 21574,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 4043
+    },
+    {
+        "ID": 240,
+        "Category": "Складские остатки",
+        "Name": "Дизайнерский Пицца-резак",
+        "Rarity": "Epic",
+        "SellPrice": 21574,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.051
+    },
+    {
+        "ID": 241,
+        "Category": "Складские остатки",
+        "Name": "Масонский Лечебные носки",
+        "Rarity": "Legendary",
+        "SellPrice": 74599,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 19035
+    },
+    {
+        "ID": 242,
+        "Category": "Складские остатки",
+        "Name": "Масонский Лечебные носки",
+        "Rarity": "Legendary",
+        "SellPrice": 74599,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.256
+    },
+    {
+        "ID": 243,
+        "Category": "Складские остатки",
+        "Name": "Иллюминатский Лечебные носки",
+        "Rarity": "Unique",
+        "SellPrice": 727772,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 125400
+    },
+    {
+        "ID": 244,
+        "Category": "Складские остатки",
+        "Name": "Иллюминатский Лечебные носки",
+        "Rarity": "Unique",
+        "SellPrice": 727772,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 1.409
+    },
+    {
+        "ID": 245,
+        "Category": "Таможенный конфискат",
+        "Name": "Старый Ролекс со стрелками назад",
+        "Rarity": "Common",
+        "SellPrice": 3327
+    },
+    {
+        "ID": 246,
+        "Category": "Таможенный конфискат",
+        "Name": "Ржавый Сейф без кода",
+        "Rarity": "Common",
+        "SellPrice": 3326
+    },
+    {
+        "ID": 247,
+        "Category": "Таможенный конфискат",
+        "Name": "Пыльный Ролекс со стрелками назад",
+        "Rarity": "Common",
+        "SellPrice": 3396
+    },
+    {
+        "ID": 248,
+        "Category": "Таможенный конфискат",
+        "Name": "Б/У Сейф без кода",
+        "Rarity": "Common",
+        "SellPrice": 3762
+    },
+    {
+        "ID": 249,
+        "Category": "Таможенный конфискат",
+        "Name": "Старый Сырой кроссовок",
+        "Rarity": "Common",
+        "SellPrice": 3839
+    },
+    {
+        "ID": 250,
+        "Category": "Таможенный конфискат",
+        "Name": "Старый Ролекс со стрелками назад",
+        "Rarity": "Common",
+        "SellPrice": 3500
+    },
+    {
+        "ID": 251,
+        "Category": "Таможенный конфискат",
+        "Name": "Старый Сырой кроссовок",
+        "Rarity": "Common",
+        "SellPrice": 3750
+    },
+    {
+        "ID": 252,
+        "Category": "Таможенный конфискат",
+        "Name": "Пыльный Сейф без кода",
+        "Rarity": "Common",
+        "SellPrice": 3273
+    },
+    {
+        "ID": 253,
+        "Category": "Таможенный конфискат",
+        "Name": "Сломанный Сейф без кода",
+        "Rarity": "Common",
+        "SellPrice": 3742
+    },
+    {
+        "ID": 254,
+        "Category": "Таможенный конфискат",
+        "Name": "Пыльный Шоколадка с чесноком",
+        "Rarity": "Common",
+        "SellPrice": 3314
+    },
+    {
+        "ID": 255,
+        "Category": "Таможенный конфискат",
+        "Name": "Сломанный Сейф без кода",
+        "Rarity": "Common",
+        "SellPrice": 3578
+    },
+    {
+        "ID": 256,
+        "Category": "Таможенный конфискат",
+        "Name": "Б/У Сейф без кода",
+        "Rarity": "Common",
+        "SellPrice": 3373
+    },
+    {
+        "ID": 257,
+        "Category": "Таможенный конфискат",
+        "Name": "Сломанный Сейф без кода",
+        "Rarity": "Common",
+        "SellPrice": 3918
+    },
+    {
+        "ID": 258,
+        "Category": "Таможенный конфискат",
+        "Name": "Б/У Сырой кроссовок",
+        "Rarity": "Common",
+        "SellPrice": 3832
+    },
+    {
+        "ID": 259,
+        "Category": "Таможенный конфискат",
+        "Name": "Липкий Шоколадка с чесноком",
+        "Rarity": "Common",
+        "SellPrice": 3293
+    },
+    {
+        "ID": 260,
+        "Category": "Таможенный конфискат",
+        "Name": "Сломанный Ролекс со стрелками назад",
+        "Rarity": "Common",
+        "SellPrice": 3347
+    },
+    {
+        "ID": 261,
+        "Category": "Таможенный конфискат",
+        "Name": "Старый Сырой кроссовок",
+        "Rarity": "Common",
+        "SellPrice": 3956
+    },
+    {
+        "ID": 262,
+        "Category": "Таможенный конфискат",
+        "Name": "Мятый Шоколадка с чесноком",
+        "Rarity": "Common",
+        "SellPrice": 3677
+    },
+    {
+        "ID": 263,
+        "Category": "Таможенный конфискат",
+        "Name": "Ржавый Шоколадка с чесноком",
+        "Rarity": "Common",
+        "SellPrice": 3564
+    },
+    {
+        "ID": 264,
+        "Category": "Таможенный конфискат",
+        "Name": "Б/У Сейф без кода",
+        "Rarity": "Common",
+        "SellPrice": 3859
+    },
+    {
+        "ID": 265,
+        "Category": "Таможенный конфискат",
+        "Name": "Липкий Сейф без кода",
+        "Rarity": "Common",
+        "SellPrice": 3649
+    },
+    {
+        "ID": 266,
+        "Category": "Таможенный конфискат",
+        "Name": "Сломанный Сырой кроссовок",
+        "Rarity": "Common",
+        "SellPrice": 3922
+    },
+    {
+        "ID": 267,
+        "Category": "Таможенный конфискат",
+        "Name": "Ржавый Ролекс со стрелками назад",
+        "Rarity": "Common",
+        "SellPrice": 3431
+    },
+    {
+        "ID": 268,
+        "Category": "Таможенный конфискат",
+        "Name": "Мятый Ролекс со стрелками назад",
+        "Rarity": "Common",
+        "SellPrice": 3413
+    },
+    {
+        "ID": 269,
+        "Category": "Таможенный конфискат",
+        "Name": "Мятый Ролекс со стрелками назад",
+        "Rarity": "Common",
+        "SellPrice": 3242
+    },
+    {
+        "ID": 270,
+        "Category": "Таможенный конфискат",
+        "Name": "Б/У Шоколадка с чесноком",
+        "Rarity": "Common",
+        "SellPrice": 3450
+    },
+    {
+        "ID": 271,
+        "Category": "Таможенный конфискат",
+        "Name": "Ржавый Сейф без кода",
+        "Rarity": "Common",
+        "SellPrice": 3749
+    },
+    {
+        "ID": 272,
+        "Category": "Таможенный конфискат",
+        "Name": "Пахучий Шоколадка с чесноком",
+        "Rarity": "Uncommon",
+        "SellPrice": 8228
+    },
+    {
+        "ID": 273,
+        "Category": "Таможенный конфискат",
+        "Name": "Исцарапанный Сейф без кода",
+        "Rarity": "Uncommon",
+        "SellPrice": 9518
+    },
+    {
+        "ID": 274,
+        "Category": "Таможенный конфискат",
+        "Name": "Пахучий Ролекс со стрелками назад",
+        "Rarity": "Uncommon",
+        "SellPrice": 8865
+    },
+    {
+        "ID": 275,
+        "Category": "Таможенный конфискат",
+        "Name": "Абсурдный Ролекс со стрелками назад",
+        "Rarity": "Uncommon",
+        "SellPrice": 9266
+    },
+    {
+        "ID": 276,
+        "Category": "Таможенный конфискат",
+        "Name": "Странный Ролекс со стрелками назад",
+        "Rarity": "Uncommon",
+        "SellPrice": 8229
+    },
+    {
+        "ID": 277,
+        "Category": "Таможенный конфискат",
+        "Name": "Исцарапанный Сейф без кода",
+        "Rarity": "Uncommon",
+        "SellPrice": 9171
+    },
+    {
+        "ID": 278,
+        "Category": "Таможенный конфискат",
+        "Name": "Мягкий Сейф без кода",
+        "Rarity": "Uncommon",
+        "SellPrice": 8890
+    },
+    {
+        "ID": 279,
+        "Category": "Таможенный конфискат",
+        "Name": "Дешевый Сейф без кода",
+        "Rarity": "Uncommon",
+        "SellPrice": 9360
+    },
+    {
+        "ID": 280,
+        "Category": "Таможенный конфискат",
+        "Name": "Странный Шоколадка с чесноком",
+        "Rarity": "Uncommon",
+        "SellPrice": 8888
+    },
+    {
+        "ID": 281,
+        "Category": "Таможенный конфискат",
+        "Name": "Абсурдный Сырой кроссовок",
+        "Rarity": "Uncommon",
+        "SellPrice": 9701
+    },
+    {
+        "ID": 282,
+        "Category": "Таможенный конфискат",
+        "Name": "Пахучий Сейф без кода",
+        "Rarity": "Uncommon",
+        "SellPrice": 9187
+    },
+    {
+        "ID": 283,
+        "Category": "Таможенный конфискат",
+        "Name": "Поддельный Сырой кроссовок",
+        "Rarity": "Uncommon",
+        "SellPrice": 8512
+    },
+    {
+        "ID": 284,
+        "Category": "Таможенный конфискат",
+        "Name": "Базированный Сырой кроссовок",
+        "Rarity": "Rare",
+        "SellPrice": 39597,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 0.96
+    },
+    {
+        "ID": 285,
+        "Category": "Таможенный конфискат",
+        "Name": "Базированный Сырой кроссовок",
+        "Rarity": "Rare",
+        "SellPrice": 39597,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.011
+    },
+    {
+        "ID": 286,
+        "Category": "Таможенный конфискат",
+        "Name": "ASMR-ный Шоколадка с чесноком",
+        "Rarity": "Rare",
+        "SellPrice": 36137,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 0.91
+    },
+    {
+        "ID": 287,
+        "Category": "Таможенный конфискат",
+        "Name": "ASMR-ный Шоколадка с чесноком",
+        "Rarity": "Rare",
+        "SellPrice": 36137,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.01
+    },
+    {
+        "ID": 288,
+        "Category": "Таможенный конфискат",
+        "Name": "ASMR-ный Шоколадка с чесноком",
+        "Rarity": "Rare",
+        "SellPrice": 36970,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 0.94
+    },
+    {
+        "ID": 289,
+        "Category": "Таможенный конфискат",
+        "Name": "ASMR-ный Шоколадка с чесноком",
+        "Rarity": "Rare",
+        "SellPrice": 36970,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.011
+    },
+    {
+        "ID": 290,
+        "Category": "Таможенный конфискат",
+        "Name": "Хайповый Сейф без кода",
+        "Rarity": "Rare",
+        "SellPrice": 35340,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 0.91
+    },
+    {
+        "ID": 291,
+        "Category": "Таможенный конфискат",
+        "Name": "Хайповый Сейф без кода",
+        "Rarity": "Rare",
+        "SellPrice": 35340,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.011
+    },
+    {
+        "ID": 292,
+        "Category": "Таможенный конфискат",
+        "Name": "ASMR-ный Сейф без кода",
+        "Rarity": "Rare",
+        "SellPrice": 35364,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 0.95
+    },
+    {
+        "ID": 293,
+        "Category": "Таможенный конфискат",
+        "Name": "ASMR-ный Сейф без кода",
+        "Rarity": "Rare",
+        "SellPrice": 35364,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.011
+    },
+    {
+        "ID": 294,
+        "Category": "Таможенный конфискат",
+        "Name": "Хайповый Сырой кроссовок",
+        "Rarity": "Rare",
+        "SellPrice": 35675,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 0.94
+    },
+    {
+        "ID": 295,
+        "Category": "Таможенный конфискат",
+        "Name": "Хайповый Сырой кроссовок",
+        "Rarity": "Rare",
+        "SellPrice": 35675,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.011
+    },
+    {
+        "ID": 296,
+        "Category": "Таможенный конфискат",
+        "Name": "Дизайнерский Шоколадка с чесноком",
+        "Rarity": "Epic",
+        "SellPrice": 289705,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 4.56
+    },
+    {
+        "ID": 297,
+        "Category": "Таможенный конфискат",
+        "Name": "Дизайнерский Шоколадка с чесноком",
+        "Rarity": "Epic",
+        "SellPrice": 289705,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.052
+    },
+    {
+        "ID": 298,
+        "Category": "Таможенный конфискат",
+        "Name": "Тактический Шоколадка с чесноком",
+        "Rarity": "Epic",
+        "SellPrice": 265315,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 4.66
+    },
+    {
+        "ID": 299,
+        "Category": "Таможенный конфискат",
+        "Name": "Тактический Шоколадка с чесноком",
+        "Rarity": "Epic",
+        "SellPrice": 265315,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.054
+    },
+    {
+        "ID": 300,
+        "Category": "Таможенный конфискат",
+        "Name": "Тактический Сейф без кода",
+        "Rarity": "Epic",
+        "SellPrice": 276622,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 4.95
+    },
+    {
+        "ID": 301,
+        "Category": "Таможенный конфискат",
+        "Name": "Тактический Сейф без кода",
+        "Rarity": "Epic",
+        "SellPrice": 276622,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.054
+    },
+    {
+        "ID": 302,
+        "Category": "Таможенный конфискат",
+        "Name": "Святой Ролекс со стрелками назад",
+        "Rarity": "Legendary",
+        "SellPrice": 858070,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 23
+    },
+    {
+        "ID": 303,
+        "Category": "Таможенный конфискат",
+        "Name": "Святой Ролекс со стрелками назад",
+        "Rarity": "Legendary",
+        "SellPrice": 858070,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.261
+    },
+    {
+        "ID": 304,
+        "Category": "Таможенный конфискат",
+        "Name": "Мертвого Моря Шоколадка с чесноком",
+        "Rarity": "Unique",
+        "SellPrice": 9685524,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 147
+    },
+    {
+        "ID": 305,
+        "Category": "Таможенный конфискат",
+        "Name": "Мертвого Моря Шоколадка с чесноком",
+        "Rarity": "Unique",
+        "SellPrice": 9685524,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 1.566
+    },
+    {
+        "ID": 306,
+        "Category": "Антиквариат",
+        "Name": "Ржавый Корона Burger King",
+        "Rarity": "Common",
+        "SellPrice": 48108
+    },
+    {
+        "ID": 307,
+        "Category": "Антиквариат",
+        "Name": "Сломанный Граммофон USB",
+        "Rarity": "Common",
+        "SellPrice": 45932
+    },
+    {
+        "ID": 308,
+        "Category": "Антиквариат",
+        "Name": "Мятый Граммофон USB",
+        "Rarity": "Common",
+        "SellPrice": 54471
+    },
+    {
+        "ID": 309,
+        "Category": "Антиквариат",
+        "Name": "Пыльный Граммофон USB",
+        "Rarity": "Common",
+        "SellPrice": 54327
+    },
+    {
+        "ID": 310,
+        "Category": "Антиквариат",
+        "Name": "Старый Ковер самолет",
+        "Rarity": "Common",
+        "SellPrice": 49155
+    },
+    {
+        "ID": 311,
+        "Category": "Антиквариат",
+        "Name": "Б/У Граммофон USB",
+        "Rarity": "Common",
+        "SellPrice": 47437
+    },
+    {
+        "ID": 312,
+        "Category": "Антиквариат",
+        "Name": "Пыльный Граммофон USB",
+        "Rarity": "Common",
+        "SellPrice": 46906
+    },
+    {
+        "ID": 313,
+        "Category": "Антиквариат",
+        "Name": "Пыльный Череп динозавра",
+        "Rarity": "Common",
+        "SellPrice": 47762
+    },
+    {
+        "ID": 314,
+        "Category": "Антиквариат",
+        "Name": "Липкий Ковер самолет",
+        "Rarity": "Common",
+        "SellPrice": 54342
+    },
+    {
+        "ID": 315,
+        "Category": "Антиквариат",
+        "Name": "Старый Череп динозавра",
+        "Rarity": "Common",
+        "SellPrice": 47828
+    },
+    {
+        "ID": 316,
+        "Category": "Антиквариат",
+        "Name": "Старый Граммофон USB",
+        "Rarity": "Common",
+        "SellPrice": 53653
+    },
+    {
+        "ID": 317,
+        "Category": "Антиквариат",
+        "Name": "Б/У Граммофон USB",
+        "Rarity": "Common",
+        "SellPrice": 48451
+    },
+    {
+        "ID": 318,
+        "Category": "Антиквариат",
+        "Name": "Липкий Граммофон USB",
+        "Rarity": "Common",
+        "SellPrice": 54329
+    },
+    {
+        "ID": 319,
+        "Category": "Антиквариат",
+        "Name": "Ржавый Корона Burger King",
+        "Rarity": "Common",
+        "SellPrice": 50718
+    },
+    {
+        "ID": 320,
+        "Category": "Антиквариат",
+        "Name": "Ржавый Граммофон USB",
+        "Rarity": "Common",
+        "SellPrice": 45436
+    },
+    {
+        "ID": 321,
+        "Category": "Антиквариат",
+        "Name": "Б/У Граммофон USB",
+        "Rarity": "Common",
+        "SellPrice": 48861
+    },
+    {
+        "ID": 322,
+        "Category": "Антиквариат",
+        "Name": "Пыльный Граммофон USB",
+        "Rarity": "Common",
+        "SellPrice": 54648
+    },
+    {
+        "ID": 323,
+        "Category": "Антиквариат",
+        "Name": "Пыльный Ковер самолет",
+        "Rarity": "Common",
+        "SellPrice": 53697
+    },
+    {
+        "ID": 324,
+        "Category": "Антиквариат",
+        "Name": "Б/У Череп динозавра",
+        "Rarity": "Common",
+        "SellPrice": 50260
+    },
+    {
+        "ID": 325,
+        "Category": "Антиквариат",
+        "Name": "Б/У Череп динозавра",
+        "Rarity": "Common",
+        "SellPrice": 52224
+    },
+    {
+        "ID": 326,
+        "Category": "Антиквариат",
+        "Name": "Липкий Корона Burger King",
+        "Rarity": "Common",
+        "SellPrice": 45748
+    },
+    {
+        "ID": 327,
+        "Category": "Антиквариат",
+        "Name": "Старый Ковер самолет",
+        "Rarity": "Common",
+        "SellPrice": 51233
+    },
+    {
+        "ID": 328,
+        "Category": "Антиквариат",
+        "Name": "Липкий Череп динозавра",
+        "Rarity": "Common",
+        "SellPrice": 53518
+    },
+    {
+        "ID": 329,
+        "Category": "Антиквариат",
+        "Name": "Липкий Ковер самолет",
+        "Rarity": "Common",
+        "SellPrice": 51268
+    },
+    {
+        "ID": 330,
+        "Category": "Антиквариат",
+        "Name": "Б/У Череп динозавра",
+        "Rarity": "Common",
+        "SellPrice": 51175
+    },
+    {
+        "ID": 331,
+        "Category": "Антиквариат",
+        "Name": "Ржавый Ковер самолет",
+        "Rarity": "Common",
+        "SellPrice": 54974
+    },
+    {
+        "ID": 332,
+        "Category": "Антиквариат",
+        "Name": "Мятый Граммофон USB",
+        "Rarity": "Common",
+        "SellPrice": 54783
+    },
+    {
+        "ID": 333,
+        "Category": "Антиквариат",
+        "Name": "Мягкий Череп динозавра",
+        "Rarity": "Uncommon",
+        "SellPrice": 123592
+    },
+    {
+        "ID": 334,
+        "Category": "Антиквариат",
+        "Name": "Пахучий Ковер самолет",
+        "Rarity": "Uncommon",
+        "SellPrice": 135086
+    },
+    {
+        "ID": 335,
+        "Category": "Антиквариат",
+        "Name": "Поддельный Ковер самолет",
+        "Rarity": "Uncommon",
+        "SellPrice": 132404
+    },
+    {
+        "ID": 336,
+        "Category": "Антиквариат",
+        "Name": "Странный Ковер самолет",
+        "Rarity": "Uncommon",
+        "SellPrice": 121871
+    },
+    {
+        "ID": 337,
+        "Category": "Антиквариат",
+        "Name": "Исцарапанный Корона Burger King",
+        "Rarity": "Uncommon",
+        "SellPrice": 125779
+    },
+    {
+        "ID": 338,
+        "Category": "Антиквариат",
+        "Name": "Абсурдный Корона Burger King",
+        "Rarity": "Uncommon",
+        "SellPrice": 116750
+    },
+    {
+        "ID": 339,
+        "Category": "Антиквариат",
+        "Name": "Поддельный Граммофон USB",
+        "Rarity": "Uncommon",
+        "SellPrice": 127993
+    },
+    {
+        "ID": 340,
+        "Category": "Антиквариат",
+        "Name": "Исцарапанный Граммофон USB",
+        "Rarity": "Uncommon",
+        "SellPrice": 135321
+    },
+    {
+        "ID": 341,
+        "Category": "Антиквариат",
+        "Name": "Исцарапанный Корона Burger King",
+        "Rarity": "Uncommon",
+        "SellPrice": 124029
+    },
+    {
+        "ID": 342,
+        "Category": "Антиквариат",
+        "Name": "Странный Граммофон USB",
+        "Rarity": "Uncommon",
+        "SellPrice": 118883
+    },
+    {
+        "ID": 343,
+        "Category": "Антиквариат",
+        "Name": "Поддельный Граммофон USB",
+        "Rarity": "Uncommon",
+        "SellPrice": 135030
+    },
+    {
+        "ID": 344,
+        "Category": "Антиквариат",
+        "Name": "Пахучий Корона Burger King",
+        "Rarity": "Uncommon",
+        "SellPrice": 114347
+    },
+    {
+        "ID": 345,
+        "Category": "Антиквариат",
+        "Name": "Винтажный Ковер самолет",
+        "Rarity": "Rare",
+        "SellPrice": 513894,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 1.03
+    },
+    {
+        "ID": 346,
+        "Category": "Антиквариат",
+        "Name": "Винтажный Ковер самолет",
+        "Rarity": "Rare",
+        "SellPrice": 513894,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.009
+    },
+    {
+        "ID": 347,
+        "Category": "Антиквариат",
+        "Name": "Хайповый Ковер самолет",
+        "Rarity": "Rare",
+        "SellPrice": 469922,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 1.0
+    },
+    {
+        "ID": 348,
+        "Category": "Антиквариат",
+        "Name": "Хайповый Ковер самолет",
+        "Rarity": "Rare",
+        "SellPrice": 469922,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.01
+    },
+    {
+        "ID": 349,
+        "Category": "Антиквариат",
+        "Name": "Блестящий Корона Burger King",
+        "Rarity": "Rare",
+        "SellPrice": 488136,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 1.01
+    },
+    {
+        "ID": 350,
+        "Category": "Антиквариат",
+        "Name": "Блестящий Корона Burger King",
+        "Rarity": "Rare",
+        "SellPrice": 488136,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.01
+    },
+    {
+        "ID": 351,
+        "Category": "Антиквариат",
+        "Name": "Базированный Ковер самолет",
+        "Rarity": "Rare",
+        "SellPrice": 452194,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 0.99
+    },
+    {
+        "ID": 352,
+        "Category": "Антиквариат",
+        "Name": "Базированный Ковер самолет",
+        "Rarity": "Rare",
+        "SellPrice": 452194,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.009
+    },
+    {
+        "ID": 353,
+        "Category": "Антиквариат",
+        "Name": "Непонятный Череп динозавра",
+        "Rarity": "Rare",
+        "SellPrice": 541062,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 1.02
+    },
+    {
+        "ID": 354,
+        "Category": "Антиквариат",
+        "Name": "Непонятный Череп динозавра",
+        "Rarity": "Rare",
+        "SellPrice": 541062,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.009
+    },
+    {
+        "ID": 355,
+        "Category": "Антиквариат",
+        "Name": "Винтажный Корона Burger King",
+        "Rarity": "Rare",
+        "SellPrice": 510706,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 1.04
+    },
+    {
+        "ID": 356,
+        "Category": "Антиквариат",
+        "Name": "Винтажный Корона Burger King",
+        "Rarity": "Rare",
+        "SellPrice": 510706,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.01
+    },
+    {
+        "ID": 357,
+        "Category": "Антиквариат",
+        "Name": "Золотой Ковер самолет",
+        "Rarity": "Epic",
+        "SellPrice": 3883323,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 5.18
+    },
+    {
+        "ID": 358,
+        "Category": "Антиквариат",
+        "Name": "Золотой Ковер самолет",
+        "Rarity": "Epic",
+        "SellPrice": 3883323,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.047
+    },
+    {
+        "ID": 359,
+        "Category": "Антиквариат",
+        "Name": "Дизайнерский Череп динозавра",
+        "Rarity": "Epic",
+        "SellPrice": 3606700,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 5.26
+    },
+    {
+        "ID": 360,
+        "Category": "Антиквариат",
+        "Name": "Дизайнерский Череп динозавра",
+        "Rarity": "Epic",
+        "SellPrice": 3606700,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.048
+    },
+    {
+        "ID": 361,
+        "Category": "Антиквариат",
+        "Name": "Светящийся Корона Burger King",
+        "Rarity": "Epic",
+        "SellPrice": 3442600,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 4.84
+    },
+    {
+        "ID": 362,
+        "Category": "Антиквариат",
+        "Name": "Светящийся Корона Burger King",
+        "Rarity": "Epic",
+        "SellPrice": 3442600,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.049
+    },
+    {
+        "ID": 363,
+        "Category": "Антиквариат",
+        "Name": "Радиоактивный Корона Burger King",
+        "Rarity": "Legendary",
+        "SellPrice": 11751987,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 26
+    },
+    {
+        "ID": 364,
+        "Category": "Антиквариат",
+        "Name": "Радиоактивный Корона Burger King",
+        "Rarity": "Legendary",
+        "SellPrice": 11751987,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.239
+    },
+    {
+        "ID": 365,
+        "Category": "Антиквариат",
+        "Name": "Мертвого Моря Корона Burger King",
+        "Rarity": "Unique",
+        "SellPrice": 118924252,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 148
+    },
+    {
+        "ID": 366,
+        "Category": "Антиквариат",
+        "Name": "Мертвого Моря Корона Burger King",
+        "Rarity": "Unique",
+        "SellPrice": 118924252,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 1.471
+    },
+    {
+        "ID": 367,
+        "Category": "Ювелирный лом",
+        "Name": "Старый Бриллиант из стекла",
+        "Rarity": "Common",
+        "SellPrice": 742593
+    },
+    {
+        "ID": 368,
+        "Category": "Ювелирный лом",
+        "Name": "Б/У Кольцо всевластия",
+        "Rarity": "Common",
+        "SellPrice": 649706
+    },
+    {
+        "ID": 369,
+        "Category": "Ювелирный лом",
+        "Name": "Ржавый Золотые зубы",
+        "Rarity": "Common",
+        "SellPrice": 765418
+    },
+    {
+        "ID": 370,
+        "Category": "Ювелирный лом",
+        "Name": "Китайский Кольцо всевластия",
+        "Rarity": "Common",
+        "SellPrice": 740695
+    },
+    {
+        "ID": 371,
+        "Category": "Ювелирный лом",
+        "Name": "Сломанный Бриллиант из стекла",
+        "Rarity": "Common",
+        "SellPrice": 705120
+    },
+    {
+        "ID": 372,
+        "Category": "Ювелирный лом",
+        "Name": "Б/У Бриллиант из стекла",
+        "Rarity": "Common",
+        "SellPrice": 724196
+    },
+    {
+        "ID": 373,
+        "Category": "Ювелирный лом",
+        "Name": "Старый Золотые зубы",
+        "Rarity": "Common",
+        "SellPrice": 745138
+    },
+    {
+        "ID": 374,
+        "Category": "Ювелирный лом",
+        "Name": "Китайский Кольцо всевластия",
+        "Rarity": "Common",
+        "SellPrice": 724477
+    },
+    {
+        "ID": 375,
+        "Category": "Ювелирный лом",
+        "Name": "Б/У Кольцо всевластия",
+        "Rarity": "Common",
+        "SellPrice": 716737
+    },
+    {
+        "ID": 376,
+        "Category": "Ювелирный лом",
+        "Name": "Китайский Цепь рэпера",
+        "Rarity": "Common",
+        "SellPrice": 720671
+    },
+    {
+        "ID": 377,
+        "Category": "Ювелирный лом",
+        "Name": "Б/У Бриллиант из стекла",
+        "Rarity": "Common",
+        "SellPrice": 720894
+    },
+    {
+        "ID": 378,
+        "Category": "Ювелирный лом",
+        "Name": "Мятый Цепь рэпера",
+        "Rarity": "Common",
+        "SellPrice": 636349
+    },
+    {
+        "ID": 379,
+        "Category": "Ювелирный лом",
+        "Name": "Сломанный Бриллиант из стекла",
+        "Rarity": "Common",
+        "SellPrice": 769430
+    },
+    {
+        "ID": 380,
+        "Category": "Ювелирный лом",
+        "Name": "Мятый Кольцо всевластия",
+        "Rarity": "Common",
+        "SellPrice": 662872
+    },
+    {
+        "ID": 381,
+        "Category": "Ювелирный лом",
+        "Name": "Пыльный Золотые зубы",
+        "Rarity": "Common",
+        "SellPrice": 693510
+    },
+    {
+        "ID": 382,
+        "Category": "Ювелирный лом",
+        "Name": "Липкий Цепь рэпера",
+        "Rarity": "Common",
+        "SellPrice": 753958
+    },
+    {
+        "ID": 383,
+        "Category": "Ювелирный лом",
+        "Name": "Мятый Золотые зубы",
+        "Rarity": "Common",
+        "SellPrice": 716191
+    },
+    {
+        "ID": 384,
+        "Category": "Ювелирный лом",
+        "Name": "Старый Кольцо всевластия",
+        "Rarity": "Common",
+        "SellPrice": 726639
+    },
+    {
+        "ID": 385,
+        "Category": "Ювелирный лом",
+        "Name": "Ржавый Золотые зубы",
+        "Rarity": "Common",
+        "SellPrice": 692257
+    },
+    {
+        "ID": 386,
+        "Category": "Ювелирный лом",
+        "Name": "Ржавый Бриллиант из стекла",
+        "Rarity": "Common",
+        "SellPrice": 643910
+    },
+    {
+        "ID": 387,
+        "Category": "Ювелирный лом",
+        "Name": "Китайский Бриллиант из стекла",
+        "Rarity": "Common",
+        "SellPrice": 638477
+    },
+    {
+        "ID": 388,
+        "Category": "Ювелирный лом",
+        "Name": "Старый Цепь рэпера",
+        "Rarity": "Common",
+        "SellPrice": 765549
+    },
+    {
+        "ID": 389,
+        "Category": "Ювелирный лом",
+        "Name": "Б/У Кольцо всевластия",
+        "Rarity": "Common",
+        "SellPrice": 722788
+    },
+    {
+        "ID": 390,
+        "Category": "Ювелирный лом",
+        "Name": "Сломанный Кольцо всевластия",
+        "Rarity": "Common",
+        "SellPrice": 740151
+    },
+    {
+        "ID": 391,
+        "Category": "Ювелирный лом",
+        "Name": "Ржавый Цепь рэпера",
+        "Rarity": "Common",
+        "SellPrice": 740177
+    },
+    {
+        "ID": 392,
+        "Category": "Ювелирный лом",
+        "Name": "Ржавый Кольцо всевластия",
+        "Rarity": "Common",
+        "SellPrice": 746174
+    },
+    {
+        "ID": 393,
+        "Category": "Ювелирный лом",
+        "Name": "Ржавый Цепь рэпера",
+        "Rarity": "Common",
+        "SellPrice": 743827
+    },
+    {
+        "ID": 394,
+        "Category": "Ювелирный лом",
+        "Name": "Исцарапанный Бриллиант из стекла",
+        "Rarity": "Uncommon",
+        "SellPrice": 1846029
+    },
+    {
+        "ID": 395,
+        "Category": "Ювелирный лом",
+        "Name": "Мягкий Кольцо всевластия",
+        "Rarity": "Uncommon",
+        "SellPrice": 1672046
+    },
+    {
+        "ID": 396,
+        "Category": "Ювелирный лом",
+        "Name": "Исцарапанный Цепь рэпера",
+        "Rarity": "Uncommon",
+        "SellPrice": 1764075
+    },
+    {
+        "ID": 397,
+        "Category": "Ювелирный лом",
+        "Name": "Мягкий Цепь рэпера",
+        "Rarity": "Uncommon",
+        "SellPrice": 1613474
+    },
+    {
+        "ID": 398,
+        "Category": "Ювелирный лом",
+        "Name": "Мягкий Кольцо всевластия",
+        "Rarity": "Uncommon",
+        "SellPrice": 1621131
+    },
+    {
+        "ID": 399,
+        "Category": "Ювелирный лом",
+        "Name": "Странный Цепь рэпера",
+        "Rarity": "Uncommon",
+        "SellPrice": 1781099
+    },
+    {
+        "ID": 400,
+        "Category": "Ювелирный лом",
+        "Name": "Поддельный Цепь рэпера",
+        "Rarity": "Uncommon",
+        "SellPrice": 1667879
+    },
+    {
+        "ID": 401,
+        "Category": "Ювелирный лом",
+        "Name": "Исцарапанный Золотые зубы",
+        "Rarity": "Uncommon",
+        "SellPrice": 1759130
+    },
+    {
+        "ID": 402,
+        "Category": "Ювелирный лом",
+        "Name": "Пахучий Кольцо всевластия",
+        "Rarity": "Uncommon",
+        "SellPrice": 1741686
+    },
+    {
+        "ID": 403,
+        "Category": "Ювелирный лом",
+        "Name": "Мягкий Бриллиант из стекла",
+        "Rarity": "Uncommon",
+        "SellPrice": 1754633
+    },
+    {
+        "ID": 404,
+        "Category": "Ювелирный лом",
+        "Name": "Поддельный Золотые зубы",
+        "Rarity": "Uncommon",
+        "SellPrice": 1751344
+    },
+    {
+        "ID": 405,
+        "Category": "Ювелирный лом",
+        "Name": "Абсурдный Кольцо всевластия",
+        "Rarity": "Uncommon",
+        "SellPrice": 1829535
+    },
+    {
+        "ID": 406,
+        "Category": "Ювелирный лом",
+        "Name": "Базированный Бриллиант из стекла",
+        "Rarity": "Rare",
+        "SellPrice": 6941260,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 1654707
+    },
+    {
+        "ID": 407,
+        "Category": "Ювелирный лом",
+        "Name": "Базированный Бриллиант из стекла",
+        "Rarity": "Rare",
+        "SellPrice": 6941260,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.01
+    },
+    {
+        "ID": 408,
+        "Category": "Ювелирный лом",
+        "Name": "Блестящий Золотые зубы",
+        "Rarity": "Rare",
+        "SellPrice": 7486218,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 1678064
+    },
+    {
+        "ID": 409,
+        "Category": "Ювелирный лом",
+        "Name": "Блестящий Золотые зубы",
+        "Rarity": "Rare",
+        "SellPrice": 7486218,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.01
+    },
+    {
+        "ID": 410,
+        "Category": "Ювелирный лом",
+        "Name": "Хайповый Золотые зубы",
+        "Rarity": "Rare",
+        "SellPrice": 6402887,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 1666199
+    },
+    {
+        "ID": 411,
+        "Category": "Ювелирный лом",
+        "Name": "Хайповый Золотые зубы",
+        "Rarity": "Rare",
+        "SellPrice": 6402887,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.01
+    },
+    {
+        "ID": 412,
+        "Category": "Ювелирный лом",
+        "Name": "Винтажный Цепь рэпера",
+        "Rarity": "Rare",
+        "SellPrice": 6391955,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 1768245
+    },
+    {
+        "ID": 413,
+        "Category": "Ювелирный лом",
+        "Name": "Винтажный Цепь рэпера",
+        "Rarity": "Rare",
+        "SellPrice": 6391955,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.01
+    },
+    {
+        "ID": 414,
+        "Category": "Ювелирный лом",
+        "Name": "Непонятный Бриллиант из стекла",
+        "Rarity": "Rare",
+        "SellPrice": 6833266,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 1793702
+    },
+    {
+        "ID": 415,
+        "Category": "Ювелирный лом",
+        "Name": "Непонятный Бриллиант из стекла",
+        "Rarity": "Rare",
+        "SellPrice": 6833266,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.01
+    },
+    {
+        "ID": 416,
+        "Category": "Ювелирный лом",
+        "Name": "Непонятный Золотые зубы",
+        "Rarity": "Rare",
+        "SellPrice": 6438850,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 1752576
+    },
+    {
+        "ID": 417,
+        "Category": "Ювелирный лом",
+        "Name": "Непонятный Золотые зубы",
+        "Rarity": "Rare",
+        "SellPrice": 6438850,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.01
+    },
+    {
+        "ID": 418,
+        "Category": "Ювелирный лом",
+        "Name": "Тактический Цепь рэпера",
+        "Rarity": "Epic",
+        "SellPrice": 51765734,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 8246705
+    },
+    {
+        "ID": 419,
+        "Category": "Ювелирный лом",
+        "Name": "Тактический Цепь рэпера",
+        "Rarity": "Epic",
+        "SellPrice": 51765734,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.05
+    },
+    {
+        "ID": 420,
+        "Category": "Ювелирный лом",
+        "Name": "Гиковский Бриллиант из стекла",
+        "Rarity": "Epic",
+        "SellPrice": 55937902,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 8660344
+    },
+    {
+        "ID": 421,
+        "Category": "Ювелирный лом",
+        "Name": "Гиковский Бриллиант из стекла",
+        "Rarity": "Epic",
+        "SellPrice": 55937902,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.048
+    },
+    {
+        "ID": 422,
+        "Category": "Ювелирный лом",
+        "Name": "Дизайнерский Бриллиант из стекла",
+        "Rarity": "Epic",
+        "SellPrice": 51731022,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 8773681
+    },
+    {
+        "ID": 423,
+        "Category": "Ювелирный лом",
+        "Name": "Дизайнерский Бриллиант из стекла",
+        "Rarity": "Epic",
+        "SellPrice": 51731022,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.051
+    },
+    {
+        "ID": 424,
+        "Category": "Ювелирный лом",
+        "Name": "Секретный Золотые зубы",
+        "Rarity": "Legendary",
+        "SellPrice": 159849666,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 44639684
+    },
+    {
+        "ID": 425,
+        "Category": "Ювелирный лом",
+        "Name": "Секретный Золотые зубы",
+        "Rarity": "Legendary",
+        "SellPrice": 159849666,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.24
+    },
+    {
+        "ID": 426,
+        "Category": "Ювелирный лом",
+        "Name": "Инопланетный Золотые зубы",
+        "Rarity": "Unique",
+        "SellPrice": 1608797551,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 259408778
+    },
+    {
+        "ID": 427,
+        "Category": "Ювелирный лом",
+        "Name": "Инопланетный Золотые зубы",
+        "Rarity": "Unique",
+        "SellPrice": 1608797551,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 1.439
+    },
+    {
+        "ID": 428,
+        "Category": "Крипто-фермы",
+        "Name": "Сломанный Кулер с неонами",
+        "Rarity": "Common",
+        "SellPrice": 10340027
+    },
+    {
+        "ID": 429,
+        "Category": "Крипто-фермы",
+        "Name": "Липкий Кулер с неонами",
+        "Rarity": "Common",
+        "SellPrice": 10747215
+    },
+    {
+        "ID": 430,
+        "Category": "Крипто-фермы",
+        "Name": "Липкий RTX 9090",
+        "Rarity": "Common",
+        "SellPrice": 10936797
+    },
+    {
+        "ID": 431,
+        "Category": "Крипто-фермы",
+        "Name": "Старый Кулер с неонами",
+        "Rarity": "Common",
+        "SellPrice": 9207201
+    },
+    {
+        "ID": 432,
+        "Category": "Крипто-фермы",
+        "Name": "Ржавый Биткоин на флешке",
+        "Rarity": "Common",
+        "SellPrice": 10313473
+    },
+    {
+        "ID": 433,
+        "Category": "Крипто-фермы",
+        "Name": "Ржавый RTX 9090",
+        "Rarity": "Common",
+        "SellPrice": 9700228
+    },
+    {
+        "ID": 434,
+        "Category": "Крипто-фермы",
+        "Name": "Китайский RTX 9090",
+        "Rarity": "Common",
+        "SellPrice": 10525211
+    },
+    {
+        "ID": 435,
+        "Category": "Крипто-фермы",
+        "Name": "Ржавый ASIC-обогреватель",
+        "Rarity": "Common",
+        "SellPrice": 10690310
+    },
+    {
+        "ID": 436,
+        "Category": "Крипто-фермы",
+        "Name": "Сломанный Кулер с неонами",
+        "Rarity": "Common",
+        "SellPrice": 9057906
+    },
+    {
+        "ID": 437,
+        "Category": "Крипто-фермы",
+        "Name": "Старый Кулер с неонами",
+        "Rarity": "Common",
+        "SellPrice": 10843075
+    },
+    {
+        "ID": 438,
+        "Category": "Крипто-фермы",
+        "Name": "Китайский RTX 9090",
+        "Rarity": "Common",
+        "SellPrice": 9362811
+    },
+    {
+        "ID": 439,
+        "Category": "Крипто-фермы",
+        "Name": "Пыльный ASIC-обогреватель",
+        "Rarity": "Common",
+        "SellPrice": 9139171
+    },
+    {
+        "ID": 440,
+        "Category": "Крипто-фермы",
+        "Name": "Сломанный RTX 9090",
+        "Rarity": "Common",
+        "SellPrice": 10492224
+    },
+    {
+        "ID": 441,
+        "Category": "Крипто-фермы",
+        "Name": "Ржавый ASIC-обогреватель",
+        "Rarity": "Common",
+        "SellPrice": 9839665
+    },
+    {
+        "ID": 442,
+        "Category": "Крипто-фермы",
+        "Name": "Китайский Биткоин на флешке",
+        "Rarity": "Common",
+        "SellPrice": 9740106
+    },
+    {
+        "ID": 443,
+        "Category": "Крипто-фермы",
+        "Name": "Китайский RTX 9090",
+        "Rarity": "Common",
+        "SellPrice": 10766684
+    },
+    {
+        "ID": 444,
+        "Category": "Крипто-фермы",
+        "Name": "Пыльный Биткоин на флешке",
+        "Rarity": "Common",
+        "SellPrice": 10508872
+    },
+    {
+        "ID": 445,
+        "Category": "Крипто-фермы",
+        "Name": "Сломанный RTX 9090",
+        "Rarity": "Common",
+        "SellPrice": 9544206
+    },
+    {
+        "ID": 446,
+        "Category": "Крипто-фермы",
+        "Name": "Липкий ASIC-обогреватель",
+        "Rarity": "Common",
+        "SellPrice": 10214152
+    },
+    {
+        "ID": 447,
+        "Category": "Крипто-фермы",
+        "Name": "Липкий Кулер с неонами",
+        "Rarity": "Common",
+        "SellPrice": 9431138
+    },
+    {
+        "ID": 448,
+        "Category": "Крипто-фермы",
+        "Name": "Мятый Кулер с неонами",
+        "Rarity": "Common",
+        "SellPrice": 9859827
+    },
+    {
+        "ID": 449,
+        "Category": "Крипто-фермы",
+        "Name": "Старый ASIC-обогреватель",
+        "Rarity": "Common",
+        "SellPrice": 10053868
+    },
+    {
+        "ID": 450,
+        "Category": "Крипто-фермы",
+        "Name": "Старый RTX 9090",
+        "Rarity": "Common",
+        "SellPrice": 9441037
+    },
+    {
+        "ID": 451,
+        "Category": "Крипто-фермы",
+        "Name": "Сломанный RTX 9090",
+        "Rarity": "Common",
+        "SellPrice": 9408846
+    },
+    {
+        "ID": 452,
+        "Category": "Крипто-фермы",
+        "Name": "Ржавый Биткоин на флешке",
+        "Rarity": "Common",
+        "SellPrice": 10528322
+    },
+    {
+        "ID": 453,
+        "Category": "Крипто-фермы",
+        "Name": "Старый Кулер с неонами",
+        "Rarity": "Common",
+        "SellPrice": 9239969
+    },
+    {
+        "ID": 454,
+        "Category": "Крипто-фермы",
+        "Name": "Б/У ASIC-обогреватель",
+        "Rarity": "Common",
+        "SellPrice": 9351390
+    },
+    {
+        "ID": 455,
+        "Category": "Крипто-фермы",
+        "Name": "Дешевый Биткоин на флешке",
+        "Rarity": "Uncommon",
+        "SellPrice": 25001312
+    },
+    {
+        "ID": 456,
+        "Category": "Крипто-фермы",
+        "Name": "Мягкий Кулер с неонами",
+        "Rarity": "Uncommon",
+        "SellPrice": 22860377
+    },
+    {
+        "ID": 457,
+        "Category": "Крипто-фермы",
+        "Name": "Мягкий RTX 9090",
+        "Rarity": "Uncommon",
+        "SellPrice": 24681098
+    },
+    {
+        "ID": 458,
+        "Category": "Крипто-фермы",
+        "Name": "Дешевый RTX 9090",
+        "Rarity": "Uncommon",
+        "SellPrice": 26810550
+    },
+    {
+        "ID": 459,
+        "Category": "Крипто-фермы",
+        "Name": "Абсурдный ASIC-обогреватель",
+        "Rarity": "Uncommon",
+        "SellPrice": 25366998
+    },
+    {
+        "ID": 460,
+        "Category": "Крипто-фермы",
+        "Name": "Пахучий ASIC-обогреватель",
+        "Rarity": "Uncommon",
+        "SellPrice": 23947576
+    },
+    {
+        "ID": 461,
+        "Category": "Крипто-фермы",
+        "Name": "Дешевый RTX 9090",
+        "Rarity": "Uncommon",
+        "SellPrice": 27330998
+    },
+    {
+        "ID": 462,
+        "Category": "Крипто-фермы",
+        "Name": "Исцарапанный ASIC-обогреватель",
+        "Rarity": "Uncommon",
+        "SellPrice": 26660130
+    },
+    {
+        "ID": 463,
+        "Category": "Крипто-фермы",
+        "Name": "Странный RTX 9090",
+        "Rarity": "Uncommon",
+        "SellPrice": 24683559
+    },
+    {
+        "ID": 464,
+        "Category": "Крипто-фермы",
+        "Name": "Поддельный Биткоин на флешке",
+        "Rarity": "Uncommon",
+        "SellPrice": 24678383
+    },
+    {
+        "ID": 465,
+        "Category": "Крипто-фермы",
+        "Name": "Дешевый RTX 9090",
+        "Rarity": "Uncommon",
+        "SellPrice": 24478833
+    },
+    {
+        "ID": 466,
+        "Category": "Крипто-фермы",
+        "Name": "Странный Кулер с неонами",
+        "Rarity": "Uncommon",
+        "SellPrice": 23607860
+    },
+    {
+        "ID": 467,
+        "Category": "Крипто-фермы",
+        "Name": "ASMR-ный RTX 9090",
+        "Rarity": "Rare",
+        "SellPrice": 100209666,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 25424095
+    },
+    {
+        "ID": 468,
+        "Category": "Крипто-фермы",
+        "Name": "ASMR-ный RTX 9090",
+        "Rarity": "Rare",
+        "SellPrice": 100209666,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.01
+    },
+    {
+        "ID": 469,
+        "Category": "Крипто-фермы",
+        "Name": "Непонятный Биткоин на флешке",
+        "Rarity": "Rare",
+        "SellPrice": 108118455,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 24684026
+    },
+    {
+        "ID": 470,
+        "Category": "Крипто-фермы",
+        "Name": "Непонятный Биткоин на флешке",
+        "Rarity": "Rare",
+        "SellPrice": 108118455,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.01
+    },
+    {
+        "ID": 471,
+        "Category": "Крипто-фермы",
+        "Name": "Базированный Биткоин на флешке",
+        "Rarity": "Rare",
+        "SellPrice": 94725377,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 24950907
+    },
+    {
+        "ID": 472,
+        "Category": "Крипто-фермы",
+        "Name": "Базированный Биткоин на флешке",
+        "Rarity": "Rare",
+        "SellPrice": 94725377,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.01
+    },
+    {
+        "ID": 473,
+        "Category": "Крипто-фермы",
+        "Name": "Винтажный Биткоин на флешке",
+        "Rarity": "Rare",
+        "SellPrice": 93469980,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 25022368
+    },
+    {
+        "ID": 474,
+        "Category": "Крипто-фермы",
+        "Name": "Винтажный Биткоин на флешке",
+        "Rarity": "Rare",
+        "SellPrice": 93469980,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.01
+    },
+    {
+        "ID": 475,
+        "Category": "Крипто-фермы",
+        "Name": "Базированный RTX 9090",
+        "Rarity": "Rare",
+        "SellPrice": 93542923,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 25092686
+    },
+    {
+        "ID": 476,
+        "Category": "Крипто-фермы",
+        "Name": "Базированный RTX 9090",
+        "Rarity": "Rare",
+        "SellPrice": 93542923,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.01
+    },
+    {
+        "ID": 477,
+        "Category": "Крипто-фермы",
+        "Name": "Непонятный ASIC-обогреватель",
+        "Rarity": "Rare",
+        "SellPrice": 103622670,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 23419339
+    },
+    {
+        "ID": 478,
+        "Category": "Крипто-фермы",
+        "Name": "Непонятный ASIC-обогреватель",
+        "Rarity": "Rare",
+        "SellPrice": 103622670,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.01
+    },
+    {
+        "ID": 479,
+        "Category": "Крипто-фермы",
+        "Name": "Светящийся Биткоин на флешке",
+        "Rarity": "Epic",
+        "SellPrice": 740964422,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 117349406
+    },
+    {
+        "ID": 480,
+        "Category": "Крипто-фермы",
+        "Name": "Светящийся Биткоин на флешке",
+        "Rarity": "Epic",
+        "SellPrice": 740964422,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.049
+    },
+    {
+        "ID": 481,
+        "Category": "Крипто-фермы",
+        "Name": "Светящийся Кулер с неонами",
+        "Rarity": "Epic",
+        "SellPrice": 763712964,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 125459981
+    },
+    {
+        "ID": 482,
+        "Category": "Крипто-фермы",
+        "Name": "Светящийся Кулер с неонами",
+        "Rarity": "Epic",
+        "SellPrice": 763712964,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.052
+    },
+    {
+        "ID": 483,
+        "Category": "Крипто-фермы",
+        "Name": "Светящийся ASIC-обогреватель",
+        "Rarity": "Epic",
+        "SellPrice": 742787080,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 118493876
+    },
+    {
+        "ID": 484,
+        "Category": "Крипто-фермы",
+        "Name": "Светящийся ASIC-обогреватель",
+        "Rarity": "Epic",
+        "SellPrice": 742787080,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.052
+    },
+    {
+        "ID": 485,
+        "Category": "Крипто-фермы",
+        "Name": "Масонский Кулер с неонами",
+        "Rarity": "Legendary",
+        "SellPrice": 2288365501,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 580777576
+    },
+    {
+        "ID": 486,
+        "Category": "Крипто-фермы",
+        "Name": "Масонский Кулер с неонами",
+        "Rarity": "Legendary",
+        "SellPrice": 2288365501,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.243
+    },
+    {
+        "ID": 487,
+        "Category": "Крипто-фермы",
+        "Name": "Иллюминатский ASIC-обогреватель",
+        "Rarity": "Unique",
+        "SellPrice": 24813558295,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 3786353259
+    },
+    {
+        "ID": 488,
+        "Category": "Крипто-фермы",
+        "Name": "Иллюминатский ASIC-обогреватель",
+        "Rarity": "Unique",
+        "SellPrice": 24813558295,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 1.491
+    },
+    {
+        "ID": 489,
+        "Category": "Искусство",
+        "Name": "Б/У Скульптура воздуха",
+        "Rarity": "Common",
+        "SellPrice": 154288856
+    },
+    {
+        "ID": 490,
+        "Category": "Искусство",
+        "Name": "Б/У Скульптура воздуха",
+        "Rarity": "Common",
+        "SellPrice": 174647115
+    },
+    {
+        "ID": 491,
+        "Category": "Искусство",
+        "Name": "Б/У Картина с точкой",
+        "Rarity": "Common",
+        "SellPrice": 169950938
+    },
+    {
+        "ID": 492,
+        "Category": "Искусство",
+        "Name": "Китайский Картина с точкой",
+        "Rarity": "Common",
+        "SellPrice": 160145568
+    },
+    {
+        "ID": 493,
+        "Category": "Искусство",
+        "Name": "Пыльный Картина с точкой",
+        "Rarity": "Common",
+        "SellPrice": 151927799
+    },
+    {
+        "ID": 494,
+        "Category": "Искусство",
+        "Name": "Б/У Цифровой NFT-камень",
+        "Rarity": "Common",
+        "SellPrice": 160770194
+    },
+    {
+        "ID": 495,
+        "Category": "Искусство",
+        "Name": "Пыльный Банан на скотче",
+        "Rarity": "Common",
+        "SellPrice": 155931263
+    },
+    {
+        "ID": 496,
+        "Category": "Искусство",
+        "Name": "Старый Цифровой NFT-камень",
+        "Rarity": "Common",
+        "SellPrice": 157080621
+    },
+    {
+        "ID": 497,
+        "Category": "Искусство",
+        "Name": "Китайский Картина с точкой",
+        "Rarity": "Common",
+        "SellPrice": 169255262
+    },
+    {
+        "ID": 498,
+        "Category": "Искусство",
+        "Name": "Китайский Картина с точкой",
+        "Rarity": "Common",
+        "SellPrice": 154550104
+    },
+    {
+        "ID": 499,
+        "Category": "Искусство",
+        "Name": "Липкий Банан на скотче",
+        "Rarity": "Common",
+        "SellPrice": 152063865
+    },
+    {
+        "ID": 500,
+        "Category": "Искусство",
+        "Name": "Пыльный Банан на скотче",
+        "Rarity": "Common",
+        "SellPrice": 146608064
+    },
+    {
+        "ID": 501,
+        "Category": "Искусство",
+        "Name": "Пыльный Банан на скотче",
+        "Rarity": "Common",
+        "SellPrice": 153927416
+    },
+    {
+        "ID": 502,
+        "Category": "Искусство",
+        "Name": "Липкий Скульптура воздуха",
+        "Rarity": "Common",
+        "SellPrice": 163041319
+    },
+    {
+        "ID": 503,
+        "Category": "Искусство",
+        "Name": "Мятый Банан на скотче",
+        "Rarity": "Common",
+        "SellPrice": 161885506
+    },
+    {
+        "ID": 504,
+        "Category": "Искусство",
+        "Name": "Китайский Скульптура воздуха",
+        "Rarity": "Common",
+        "SellPrice": 165443725
+    },
+    {
+        "ID": 505,
+        "Category": "Искусство",
+        "Name": "Мятый Цифровой NFT-камень",
+        "Rarity": "Common",
+        "SellPrice": 160271632
+    },
+    {
+        "ID": 506,
+        "Category": "Искусство",
+        "Name": "Сломанный Банан на скотче",
+        "Rarity": "Common",
+        "SellPrice": 153883714
+    },
+    {
+        "ID": 507,
+        "Category": "Искусство",
+        "Name": "Ржавый Банан на скотче",
+        "Rarity": "Common",
+        "SellPrice": 174325385
+    },
+    {
+        "ID": 508,
+        "Category": "Искусство",
+        "Name": "Б/У Скульптура воздуха",
+        "Rarity": "Common",
+        "SellPrice": 151249377
+    },
+    {
+        "ID": 509,
+        "Category": "Искусство",
+        "Name": "Пыльный Скульптура воздуха",
+        "Rarity": "Common",
+        "SellPrice": 146469283
+    },
+    {
+        "ID": 510,
+        "Category": "Искусство",
+        "Name": "Мятый Картина с точкой",
+        "Rarity": "Common",
+        "SellPrice": 165181736
+    },
+    {
+        "ID": 511,
+        "Category": "Искусство",
+        "Name": "Пыльный Цифровой NFT-камень",
+        "Rarity": "Common",
+        "SellPrice": 148936088
+    },
+    {
+        "ID": 512,
+        "Category": "Искусство",
+        "Name": "Пыльный Скульптура воздуха",
+        "Rarity": "Common",
+        "SellPrice": 167077856
+    },
+    {
+        "ID": 513,
+        "Category": "Искусство",
+        "Name": "Сломанный Цифровой NFT-камень",
+        "Rarity": "Common",
+        "SellPrice": 155657581
+    },
+    {
+        "ID": 514,
+        "Category": "Искусство",
+        "Name": "Ржавый Цифровой NFT-камень",
+        "Rarity": "Common",
+        "SellPrice": 163539054
+    },
+    {
+        "ID": 515,
+        "Category": "Искусство",
+        "Name": "Б/У Скульптура воздуха",
+        "Rarity": "Common",
+        "SellPrice": 161088357
+    },
+    {
+        "ID": 516,
+        "Category": "Искусство",
+        "Name": "Странный Цифровой NFT-камень",
+        "Rarity": "Uncommon",
+        "SellPrice": 432317947
+    },
+    {
+        "ID": 517,
+        "Category": "Искусство",
+        "Name": "Исцарапанный Банан на скотче",
+        "Rarity": "Uncommon",
+        "SellPrice": 414264546
+    },
+    {
+        "ID": 518,
+        "Category": "Искусство",
+        "Name": "Абсурдный Цифровой NFT-камень",
+        "Rarity": "Uncommon",
+        "SellPrice": 396934398
+    },
+    {
+        "ID": 519,
+        "Category": "Искусство",
+        "Name": "Странный Цифровой NFT-камень",
+        "Rarity": "Uncommon",
+        "SellPrice": 400232535
+    },
+    {
+        "ID": 520,
+        "Category": "Искусство",
+        "Name": "Дешевый Скульптура воздуха",
+        "Rarity": "Uncommon",
+        "SellPrice": 425351299
+    },
+    {
+        "ID": 521,
+        "Category": "Искусство",
+        "Name": "Мягкий Скульптура воздуха",
+        "Rarity": "Uncommon",
+        "SellPrice": 429840154
+    },
+    {
+        "ID": 522,
+        "Category": "Искусство",
+        "Name": "Поддельный Цифровой NFT-камень",
+        "Rarity": "Uncommon",
+        "SellPrice": 429929356
+    },
+    {
+        "ID": 523,
+        "Category": "Искусство",
+        "Name": "Абсурдный Картина с точкой",
+        "Rarity": "Uncommon",
+        "SellPrice": 416912078
+    },
+    {
+        "ID": 524,
+        "Category": "Искусство",
+        "Name": "Абсурдный Картина с точкой",
+        "Rarity": "Uncommon",
+        "SellPrice": 382805041
+    },
+    {
+        "ID": 525,
+        "Category": "Искусство",
+        "Name": "Мягкий Скульптура воздуха",
+        "Rarity": "Uncommon",
+        "SellPrice": 381823304
+    },
+    {
+        "ID": 526,
+        "Category": "Искусство",
+        "Name": "Абсурдный Скульптура воздуха",
+        "Rarity": "Uncommon",
+        "SellPrice": 426483737
+    },
+    {
+        "ID": 527,
+        "Category": "Искусство",
+        "Name": "Поддельный Скульптура воздуха",
+        "Rarity": "Uncommon",
+        "SellPrice": 425336260
+    },
+    {
+        "ID": 528,
+        "Category": "Искусство",
+        "Name": "Винтажный Картина с точкой",
+        "Rarity": "Rare",
+        "SellPrice": 1572767010,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 400861701
+    },
+    {
+        "ID": 529,
+        "Category": "Искусство",
+        "Name": "Винтажный Картина с точкой",
+        "Rarity": "Rare",
+        "SellPrice": 1572767010,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.011
+    },
+    {
+        "ID": 530,
+        "Category": "Искусство",
+        "Name": "ASMR-ный Цифровой NFT-камень",
+        "Rarity": "Rare",
+        "SellPrice": 1758248112,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 407509108
+    },
+    {
+        "ID": 531,
+        "Category": "Искусство",
+        "Name": "ASMR-ный Цифровой NFT-камень",
+        "Rarity": "Rare",
+        "SellPrice": 1758248112,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.011
+    },
+    {
+        "ID": 532,
+        "Category": "Искусство",
+        "Name": "Винтажный Картина с точкой",
+        "Rarity": "Rare",
+        "SellPrice": 1708536412,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 398461884
+    },
+    {
+        "ID": 533,
+        "Category": "Искусство",
+        "Name": "Винтажный Картина с точкой",
+        "Rarity": "Rare",
+        "SellPrice": 1708536412,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.011
+    },
+    {
+        "ID": 534,
+        "Category": "Искусство",
+        "Name": "ASMR-ный Картина с точкой",
+        "Rarity": "Rare",
+        "SellPrice": 1531801407,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 404070522
+    },
+    {
+        "ID": 535,
+        "Category": "Искусство",
+        "Name": "ASMR-ный Картина с точкой",
+        "Rarity": "Rare",
+        "SellPrice": 1531801407,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.01
+    },
+    {
+        "ID": 536,
+        "Category": "Искусство",
+        "Name": "ASMR-ный Цифровой NFT-камень",
+        "Rarity": "Rare",
+        "SellPrice": 1583552472,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 425185421
+    },
+    {
+        "ID": 537,
+        "Category": "Искусство",
+        "Name": "ASMR-ный Цифровой NFT-камень",
+        "Rarity": "Rare",
+        "SellPrice": 1583552472,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.011
+    },
+    {
+        "ID": 538,
+        "Category": "Искусство",
+        "Name": "Блестящий Картина с точкой",
+        "Rarity": "Rare",
+        "SellPrice": 1521895657,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 402118213
+    },
+    {
+        "ID": 539,
+        "Category": "Искусство",
+        "Name": "Блестящий Картина с точкой",
+        "Rarity": "Rare",
+        "SellPrice": 1521895657,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.01
+    },
+    {
+        "ID": 540,
+        "Category": "Искусство",
+        "Name": "Тактический Цифровой NFT-камень",
+        "Rarity": "Epic",
+        "SellPrice": 11066848465,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 1978196665
+    },
+    {
+        "ID": 541,
+        "Category": "Искусство",
+        "Name": "Тактический Цифровой NFT-камень",
+        "Rarity": "Epic",
+        "SellPrice": 11066848465,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.052
+    },
+    {
+        "ID": 542,
+        "Category": "Искусство",
+        "Name": "Дизайнерский Картина с точкой",
+        "Rarity": "Epic",
+        "SellPrice": 11372254808,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 1986879685
+    },
+    {
+        "ID": 543,
+        "Category": "Искусство",
+        "Name": "Дизайнерский Картина с точкой",
+        "Rarity": "Epic",
+        "SellPrice": 11372254808,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.054
+    },
+    {
+        "ID": 544,
+        "Category": "Искусство",
+        "Name": "Гиковский Картина с точкой",
+        "Rarity": "Epic",
+        "SellPrice": 12316691861,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 2123510842
+    },
+    {
+        "ID": 545,
+        "Category": "Искусство",
+        "Name": "Гиковский Картина с точкой",
+        "Rarity": "Epic",
+        "SellPrice": 12316691861,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.056
+    },
+    {
+        "ID": 546,
+        "Category": "Искусство",
+        "Name": "Секретный Банан на скотче",
+        "Rarity": "Legendary",
+        "SellPrice": 39433911145,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 10005215462
+    },
+    {
+        "ID": 547,
+        "Category": "Искусство",
+        "Name": "Секретный Банан на скотче",
+        "Rarity": "Legendary",
+        "SellPrice": 39433911145,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.28
+    },
+    {
+        "ID": 548,
+        "Category": "Искусство",
+        "Name": "Матричный Скульптура воздуха",
+        "Rarity": "Unique",
+        "SellPrice": 413149704139,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 58593846100
+    },
+    {
+        "ID": 549,
+        "Category": "Искусство",
+        "Name": "Матричный Скульптура воздуха",
+        "Rarity": "Unique",
+        "SellPrice": 413149704139,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 1.69
+    },
+    {
+        "ID": 550,
+        "Category": "Гос. конфискат",
+        "Name": "Китайский Скипетр мэра",
+        "Rarity": "Common",
+        "SellPrice": 3272042207
+    },
+    {
+        "ID": 551,
+        "Category": "Гос. конфискат",
+        "Name": "Сломанный Кейс с воздухом",
+        "Rarity": "Common",
+        "SellPrice": 3223998863
+    },
+    {
+        "ID": 552,
+        "Category": "Гос. конфискат",
+        "Name": "Сломанный Кейс с воздухом",
+        "Rarity": "Common",
+        "SellPrice": 3288623654
+    },
+    {
+        "ID": 553,
+        "Category": "Гос. конфискат",
+        "Name": "Старый Скипетр мэра",
+        "Rarity": "Common",
+        "SellPrice": 2914256326
+    },
+    {
+        "ID": 554,
+        "Category": "Гос. конфискат",
+        "Name": "Мятый Мигалка элитная",
+        "Rarity": "Common",
+        "SellPrice": 2844675555
+    },
+    {
+        "ID": 555,
+        "Category": "Гос. конфискат",
+        "Name": "Мятый Мигалка элитная",
+        "Rarity": "Common",
+        "SellPrice": 2780045754
+    },
+    {
+        "ID": 556,
+        "Category": "Гос. конфискат",
+        "Name": "Китайский Мигалка элитная",
+        "Rarity": "Common",
+        "SellPrice": 3188105319
+    },
+    {
+        "ID": 557,
+        "Category": "Гос. конфискат",
+        "Name": "Пыльный Кейс с воздухом",
+        "Rarity": "Common",
+        "SellPrice": 3288491511
+    },
+    {
+        "ID": 558,
+        "Category": "Гос. конфискат",
+        "Name": "Б/У Флешка с секретами",
+        "Rarity": "Common",
+        "SellPrice": 3186898609
+    },
+    {
+        "ID": 559,
+        "Category": "Гос. конфискат",
+        "Name": "Мятый Кейс с воздухом",
+        "Rarity": "Common",
+        "SellPrice": 2722190274
+    },
+    {
+        "ID": 560,
+        "Category": "Гос. конфискат",
+        "Name": "Ржавый Скипетр мэра",
+        "Rarity": "Common",
+        "SellPrice": 3174665528
+    },
+    {
+        "ID": 561,
+        "Category": "Гос. конфискат",
+        "Name": "Сломанный Мигалка элитная",
+        "Rarity": "Common",
+        "SellPrice": 3260022588
+    },
+    {
+        "ID": 562,
+        "Category": "Гос. конфискат",
+        "Name": "Липкий Кейс с воздухом",
+        "Rarity": "Common",
+        "SellPrice": 2851988259
+    },
+    {
+        "ID": 563,
+        "Category": "Гос. конфискат",
+        "Name": "Ржавый Мигалка элитная",
+        "Rarity": "Common",
+        "SellPrice": 2914184506
+    },
+    {
+        "ID": 564,
+        "Category": "Гос. конфискат",
+        "Name": "Сломанный Мигалка элитная",
+        "Rarity": "Common",
+        "SellPrice": 2863929964
+    },
+    {
+        "ID": 565,
+        "Category": "Гос. конфискат",
+        "Name": "Китайский Кейс с воздухом",
+        "Rarity": "Common",
+        "SellPrice": 3233691910
+    },
+    {
+        "ID": 566,
+        "Category": "Гос. конфискат",
+        "Name": "Б/У Кейс с воздухом",
+        "Rarity": "Common",
+        "SellPrice": 2903421977
+    },
+    {
+        "ID": 567,
+        "Category": "Гос. конфискат",
+        "Name": "Пыльный Кейс с воздухом",
+        "Rarity": "Common",
+        "SellPrice": 3115241095
+    },
+    {
+        "ID": 568,
+        "Category": "Гос. конфискат",
+        "Name": "Китайский Мигалка элитная",
+        "Rarity": "Common",
+        "SellPrice": 3180688852
+    },
+    {
+        "ID": 569,
+        "Category": "Гос. конфискат",
+        "Name": "Липкий Скипетр мэра",
+        "Rarity": "Common",
+        "SellPrice": 2958364291
+    },
+    {
+        "ID": 570,
+        "Category": "Гос. конфискат",
+        "Name": "Пыльный Мигалка элитная",
+        "Rarity": "Common",
+        "SellPrice": 2892726857
+    },
+    {
+        "ID": 571,
+        "Category": "Гос. конфискат",
+        "Name": "Мятый Мигалка элитная",
+        "Rarity": "Common",
+        "SellPrice": 3096551533
+    },
+    {
+        "ID": 572,
+        "Category": "Гос. конфискат",
+        "Name": "Старый Кейс с воздухом",
+        "Rarity": "Common",
+        "SellPrice": 3061572977
+    },
+    {
+        "ID": 573,
+        "Category": "Гос. конфискат",
+        "Name": "Липкий Флешка с секретами",
+        "Rarity": "Common",
+        "SellPrice": 3113858885
+    },
+    {
+        "ID": 574,
+        "Category": "Гос. конфискат",
+        "Name": "Китайский Кейс с воздухом",
+        "Rarity": "Common",
+        "SellPrice": 2725413098
+    },
+    {
+        "ID": 575,
+        "Category": "Гос. конфискат",
+        "Name": "Китайский Кейс с воздухом",
+        "Rarity": "Common",
+        "SellPrice": 2864733216
+    },
+    {
+        "ID": 576,
+        "Category": "Гос. конфискат",
+        "Name": "Сломанный Скипетр мэра",
+        "Rarity": "Common",
+        "SellPrice": 3102710333
+    },
+    {
+        "ID": 577,
+        "Category": "Гос. конфискат",
+        "Name": "Дешевый Мигалка элитная",
+        "Rarity": "Uncommon",
+        "SellPrice": 7519629029
+    },
+    {
+        "ID": 578,
+        "Category": "Гос. конфискат",
+        "Name": "Пахучий Флешка с секретами",
+        "Rarity": "Uncommon",
+        "SellPrice": 8179184094
+    },
+    {
+        "ID": 579,
+        "Category": "Гос. конфискат",
+        "Name": "Исцарапанный Кейс с воздухом",
+        "Rarity": "Uncommon",
+        "SellPrice": 6802198449
+    },
+    {
+        "ID": 580,
+        "Category": "Гос. конфискат",
+        "Name": "Поддельный Флешка с секретами",
+        "Rarity": "Uncommon",
+        "SellPrice": 7917773060
+    },
+    {
+        "ID": 581,
+        "Category": "Гос. конфискат",
+        "Name": "Странный Мигалка элитная",
+        "Rarity": "Uncommon",
+        "SellPrice": 7324281603
+    },
+    {
+        "ID": 582,
+        "Category": "Гос. конфискат",
+        "Name": "Абсурдный Скипетр мэра",
+        "Rarity": "Uncommon",
+        "SellPrice": 7657642243
+    },
+    {
+        "ID": 583,
+        "Category": "Гос. конфискат",
+        "Name": "Пахучий Кейс с воздухом",
+        "Rarity": "Uncommon",
+        "SellPrice": 8173235294
+    },
+    {
+        "ID": 584,
+        "Category": "Гос. конфискат",
+        "Name": "Странный Кейс с воздухом",
+        "Rarity": "Uncommon",
+        "SellPrice": 7894626708
+    },
+    {
+        "ID": 585,
+        "Category": "Гос. конфискат",
+        "Name": "Абсурдный Флешка с секретами",
+        "Rarity": "Uncommon",
+        "SellPrice": 7544189822
+    },
+    {
+        "ID": 586,
+        "Category": "Гос. конфискат",
+        "Name": "Дешевый Мигалка элитная",
+        "Rarity": "Uncommon",
+        "SellPrice": 7724341105
+    },
+    {
+        "ID": 587,
+        "Category": "Гос. конфискат",
+        "Name": "Исцарапанный Скипетр мэра",
+        "Rarity": "Uncommon",
+        "SellPrice": 6788870011
+    },
+    {
+        "ID": 588,
+        "Category": "Гос. конфискат",
+        "Name": "Исцарапанный Кейс с воздухом",
+        "Rarity": "Uncommon",
+        "SellPrice": 7526617911
+    },
+    {
+        "ID": 589,
+        "Category": "Гос. конфискат",
+        "Name": "Непонятный Скипетр мэра",
+        "Rarity": "Rare",
+        "SellPrice": 28570660060,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 7020473188
+    },
+    {
+        "ID": 590,
+        "Category": "Гос. конфискат",
+        "Name": "Непонятный Скипетр мэра",
+        "Rarity": "Rare",
+        "SellPrice": 28570660060,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.012
+    },
+    {
+        "ID": 591,
+        "Category": "Гос. конфискат",
+        "Name": "ASMR-ный Мигалка элитная",
+        "Rarity": "Rare",
+        "SellPrice": 31163883846,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 7293198501
+    },
+    {
+        "ID": 592,
+        "Category": "Гос. конфискат",
+        "Name": "ASMR-ный Мигалка элитная",
+        "Rarity": "Rare",
+        "SellPrice": 31163883846,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.011
+    },
+    {
+        "ID": 593,
+        "Category": "Гос. конфискат",
+        "Name": "ASMR-ный Скипетр мэра",
+        "Rarity": "Rare",
+        "SellPrice": 29712256111,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 7009121101
+    },
+    {
+        "ID": 594,
+        "Category": "Гос. конфискат",
+        "Name": "ASMR-ный Скипетр мэра",
+        "Rarity": "Rare",
+        "SellPrice": 29712256111,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.011
+    },
+    {
+        "ID": 595,
+        "Category": "Гос. конфискат",
+        "Name": "Базированный Мигалка элитная",
+        "Rarity": "Rare",
+        "SellPrice": 31007038743,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 7240365417
+    },
+    {
+        "ID": 596,
+        "Category": "Гос. конфискат",
+        "Name": "Базированный Мигалка элитная",
+        "Rarity": "Rare",
+        "SellPrice": 31007038743,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.012
+    },
+    {
+        "ID": 597,
+        "Category": "Гос. конфискат",
+        "Name": "Непонятный Мигалка элитная",
+        "Rarity": "Rare",
+        "SellPrice": 32347990094,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 7197854865
+    },
+    {
+        "ID": 598,
+        "Category": "Гос. конфискат",
+        "Name": "Непонятный Мигалка элитная",
+        "Rarity": "Rare",
+        "SellPrice": 32347990094,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.011
+    },
+    {
+        "ID": 599,
+        "Category": "Гос. конфискат",
+        "Name": "Базированный Флешка с секретами",
+        "Rarity": "Rare",
+        "SellPrice": 31762178303,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 7006045848
+    },
+    {
+        "ID": 600,
+        "Category": "Гос. конфискат",
+        "Name": "Базированный Флешка с секретами",
+        "Rarity": "Rare",
+        "SellPrice": 31762178303,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.011
+    },
+    {
+        "ID": 601,
+        "Category": "Гос. конфискат",
+        "Name": "Дизайнерский Флешка с секретами",
+        "Rarity": "Epic",
+        "SellPrice": 238142955313,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 34887628250
+    },
+    {
+        "ID": 602,
+        "Category": "Гос. конфискат",
+        "Name": "Дизайнерский Флешка с секретами",
+        "Rarity": "Epic",
+        "SellPrice": 238142955313,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.053
+    },
+    {
+        "ID": 603,
+        "Category": "Гос. конфискат",
+        "Name": "Гиковский Скипетр мэра",
+        "Rarity": "Epic",
+        "SellPrice": 218740343600,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 34382245103
+    },
+    {
+        "ID": 604,
+        "Category": "Гос. конфискат",
+        "Name": "Гиковский Скипетр мэра",
+        "Rarity": "Epic",
+        "SellPrice": 218740343600,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.055
+    },
+    {
+        "ID": 605,
+        "Category": "Гос. конфискат",
+        "Name": "Тактический Флешка с секретами",
+        "Rarity": "Epic",
+        "SellPrice": 230037676318,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 34800267814
+    },
+    {
+        "ID": 606,
+        "Category": "Гос. конфискат",
+        "Name": "Тактический Флешка с секретами",
+        "Rarity": "Epic",
+        "SellPrice": 230037676318,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.054
+    },
+    {
+        "ID": 607,
+        "Category": "Гос. конфискат",
+        "Name": "Святой Мигалка элитная",
+        "Rarity": "Legendary",
+        "SellPrice": 734723997116,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 178240191786
+    },
+    {
+        "ID": 608,
+        "Category": "Гос. конфискат",
+        "Name": "Святой Мигалка элитная",
+        "Rarity": "Legendary",
+        "SellPrice": 734723997116,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 0.282
+    },
+    {
+        "ID": 609,
+        "Category": "Гос. конфискат",
+        "Name": "Матричный Скипетр мэра",
+        "Rarity": "Unique",
+        "SellPrice": 6937990173389,
+        "BoostType": "Flat_IPS",
+        "BoostValue": 996627731290
+    },
+    {
+        "ID": 610,
+        "Category": "Гос. конфискат",
+        "Name": "Матричный Скипетр мэра",
+        "Rarity": "Unique",
+        "SellPrice": 6937990173389,
+        "BoostType": "Mult_MPC",
+        "BoostValue": 1.771
+    }
+]

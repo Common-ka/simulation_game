@@ -1,0 +1,54 @@
+[
+    {
+        "UpgradeID": "manual_tap_power",
+        "Name": "Ручной Клик",
+        "Description": "Плоское увеличение базовой силы каждого тапа.",
+        "BaseCost": 500,
+        "CostFormula": "BaseCost * Math.Pow(1.18, Level) * Math.Max(1, Math.Floor(Level / 50) * 1.4)",
+        "EffectFormula": "Level * 1.5",
+        "DependsOnIPS": false,
+        "MaxLevel": 9999
+    },
+    {
+        "UpgradeID": "rusty_autoclicker",
+        "Name": "Ржавый сервопривод",
+        "Description": "Автоматически делает 1 клик каждые 3 секунды (0.33 CPS).",
+        "BaseCost": 1000,
+        "CostFormula": "1000",
+        "EffectFormula": "0.33",
+        "DependsOnIPS": false,
+        "MaxLevel": 1
+    },
+    {
+        "UpgradeID": "overdrive_module",
+        "Name": "Модуль форсированного клика",
+        "Description": "Заменяет мотор. Мгновенно повышает скорость до 3 CPS и открывает дальнейшую прокачку.",
+        "BaseCost": 100000,
+        "CostFormula": "100000",
+        "EffectFormula": "3.0",
+        "DependsOnIPS": false,
+        "RequiredUpgrade": "rusty_autoclicker",
+        "MaxLevel": 1
+    },
+    {
+        "UpgradeID": "auto_clicker_cps",
+        "Name": "Турбо-подшипники (CPS)",
+        "Description": "Увеличивает скорость авто-клика на +1 за каждый уровень.",
+        "BaseCost": 50000,
+        "CostFormula": "BaseCost * Math.Pow(1.70, Level)",
+        "EffectFormula": "3.0 + Level",
+        "DependsOnIPS": false,
+        "RequiredUpgrade": "overdrive_module",
+        "MaxLevel": 10
+    },
+    {
+        "UpgradeID": "auto_clicker_power",
+        "Name": "Сила Авто-клика",
+        "Description": "Увеличивает силу авто-клика в процентах (0.1 х Level) от силы ручного тапа. Также клик получает бонус от IPS.",
+        "BaseCost": 25000,
+        "CostFormula": "BaseCost * Math.Pow(1.20, Level) * Math.Max(1, Math.Floor(Level / 25) * 1.5)",
+        "EffectFormula": "ManualTapEffect * (0.1 * Level)",
+        "DependsOnIPS": true,
+        "MaxLevel": 9999
+    }
+]

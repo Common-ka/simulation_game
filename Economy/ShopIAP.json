@@ -1,0 +1,71 @@
+{
+    "CurrencyConversion": {
+        "USD_To_Gems": 100
+    },
+    "Shelves": [
+        {
+            "ShelfSlot": 6,
+            "PriceSoft": 15000000,
+            "PriceGems": 0,
+            "PriceUSD": 0.0,
+            "OpportunityCostDesc": "Пробитие Мидгейм стены (Категория 5). Требует ~40 минут активного гринда."
+        },
+        {
+            "ShelfSlot": 7,
+            "PriceSoft": 0,
+            "PriceGems": 50,
+            "PriceUSD": 0.5,
+            "OpportunityCostDesc": "Стена 3 (Эндгейм). Экономия 2 часов чистого простоя."
+        },
+        {
+            "ShelfSlot": 8,
+            "PriceSoft": 0,
+            "PriceGems": 200,
+            "PriceUSD": 2.0,
+            "OpportunityCostDesc": "Мидгейм барьер после 1 престижа. Экономит более 10 часов прогресса."
+        },
+        {
+            "ShelfSlot": 9,
+            "PriceSoft": 0,
+            "PriceGems": 500,
+            "PriceUSD": 5.0,
+            "OpportunityCostDesc": "Экономит 3 дня фарма поздних категорий (Искусство)."
+        },
+        {
+            "ShelfSlot": 10,
+            "PriceSoft": 0,
+            "PriceGems": 1500,
+            "PriceUSD": 15.0,
+            "OpportunityCostDesc": "Кит-контент. Экономит более 14 дней чистого Idle-ожидания."
+        }
+    ],
+    "Consumables": [
+        {
+            "ItemID": "consumable_bm_key",
+            "Name": "Теневой Пропуск",
+            "Description": "Мгновенный доступ на Черный рынок. Контейнеры приобретаются за игровые средства.",
+            "PriceGems": 300,
+            "PurchaseLimit": -1,
+            "ActionType": "Grant_BM_Key",
+            "Value": 1
+        },
+        {
+            "ItemID": "consumable_stardust_500",
+            "Name": "Контейнер Звездной Пыли",
+            "Description": "500 единиц пыли для направленного синтеза стикеров в Альбоме.",
+            "PriceGems": 1000,
+            "PurchaseLimit": -1,
+            "ActionType": "Grant_Stardust",
+            "Value": 500
+        },
+        {
+            "ItemID": "consumable_timeskip_4h",
+            "Name": "Хронометр (4 часа)",
+            "Description": "Мгновенно начисляет пассивный доход с полок за 4 часа (базовый IPS x 14400 секунд).",
+            "PriceGems": 500,
+            "PurchaseLimit": -1,
+            "ActionType": "Time_Skip",
+            "Value": 14400
+        }
+    ]
+}

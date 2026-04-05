@@ -1,0 +1,352 @@
+[
+    {
+        "ID": 1001,
+        "Name": "Теневой Артефакт #1",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "+Offline_Time",
+        "EffectValue": 2.9
+    },
+    {
+        "ID": 1002,
+        "Name": "Теневой Артефакт #2",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "-Shop_Prices%",
+        "EffectValue": 1.5
+    },
+    {
+        "ID": 1003,
+        "Name": "Теневой Артефакт #3",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "+Gacha_Chance%",
+        "EffectValue": 4.1
+    },
+    {
+        "ID": 1004,
+        "Name": "Теневой Артефакт #4",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "+Gacha_Chance%",
+        "EffectValue": 2.7
+    },
+    {
+        "ID": 1005,
+        "Name": "Теневой Артефакт #5",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "+Total_IPS%",
+        "EffectValue": 4.3
+    },
+    {
+        "ID": 1006,
+        "Name": "Теневой Артефакт #6",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "+Gacha_Chance%",
+        "EffectValue": 2.2
+    },
+    {
+        "ID": 1007,
+        "Name": "Теневой Артефакт #7",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "+Gacha_Chance%",
+        "EffectValue": 2.3
+    },
+    {
+        "ID": 1008,
+        "Name": "Теневой Артефакт #8",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "+Gacha_Chance%",
+        "EffectValue": 2.4
+    },
+    {
+        "ID": 1009,
+        "Name": "Теневой Артефакт #9",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "-Shop_Prices%",
+        "EffectValue": 4.4
+    },
+    {
+        "ID": 1010,
+        "Name": "Теневой Артефакт #10",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "-Shop_Prices%",
+        "EffectValue": 1.8
+    },
+    {
+        "ID": 1011,
+        "Name": "Теневой Артефакт #11",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "-Shop_Prices%",
+        "EffectValue": 1.5
+    },
+    {
+        "ID": 1012,
+        "Name": "Теневой Артефакт #12",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "-Shop_Prices%",
+        "EffectValue": 3.5
+    },
+    {
+        "ID": 1013,
+        "Name": "Теневой Артефакт #13",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "+Total_IPS%",
+        "EffectValue": 3.0
+    },
+    {
+        "ID": 1014,
+        "Name": "Теневой Артефакт #14",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "+Gacha_Chance%",
+        "EffectValue": 3.4
+    },
+    {
+        "ID": 1015,
+        "Name": "Теневой Артефакт #15",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "+Gacha_Chance%",
+        "EffectValue": 1.7
+    },
+    {
+        "ID": 1016,
+        "Name": "Теневой Артефакт #16",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "-Shop_Prices%",
+        "EffectValue": 4.4
+    },
+    {
+        "ID": 1017,
+        "Name": "Теневой Артефакт #17",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "+Total_IPS%",
+        "EffectValue": 4.3
+    },
+    {
+        "ID": 1018,
+        "Name": "Теневой Артефакт #18",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "+Total_IPS%",
+        "EffectValue": 1.3
+    },
+    {
+        "ID": 1019,
+        "Name": "Теневой Артефакт #19",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "-Shop_Prices%",
+        "EffectValue": 3.6
+    },
+    {
+        "ID": 1020,
+        "Name": "Теневой Артефакт #20",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "+Offline_Time",
+        "EffectValue": 3.5
+    },
+    {
+        "ID": 1021,
+        "Name": "Теневой Артефакт #21",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "+Total_IPS%",
+        "EffectValue": 3.0
+    },
+    {
+        "ID": 1022,
+        "Name": "Теневой Артефакт #22",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "-Shop_Prices%",
+        "EffectValue": 3.6
+    },
+    {
+        "ID": 1023,
+        "Name": "Теневой Артефакт #23",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "-Shop_Prices%",
+        "EffectValue": 2.9
+    },
+    {
+        "ID": 1024,
+        "Name": "Теневой Артефакт #24",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "+Offline_Time",
+        "EffectValue": 2.2
+    },
+    {
+        "ID": 1025,
+        "Name": "Теневой Артефакт #25",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "+Total_IPS%",
+        "EffectValue": 3.8
+    },
+    {
+        "ID": 1026,
+        "Name": "Теневой Артефакт #26",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "+Gacha_Chance%",
+        "EffectValue": 2.8
+    },
+    {
+        "ID": 1027,
+        "Name": "Теневой Артефакт #27",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "+Offline_Time",
+        "EffectValue": 2.9
+    },
+    {
+        "ID": 1028,
+        "Name": "Теневой Артефакт #28",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "-Shop_Prices%",
+        "EffectValue": 3.4
+    },
+    {
+        "ID": 1029,
+        "Name": "Теневой Артефакт #29",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "-Shop_Prices%",
+        "EffectValue": 4.4
+    },
+    {
+        "ID": 1030,
+        "Name": "Теневой Артефакт #30",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "-Shop_Prices%",
+        "EffectValue": 3.9
+    },
+    {
+        "ID": 1031,
+        "Name": "Теневой Артефакт #31",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "-Shop_Prices%",
+        "EffectValue": 4.9
+    },
+    {
+        "ID": 1032,
+        "Name": "Теневой Артефакт #32",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "+Gacha_Chance%",
+        "EffectValue": 4.0
+    },
+    {
+        "ID": 1033,
+        "Name": "Теневой Артефакт #33",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "+Total_IPS%",
+        "EffectValue": 2.3
+    },
+    {
+        "ID": 1034,
+        "Name": "Теневой Артефакт #34",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "+Offline_Time",
+        "EffectValue": 1.5
+    },
+    {
+        "ID": 1035,
+        "Name": "Теневой Артефакт #35",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "+Offline_Time",
+        "EffectValue": 2.0
+    },
+    {
+        "ID": 1036,
+        "Name": "Теневой Артефакт #36",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "+Total_IPS%",
+        "EffectValue": 1.2
+    },
+    {
+        "ID": 1037,
+        "Name": "Теневой Артефакт #37",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "+Offline_Time",
+        "EffectValue": 4.5
+    },
+    {
+        "ID": 1038,
+        "Name": "Теневой Артефакт #38",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "+Offline_Time",
+        "EffectValue": 2.0
+    },
+    {
+        "ID": 1039,
+        "Name": "Теневой Артефакт #39",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "+Gacha_Chance%",
+        "EffectValue": 4.3
+    },
+    {
+        "ID": 1040,
+        "Name": "Теневой Артефакт #40",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "-Shop_Prices%",
+        "EffectValue": 1.8
+    },
+    {
+        "ID": 1041,
+        "Name": "Теневой Артефакт #41",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "+Gacha_Chance%",
+        "EffectValue": 3.0
+    },
+    {
+        "ID": 1042,
+        "Name": "Теневой Артефакт #42",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "+Offline_Time",
+        "EffectValue": 3.0
+    },
+    {
+        "ID": 1043,
+        "Name": "Теневой Артефакт #43",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "-Shop_Prices%",
+        "EffectValue": 3.0
+    },
+    {
+        "ID": 1044,
+        "Name": "Теневой Артефакт #44",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "+Total_IPS%",
+        "EffectValue": 4.8
+    },
+    {
+        "ID": 1045,
+        "Name": "Теневой Артефакт #45",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "+Offline_Time",
+        "EffectValue": 4.9
+    },
+    {
+        "ID": 1046,
+        "Name": "Теневой Артефакт #46",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "+Gacha_Chance%",
+        "EffectValue": 3.3
+    },
+    {
+        "ID": 1047,
+        "Name": "Теневой Артефакт #47",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "+Total_IPS%",
+        "EffectValue": 1.2
+    },
+    {
+        "ID": 1048,
+        "Name": "Теневой Артефакт #48",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "+Offline_Time",
+        "EffectValue": 3.4
+    },
+    {
+        "ID": 1049,
+        "Name": "Теневой Артефакт #49",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "+Offline_Time",
+        "EffectValue": 2.1
+    },
+    {
+        "ID": 1050,
+        "Name": "Теневой Артефакт #50",
+        "Rarity": "Black_Market_Exclusive",
+        "EffectType": "+Total_IPS%",
+        "EffectValue": 4.4
+    }
+]
