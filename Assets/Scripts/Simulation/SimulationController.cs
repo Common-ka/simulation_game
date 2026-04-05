@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using UnityEngine;
+using Newtonsoft.Json;
 
 public class SimulationController : MonoBehaviour
 {
-    // --- Data Models ---
+    // --- Data Models (Newtonsoft.Json) ---
     [Serializable]
     public class UpgradeData {
         public string UpgradeID;
@@ -18,12 +19,12 @@ public class SimulationController : MonoBehaviour
         public string EffectFormula;
         public bool DependsOnIPS;
         public string RequiredUpgrade;
-        public int MaxLevel;
+        public double MaxLevel; 
     }
 
     [Serializable]
     public class LootItem {
-        public int ID;
+        public double ID;
         public string Category;
         public string Name;
         public string Rarity;
@@ -40,18 +41,19 @@ public class SimulationController : MonoBehaviour
 
     // --- State Variables ---
     [Header("Simulation State")]
-    public double softCurrency = 0;
-    public double baseIPS = 0;
-    public double currentIPS = 0;
-    public double baseClickPower = 1;
-    public float autoCPS = 0f;
+    public double softCurrency = 0.0;
+    public double baseIPS = 0.0;
+    public double currentIPS = 0.0;
+    public double baseClickPower = 1.0; 
+    public double currentClickPower = 1.0;
+    public double autoCPS = 0.0; 
 
-    private int timeInSeconds = 0;
+    private double timeInSeconds = 0;
     private int unlockedCategoryIndex = 0;
 
     [Header("Config")]
-    public string overrideEconomyFolderPath = ""; // Если пусто, ищет в папке Economy в корне проекта (рядом с Assets)
-    public int maxUnpacksPerSecond = 5; // Имитация скорости игрока (во избежание EV > 1 бесконечных циклов)
+    public string overrideEconomyFolderPath = ""; 
+    public double maxUnpacksPerSecond = 5; 
 
     // --- DB Data ---
     private List<UpgradeData> upgrades;
@@ -59,8 +61,8 @@ public class SimulationController : MonoBehaviour
     private List<CategoryData> categories;
     
     // --- Cached Logic Data ---
-    private Dictionary<string, int> upgradeLevels = new Dictionary<string, int>();
-    private List<LootItem> shelf = new List<LootItem>(); // Макс 5 предметов
+    private Dictionary<string, double> upgradeLevels = new Dictionary<string, double>();
+    private List<LootItem> shelf = new List<LootItem>(); 
     private StreamWriter logWriter;
     private Dictionary<string, List<LootItem>> lootLookup = new Dictionary<string, List<LootItem>>();
 
@@ -91,8 +93,8 @@ public class SimulationController : MonoBehaviour
         string upgradesJson = File.ReadAllText(Path.Combine(path, "Upgrades.json"));
         string lootJson = File.ReadAllText(Path.Combine(path, "LootTable.json"));
 
-        upgrades = JsonHelper.FromJson<UpgradeData>(upgradesJson).ToList();
-        lootTable = JsonHelper.FromJson<LootItem>(lootJson).ToList();
+        upgrades = JsonConvert.DeserializeObject<List<UpgradeData>>(upgradesJson);
+        lootTable = JsonConvert.DeserializeObject<List<LootItem>>(lootJson);
     }
 
     private void InitCategoriesAndCache()
@@ -107,12 +109,10 @@ public class SimulationController : MonoBehaviour
             string cName = catsLayout[i];
             var commons = lootTable.Where(x => x.Category == cName && x.Rarity == "Common").ToList();
             if (commons.Count > 0) {
-                // Математически: CommonDropPrice = 0.2 * BoxPrice -> BoxPrice = CommonDropPrice * 5
                 categories.Add(new CategoryData { Name = cName, UnlockCost = unlockCosts[i], BoxPrice = commons[0].SellPrice * 5.0 });
             }
         }
 
-        // Cache Items for blazing-fast random pulls in memory without GC allocation spikes
         string[] rarities = { "Common", "Uncommon", "Rare", "Epic", "Legendary", "Unique" };
         foreach (var c in categories) {
             foreach (var r in rarities) {
@@ -123,14 +123,13 @@ public class SimulationController : MonoBehaviour
 
     private IEnumerator RunSimulation()
     {
-        int totalIterations = 14 * 24 * 60 * 60; // 14 дней
+        double totalIterations = 14.0 * 24.0 * 60.0 * 60.0; // Исключительно double во избежание int overflow
 
-        for (int i = 0; i < totalIterations; i++)
+        for (double i = 0; i < totalIterations; i++)
         {
             timeInSeconds = i;
             UpdateBotState();
 
-            // Чтобы редактор Unity не фризнул, пропуск кадра каждый 1 час ин-гейм времени
             if (i > 0 && i % 3600 == 0)
             {
                 yield return null; 
@@ -144,32 +143,29 @@ public class SimulationController : MonoBehaviour
 
     private void UpdateBotState()
     {
-        // 1. Пассивный доход
+        // --- БЛОК 0: Фарминг (Начисление пассивного и клик-дохода) ---
         softCurrency += currentIPS;
 
-        // 2. Клики (ручные и авто)
-        float manualCPS = (timeInSeconds < 1800) ? 5f : 0f;
-        float totalCPS = manualCPS + autoCPS;
+        double manualCPS = (timeInSeconds < 1800) ? 5.0 : 0.0;
+        double totalCPS = manualCPS + autoCPS;
 
         if (totalCPS > 0)
         {
-            double clickDamage = baseClickPower;
-            double tickGain = manualCPS * clickDamage;
+            double tickGain = manualCPS * currentClickPower;
 
-            // Обработка логики процента от силы авто-клика
             if (autoCPS > 0) {
                 double autoMultiplier = 1.0 + (0.1 * GetUpgradeLevel("auto_clicker_power"));
-                tickGain += autoCPS * (clickDamage * autoMultiplier);
+                tickGain += autoCPS * (currentClickPower * autoMultiplier);
             }
             softCurrency += tickGain;
         }
 
-        // 3. Апгрейды (Жадный режим)
+        // --- БЛОК 1: ПРИОРИТЕТ 1 - Проверка апгрейдов ---
         bool upgradeBought = true;
         while (upgradeBought)
         {
             upgradeBought = false;
-            // Пытаемся купить начиная с самого приоритетного
+            // Покупка жадная: пока хватает денег, скупаем всё
             if (TryBuyUpgrade("rusty_autoclicker")) { upgradeBought = true; continue; }
             if (TryBuyUpgrade("overdrive_module")) { upgradeBought = true; continue; }
             if (TryBuyUpgrade("auto_clicker_cps")) { upgradeBought = true; continue; }
@@ -177,19 +173,21 @@ public class SimulationController : MonoBehaviour
             if (TryBuyUpgrade("manual_tap_power")) { upgradeBought = true; continue; }
         }
 
-        // 4. Открытие категорий
-        for (int i = unlockedCategoryIndex + 1; i < categories.Count; i++)
+        // --- БЛОК 2: ПРИОРИТЕТ 2 - Доступна ли Категория N+1? (Строгий анлок) ---
+        if (unlockedCategoryIndex + 1 < categories.Count)
         {
-            if (softCurrency >= categories[i].UnlockCost)
+            var nextCat = categories[unlockedCategoryIndex + 1];
+            if (softCurrency >= nextCat.UnlockCost)
             {
-                unlockedCategoryIndex = i;
-                LogEvent($"Открытие новой категории коробок: {categories[i].Name}");
+                softCurrency -= nextCat.UnlockCost; // Обязательная транзакция разблокировки
+                unlockedCategoryIndex++;
+                LogEvent($"Открытие новой категории коробок: {nextCat.Name} (Списано: {nextCat.UnlockCost:F0})");
             }
         }
 
-        // 5. Анпакинг (покупка коробок высшей доступной категории)
+        // --- БЛОК 3: ПРИОРИТЕТ 3 - Покупка Лотов текущей категории ---
         var targetCat = categories[unlockedCategoryIndex];
-        int unpacksThisSecond = 0;
+        double unpacksThisSecond = 0;
         while (softCurrency >= targetCat.BoxPrice && unpacksThisSecond < maxUnpacksPerSecond)
         {
             softCurrency -= targetCat.BoxPrice;
@@ -199,22 +197,21 @@ public class SimulationController : MonoBehaviour
 
         CheckCheckpoints();
 
-        // End of the day summary
         if (timeInSeconds > 0 && timeInSeconds % 86400 == 0) {
-            int d = (timeInSeconds / 86400);
-            LogEvent($"-- ИТОГИ ДНЯ {d} -- SoftCurrency: {softCurrency:F0} | IPS: {currentIPS:F2} | ClickPow: {baseClickPower:F2}");
+            double d = (timeInSeconds / 86400);
+            LogEvent($"-- ИТОГИ ДНЯ {d} -- SoftCurrency: {softCurrency:F0} | IPS: {currentIPS:F2} | ClickPow: {currentClickPower:F2}");
         }
     }
 
     private void OpenBox(CategoryData cat)
     {
-        float p = UnityEngine.Random.value * 100f;
+        double p = UnityEngine.Random.value * 100.0;
         string rarity = "Common";
-        if (p < 55f) rarity = "Common";
-        else if (p < 80f) rarity = "Uncommon";
-        else if (p < 92f) rarity = "Rare";
-        else if (p < 98f) rarity = "Epic";
-        else if (p < 99.8f) rarity = "Legendary";
+        if (p < 55.0) rarity = "Common";
+        else if (p < 80.0) rarity = "Uncommon";
+        else if (p < 92.0) rarity = "Rare";
+        else if (p < 98.0) rarity = "Epic";
+        else if (p < 99.8) rarity = "Legendary";
         else rarity = "Unique";
 
         List<LootItem> possible = lootLookup[$"{cat.Name}_{rarity}"];
@@ -234,31 +231,83 @@ public class SimulationController : MonoBehaviour
             return;
         }
 
-        // Менеджмент полки (Rare+)
+        // Установка на полку (Rare+)
         if (shelf.Count < 5)
         {
-            shelf.Add(item);
+            AddItemToShelfAndRoute(item);
             if (item.Rarity != "Rare") LogEvent($"Установка предмета {item.Rarity} на полку: {item.Name} (+Boost)");
-            RecalculateCalculatedStats();
         }
         else
         {
-            // Полка заполнена — вычисляем худший предмет на основе агрегатора ценности (SellPrice)
+            // Сравнение с худшим
             var worstItem = shelf.OrderBy(x => x.SellPrice).First();
 
             if (item.SellPrice > worstItem.SellPrice)
             {
-                shelf.Remove(worstItem);
-                softCurrency += worstItem.SellPrice;
-                shelf.Add(item);
+                RemoveItemFromShelfAndRoute(worstItem);
+                softCurrency += worstItem.SellPrice; // Продаем изгнанный худший предмет
                 
+                AddItemToShelfAndRoute(item);
                 if (item.Rarity != "Rare") LogEvent($"Установка {item.Rarity} на полку (замена {worstItem.Name}): {item.Name} (+Boost)");
-                RecalculateCalculatedStats();
             }
             else
             {
+                // Новый оказался хуже — продаем его
                 softCurrency += item.SellPrice; 
             }
+        }
+    }
+
+    // --- IPS ROUTING ALGORITHM ---
+    private void AddItemToShelfAndRoute(LootItem item)
+    {
+        shelf.Add(item);
+        
+        // Строгая маршрутизация прибавки
+        if (item.BoostType == "Flat_IPS") {
+            baseIPS += item.BoostValue;
+        } 
+        else if (item.BoostType == "Mult_MPC") {
+            baseClickPower += item.BoostValue;
+        }
+        
+        RecalculateCoreStats();
+    }
+
+    private void RemoveItemFromShelfAndRoute(LootItem item)
+    {
+        shelf.Remove(item);
+        
+        // Вычитаем бусты при продаже
+        if (item.BoostType == "Flat_IPS") {
+            baseIPS -= item.BoostValue;
+            if (baseIPS < 0.0001) baseIPS = 0; // Защита от микропогрешностей
+        } 
+        else if (item.BoostType == "Mult_MPC") {
+            baseClickPower -= item.BoostValue;
+            if (baseClickPower < 1.0) baseClickPower = 1.0; 
+        }
+        
+        RecalculateCoreStats();
+    }
+
+    private void RecalculateCoreStats()
+    {
+        // baseIPS является агрегатором прямых бустов от Flat_IPS. 
+        currentIPS = baseIPS;
+        
+        double manualTapPower = GetUpgradeLevel("manual_tap_power") * 1.5;
+        // baseClickPower держит в себе "Mult_MPC" прибавки от полок (согласно графу)
+        double pureBaseClick = baseClickPower + manualTapPower;
+        
+        currentClickPower = pureBaseClick + (currentIPS * 0.1);
+
+        if (GetUpgradeLevel("overdrive_module") > 0) {
+            autoCPS = 3.0 + GetUpgradeLevel("auto_clicker_cps");
+        } else if (GetUpgradeLevel("rusty_autoclicker") > 0) {
+            autoCPS = 0.33;
+        } else {
+            autoCPS = 0;
         }
     }
 
@@ -267,54 +316,27 @@ public class SimulationController : MonoBehaviour
         var u = upgrades.FirstOrDefault(x => x.UpgradeID == id);
         if (u == null) return false;
 
-        int lvl = GetUpgradeLevel(id);
+        double lvl = GetUpgradeLevel(id);
         if (lvl >= u.MaxLevel) return false;
         if (!string.IsNullOrEmpty(u.RequiredUpgrade) && GetUpgradeLevel(u.RequiredUpgrade) == 0) return false;
 
         double cost = MathEvaluateCostFormula(u, lvl);
 
+        if (double.IsInfinity(cost) || double.IsNaN(cost)) return false;
+
+        // Транзакция
         if (softCurrency >= cost)
         {
             softCurrency -= cost;
             upgradeLevels[id] = lvl + 1;
             LogEvent($"Покупка апгрейда: {u.Name} (Ур. {lvl + 1}) за {cost:F0}");
-            RecalculateCalculatedStats();
+            RecalculateCoreStats();
             return true;
         }
         return false;
     }
 
-    private void RecalculateCalculatedStats()
-    {
-        double shelfIPS = 0;
-        double shelfMPCAdd = 0;
-
-        foreach (var item in shelf)
-        {
-            if (item.BoostType == "Flat_IPS") shelfIPS += item.BoostValue;
-            if (item.BoostType == "Mult_MPC") shelfMPCAdd += item.BoostValue; 
-        }
-
-        baseIPS = shelfIPS;
-        currentIPS = baseIPS;
-        
-        // Согласно MacroBalance.md: MPC = Base_Click + (Total_IPS * 0.1)
-        double manualTapPower = GetUpgradeLevel("manual_tap_power") * 1.5;
-        double pureBaseClick = 1.0 + manualTapPower + shelfMPCAdd;
-        
-        baseClickPower = pureBaseClick + (currentIPS * 0.1);
-
-        // Расчет авто-клика
-        if (GetUpgradeLevel("overdrive_module") > 0) {
-            autoCPS = 3.0f + GetUpgradeLevel("auto_clicker_cps");
-        } else if (GetUpgradeLevel("rusty_autoclicker") > 0) {
-            autoCPS = 0.33f;
-        } else {
-            autoCPS = 0f;
-        }
-    }
-
-    private double MathEvaluateCostFormula(UpgradeData u, int level)
+    private double MathEvaluateCostFormula(UpgradeData u, double level)
     {
         if (u.UpgradeID == "manual_tap_power")
             return u.BaseCost * Math.Pow(1.18, level) * Math.Max(1.0, Math.Floor(level / 50.0) * 1.4);
@@ -325,10 +347,10 @@ public class SimulationController : MonoBehaviour
         if (u.UpgradeID == "auto_clicker_power")
             return u.BaseCost * Math.Pow(1.20, level) * Math.Max(1.0, Math.Floor(level / 25.0) * 1.5);
             
-        return u.BaseCost; // Константа для rusty_autoclicker и overdrive_module
+        return u.BaseCost;
     }
 
-    private int GetUpgradeLevel(string id) => upgradeLevels.ContainsKey(id) ? upgradeLevels[id] : 0;
+    private double GetUpgradeLevel(string id) => upgradeLevels.ContainsKey(id) ? upgradeLevels[id] : 0;
     
     private void CheckCheckpoints()
     {
@@ -339,12 +361,12 @@ public class SimulationController : MonoBehaviour
 
     private void LogEvent(string message)
     {
-        int day = (timeInSeconds / 86400) + 1;
-        int hour = (timeInSeconds % 86400) / 3600;
-        int min = (timeInSeconds % 3600) / 60;
-        int sec = timeInSeconds % 60;
+        double day = Math.Floor(timeInSeconds / 86400) + 1;
+        double hour = Math.Floor((timeInSeconds % 86400) / 3600);
+        double min = Math.Floor((timeInSeconds % 3600) / 60);
+        double sec = timeInSeconds % 60;
 
-        string ts = $"[Day {day}, {hour:D2}:{min:D2}:{sec:D2}]";
+        string ts = $"[Day {day}, {hour:00}:{min:00}:{sec:00}]";
         string printMsg = $"{ts} {message}";
 
         Debug.Log(printMsg);
@@ -355,22 +377,5 @@ public class SimulationController : MonoBehaviour
     private void OnDestroy()
     {
         logWriter?.Close();
-    }
-}
-
-// --- JSON Wrapper for Root Arrays (Standard Engine Fix) ---
-public static class JsonHelper
-{
-    public static T[] FromJson<T>(string json)
-    {
-        string newJson = "{ \"array\": " + json + "}";
-        Wrapper<T> wrapper = JsonUtility.FromJson<Wrapper<T>>(newJson);
-        return wrapper.array;
-    }
-
-    [Serializable]
-    private class Wrapper<T>
-    {
-        public T[] array;
     }
 }
