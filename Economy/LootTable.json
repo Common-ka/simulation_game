@@ -279,7 +279,7 @@
         "Rarity": "Rare",
         "SellPrice": 2,
         "BoostType": "Flat_IPS",
-        "BoostValue": 0.98
+        "BoostValue": 1.0
     },
     {
         "ID": 41,
@@ -297,7 +297,7 @@
         "Rarity": "Rare",
         "SellPrice": 2,
         "BoostType": "Flat_IPS",
-        "BoostValue": 0.96
+        "BoostValue": 1.0
     },
     {
         "ID": 43,
@@ -315,7 +315,7 @@
         "Rarity": "Rare",
         "SellPrice": 2,
         "BoostType": "Flat_IPS",
-        "BoostValue": 0.98
+        "BoostValue": 1.02
     },
     {
         "ID": 45,
@@ -333,7 +333,7 @@
         "Rarity": "Rare",
         "SellPrice": 2,
         "BoostType": "Flat_IPS",
-        "BoostValue": 0.91
+        "BoostValue": 1.03
     },
     {
         "ID": 47,
@@ -351,7 +351,7 @@
         "Rarity": "Rare",
         "SellPrice": 2,
         "BoostType": "Flat_IPS",
-        "BoostValue": 0.95
+        "BoostValue": 1.0
     },
     {
         "ID": 49,
@@ -369,7 +369,7 @@
         "Rarity": "Rare",
         "SellPrice": 2,
         "BoostType": "Flat_IPS",
-        "BoostValue": 0.97
+        "BoostValue": 1.04
     },
     {
         "ID": 51,
@@ -387,7 +387,7 @@
         "Rarity": "Epic",
         "SellPrice": 16,
         "BoostType": "Flat_IPS",
-        "BoostValue": 4.9
+        "BoostValue": 4.99
     },
     {
         "ID": 53,
@@ -405,7 +405,7 @@
         "Rarity": "Epic",
         "SellPrice": 16,
         "BoostType": "Flat_IPS",
-        "BoostValue": 4.64
+        "BoostValue": 5.01
     },
     {
         "ID": 55,
@@ -423,7 +423,7 @@
         "Rarity": "Epic",
         "SellPrice": 16,
         "BoostType": "Flat_IPS",
-        "BoostValue": 4.58
+        "BoostValue": 4.82
     },
     {
         "ID": 57,
@@ -441,7 +441,7 @@
         "Rarity": "Legendary",
         "SellPrice": 54,
         "BoostType": "Flat_IPS",
-        "BoostValue": 23
+        "BoostValue": 24.66
     },
     {
         "ID": 59,
@@ -459,7 +459,7 @@
         "Rarity": "Unique",
         "SellPrice": 537,
         "BoostType": "Flat_IPS",
-        "BoostValue": 146
+        "BoostValue": 157.0
     },
     {
         "ID": 61,
@@ -750,7 +750,7 @@
         "Rarity": "Rare",
         "SellPrice": 30,
         "BoostType": "Flat_IPS",
-        "BoostValue": 8.58
+        "BoostValue": 1.0
     },
     {
         "ID": 102,
@@ -768,7 +768,7 @@
         "Rarity": "Rare",
         "SellPrice": 30,
         "BoostType": "Flat_IPS",
-        "BoostValue": 8.45
+        "BoostValue": 1.0
     },
     {
         "ID": 104,
@@ -786,7 +786,7 @@
         "Rarity": "Rare",
         "SellPrice": 32,
         "BoostType": "Flat_IPS",
-        "BoostValue": 7.92
+        "BoostValue": 1.03
     },
     {
         "ID": 106,
@@ -804,7 +804,7 @@
         "Rarity": "Rare",
         "SellPrice": 31,
         "BoostType": "Flat_IPS",
-        "BoostValue": 8.06
+        "BoostValue": 1.04
     },
     {
         "ID": 108,
@@ -822,7 +822,7 @@
         "Rarity": "Rare",
         "SellPrice": 33,
         "BoostType": "Flat_IPS",
-        "BoostValue": 8.4
+        "BoostValue": 1.0
     },
     {
         "ID": 110,
@@ -840,7 +840,7 @@
         "Rarity": "Rare",
         "SellPrice": 28,
         "BoostType": "Flat_IPS",
-        "BoostValue": 8.35
+        "BoostValue": 1.0
     },
     {
         "ID": 112,
@@ -858,7 +858,7 @@
         "Rarity": "Epic",
         "SellPrice": 215,
         "BoostType": "Flat_IPS",
-        "BoostValue": 40
+        "BoostValue": 5.14
     },
     {
         "ID": 114,
@@ -876,7 +876,7 @@
         "Rarity": "Epic",
         "SellPrice": 233,
         "BoostType": "Flat_IPS",
-        "BoostValue": 43
+        "BoostValue": 4.84
     },
     {
         "ID": 116,
@@ -894,7 +894,7 @@
         "Rarity": "Epic",
         "SellPrice": 207,
         "BoostType": "Flat_IPS",
-        "BoostValue": 41
+        "BoostValue": 5.09
     },
     {
         "ID": 118,
@@ -912,7 +912,7 @@
         "Rarity": "Legendary",
         "SellPrice": 725,
         "BoostType": "Flat_IPS",
-        "BoostValue": 199
+        "BoostValue": 25.24
     },
     {
         "ID": 120,
@@ -930,7 +930,7 @@
         "Rarity": "Unique",
         "SellPrice": 7862,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1262
+        "BoostValue": 150.0
     },
     {
         "ID": 122,
@@ -1221,7 +1221,7 @@
         "Rarity": "Rare",
         "SellPrice": 223,
         "BoostType": "Flat_IPS",
-        "BoostValue": 59
+        "BoostValue": 1.0
     },
     {
         "ID": 163,
@@ -1239,7 +1239,7 @@
         "Rarity": "Rare",
         "SellPrice": 245,
         "BoostType": "Flat_IPS",
-        "BoostValue": 60
+        "BoostValue": 1.0
     },
     {
         "ID": 165,
@@ -1257,7 +1257,7 @@
         "Rarity": "Rare",
         "SellPrice": 259,
         "BoostType": "Flat_IPS",
-        "BoostValue": 61
+        "BoostValue": 1.04
     },
     {
         "ID": 167,
@@ -1275,7 +1275,7 @@
         "Rarity": "Rare",
         "SellPrice": 240,
         "BoostType": "Flat_IPS",
-        "BoostValue": 65
+        "BoostValue": 1.0
     },
     {
         "ID": 169,
@@ -1293,7 +1293,7 @@
         "Rarity": "Rare",
         "SellPrice": 259,
         "BoostType": "Flat_IPS",
-        "BoostValue": 63
+        "BoostValue": 1.0
     },
     {
         "ID": 171,
@@ -1311,7 +1311,7 @@
         "Rarity": "Rare",
         "SellPrice": 224,
         "BoostType": "Flat_IPS",
-        "BoostValue": 65
+        "BoostValue": 1.0
     },
     {
         "ID": 173,
@@ -1329,7 +1329,7 @@
         "Rarity": "Epic",
         "SellPrice": 1784,
         "BoostType": "Flat_IPS",
-        "BoostValue": 307
+        "BoostValue": 4.84
     },
     {
         "ID": 175,
@@ -1347,7 +1347,7 @@
         "Rarity": "Epic",
         "SellPrice": 1962,
         "BoostType": "Flat_IPS",
-        "BoostValue": 314
+        "BoostValue": 4.96
     },
     {
         "ID": 177,
@@ -1365,7 +1365,7 @@
         "Rarity": "Epic",
         "SellPrice": 1919,
         "BoostType": "Flat_IPS",
-        "BoostValue": 304
+        "BoostValue": 4.82
     },
     {
         "ID": 179,
@@ -1383,7 +1383,7 @@
         "Rarity": "Legendary",
         "SellPrice": 5711,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1606
+        "BoostValue": 25.34
     },
     {
         "ID": 181,
@@ -1401,7 +1401,7 @@
         "Rarity": "Unique",
         "SellPrice": 61521,
         "BoostType": "Flat_IPS",
-        "BoostValue": 9664
+        "BoostValue": 143.0
     },
     {
         "ID": 183,
@@ -1692,7 +1692,7 @@
         "Rarity": "Rare",
         "SellPrice": 3070,
         "BoostType": "Flat_IPS",
-        "BoostValue": 765
+        "BoostValue": 1.02
     },
     {
         "ID": 224,
@@ -1710,7 +1710,7 @@
         "Rarity": "Rare",
         "SellPrice": 2893,
         "BoostType": "Flat_IPS",
-        "BoostValue": 795
+        "BoostValue": 1.0
     },
     {
         "ID": 226,
@@ -1728,7 +1728,7 @@
         "Rarity": "Rare",
         "SellPrice": 3229,
         "BoostType": "Flat_IPS",
-        "BoostValue": 760
+        "BoostValue": 1.0
     },
     {
         "ID": 228,
@@ -1746,7 +1746,7 @@
         "Rarity": "Rare",
         "SellPrice": 2902,
         "BoostType": "Flat_IPS",
-        "BoostValue": 798
+        "BoostValue": 1.04
     },
     {
         "ID": 230,
@@ -1764,7 +1764,7 @@
         "Rarity": "Rare",
         "SellPrice": 2827,
         "BoostType": "Flat_IPS",
-        "BoostValue": 815
+        "BoostValue": 1.02
     },
     {
         "ID": 232,
@@ -1782,7 +1782,7 @@
         "Rarity": "Rare",
         "SellPrice": 3033,
         "BoostType": "Flat_IPS",
-        "BoostValue": 793
+        "BoostValue": 1.04
     },
     {
         "ID": 234,
@@ -1800,7 +1800,7 @@
         "Rarity": "Epic",
         "SellPrice": 23490,
         "BoostType": "Flat_IPS",
-        "BoostValue": 4173
+        "BoostValue": 4.98
     },
     {
         "ID": 236,
@@ -1818,7 +1818,7 @@
         "Rarity": "Epic",
         "SellPrice": 23157,
         "BoostType": "Flat_IPS",
-        "BoostValue": 3856
+        "BoostValue": 4.79
     },
     {
         "ID": 238,
@@ -1836,7 +1836,7 @@
         "Rarity": "Epic",
         "SellPrice": 21574,
         "BoostType": "Flat_IPS",
-        "BoostValue": 4043
+        "BoostValue": 5.17
     },
     {
         "ID": 240,
@@ -1854,7 +1854,7 @@
         "Rarity": "Legendary",
         "SellPrice": 74599,
         "BoostType": "Flat_IPS",
-        "BoostValue": 19035
+        "BoostValue": 25.39
     },
     {
         "ID": 242,
@@ -1872,7 +1872,7 @@
         "Rarity": "Unique",
         "SellPrice": 727772,
         "BoostType": "Flat_IPS",
-        "BoostValue": 125400
+        "BoostValue": 148.0
     },
     {
         "ID": 244,
@@ -2163,7 +2163,7 @@
         "Rarity": "Rare",
         "SellPrice": 39597,
         "BoostType": "Flat_IPS",
-        "BoostValue": 0.96
+        "BoostValue": 9.65
     },
     {
         "ID": 285,
@@ -2181,7 +2181,7 @@
         "Rarity": "Rare",
         "SellPrice": 36137,
         "BoostType": "Flat_IPS",
-        "BoostValue": 0.91
+        "BoostValue": 8.83
     },
     {
         "ID": 287,
@@ -2199,7 +2199,7 @@
         "Rarity": "Rare",
         "SellPrice": 36970,
         "BoostType": "Flat_IPS",
-        "BoostValue": 0.94
+        "BoostValue": 9.61
     },
     {
         "ID": 289,
@@ -2217,7 +2217,7 @@
         "Rarity": "Rare",
         "SellPrice": 35340,
         "BoostType": "Flat_IPS",
-        "BoostValue": 0.91
+        "BoostValue": 9.16
     },
     {
         "ID": 291,
@@ -2235,7 +2235,7 @@
         "Rarity": "Rare",
         "SellPrice": 35364,
         "BoostType": "Flat_IPS",
-        "BoostValue": 0.95
+        "BoostValue": 8.88
     },
     {
         "ID": 293,
@@ -2253,7 +2253,7 @@
         "Rarity": "Rare",
         "SellPrice": 35675,
         "BoostType": "Flat_IPS",
-        "BoostValue": 0.94
+        "BoostValue": 9.31
     },
     {
         "ID": 295,
@@ -2271,7 +2271,7 @@
         "Rarity": "Epic",
         "SellPrice": 289705,
         "BoostType": "Flat_IPS",
-        "BoostValue": 4.56
+        "BoostValue": 45.16
     },
     {
         "ID": 297,
@@ -2289,7 +2289,7 @@
         "Rarity": "Epic",
         "SellPrice": 265315,
         "BoostType": "Flat_IPS",
-        "BoostValue": 4.66
+        "BoostValue": 44.61
     },
     {
         "ID": 299,
@@ -2307,7 +2307,7 @@
         "Rarity": "Epic",
         "SellPrice": 276622,
         "BoostType": "Flat_IPS",
-        "BoostValue": 4.95
+        "BoostValue": 47.06
     },
     {
         "ID": 301,
@@ -2325,7 +2325,7 @@
         "Rarity": "Legendary",
         "SellPrice": 858070,
         "BoostType": "Flat_IPS",
-        "BoostValue": 23
+        "BoostValue": 241.0
     },
     {
         "ID": 303,
@@ -2343,7 +2343,7 @@
         "Rarity": "Unique",
         "SellPrice": 9685524,
         "BoostType": "Flat_IPS",
-        "BoostValue": 147
+        "BoostValue": 1408.0
     },
     {
         "ID": 305,
@@ -2634,7 +2634,7 @@
         "Rarity": "Rare",
         "SellPrice": 513894,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1.03
+        "BoostValue": 29917.0
     },
     {
         "ID": 346,
@@ -2652,7 +2652,7 @@
         "Rarity": "Rare",
         "SellPrice": 469922,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1.0
+        "BoostValue": 32098.0
     },
     {
         "ID": 348,
@@ -2670,7 +2670,7 @@
         "Rarity": "Rare",
         "SellPrice": 488136,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1.01
+        "BoostValue": 29836.0
     },
     {
         "ID": 350,
@@ -2688,7 +2688,7 @@
         "Rarity": "Rare",
         "SellPrice": 452194,
         "BoostType": "Flat_IPS",
-        "BoostValue": 0.99
+        "BoostValue": 32123.0
     },
     {
         "ID": 352,
@@ -2706,7 +2706,7 @@
         "Rarity": "Rare",
         "SellPrice": 541062,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1.02
+        "BoostValue": 30760.0
     },
     {
         "ID": 354,
@@ -2724,7 +2724,7 @@
         "Rarity": "Rare",
         "SellPrice": 510706,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1.04
+        "BoostValue": 30750.0
     },
     {
         "ID": 356,
@@ -2742,7 +2742,7 @@
         "Rarity": "Epic",
         "SellPrice": 3883323,
         "BoostType": "Flat_IPS",
-        "BoostValue": 5.18
+        "BoostValue": 158353.0
     },
     {
         "ID": 358,
@@ -2760,7 +2760,7 @@
         "Rarity": "Epic",
         "SellPrice": 3606700,
         "BoostType": "Flat_IPS",
-        "BoostValue": 5.26
+        "BoostValue": 153238.0
     },
     {
         "ID": 360,
@@ -2778,7 +2778,7 @@
         "Rarity": "Epic",
         "SellPrice": 3442600,
         "BoostType": "Flat_IPS",
-        "BoostValue": 4.84
+        "BoostValue": 157085.0
     },
     {
         "ID": 362,
@@ -2796,7 +2796,7 @@
         "Rarity": "Legendary",
         "SellPrice": 11751987,
         "BoostType": "Flat_IPS",
-        "BoostValue": 26
+        "BoostValue": 771074.0
     },
     {
         "ID": 364,
@@ -2814,7 +2814,7 @@
         "Rarity": "Unique",
         "SellPrice": 118924252,
         "BoostType": "Flat_IPS",
-        "BoostValue": 148
+        "BoostValue": 4589391.0
     },
     {
         "ID": 366,
@@ -2830,1883 +2830,1883 @@
         "Category": "Ювелирный лом",
         "Name": "Старый Бриллиант из стекла",
         "Rarity": "Common",
-        "SellPrice": 742593
+        "SellPrice": 74259300
     },
     {
         "ID": 368,
         "Category": "Ювелирный лом",
         "Name": "Б/У Кольцо всевластия",
         "Rarity": "Common",
-        "SellPrice": 649706
+        "SellPrice": 64970600
     },
     {
         "ID": 369,
         "Category": "Ювелирный лом",
         "Name": "Ржавый Золотые зубы",
         "Rarity": "Common",
-        "SellPrice": 765418
+        "SellPrice": 76541800
     },
     {
         "ID": 370,
         "Category": "Ювелирный лом",
         "Name": "Китайский Кольцо всевластия",
         "Rarity": "Common",
-        "SellPrice": 740695
+        "SellPrice": 74069500
     },
     {
         "ID": 371,
         "Category": "Ювелирный лом",
         "Name": "Сломанный Бриллиант из стекла",
         "Rarity": "Common",
-        "SellPrice": 705120
+        "SellPrice": 70512000
     },
     {
         "ID": 372,
         "Category": "Ювелирный лом",
         "Name": "Б/У Бриллиант из стекла",
         "Rarity": "Common",
-        "SellPrice": 724196
+        "SellPrice": 72419600
     },
     {
         "ID": 373,
         "Category": "Ювелирный лом",
         "Name": "Старый Золотые зубы",
         "Rarity": "Common",
-        "SellPrice": 745138
+        "SellPrice": 74513800
     },
     {
         "ID": 374,
         "Category": "Ювелирный лом",
         "Name": "Китайский Кольцо всевластия",
         "Rarity": "Common",
-        "SellPrice": 724477
+        "SellPrice": 72447700
     },
     {
         "ID": 375,
         "Category": "Ювелирный лом",
         "Name": "Б/У Кольцо всевластия",
         "Rarity": "Common",
-        "SellPrice": 716737
+        "SellPrice": 71673700
     },
     {
         "ID": 376,
         "Category": "Ювелирный лом",
         "Name": "Китайский Цепь рэпера",
         "Rarity": "Common",
-        "SellPrice": 720671
+        "SellPrice": 72067100
     },
     {
         "ID": 377,
         "Category": "Ювелирный лом",
         "Name": "Б/У Бриллиант из стекла",
         "Rarity": "Common",
-        "SellPrice": 720894
+        "SellPrice": 72089400
     },
     {
         "ID": 378,
         "Category": "Ювелирный лом",
         "Name": "Мятый Цепь рэпера",
         "Rarity": "Common",
-        "SellPrice": 636349
+        "SellPrice": 63634900
     },
     {
         "ID": 379,
         "Category": "Ювелирный лом",
         "Name": "Сломанный Бриллиант из стекла",
         "Rarity": "Common",
-        "SellPrice": 769430
+        "SellPrice": 76943000
     },
     {
         "ID": 380,
         "Category": "Ювелирный лом",
         "Name": "Мятый Кольцо всевластия",
         "Rarity": "Common",
-        "SellPrice": 662872
+        "SellPrice": 66287200
     },
     {
         "ID": 381,
         "Category": "Ювелирный лом",
         "Name": "Пыльный Золотые зубы",
         "Rarity": "Common",
-        "SellPrice": 693510
+        "SellPrice": 69351000
     },
     {
         "ID": 382,
         "Category": "Ювелирный лом",
         "Name": "Липкий Цепь рэпера",
         "Rarity": "Common",
-        "SellPrice": 753958
+        "SellPrice": 75395800
     },
     {
         "ID": 383,
         "Category": "Ювелирный лом",
         "Name": "Мятый Золотые зубы",
         "Rarity": "Common",
-        "SellPrice": 716191
+        "SellPrice": 71619100
     },
     {
         "ID": 384,
         "Category": "Ювелирный лом",
         "Name": "Старый Кольцо всевластия",
         "Rarity": "Common",
-        "SellPrice": 726639
+        "SellPrice": 72663900
     },
     {
         "ID": 385,
         "Category": "Ювелирный лом",
         "Name": "Ржавый Золотые зубы",
         "Rarity": "Common",
-        "SellPrice": 692257
+        "SellPrice": 69225700
     },
     {
         "ID": 386,
         "Category": "Ювелирный лом",
         "Name": "Ржавый Бриллиант из стекла",
         "Rarity": "Common",
-        "SellPrice": 643910
+        "SellPrice": 64391000
     },
     {
         "ID": 387,
         "Category": "Ювелирный лом",
         "Name": "Китайский Бриллиант из стекла",
         "Rarity": "Common",
-        "SellPrice": 638477
+        "SellPrice": 63847700
     },
     {
         "ID": 388,
         "Category": "Ювелирный лом",
         "Name": "Старый Цепь рэпера",
         "Rarity": "Common",
-        "SellPrice": 765549
+        "SellPrice": 76554900
     },
     {
         "ID": 389,
         "Category": "Ювелирный лом",
         "Name": "Б/У Кольцо всевластия",
         "Rarity": "Common",
-        "SellPrice": 722788
+        "SellPrice": 72278800
     },
     {
         "ID": 390,
         "Category": "Ювелирный лом",
         "Name": "Сломанный Кольцо всевластия",
         "Rarity": "Common",
-        "SellPrice": 740151
+        "SellPrice": 74015100
     },
     {
         "ID": 391,
         "Category": "Ювелирный лом",
         "Name": "Ржавый Цепь рэпера",
         "Rarity": "Common",
-        "SellPrice": 740177
+        "SellPrice": 74017700
     },
     {
         "ID": 392,
         "Category": "Ювелирный лом",
         "Name": "Ржавый Кольцо всевластия",
         "Rarity": "Common",
-        "SellPrice": 746174
+        "SellPrice": 74617400
     },
     {
         "ID": 393,
         "Category": "Ювелирный лом",
         "Name": "Ржавый Цепь рэпера",
         "Rarity": "Common",
-        "SellPrice": 743827
+        "SellPrice": 74382700
     },
     {
         "ID": 394,
         "Category": "Ювелирный лом",
         "Name": "Исцарапанный Бриллиант из стекла",
         "Rarity": "Uncommon",
-        "SellPrice": 1846029
+        "SellPrice": 184602900
     },
     {
         "ID": 395,
         "Category": "Ювелирный лом",
         "Name": "Мягкий Кольцо всевластия",
         "Rarity": "Uncommon",
-        "SellPrice": 1672046
+        "SellPrice": 167204600
     },
     {
         "ID": 396,
         "Category": "Ювелирный лом",
         "Name": "Исцарапанный Цепь рэпера",
         "Rarity": "Uncommon",
-        "SellPrice": 1764075
+        "SellPrice": 176407500
     },
     {
         "ID": 397,
         "Category": "Ювелирный лом",
         "Name": "Мягкий Цепь рэпера",
         "Rarity": "Uncommon",
-        "SellPrice": 1613474
+        "SellPrice": 161347400
     },
     {
         "ID": 398,
         "Category": "Ювелирный лом",
         "Name": "Мягкий Кольцо всевластия",
         "Rarity": "Uncommon",
-        "SellPrice": 1621131
+        "SellPrice": 162113100
     },
     {
         "ID": 399,
         "Category": "Ювелирный лом",
         "Name": "Странный Цепь рэпера",
         "Rarity": "Uncommon",
-        "SellPrice": 1781099
+        "SellPrice": 178109900
     },
     {
         "ID": 400,
         "Category": "Ювелирный лом",
         "Name": "Поддельный Цепь рэпера",
         "Rarity": "Uncommon",
-        "SellPrice": 1667879
+        "SellPrice": 166787900
     },
     {
         "ID": 401,
         "Category": "Ювелирный лом",
         "Name": "Исцарапанный Золотые зубы",
         "Rarity": "Uncommon",
-        "SellPrice": 1759130
+        "SellPrice": 175913000
     },
     {
         "ID": 402,
         "Category": "Ювелирный лом",
         "Name": "Пахучий Кольцо всевластия",
         "Rarity": "Uncommon",
-        "SellPrice": 1741686
+        "SellPrice": 174168600
     },
     {
         "ID": 403,
         "Category": "Ювелирный лом",
         "Name": "Мягкий Бриллиант из стекла",
         "Rarity": "Uncommon",
-        "SellPrice": 1754633
+        "SellPrice": 175463300
     },
     {
         "ID": 404,
         "Category": "Ювелирный лом",
         "Name": "Поддельный Золотые зубы",
         "Rarity": "Uncommon",
-        "SellPrice": 1751344
+        "SellPrice": 175134400
     },
     {
         "ID": 405,
         "Category": "Ювелирный лом",
         "Name": "Абсурдный Кольцо всевластия",
         "Rarity": "Uncommon",
-        "SellPrice": 1829535
+        "SellPrice": 182953500
     },
     {
         "ID": 406,
         "Category": "Ювелирный лом",
         "Name": "Базированный Бриллиант из стекла",
         "Rarity": "Rare",
-        "SellPrice": 6941260,
+        "SellPrice": 694126000,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1654707
+        "BoostValue": 225033.0
     },
     {
         "ID": 407,
         "Category": "Ювелирный лом",
         "Name": "Базированный Бриллиант из стекла",
         "Rarity": "Rare",
-        "SellPrice": 6941260,
+        "SellPrice": 694126000,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.01
+        "BoostValue": 0.05
     },
     {
         "ID": 408,
         "Category": "Ювелирный лом",
         "Name": "Блестящий Золотые зубы",
         "Rarity": "Rare",
-        "SellPrice": 7486218,
+        "SellPrice": 748621800,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1678064
+        "BoostValue": 226059.0
     },
     {
         "ID": 409,
         "Category": "Ювелирный лом",
         "Name": "Блестящий Золотые зубы",
         "Rarity": "Rare",
-        "SellPrice": 7486218,
+        "SellPrice": 748621800,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.01
+        "BoostValue": 0.05
     },
     {
         "ID": 410,
         "Category": "Ювелирный лом",
         "Name": "Хайповый Золотые зубы",
         "Rarity": "Rare",
-        "SellPrice": 6402887,
+        "SellPrice": 640288700,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1666199
+        "BoostValue": 223615.0
     },
     {
         "ID": 411,
         "Category": "Ювелирный лом",
         "Name": "Хайповый Золотые зубы",
         "Rarity": "Rare",
-        "SellPrice": 6402887,
+        "SellPrice": 640288700,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.01
+        "BoostValue": 0.05
     },
     {
         "ID": 412,
         "Category": "Ювелирный лом",
         "Name": "Винтажный Цепь рэпера",
         "Rarity": "Rare",
-        "SellPrice": 6391955,
+        "SellPrice": 639195500,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1768245
+        "BoostValue": 214790.0
     },
     {
         "ID": 413,
         "Category": "Ювелирный лом",
         "Name": "Винтажный Цепь рэпера",
         "Rarity": "Rare",
-        "SellPrice": 6391955,
+        "SellPrice": 639195500,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.01
+        "BoostValue": 0.05
     },
     {
         "ID": 414,
         "Category": "Ювелирный лом",
         "Name": "Непонятный Бриллиант из стекла",
         "Rarity": "Rare",
-        "SellPrice": 6833266,
+        "SellPrice": 683326600,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1793702
+        "BoostValue": 222531.0
     },
     {
         "ID": 415,
         "Category": "Ювелирный лом",
         "Name": "Непонятный Бриллиант из стекла",
         "Rarity": "Rare",
-        "SellPrice": 6833266,
+        "SellPrice": 683326600,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.01
+        "BoostValue": 0.05
     },
     {
         "ID": 416,
         "Category": "Ювелирный лом",
         "Name": "Непонятный Золотые зубы",
         "Rarity": "Rare",
-        "SellPrice": 6438850,
+        "SellPrice": 643885000,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1752576
+        "BoostValue": 222111.0
     },
     {
         "ID": 417,
         "Category": "Ювелирный лом",
         "Name": "Непонятный Золотые зубы",
         "Rarity": "Rare",
-        "SellPrice": 6438850,
+        "SellPrice": 643885000,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.01
+        "BoostValue": 0.05
     },
     {
         "ID": 418,
         "Category": "Ювелирный лом",
         "Name": "Тактический Цепь рэпера",
         "Rarity": "Epic",
-        "SellPrice": 51765734,
+        "SellPrice": 5176573400,
         "BoostType": "Flat_IPS",
-        "BoostValue": 8246705
+        "BoostValue": 1119360.0
     },
     {
         "ID": 419,
         "Category": "Ювелирный лом",
         "Name": "Тактический Цепь рэпера",
         "Rarity": "Epic",
-        "SellPrice": 51765734,
+        "SellPrice": 5176573400,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.05
+        "BoostValue": 0.25
     },
     {
         "ID": 420,
         "Category": "Ювелирный лом",
         "Name": "Гиковский Бриллиант из стекла",
         "Rarity": "Epic",
-        "SellPrice": 55937902,
+        "SellPrice": 5593790200,
         "BoostType": "Flat_IPS",
-        "BoostValue": 8660344
+        "BoostValue": 1129973.0
     },
     {
         "ID": 421,
         "Category": "Ювелирный лом",
         "Name": "Гиковский Бриллиант из стекла",
         "Rarity": "Epic",
-        "SellPrice": 55937902,
+        "SellPrice": 5593790200,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.048
+        "BoostValue": 0.24
     },
     {
         "ID": 422,
         "Category": "Ювелирный лом",
         "Name": "Дизайнерский Бриллиант из стекла",
         "Rarity": "Epic",
-        "SellPrice": 51731022,
+        "SellPrice": 5173102200,
         "BoostType": "Flat_IPS",
-        "BoostValue": 8773681
+        "BoostValue": 1062571.0
     },
     {
         "ID": 423,
         "Category": "Ювелирный лом",
         "Name": "Дизайнерский Бриллиант из стекла",
         "Rarity": "Epic",
-        "SellPrice": 51731022,
+        "SellPrice": 5173102200,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.051
+        "BoostValue": 0.255
     },
     {
         "ID": 424,
         "Category": "Ювелирный лом",
         "Name": "Секретный Золотые зубы",
         "Rarity": "Legendary",
-        "SellPrice": 159849666,
+        "SellPrice": 15984966600,
         "BoostType": "Flat_IPS",
-        "BoostValue": 44639684
+        "BoostValue": 5484287.0
     },
     {
         "ID": 425,
         "Category": "Ювелирный лом",
         "Name": "Секретный Золотые зубы",
         "Rarity": "Legendary",
-        "SellPrice": 159849666,
+        "SellPrice": 15984966600,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.24
+        "BoostValue": 1.2
     },
     {
         "ID": 426,
         "Category": "Ювелирный лом",
         "Name": "Инопланетный Золотые зубы",
         "Rarity": "Unique",
-        "SellPrice": 1608797551,
+        "SellPrice": 160879755100,
         "BoostType": "Flat_IPS",
-        "BoostValue": 259408778
+        "BoostValue": 32127050.0
     },
     {
         "ID": 427,
         "Category": "Ювелирный лом",
         "Name": "Инопланетный Золотые зубы",
         "Rarity": "Unique",
-        "SellPrice": 1608797551,
+        "SellPrice": 160879755100,
         "BoostType": "Mult_MPC",
-        "BoostValue": 1.439
+        "BoostValue": 7.195
     },
     {
         "ID": 428,
         "Category": "Крипто-фермы",
         "Name": "Сломанный Кулер с неонами",
         "Rarity": "Common",
-        "SellPrice": 10340027
+        "SellPrice": 2585006750
     },
     {
         "ID": 429,
         "Category": "Крипто-фермы",
         "Name": "Липкий Кулер с неонами",
         "Rarity": "Common",
-        "SellPrice": 10747215
+        "SellPrice": 2686803750
     },
     {
         "ID": 430,
         "Category": "Крипто-фермы",
         "Name": "Липкий RTX 9090",
         "Rarity": "Common",
-        "SellPrice": 10936797
+        "SellPrice": 2734199250
     },
     {
         "ID": 431,
         "Category": "Крипто-фермы",
         "Name": "Старый Кулер с неонами",
         "Rarity": "Common",
-        "SellPrice": 9207201
+        "SellPrice": 2301800250
     },
     {
         "ID": 432,
         "Category": "Крипто-фермы",
         "Name": "Ржавый Биткоин на флешке",
         "Rarity": "Common",
-        "SellPrice": 10313473
+        "SellPrice": 2578368250
     },
     {
         "ID": 433,
         "Category": "Крипто-фермы",
         "Name": "Ржавый RTX 9090",
         "Rarity": "Common",
-        "SellPrice": 9700228
+        "SellPrice": 2425057000
     },
     {
         "ID": 434,
         "Category": "Крипто-фермы",
         "Name": "Китайский RTX 9090",
         "Rarity": "Common",
-        "SellPrice": 10525211
+        "SellPrice": 2631302750
     },
     {
         "ID": 435,
         "Category": "Крипто-фермы",
         "Name": "Ржавый ASIC-обогреватель",
         "Rarity": "Common",
-        "SellPrice": 10690310
+        "SellPrice": 2672577500
     },
     {
         "ID": 436,
         "Category": "Крипто-фермы",
         "Name": "Сломанный Кулер с неонами",
         "Rarity": "Common",
-        "SellPrice": 9057906
+        "SellPrice": 2264476500
     },
     {
         "ID": 437,
         "Category": "Крипто-фермы",
         "Name": "Старый Кулер с неонами",
         "Rarity": "Common",
-        "SellPrice": 10843075
+        "SellPrice": 2710768750
     },
     {
         "ID": 438,
         "Category": "Крипто-фермы",
         "Name": "Китайский RTX 9090",
         "Rarity": "Common",
-        "SellPrice": 9362811
+        "SellPrice": 2340702750
     },
     {
         "ID": 439,
         "Category": "Крипто-фермы",
         "Name": "Пыльный ASIC-обогреватель",
         "Rarity": "Common",
-        "SellPrice": 9139171
+        "SellPrice": 2284792750
     },
     {
         "ID": 440,
         "Category": "Крипто-фермы",
         "Name": "Сломанный RTX 9090",
         "Rarity": "Common",
-        "SellPrice": 10492224
+        "SellPrice": 2623056000
     },
     {
         "ID": 441,
         "Category": "Крипто-фермы",
         "Name": "Ржавый ASIC-обогреватель",
         "Rarity": "Common",
-        "SellPrice": 9839665
+        "SellPrice": 2459916250
     },
     {
         "ID": 442,
         "Category": "Крипто-фермы",
         "Name": "Китайский Биткоин на флешке",
         "Rarity": "Common",
-        "SellPrice": 9740106
+        "SellPrice": 2435026500
     },
     {
         "ID": 443,
         "Category": "Крипто-фермы",
         "Name": "Китайский RTX 9090",
         "Rarity": "Common",
-        "SellPrice": 10766684
+        "SellPrice": 2691671000
     },
     {
         "ID": 444,
         "Category": "Крипто-фермы",
         "Name": "Пыльный Биткоин на флешке",
         "Rarity": "Common",
-        "SellPrice": 10508872
+        "SellPrice": 2627218000
     },
     {
         "ID": 445,
         "Category": "Крипто-фермы",
         "Name": "Сломанный RTX 9090",
         "Rarity": "Common",
-        "SellPrice": 9544206
+        "SellPrice": 2386051500
     },
     {
         "ID": 446,
         "Category": "Крипто-фермы",
         "Name": "Липкий ASIC-обогреватель",
         "Rarity": "Common",
-        "SellPrice": 10214152
+        "SellPrice": 2553538000
     },
     {
         "ID": 447,
         "Category": "Крипто-фермы",
         "Name": "Липкий Кулер с неонами",
         "Rarity": "Common",
-        "SellPrice": 9431138
+        "SellPrice": 2357784500
     },
     {
         "ID": 448,
         "Category": "Крипто-фермы",
         "Name": "Мятый Кулер с неонами",
         "Rarity": "Common",
-        "SellPrice": 9859827
+        "SellPrice": 2464956750
     },
     {
         "ID": 449,
         "Category": "Крипто-фермы",
         "Name": "Старый ASIC-обогреватель",
         "Rarity": "Common",
-        "SellPrice": 10053868
+        "SellPrice": 2513467000
     },
     {
         "ID": 450,
         "Category": "Крипто-фермы",
         "Name": "Старый RTX 9090",
         "Rarity": "Common",
-        "SellPrice": 9441037
+        "SellPrice": 2360259250
     },
     {
         "ID": 451,
         "Category": "Крипто-фермы",
         "Name": "Сломанный RTX 9090",
         "Rarity": "Common",
-        "SellPrice": 9408846
+        "SellPrice": 2352211500
     },
     {
         "ID": 452,
         "Category": "Крипто-фермы",
         "Name": "Ржавый Биткоин на флешке",
         "Rarity": "Common",
-        "SellPrice": 10528322
+        "SellPrice": 2632080500
     },
     {
         "ID": 453,
         "Category": "Крипто-фермы",
         "Name": "Старый Кулер с неонами",
         "Rarity": "Common",
-        "SellPrice": 9239969
+        "SellPrice": 2309992250
     },
     {
         "ID": 454,
         "Category": "Крипто-фермы",
         "Name": "Б/У ASIC-обогреватель",
         "Rarity": "Common",
-        "SellPrice": 9351390
+        "SellPrice": 2337847500
     },
     {
         "ID": 455,
         "Category": "Крипто-фермы",
         "Name": "Дешевый Биткоин на флешке",
         "Rarity": "Uncommon",
-        "SellPrice": 25001312
+        "SellPrice": 6250328000
     },
     {
         "ID": 456,
         "Category": "Крипто-фермы",
         "Name": "Мягкий Кулер с неонами",
         "Rarity": "Uncommon",
-        "SellPrice": 22860377
+        "SellPrice": 5715094250
     },
     {
         "ID": 457,
         "Category": "Крипто-фермы",
         "Name": "Мягкий RTX 9090",
         "Rarity": "Uncommon",
-        "SellPrice": 24681098
+        "SellPrice": 6170274500
     },
     {
         "ID": 458,
         "Category": "Крипто-фермы",
         "Name": "Дешевый RTX 9090",
         "Rarity": "Uncommon",
-        "SellPrice": 26810550
+        "SellPrice": 6702637500
     },
     {
         "ID": 459,
         "Category": "Крипто-фермы",
         "Name": "Абсурдный ASIC-обогреватель",
         "Rarity": "Uncommon",
-        "SellPrice": 25366998
+        "SellPrice": 6341749500
     },
     {
         "ID": 460,
         "Category": "Крипто-фермы",
         "Name": "Пахучий ASIC-обогреватель",
         "Rarity": "Uncommon",
-        "SellPrice": 23947576
+        "SellPrice": 5986894000
     },
     {
         "ID": 461,
         "Category": "Крипто-фермы",
         "Name": "Дешевый RTX 9090",
         "Rarity": "Uncommon",
-        "SellPrice": 27330998
+        "SellPrice": 6832749500
     },
     {
         "ID": 462,
         "Category": "Крипто-фермы",
         "Name": "Исцарапанный ASIC-обогреватель",
         "Rarity": "Uncommon",
-        "SellPrice": 26660130
+        "SellPrice": 6665032500
     },
     {
         "ID": 463,
         "Category": "Крипто-фермы",
         "Name": "Странный RTX 9090",
         "Rarity": "Uncommon",
-        "SellPrice": 24683559
+        "SellPrice": 6170889750
     },
     {
         "ID": 464,
         "Category": "Крипто-фермы",
         "Name": "Поддельный Биткоин на флешке",
         "Rarity": "Uncommon",
-        "SellPrice": 24678383
+        "SellPrice": 6169595750
     },
     {
         "ID": 465,
         "Category": "Крипто-фермы",
         "Name": "Дешевый RTX 9090",
         "Rarity": "Uncommon",
-        "SellPrice": 24478833
+        "SellPrice": 6119708250
     },
     {
         "ID": 466,
         "Category": "Крипто-фермы",
         "Name": "Странный Кулер с неонами",
         "Rarity": "Uncommon",
-        "SellPrice": 23607860
+        "SellPrice": 5901965000
     },
     {
         "ID": 467,
         "Category": "Крипто-фермы",
         "Name": "ASMR-ный RTX 9090",
         "Rarity": "Rare",
-        "SellPrice": 100209666,
+        "SellPrice": 25052416500,
         "BoostType": "Flat_IPS",
-        "BoostValue": 25424095
+        "BoostValue": 17508057.0
     },
     {
         "ID": 468,
         "Category": "Крипто-фермы",
         "Name": "ASMR-ный RTX 9090",
         "Rarity": "Rare",
-        "SellPrice": 100209666,
+        "SellPrice": 25052416500,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.01
+        "BoostValue": 0.08
     },
     {
         "ID": 469,
         "Category": "Крипто-фермы",
         "Name": "Непонятный Биткоин на флешке",
         "Rarity": "Rare",
-        "SellPrice": 108118455,
+        "SellPrice": 27029613750,
         "BoostType": "Flat_IPS",
-        "BoostValue": 24684026
+        "BoostValue": 17220667.0
     },
     {
         "ID": 470,
         "Category": "Крипто-фермы",
         "Name": "Непонятный Биткоин на флешке",
         "Rarity": "Rare",
-        "SellPrice": 108118455,
+        "SellPrice": 27029613750,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.01
+        "BoostValue": 0.08
     },
     {
         "ID": 471,
         "Category": "Крипто-фермы",
         "Name": "Базированный Биткоин на флешке",
         "Rarity": "Rare",
-        "SellPrice": 94725377,
+        "SellPrice": 23681344250,
         "BoostType": "Flat_IPS",
-        "BoostValue": 24950907
+        "BoostValue": 18386900.0
     },
     {
         "ID": 472,
         "Category": "Крипто-фермы",
         "Name": "Базированный Биткоин на флешке",
         "Rarity": "Rare",
-        "SellPrice": 94725377,
+        "SellPrice": 23681344250,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.01
+        "BoostValue": 0.08
     },
     {
         "ID": 473,
         "Category": "Крипто-фермы",
         "Name": "Винтажный Биткоин на флешке",
         "Rarity": "Rare",
-        "SellPrice": 93469980,
+        "SellPrice": 23367495000,
         "BoostType": "Flat_IPS",
-        "BoostValue": 25022368
+        "BoostValue": 16985465.0
     },
     {
         "ID": 474,
         "Category": "Крипто-фермы",
         "Name": "Винтажный Биткоин на флешке",
         "Rarity": "Rare",
-        "SellPrice": 93469980,
+        "SellPrice": 23367495000,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.01
+        "BoostValue": 0.08
     },
     {
         "ID": 475,
         "Category": "Крипто-фермы",
         "Name": "Базированный RTX 9090",
         "Rarity": "Rare",
-        "SellPrice": 93542923,
+        "SellPrice": 23385730750,
         "BoostType": "Flat_IPS",
-        "BoostValue": 25092686
+        "BoostValue": 17262936.0
     },
     {
         "ID": 476,
         "Category": "Крипто-фермы",
         "Name": "Базированный RTX 9090",
         "Rarity": "Rare",
-        "SellPrice": 93542923,
+        "SellPrice": 23385730750,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.01
+        "BoostValue": 0.08
     },
     {
         "ID": 477,
         "Category": "Крипто-фермы",
         "Name": "Непонятный ASIC-обогреватель",
         "Rarity": "Rare",
-        "SellPrice": 103622670,
+        "SellPrice": 25905667500,
         "BoostType": "Flat_IPS",
-        "BoostValue": 23419339
+        "BoostValue": 18245796.0
     },
     {
         "ID": 478,
         "Category": "Крипто-фермы",
         "Name": "Непонятный ASIC-обогреватель",
         "Rarity": "Rare",
-        "SellPrice": 103622670,
+        "SellPrice": 25905667500,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.01
+        "BoostValue": 0.08
     },
     {
         "ID": 479,
         "Category": "Крипто-фермы",
         "Name": "Светящийся Биткоин на флешке",
         "Rarity": "Epic",
-        "SellPrice": 740964422,
+        "SellPrice": 185241105500,
         "BoostType": "Flat_IPS",
-        "BoostValue": 117349406
+        "BoostValue": 84591836.0
     },
     {
         "ID": 480,
         "Category": "Крипто-фермы",
         "Name": "Светящийся Биткоин на флешке",
         "Rarity": "Epic",
-        "SellPrice": 740964422,
+        "SellPrice": 185241105500,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.049
+        "BoostValue": 0.392
     },
     {
         "ID": 481,
         "Category": "Крипто-фермы",
         "Name": "Светящийся Кулер с неонами",
         "Rarity": "Epic",
-        "SellPrice": 763712964,
+        "SellPrice": 190928241000,
         "BoostType": "Flat_IPS",
-        "BoostValue": 125459981
+        "BoostValue": 92164237.0
     },
     {
         "ID": 482,
         "Category": "Крипто-фермы",
         "Name": "Светящийся Кулер с неонами",
         "Rarity": "Epic",
-        "SellPrice": 763712964,
+        "SellPrice": 190928241000,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.052
+        "BoostValue": 0.416
     },
     {
         "ID": 483,
         "Category": "Крипто-фермы",
         "Name": "Светящийся ASIC-обогреватель",
         "Rarity": "Epic",
-        "SellPrice": 742787080,
+        "SellPrice": 185696770000,
         "BoostType": "Flat_IPS",
-        "BoostValue": 118493876
+        "BoostValue": 91392750.0
     },
     {
         "ID": 484,
         "Category": "Крипто-фермы",
         "Name": "Светящийся ASIC-обогреватель",
         "Rarity": "Epic",
-        "SellPrice": 742787080,
+        "SellPrice": 185696770000,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.052
+        "BoostValue": 0.416
     },
     {
         "ID": 485,
         "Category": "Крипто-фермы",
         "Name": "Масонский Кулер с неонами",
         "Rarity": "Legendary",
-        "SellPrice": 2288365501,
+        "SellPrice": 572091375250,
         "BoostType": "Flat_IPS",
-        "BoostValue": 580777576
+        "BoostValue": 450799535.0
     },
     {
         "ID": 486,
         "Category": "Крипто-фермы",
         "Name": "Масонский Кулер с неонами",
         "Rarity": "Legendary",
-        "SellPrice": 2288365501,
+        "SellPrice": 572091375250,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.243
+        "BoostValue": 1.944
     },
     {
         "ID": 487,
         "Category": "Крипто-фермы",
         "Name": "Иллюминатский ASIC-обогреватель",
         "Rarity": "Unique",
-        "SellPrice": 24813558295,
+        "SellPrice": 6203389573750,
         "BoostType": "Flat_IPS",
-        "BoostValue": 3786353259
+        "BoostValue": 2698137450.0
     },
     {
         "ID": 488,
         "Category": "Крипто-фермы",
         "Name": "Иллюминатский ASIC-обогреватель",
         "Rarity": "Unique",
-        "SellPrice": 24813558295,
+        "SellPrice": 6203389573750,
         "BoostType": "Mult_MPC",
-        "BoostValue": 1.491
+        "BoostValue": 11.928
     },
     {
         "ID": 489,
         "Category": "Искусство",
         "Name": "Б/У Скульптура воздуха",
         "Rarity": "Common",
-        "SellPrice": 154288856
+        "SellPrice": 61715542400
     },
     {
         "ID": 490,
         "Category": "Искусство",
         "Name": "Б/У Скульптура воздуха",
         "Rarity": "Common",
-        "SellPrice": 174647115
+        "SellPrice": 69858846000
     },
     {
         "ID": 491,
         "Category": "Искусство",
         "Name": "Б/У Картина с точкой",
         "Rarity": "Common",
-        "SellPrice": 169950938
+        "SellPrice": 67980375200
     },
     {
         "ID": 492,
         "Category": "Искусство",
         "Name": "Китайский Картина с точкой",
         "Rarity": "Common",
-        "SellPrice": 160145568
+        "SellPrice": 64058227200
     },
     {
         "ID": 493,
         "Category": "Искусство",
         "Name": "Пыльный Картина с точкой",
         "Rarity": "Common",
-        "SellPrice": 151927799
+        "SellPrice": 60771119600
     },
     {
         "ID": 494,
         "Category": "Искусство",
         "Name": "Б/У Цифровой NFT-камень",
         "Rarity": "Common",
-        "SellPrice": 160770194
+        "SellPrice": 64308077600
     },
     {
         "ID": 495,
         "Category": "Искусство",
         "Name": "Пыльный Банан на скотче",
         "Rarity": "Common",
-        "SellPrice": 155931263
+        "SellPrice": 62372505200
     },
     {
         "ID": 496,
         "Category": "Искусство",
         "Name": "Старый Цифровой NFT-камень",
         "Rarity": "Common",
-        "SellPrice": 157080621
+        "SellPrice": 62832248400
     },
     {
         "ID": 497,
         "Category": "Искусство",
         "Name": "Китайский Картина с точкой",
         "Rarity": "Common",
-        "SellPrice": 169255262
+        "SellPrice": 67702104800
     },
     {
         "ID": 498,
         "Category": "Искусство",
         "Name": "Китайский Картина с точкой",
         "Rarity": "Common",
-        "SellPrice": 154550104
+        "SellPrice": 61820041600
     },
     {
         "ID": 499,
         "Category": "Искусство",
         "Name": "Липкий Банан на скотче",
         "Rarity": "Common",
-        "SellPrice": 152063865
+        "SellPrice": 60825546000
     },
     {
         "ID": 500,
         "Category": "Искусство",
         "Name": "Пыльный Банан на скотче",
         "Rarity": "Common",
-        "SellPrice": 146608064
+        "SellPrice": 58643225600
     },
     {
         "ID": 501,
         "Category": "Искусство",
         "Name": "Пыльный Банан на скотче",
         "Rarity": "Common",
-        "SellPrice": 153927416
+        "SellPrice": 61570966400
     },
     {
         "ID": 502,
         "Category": "Искусство",
         "Name": "Липкий Скульптура воздуха",
         "Rarity": "Common",
-        "SellPrice": 163041319
+        "SellPrice": 65216527600
     },
     {
         "ID": 503,
         "Category": "Искусство",
         "Name": "Мятый Банан на скотче",
         "Rarity": "Common",
-        "SellPrice": 161885506
+        "SellPrice": 64754202400
     },
     {
         "ID": 504,
         "Category": "Искусство",
         "Name": "Китайский Скульптура воздуха",
         "Rarity": "Common",
-        "SellPrice": 165443725
+        "SellPrice": 66177490000
     },
     {
         "ID": 505,
         "Category": "Искусство",
         "Name": "Мятый Цифровой NFT-камень",
         "Rarity": "Common",
-        "SellPrice": 160271632
+        "SellPrice": 64108652800
     },
     {
         "ID": 506,
         "Category": "Искусство",
         "Name": "Сломанный Банан на скотче",
         "Rarity": "Common",
-        "SellPrice": 153883714
+        "SellPrice": 61553485600
     },
     {
         "ID": 507,
         "Category": "Искусство",
         "Name": "Ржавый Банан на скотче",
         "Rarity": "Common",
-        "SellPrice": 174325385
+        "SellPrice": 69730154000
     },
     {
         "ID": 508,
         "Category": "Искусство",
         "Name": "Б/У Скульптура воздуха",
         "Rarity": "Common",
-        "SellPrice": 151249377
+        "SellPrice": 60499750800
     },
     {
         "ID": 509,
         "Category": "Искусство",
         "Name": "Пыльный Скульптура воздуха",
         "Rarity": "Common",
-        "SellPrice": 146469283
+        "SellPrice": 58587713200
     },
     {
         "ID": 510,
         "Category": "Искусство",
         "Name": "Мятый Картина с точкой",
         "Rarity": "Common",
-        "SellPrice": 165181736
+        "SellPrice": 66072694400
     },
     {
         "ID": 511,
         "Category": "Искусство",
         "Name": "Пыльный Цифровой NFT-камень",
         "Rarity": "Common",
-        "SellPrice": 148936088
+        "SellPrice": 59574435200
     },
     {
         "ID": 512,
         "Category": "Искусство",
         "Name": "Пыльный Скульптура воздуха",
         "Rarity": "Common",
-        "SellPrice": 167077856
+        "SellPrice": 66831142400
     },
     {
         "ID": 513,
         "Category": "Искусство",
         "Name": "Сломанный Цифровой NFT-камень",
         "Rarity": "Common",
-        "SellPrice": 155657581
+        "SellPrice": 62263032400
     },
     {
         "ID": 514,
         "Category": "Искусство",
         "Name": "Ржавый Цифровой NFT-камень",
         "Rarity": "Common",
-        "SellPrice": 163539054
+        "SellPrice": 65415621600
     },
     {
         "ID": 515,
         "Category": "Искусство",
         "Name": "Б/У Скульптура воздуха",
         "Rarity": "Common",
-        "SellPrice": 161088357
+        "SellPrice": 64435342800
     },
     {
         "ID": 516,
         "Category": "Искусство",
         "Name": "Странный Цифровой NFT-камень",
         "Rarity": "Uncommon",
-        "SellPrice": 432317947
+        "SellPrice": 172927178800
     },
     {
         "ID": 517,
         "Category": "Искусство",
         "Name": "Исцарапанный Банан на скотче",
         "Rarity": "Uncommon",
-        "SellPrice": 414264546
+        "SellPrice": 165705818400
     },
     {
         "ID": 518,
         "Category": "Искусство",
         "Name": "Абсурдный Цифровой NFT-камень",
         "Rarity": "Uncommon",
-        "SellPrice": 396934398
+        "SellPrice": 158773759200
     },
     {
         "ID": 519,
         "Category": "Искусство",
         "Name": "Странный Цифровой NFT-камень",
         "Rarity": "Uncommon",
-        "SellPrice": 400232535
+        "SellPrice": 160093014000
     },
     {
         "ID": 520,
         "Category": "Искусство",
         "Name": "Дешевый Скульптура воздуха",
         "Rarity": "Uncommon",
-        "SellPrice": 425351299
+        "SellPrice": 170140519600
     },
     {
         "ID": 521,
         "Category": "Искусство",
         "Name": "Мягкий Скульптура воздуха",
         "Rarity": "Uncommon",
-        "SellPrice": 429840154
+        "SellPrice": 171936061600
     },
     {
         "ID": 522,
         "Category": "Искусство",
         "Name": "Поддельный Цифровой NFT-камень",
         "Rarity": "Uncommon",
-        "SellPrice": 429929356
+        "SellPrice": 171971742400
     },
     {
         "ID": 523,
         "Category": "Искусство",
         "Name": "Абсурдный Картина с точкой",
         "Rarity": "Uncommon",
-        "SellPrice": 416912078
+        "SellPrice": 166764831200
     },
     {
         "ID": 524,
         "Category": "Искусство",
         "Name": "Абсурдный Картина с точкой",
         "Rarity": "Uncommon",
-        "SellPrice": 382805041
+        "SellPrice": 153122016400
     },
     {
         "ID": 525,
         "Category": "Искусство",
         "Name": "Мягкий Скульптура воздуха",
         "Rarity": "Uncommon",
-        "SellPrice": 381823304
+        "SellPrice": 152729321600
     },
     {
         "ID": 526,
         "Category": "Искусство",
         "Name": "Абсурдный Скульптура воздуха",
         "Rarity": "Uncommon",
-        "SellPrice": 426483737
+        "SellPrice": 170593494800
     },
     {
         "ID": 527,
         "Category": "Искусство",
         "Name": "Поддельный Скульптура воздуха",
         "Rarity": "Uncommon",
-        "SellPrice": 425336260
+        "SellPrice": 170134504000
     },
     {
         "ID": 528,
         "Category": "Искусство",
         "Name": "Винтажный Картина с точкой",
         "Rarity": "Rare",
-        "SellPrice": 1572767010,
+        "SellPrice": 629106804000,
         "BoostType": "Flat_IPS",
-        "BoostValue": 400861701
+        "BoostValue": 1446134585.0
     },
     {
         "ID": 529,
         "Category": "Искусство",
         "Name": "Винтажный Картина с точкой",
         "Rarity": "Rare",
-        "SellPrice": 1572767010,
+        "SellPrice": 629106804000,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.011
+        "BoostValue": 0.132
     },
     {
         "ID": 530,
         "Category": "Искусство",
         "Name": "ASMR-ный Цифровой NFT-камень",
         "Rarity": "Rare",
-        "SellPrice": 1758248112,
+        "SellPrice": 703299244800,
         "BoostType": "Flat_IPS",
-        "BoostValue": 407509108
+        "BoostValue": 1498011868.0
     },
     {
         "ID": 531,
         "Category": "Искусство",
         "Name": "ASMR-ный Цифровой NFT-камень",
         "Rarity": "Rare",
-        "SellPrice": 1758248112,
+        "SellPrice": 703299244800,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.011
+        "BoostValue": 0.132
     },
     {
         "ID": 532,
         "Category": "Искусство",
         "Name": "Винтажный Картина с точкой",
         "Rarity": "Rare",
-        "SellPrice": 1708536412,
+        "SellPrice": 683414564800,
         "BoostType": "Flat_IPS",
-        "BoostValue": 398461884
+        "BoostValue": 1525999976.0
     },
     {
         "ID": 533,
         "Category": "Искусство",
         "Name": "Винтажный Картина с точкой",
         "Rarity": "Rare",
-        "SellPrice": 1708536412,
+        "SellPrice": 683414564800,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.011
+        "BoostValue": 0.132
     },
     {
         "ID": 534,
         "Category": "Искусство",
         "Name": "ASMR-ный Картина с точкой",
         "Rarity": "Rare",
-        "SellPrice": 1531801407,
+        "SellPrice": 612720562800,
         "BoostType": "Flat_IPS",
-        "BoostValue": 404070522
+        "BoostValue": 1414926772.0
     },
     {
         "ID": 535,
         "Category": "Искусство",
         "Name": "ASMR-ный Картина с точкой",
         "Rarity": "Rare",
-        "SellPrice": 1531801407,
+        "SellPrice": 612720562800,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.01
+        "BoostValue": 0.12
     },
     {
         "ID": 536,
         "Category": "Искусство",
         "Name": "ASMR-ный Цифровой NFT-камень",
         "Rarity": "Rare",
-        "SellPrice": 1583552472,
+        "SellPrice": 633420988800,
         "BoostType": "Flat_IPS",
-        "BoostValue": 425185421
+        "BoostValue": 1499652026.0
     },
     {
         "ID": 537,
         "Category": "Искусство",
         "Name": "ASMR-ный Цифровой NFT-камень",
         "Rarity": "Rare",
-        "SellPrice": 1583552472,
+        "SellPrice": 633420988800,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.011
+        "BoostValue": 0.132
     },
     {
         "ID": 538,
         "Category": "Искусство",
         "Name": "Блестящий Картина с точкой",
         "Rarity": "Rare",
-        "SellPrice": 1521895657,
+        "SellPrice": 608758262800,
         "BoostType": "Flat_IPS",
-        "BoostValue": 402118213
+        "BoostValue": 1459193398.0
     },
     {
         "ID": 539,
         "Category": "Искусство",
         "Name": "Блестящий Картина с точкой",
         "Rarity": "Rare",
-        "SellPrice": 1521895657,
+        "SellPrice": 608758262800,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.01
+        "BoostValue": 0.12
     },
     {
         "ID": 540,
         "Category": "Искусство",
         "Name": "Тактический Цифровой NFT-камень",
         "Rarity": "Epic",
-        "SellPrice": 11066848465,
+        "SellPrice": 4426739386000,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1978196665
+        "BoostValue": 7530156369.0
     },
     {
         "ID": 541,
         "Category": "Искусство",
         "Name": "Тактический Цифровой NFT-камень",
         "Rarity": "Epic",
-        "SellPrice": 11066848465,
+        "SellPrice": 4426739386000,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.052
+        "BoostValue": 0.624
     },
     {
         "ID": 542,
         "Category": "Искусство",
         "Name": "Дизайнерский Картина с точкой",
         "Rarity": "Epic",
-        "SellPrice": 11372254808,
+        "SellPrice": 4548901923200,
         "BoostType": "Flat_IPS",
-        "BoostValue": 1986879685
+        "BoostValue": 7652845664.0
     },
     {
         "ID": 543,
         "Category": "Искусство",
         "Name": "Дизайнерский Картина с точкой",
         "Rarity": "Epic",
-        "SellPrice": 11372254808,
+        "SellPrice": 4548901923200,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.054
+        "BoostValue": 0.648
     },
     {
         "ID": 544,
         "Category": "Искусство",
         "Name": "Гиковский Картина с точкой",
         "Rarity": "Epic",
-        "SellPrice": 12316691861,
+        "SellPrice": 4926676744400,
         "BoostType": "Flat_IPS",
-        "BoostValue": 2123510842
+        "BoostValue": 7048380915.0
     },
     {
         "ID": 545,
         "Category": "Искусство",
         "Name": "Гиковский Картина с точкой",
         "Rarity": "Epic",
-        "SellPrice": 12316691861,
+        "SellPrice": 4926676744400,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.056
+        "BoostValue": 0.672
     },
     {
         "ID": 546,
         "Category": "Искусство",
         "Name": "Секретный Банан на скотче",
         "Rarity": "Legendary",
-        "SellPrice": 39433911145,
+        "SellPrice": 15773564458000,
         "BoostType": "Flat_IPS",
-        "BoostValue": 10005215462
+        "BoostValue": 36857391177.0
     },
     {
         "ID": 547,
         "Category": "Искусство",
         "Name": "Секретный Банан на скотче",
         "Rarity": "Legendary",
-        "SellPrice": 39433911145,
+        "SellPrice": 15773564458000,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.28
+        "BoostValue": 3.36
     },
     {
         "ID": 548,
         "Category": "Искусство",
         "Name": "Матричный Скульптура воздуха",
         "Rarity": "Unique",
-        "SellPrice": 413149704139,
+        "SellPrice": 165259881655600,
         "BoostType": "Flat_IPS",
-        "BoostValue": 58593846100
+        "BoostValue": 223810624953.0
     },
     {
         "ID": 549,
         "Category": "Искусство",
         "Name": "Матричный Скульптура воздуха",
         "Rarity": "Unique",
-        "SellPrice": 413149704139,
+        "SellPrice": 165259881655600,
         "BoostType": "Mult_MPC",
-        "BoostValue": 1.69
+        "BoostValue": 20.28
     },
     {
         "ID": 550,
         "Category": "Гос. конфискат",
         "Name": "Китайский Скипетр мэра",
         "Rarity": "Common",
-        "SellPrice": 3272042207
+        "SellPrice": 1636021103500
     },
     {
         "ID": 551,
         "Category": "Гос. конфискат",
         "Name": "Сломанный Кейс с воздухом",
         "Rarity": "Common",
-        "SellPrice": 3223998863
+        "SellPrice": 1611999431500
     },
     {
         "ID": 552,
         "Category": "Гос. конфискат",
         "Name": "Сломанный Кейс с воздухом",
         "Rarity": "Common",
-        "SellPrice": 3288623654
+        "SellPrice": 1644311827000
     },
     {
         "ID": 553,
         "Category": "Гос. конфискат",
         "Name": "Старый Скипетр мэра",
         "Rarity": "Common",
-        "SellPrice": 2914256326
+        "SellPrice": 1457128163000
     },
     {
         "ID": 554,
         "Category": "Гос. конфискат",
         "Name": "Мятый Мигалка элитная",
         "Rarity": "Common",
-        "SellPrice": 2844675555
+        "SellPrice": 1422337777500
     },
     {
         "ID": 555,
         "Category": "Гос. конфискат",
         "Name": "Мятый Мигалка элитная",
         "Rarity": "Common",
-        "SellPrice": 2780045754
+        "SellPrice": 1390022877000
     },
     {
         "ID": 556,
         "Category": "Гос. конфискат",
         "Name": "Китайский Мигалка элитная",
         "Rarity": "Common",
-        "SellPrice": 3188105319
+        "SellPrice": 1594052659500
     },
     {
         "ID": 557,
         "Category": "Гос. конфискат",
         "Name": "Пыльный Кейс с воздухом",
         "Rarity": "Common",
-        "SellPrice": 3288491511
+        "SellPrice": 1644245755500
     },
     {
         "ID": 558,
         "Category": "Гос. конфискат",
         "Name": "Б/У Флешка с секретами",
         "Rarity": "Common",
-        "SellPrice": 3186898609
+        "SellPrice": 1593449304500
     },
     {
         "ID": 559,
         "Category": "Гос. конфискат",
         "Name": "Мятый Кейс с воздухом",
         "Rarity": "Common",
-        "SellPrice": 2722190274
+        "SellPrice": 1361095137000
     },
     {
         "ID": 560,
         "Category": "Гос. конфискат",
         "Name": "Ржавый Скипетр мэра",
         "Rarity": "Common",
-        "SellPrice": 3174665528
+        "SellPrice": 1587332764000
     },
     {
         "ID": 561,
         "Category": "Гос. конфискат",
         "Name": "Сломанный Мигалка элитная",
         "Rarity": "Common",
-        "SellPrice": 3260022588
+        "SellPrice": 1630011294000
     },
     {
         "ID": 562,
         "Category": "Гос. конфискат",
         "Name": "Липкий Кейс с воздухом",
         "Rarity": "Common",
-        "SellPrice": 2851988259
+        "SellPrice": 1425994129500
     },
     {
         "ID": 563,
         "Category": "Гос. конфискат",
         "Name": "Ржавый Мигалка элитная",
         "Rarity": "Common",
-        "SellPrice": 2914184506
+        "SellPrice": 1457092253000
     },
     {
         "ID": 564,
         "Category": "Гос. конфискат",
         "Name": "Сломанный Мигалка элитная",
         "Rarity": "Common",
-        "SellPrice": 2863929964
+        "SellPrice": 1431964982000
     },
     {
         "ID": 565,
         "Category": "Гос. конфискат",
         "Name": "Китайский Кейс с воздухом",
         "Rarity": "Common",
-        "SellPrice": 3233691910
+        "SellPrice": 1616845955000
     },
     {
         "ID": 566,
         "Category": "Гос. конфискат",
         "Name": "Б/У Кейс с воздухом",
         "Rarity": "Common",
-        "SellPrice": 2903421977
+        "SellPrice": 1451710988500
     },
     {
         "ID": 567,
         "Category": "Гос. конфискат",
         "Name": "Пыльный Кейс с воздухом",
         "Rarity": "Common",
-        "SellPrice": 3115241095
+        "SellPrice": 1557620547500
     },
     {
         "ID": 568,
         "Category": "Гос. конфискат",
         "Name": "Китайский Мигалка элитная",
         "Rarity": "Common",
-        "SellPrice": 3180688852
+        "SellPrice": 1590344426000
     },
     {
         "ID": 569,
         "Category": "Гос. конфискат",
         "Name": "Липкий Скипетр мэра",
         "Rarity": "Common",
-        "SellPrice": 2958364291
+        "SellPrice": 1479182145500
     },
     {
         "ID": 570,
         "Category": "Гос. конфискат",
         "Name": "Пыльный Мигалка элитная",
         "Rarity": "Common",
-        "SellPrice": 2892726857
+        "SellPrice": 1446363428500
     },
     {
         "ID": 571,
         "Category": "Гос. конфискат",
         "Name": "Мятый Мигалка элитная",
         "Rarity": "Common",
-        "SellPrice": 3096551533
+        "SellPrice": 1548275766500
     },
     {
         "ID": 572,
         "Category": "Гос. конфискат",
         "Name": "Старый Кейс с воздухом",
         "Rarity": "Common",
-        "SellPrice": 3061572977
+        "SellPrice": 1530786488500
     },
     {
         "ID": 573,
         "Category": "Гос. конфискат",
         "Name": "Липкий Флешка с секретами",
         "Rarity": "Common",
-        "SellPrice": 3113858885
+        "SellPrice": 1556929442500
     },
     {
         "ID": 574,
         "Category": "Гос. конфискат",
         "Name": "Китайский Кейс с воздухом",
         "Rarity": "Common",
-        "SellPrice": 2725413098
+        "SellPrice": 1362706549000
     },
     {
         "ID": 575,
         "Category": "Гос. конфискат",
         "Name": "Китайский Кейс с воздухом",
         "Rarity": "Common",
-        "SellPrice": 2864733216
+        "SellPrice": 1432366608000
     },
     {
         "ID": 576,
         "Category": "Гос. конфискат",
         "Name": "Сломанный Скипетр мэра",
         "Rarity": "Common",
-        "SellPrice": 3102710333
+        "SellPrice": 1551355166500
     },
     {
         "ID": 577,
         "Category": "Гос. конфискат",
         "Name": "Дешевый Мигалка элитная",
         "Rarity": "Uncommon",
-        "SellPrice": 7519629029
+        "SellPrice": 3759814514500
     },
     {
         "ID": 578,
         "Category": "Гос. конфискат",
         "Name": "Пахучий Флешка с секретами",
         "Rarity": "Uncommon",
-        "SellPrice": 8179184094
+        "SellPrice": 4089592047000
     },
     {
         "ID": 579,
         "Category": "Гос. конфискат",
         "Name": "Исцарапанный Кейс с воздухом",
         "Rarity": "Uncommon",
-        "SellPrice": 6802198449
+        "SellPrice": 3401099224500
     },
     {
         "ID": 580,
         "Category": "Гос. конфискат",
         "Name": "Поддельный Флешка с секретами",
         "Rarity": "Uncommon",
-        "SellPrice": 7917773060
+        "SellPrice": 3958886530000
     },
     {
         "ID": 581,
         "Category": "Гос. конфискат",
         "Name": "Странный Мигалка элитная",
         "Rarity": "Uncommon",
-        "SellPrice": 7324281603
+        "SellPrice": 3662140801500
     },
     {
         "ID": 582,
         "Category": "Гос. конфискат",
         "Name": "Абсурдный Скипетр мэра",
         "Rarity": "Uncommon",
-        "SellPrice": 7657642243
+        "SellPrice": 3828821121500
     },
     {
         "ID": 583,
         "Category": "Гос. конфискат",
         "Name": "Пахучий Кейс с воздухом",
         "Rarity": "Uncommon",
-        "SellPrice": 8173235294
+        "SellPrice": 4086617647000
     },
     {
         "ID": 584,
         "Category": "Гос. конфискат",
         "Name": "Странный Кейс с воздухом",
         "Rarity": "Uncommon",
-        "SellPrice": 7894626708
+        "SellPrice": 3947313354000
     },
     {
         "ID": 585,
         "Category": "Гос. конфискат",
         "Name": "Абсурдный Флешка с секретами",
         "Rarity": "Uncommon",
-        "SellPrice": 7544189822
+        "SellPrice": 3772094911000
     },
     {
         "ID": 586,
         "Category": "Гос. конфискат",
         "Name": "Дешевый Мигалка элитная",
         "Rarity": "Uncommon",
-        "SellPrice": 7724341105
+        "SellPrice": 3862170552500
     },
     {
         "ID": 587,
         "Category": "Гос. конфискат",
         "Name": "Исцарапанный Скипетр мэра",
         "Rarity": "Uncommon",
-        "SellPrice": 6788870011
+        "SellPrice": 3394435005500
     },
     {
         "ID": 588,
         "Category": "Гос. конфискат",
         "Name": "Исцарапанный Кейс с воздухом",
         "Rarity": "Uncommon",
-        "SellPrice": 7526617911
+        "SellPrice": 3763308955500
     },
     {
         "ID": 589,
         "Category": "Гос. конфискат",
         "Name": "Непонятный Скипетр мэра",
         "Rarity": "Rare",
-        "SellPrice": 28570660060,
+        "SellPrice": 14285330030000,
         "BoostType": "Flat_IPS",
-        "BoostValue": 7020473188
+        "BoostValue": 118522055378.0
     },
     {
         "ID": 590,
         "Category": "Гос. конфискат",
         "Name": "Непонятный Скипетр мэра",
         "Rarity": "Rare",
-        "SellPrice": 28570660060,
+        "SellPrice": 14285330030000,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.012
+        "BoostValue": 0.18
     },
     {
         "ID": 591,
         "Category": "Гос. конфискат",
         "Name": "ASMR-ный Мигалка элитная",
         "Rarity": "Rare",
-        "SellPrice": 31163883846,
+        "SellPrice": 15581941923000,
         "BoostType": "Flat_IPS",
-        "BoostValue": 7293198501
+        "BoostValue": 123877304273.0
     },
     {
         "ID": 592,
         "Category": "Гос. конфискат",
         "Name": "ASMR-ный Мигалка элитная",
         "Rarity": "Rare",
-        "SellPrice": 31163883846,
+        "SellPrice": 15581941923000,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.011
+        "BoostValue": 0.165
     },
     {
         "ID": 593,
         "Category": "Гос. конфискат",
         "Name": "ASMR-ный Скипетр мэра",
         "Rarity": "Rare",
-        "SellPrice": 29712256111,
+        "SellPrice": 14856128055500,
         "BoostType": "Flat_IPS",
-        "BoostValue": 7009121101
+        "BoostValue": 117647739308.0
     },
     {
         "ID": 594,
         "Category": "Гос. конфискат",
         "Name": "ASMR-ный Скипетр мэра",
         "Rarity": "Rare",
-        "SellPrice": 29712256111,
+        "SellPrice": 14856128055500,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.011
+        "BoostValue": 0.165
     },
     {
         "ID": 595,
         "Category": "Гос. конфискат",
         "Name": "Базированный Мигалка элитная",
         "Rarity": "Rare",
-        "SellPrice": 31007038743,
+        "SellPrice": 15503519371500,
         "BoostType": "Flat_IPS",
-        "BoostValue": 7240365417
+        "BoostValue": 126392809282.0
     },
     {
         "ID": 596,
         "Category": "Гос. конфискат",
         "Name": "Базированный Мигалка элитная",
         "Rarity": "Rare",
-        "SellPrice": 31007038743,
+        "SellPrice": 15503519371500,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.012
+        "BoostValue": 0.18
     },
     {
         "ID": 597,
         "Category": "Гос. конфискат",
         "Name": "Непонятный Мигалка элитная",
         "Rarity": "Rare",
-        "SellPrice": 32347990094,
+        "SellPrice": 16173995047000,
         "BoostType": "Flat_IPS",
-        "BoostValue": 7197854865
+        "BoostValue": 120259517481.0
     },
     {
         "ID": 598,
         "Category": "Гос. конфискат",
         "Name": "Непонятный Мигалка элитная",
         "Rarity": "Rare",
-        "SellPrice": 32347990094,
+        "SellPrice": 16173995047000,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.011
+        "BoostValue": 0.165
     },
     {
         "ID": 599,
         "Category": "Гос. конфискат",
         "Name": "Базированный Флешка с секретами",
         "Rarity": "Rare",
-        "SellPrice": 31762178303,
+        "SellPrice": 15881089151500,
         "BoostType": "Flat_IPS",
-        "BoostValue": 7006045848
+        "BoostValue": 123126952046.0
     },
     {
         "ID": 600,
         "Category": "Гос. конфискат",
         "Name": "Базированный Флешка с секретами",
         "Rarity": "Rare",
-        "SellPrice": 31762178303,
+        "SellPrice": 15881089151500,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.011
+        "BoostValue": 0.165
     },
     {
         "ID": 601,
         "Category": "Гос. конфискат",
         "Name": "Дизайнерский Флешка с секретами",
         "Rarity": "Epic",
-        "SellPrice": 238142955313,
+        "SellPrice": 119071477656500,
         "BoostType": "Flat_IPS",
-        "BoostValue": 34887628250
+        "BoostValue": 600633028648.0
     },
     {
         "ID": 602,
         "Category": "Гос. конфискат",
         "Name": "Дизайнерский Флешка с секретами",
         "Rarity": "Epic",
-        "SellPrice": 238142955313,
+        "SellPrice": 119071477656500,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.053
+        "BoostValue": 0.795
     },
     {
         "ID": 603,
         "Category": "Гос. конфискат",
         "Name": "Гиковский Скипетр мэра",
         "Rarity": "Epic",
-        "SellPrice": 218740343600,
+        "SellPrice": 109370171800000,
         "BoostType": "Flat_IPS",
-        "BoostValue": 34382245103
+        "BoostValue": 623522187270.0
     },
     {
         "ID": 604,
         "Category": "Гос. конфискат",
         "Name": "Гиковский Скипетр мэра",
         "Rarity": "Epic",
-        "SellPrice": 218740343600,
+        "SellPrice": 109370171800000,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.055
+        "BoostValue": 0.825
     },
     {
         "ID": 605,
         "Category": "Гос. конфискат",
         "Name": "Тактический Флешка с секретами",
         "Rarity": "Epic",
-        "SellPrice": 230037676318,
+        "SellPrice": 115018838159000,
         "BoostType": "Flat_IPS",
-        "BoostValue": 34800267814
+        "BoostValue": 622674352998.0
     },
     {
         "ID": 606,
         "Category": "Гос. конфискат",
         "Name": "Тактический Флешка с секретами",
         "Rarity": "Epic",
-        "SellPrice": 230037676318,
+        "SellPrice": 115018838159000,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.054
+        "BoostValue": 0.81
     },
     {
         "ID": 607,
         "Category": "Гос. конфискат",
         "Name": "Святой Мигалка элитная",
         "Rarity": "Legendary",
-        "SellPrice": 734723997116,
+        "SellPrice": 367361998558000,
         "BoostType": "Flat_IPS",
-        "BoostValue": 178240191786
+        "BoostValue": 2934379595372.0
     },
     {
         "ID": 608,
         "Category": "Гос. конфискат",
         "Name": "Святой Мигалка элитная",
         "Rarity": "Legendary",
-        "SellPrice": 734723997116,
+        "SellPrice": 367361998558000,
         "BoostType": "Mult_MPC",
-        "BoostValue": 0.282
+        "BoostValue": 4.23
     },
     {
         "ID": 609,
         "Category": "Гос. конфискат",
         "Name": "Матричный Скипетр мэра",
         "Rarity": "Unique",
-        "SellPrice": 6937990173389,
+        "SellPrice": 3468995086694500,
         "BoostType": "Flat_IPS",
-        "BoostValue": 996627731290
+        "BoostValue": 18424057290869.0
     },
     {
         "ID": 610,
         "Category": "Гос. конфискат",
         "Name": "Матричный Скипетр мэра",
         "Rarity": "Unique",
-        "SellPrice": 6937990173389,
+        "SellPrice": 3468995086694500,
         "BoostType": "Mult_MPC",
-        "BoostValue": 1.771
+        "BoostValue": 26.565
     }
 ]

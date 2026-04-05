@@ -33,10 +33,30 @@ public class SimulationController : MonoBehaviour
         public double BoostValue;
     }
 
+    [Serializable]
     public class CategoryData {
         public string Name;
         public double UnlockCost;
         public double BoxPrice;
+    }
+
+    [Serializable]
+    public class BlackMarketArtifact {
+        public double ID;
+        public string Name;
+        public string Rarity;
+        public string EffectType;
+        public double EffectValue;
+    }
+
+    [Serializable]
+    public class BMConfigModel {
+        public BMLimit BM_Global_IPS_Limit;
+    }
+
+    [Serializable]
+    public class BMLimit {
+        public double BaseHardCapPercent;
     }
 
     // --- State Variables ---
@@ -59,10 +79,13 @@ public class SimulationController : MonoBehaviour
     private List<UpgradeData> upgrades;
     private List<LootItem> lootTable;
     private List<CategoryData> categories;
+    private List<BlackMarketArtifact> bmArtifactsDB;
+    private BMConfigModel bmConfig;
     
     // --- Cached Logic Data ---
     private Dictionary<string, double> upgradeLevels = new Dictionary<string, double>();
     private List<LootItem> shelf = new List<LootItem>(); 
+    public List<BlackMarketArtifact> ownedArtifacts = new List<BlackMarketArtifact>(); 
     private StreamWriter logWriter;
     private Dictionary<string, List<LootItem>> lootLookup = new Dictionary<string, List<LootItem>>();
 
@@ -90,27 +113,18 @@ public class SimulationController : MonoBehaviour
 
     private void LoadJSON(string path)
     {
-        string upgradesJson = File.ReadAllText(Path.Combine(path, "Upgrades.json"));
-        string lootJson = File.ReadAllText(Path.Combine(path, "LootTable.json"));
-
-        upgrades = JsonConvert.DeserializeObject<List<UpgradeData>>(upgradesJson);
-        lootTable = JsonConvert.DeserializeObject<List<LootItem>>(lootJson);
+        upgrades = JsonConvert.DeserializeObject<List<UpgradeData>>(File.ReadAllText(Path.Combine(path, "Upgrades.json")));
+        lootTable = JsonConvert.DeserializeObject<List<LootItem>>(File.ReadAllText(Path.Combine(path, "LootTable.json")));
+        categories = JsonConvert.DeserializeObject<List<CategoryData>>(File.ReadAllText(Path.Combine(path, "Categories.json")));
+        bmArtifactsDB = JsonConvert.DeserializeObject<List<BlackMarketArtifact>>(File.ReadAllText(Path.Combine(path, "BlackMarketArtifacts.json")));
+        bmConfig = JsonConvert.DeserializeObject<BMConfigModel>(File.ReadAllText(Path.Combine(path, "BlackMarketConfig.json")));
     }
 
     private void InitCategoriesAndCache()
     {
-        string[] catsLayout = { "Барахло", "Возвраты электроники", "Забытый багаж", "Складские остатки", 
-                                "Таможенный конфискат", "Антиквариат", "Ювелирный лом", "Крипто-фермы", 
-                                "Искусство", "Гос. конфискат" };
-        double[] unlockCosts = { 0, 1500, 25000, 500000, 12000000, 450000000, 15000000000, 600000000000, 30000000000000, 2000000000000000 };
-
-        categories = new List<CategoryData>();
-        for (int i = 0; i < catsLayout.Length; i++) {
-            string cName = catsLayout[i];
-            var commons = lootTable.Where(x => x.Category == cName && x.Rarity == "Common").ToList();
-            if (commons.Count > 0) {
-                categories.Add(new CategoryData { Name = cName, UnlockCost = unlockCosts[i], BoxPrice = commons[0].SellPrice * 5.0 });
-            }
+        foreach (var c in categories) {
+            var commons = lootTable.Where(x => x.Category == c.Name && x.Rarity == "Common").ToList();
+            if (commons.Count > 0) c.BoxPrice = commons[0].SellPrice * 5.0;
         }
 
         string[] rarities = { "Common", "Uncommon", "Rare", "Epic", "Legendary", "Unique" };
@@ -128,6 +142,12 @@ public class SimulationController : MonoBehaviour
         for (double i = 0; i < totalIterations; i++)
         {
             timeInSeconds = i;
+
+            if (i == 0) {
+                LogEvent("ТУТОРИАЛ: Получен стартовый ключ Черного рынка!");
+                SpendBlackMarketKey(true);
+            }
+
             UpdateBotState();
 
             if (i > 0 && i % 3600 == 0)
@@ -205,6 +225,13 @@ public class SimulationController : MonoBehaviour
 
     private void OpenBox(CategoryData cat)
     {
+        // Механика случайного дропа ключей (шанс условно 0.05%)
+        if (UnityEngine.Random.value * 100.0 < 0.05) 
+        {
+            LogEvent("Глобальный дроп: Выпал Ключ Черного Рынка! Тратим...");
+            SpendBlackMarketKey(false);
+        }
+
         double p = UnityEngine.Random.value * 100.0;
         string rarity = "Common";
         if (p < 55.0) rarity = "Common";
@@ -239,20 +266,41 @@ public class SimulationController : MonoBehaviour
         }
         else
         {
-            // Сравнение с худшим
+            // Находим худший предмет
             var worstItem = shelf.OrderBy(x => x.SellPrice).First();
+            bool replace = false;
+            LootItem targetToReplace = worstItem;
 
             if (item.SellPrice > worstItem.SellPrice)
             {
-                RemoveItemFromShelfAndRoute(worstItem);
-                softCurrency += worstItem.SellPrice; // Продаем изгнанный худший предмет
+                replace = true;
+            }
+            // УЗЕЛ IPS ROUTING: Если предметы равны по цене (оба Unique), балансируем статы!
+            else if (Math.Abs(item.SellPrice - worstItem.SellPrice) < 0.01)
+            {
+                int myTypeCount = shelf.Count(x => x.BoostType == item.BoostType);
+                // Стремимся держать хотя бы 2 предмета каждого типа на полке
+                if (myTypeCount < 2) 
+                {
+                    var oppositeTarget = shelf.FirstOrDefault(x => Math.Abs(x.SellPrice - item.SellPrice) < 0.01 && x.BoostType != item.BoostType);
+                    if (oppositeTarget != null)
+                    {
+                        targetToReplace = oppositeTarget;
+                        replace = true;
+                    }
+                }
+            }
+
+            if (replace)
+            {
+                RemoveItemFromShelfAndRoute(targetToReplace);
+                softCurrency += targetToReplace.SellPrice; 
                 
                 AddItemToShelfAndRoute(item);
-                if (item.Rarity != "Rare") LogEvent($"Установка {item.Rarity} на полку (замена {worstItem.Name}): {item.Name} (+Boost)");
+                if (item.Rarity != "Rare") LogEvent($"Установка {item.Rarity} на полку (замена {targetToReplace.Name}): {item.Name} (+{item.BoostType})");
             }
             else
             {
-                // Новый оказался хуже — продаем его
                 softCurrency += item.SellPrice; 
             }
         }
@@ -293,8 +341,23 @@ public class SimulationController : MonoBehaviour
 
     private void RecalculateCoreStats()
     {
-        // baseIPS является агрегатором прямых бустов от Flat_IPS. 
-        currentIPS = baseIPS;
+        // Черный рынок: накапливаем множители грязного дохода
+        double bmIpsModifiers = 0;
+        foreach (var art in ownedArtifacts) {
+            if (art.EffectType == "+Total_IPS%") {
+                bmIpsModifiers += art.EffectValue;
+            }
+        }
+        
+        double percentMulti = bmIpsModifiers / 100.0;
+        double maxPercentMulti = bmConfig != null && bmConfig.BM_Global_IPS_Limit != null 
+                                 ? bmConfig.BM_Global_IPS_Limit.BaseHardCapPercent / 100.0 
+                                 : 3.0;
+
+        if (percentMulti > maxPercentMulti) percentMulti = maxPercentMulti;
+
+        // Итоговый доход = BaseIPS * (1 + Сумма(Total_IPS_Artifacts / 100))
+        currentIPS = baseIPS * (1.0 + percentMulti);
         
         double manualTapPower = GetUpgradeLevel("manual_tap_power") * 1.5;
         // baseClickPower держит в себе "Mult_MPC" прибавки от полок (согласно графу)
@@ -357,6 +420,27 @@ public class SimulationController : MonoBehaviour
         if (!cp100k && softCurrency >= 100000) { cp100k = true; LogEvent("Достижение чекпоинта: 100k софт-валюты"); }
         if (!cp1M && softCurrency >= 1000000) { cp1M = true; LogEvent("Достижение чекпоинта: 1M софт-валюты"); }
         if (!cp1B && softCurrency >= 1000000000) { cp1B = true; LogEvent("Достижение чекпоинта: 1B софт-валюты"); }
+    }
+
+    private void SpendBlackMarketKey(bool forceTutorial)
+    {
+        if (bmArtifactsDB == null || bmArtifactsDB.Count == 0) return;
+
+        if (forceTutorial) {
+            // Жестко вытягиваем артефакт со свойством +Total_IPS% (ID 1005: Теневой Артефакт #5)
+            var art = bmArtifactsDB.FirstOrDefault(x => x.ID == 1005);
+            if (art != null) {
+                ownedArtifacts.Add(art);
+                LogEvent($"Черный рынок: куплен туториал-артефакт {art.Name} ({art.EffectType} {art.EffectValue})");
+                RecalculateCoreStats();
+            }
+        } else {
+            // Случайный мидгейм-дроп
+            var art = bmArtifactsDB[UnityEngine.Random.Range(0, bmArtifactsDB.Count)];
+            ownedArtifacts.Add(art);
+            LogEvent($"Черный рынок: случайная покупка {art.Name} ({art.EffectType} {art.EffectValue})");
+            RecalculateCoreStats();
+        }
     }
 
     private void LogEvent(string message)
