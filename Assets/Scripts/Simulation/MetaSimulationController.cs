@@ -25,18 +25,24 @@ public class MetaSimulationController : MonoBehaviour
 
         // Триггер Престижа
         double lifetime = currentSim.persistentData.LifetimeEarnings;
-        
-        // PP = Math.Pow((LifetimeEarnings / 1_000_000_000.0), 0.43)
-        double pp = Math.Pow((lifetime / 1000000000.0), 0.38);
-        if (double.IsNaN(pp) || pp < 0) pp = 0;
+        double stardustAtPrestige = currentSim.persistentData.CurrencyStardust;
+
+        // PP = (LifetimeEarnings / 1e9)^0.38  +  (TotalStardust / 10000)
+        // Коэффициент /10000 даёт пыли ~10-15% от основных очков при типичном запасе 7М пыли
+        double ppFromEarnings = Math.Pow((lifetime / 1000000000.0), 0.38);
+        double ppFromStardust = stardustAtPrestige / 10000.0;
+        if (double.IsNaN(ppFromEarnings) || ppFromEarnings < 0) ppFromEarnings = 0;
+
+        double pp = ppFromEarnings + ppFromStardust;
 
         // PermanentPrestigeMultiplier = 1.0 + (PP * 0.02)
         double multi = 1.0 + (pp * 0.02);
 
         Debug.Log($"<color=green>ПРЕСТИЖ!</color> Заработано за Эпоху 1: {lifetime:F0}");
-        Debug.Log($"Prestige Points (PP): {pp:F2} -> Глобальный Множитель: {multi:F2}x");
+        Debug.Log($"[Prestige] Сконвертировано {stardustAtPrestige:F0} пыли в {ppFromStardust:F2} очков престижа. Текущий запас пыли: 0.");
+        Debug.Log($"Prestige Points (PP): {ppFromEarnings:F2} (доход) + {ppFromStardust:F2} (пыль) = {pp:F2} -> Глобальный Множитель: {multi:F2}x");
 
-        // Сохраняем данные для Эпохи 2
+        // Сохраняем данные для Эпохи 2 — пыль обнуляется!
         var carryOverData = new SimulationController.RetainedData
         {
             LifetimeEarnings = lifetime, 
@@ -44,7 +50,7 @@ public class MetaSimulationController : MonoBehaviour
             OwnedArtifacts = new List<SimulationController.BlackMarketArtifact>(currentSim.persistentData.OwnedArtifacts),
             UnlockedStickers = new HashSet<double>(currentSim.persistentData.UnlockedStickers),
             CompletedSets = new HashSet<string>(currentSim.persistentData.CompletedSets),
-            CurrencyStardust = currentSim.persistentData.CurrencyStardust
+            CurrencyStardust = 0.0  // Пыль сбрасывается при Престиже
         };
 
         // Вычищаем старую симуляцию
