@@ -27,7 +27,7 @@ public class MetaSimulationController : MonoBehaviour
         double lifetime = currentSim.persistentData.LifetimeEarnings;
         
         // PP = Math.Pow((LifetimeEarnings / 1_000_000_000.0), 0.43)
-        double pp = Math.Pow((lifetime / 1000000000.0), 0.43);
+        double pp = Math.Pow((lifetime / 1000000000.0), 0.38);
         if (double.IsNaN(pp) || pp < 0) pp = 0;
 
         // PermanentPrestigeMultiplier = 1.0 + (PP * 0.02)

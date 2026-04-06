@@ -122,7 +122,7 @@ Price_{BM} = (TPS \times 120) + (MPC \times 50)
 
 ### Формула начисления очков:
 ```math
-PP = (\text{Lifetime Earnings} / 1,000,000,000)^{0.43}
+PP = (\text{Lifetime Earnings} / 1,000,000,000)^{0.38}
 ```
 
 ### Глобальный множитель дохода ($M_{pres}$):
