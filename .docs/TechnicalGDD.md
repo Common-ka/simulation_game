@@ -265,6 +265,65 @@ if item.Category in CompletedSets:
     effective_BoostValue = item.BoostValue * 1.2  // StandardSetMultiplier из GachaMath.json
 ```
 
+### 3.7 X-Ray (Рентген коробки)
+
+**Суть:** до открытия рулетки игрок платит (rewarded или ЯМ) и видит содержимое. Если нравится — открывает с гарантией. Если нет — бесплатный Refresh, но уже вслепую.
+
+**Ключевой принцип реализации — Pre-Roll:**
+Лут генерируется в момент **покупки лота**, а не в момент открытия. X-Ray просто показывает уже сгенерированный результат.
+
+```csharp
+// GachaController.cs
+public class PendingLot {
+    public List<LootItem> PreRolledItems;  // сгенерированы при покупке
+    public bool XRayUsed    = false;       // был ли использован X-Ray
+    public bool XRayRevealed = false;      // видит ли игрок содержимое сейчас
+}
+
+private PendingLot _currentLot;
+
+// При покупке лота — сразу генерируем содержимое
+public void PurchaseLot(int categoryIndex, int quantity) {
+    _currentLot = new PendingLot {
+        PreRolledItems = RollItems(categoryIndex, quantity)
+    };
+    // Показываем UI лота — рентген ещё не активирован
+}
+
+// Игрок нажал «Рентген» (после рекламы или оплаты ЯМ)
+public void ActivateXRay() {
+    if (_currentLot.XRayUsed) return; // уже использован
+    _currentLot.XRayRevealed = true;
+    ShowXRayPreview(_currentLot.PreRolledItems);
+}
+
+// Игрок нажал «Открыть» — используем pre-rolled лут
+public void OpenLot() {
+    StartRoulette(_currentLot.PreRolledItems); // предметы гарантированы
+    _currentLot = null;
+}
+
+// Игрок нажал «Обновить» — перегенерируем, блокируем X-Ray
+public void RefreshLot(int categoryIndex, int quantity) {
+    _currentLot = new PendingLot {
+        PreRolledItems = RollItems(categoryIndex, quantity),
+        XRayUsed       = true   // X-Ray недоступен для нового лота
+    };
+    // UI показывает лот без превью
+}
+```
+
+**Что показывает превью:**
+
+| Элемент | Отображение |
+|---|---|
+| Иконка предмета | Спрайт если загружен, иначе `placeholder.png` с цветом редкости |
+| Название | Полное имя из `LootTable.json` |
+| Редкость | Цветная рамка (Common=серый, Rare=синий, Legendary=золотой, Unique=красный) |
+| Статы (BoostValue) | **Скрыты** — видны только после открытия |
+
+> **Почему статы скрыты:** Если показывать полную ценность предмета, игрок принимает чисто рациональное решение. Скрытые статы при видимой редкости создают дополнительное ожидание и сохраняют азарт открытия.
+
 ---
 
 ## 4. Черный рынок и Артефакты
@@ -428,6 +487,109 @@ public void BuyArtifact(int artifactId) {
 | `Upgrades.json` | Апгрейды: ID, BaseCost, MaxLevel, CostFormula | `SimulationController` |
 
 > **Правило архитектуры:** C#-код не содержит числовых балансных констант. Любое изменение баланса = изменение JSON. Для Live-Ops JSON-файлы подтягиваются с CDN по URL из Remote Config — без перевыкладки сборки Unity.
+
+---
+
+## 7. Защита от читерства (Anti-Cheat)
+
+### 7.1 Проблема: Time Manipulation
+
+Игрок переводит системные часы вперёд на 24 часа → игра считает что прошло 86 400 секунд оффлайна → начисляет огромный доход.
+
+**Три уровня защиты — каждый следующий является страховкой предыдущего.**
+
+---
+
+### 7.2 Уровень 1 — Серверное время (основной)
+
+Никогда не доверяй `DateTime.Now` или `Time.time` для расчёта оффлайн-дельты.
+
+**Как получить надёжное время в браузере без своего сервера:**
+
+```csharp
+// SaveManager.cs — при загрузке игры
+IEnumerator FetchServerTime() {
+    // Делаем любой HTTPS-запрос к надёжному эндпоинту
+    // Response Header "Date" содержит серверное UTC-время
+    using var req = UnityWebRequest.Head("https://yandex.ru");
+    yield return req.SendWebRequest();
+    
+    if (req.result == UnityWebRequest.Result.Success) {
+        string dateHeader = req.GetResponseHeader("Date");
+        _serverTime = ParseHttpDate(dateHeader); // Unix timestamp
+    } else {
+        // Fallback: используем локальное время, но логируем
+        _serverTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+        Debug.LogWarning("[AntiCheat] Server time unavailable, using local time");
+    }
+}
+```
+
+**Алгоритм расчёта оффлайн-дохода:**
+
+```csharp
+long savedTimestamp  = retainedData.last_online_timestamp; // из Yandex cloud
+long currentTime     = _serverTime;                        // серверное время
+long delta           = currentTime - savedTimestamp;
+
+// Защита от отката часов назад (delta < 0)
+if (delta < 0) {
+    Debug.LogWarning($"[AntiCheat] Clock rollback detected: delta={delta}s");
+    delta = 0;
+}
+
+// Хардкап (Уровень 2)
+long cappedDelta = Math.Min(delta, retainedData.offline_cap_seconds);
+double offlineEarned = CurrentIPS * cappedDelta;
+```
+
+> **Ключевое:** `last_online_timestamp` хранится в **Yandex Cloud** через `player.setData()` — игрок не может подделать его локально. Сравнение серверного времени с облачным timestamp — самая надёжная проверка.
+
+---
+
+### 7.3 Уровень 2 — Хардкап оффлайна (всегда активен)
+
+Даже если серверное время недоступно и используется локальное — хардкап ограничивает максимальный доход:
+
+```csharp
+// Базовый лимит из SaveManager
+int MAX_OFFLINE_SECONDS = retainedData.offline_cap_seconds; // 7200–28800 сек
+
+cappedDelta = Math.Min(rawDelta, MAX_OFFLINE_SECONDS);
+```
+
+Читер, переведший часы на 1 год, получит максимум **8 часов** дохода (при VIP Gold). Это приемлемо — полноценного взлома не произойдёт.
+
+---
+
+### 7.4 Уровень 3 — IPS Sanity Check
+
+При каждом сохранении `SaveManager` проверяет что текущий IPS не превышает теоретического максимума:
+
+```csharp
+// Теоретический максимум = все Unique предметы + все артефакты + макс. Престиж
+double theoreticalMaxIPS = EconomyService.CalculateTheoreticalMaxIPS();
+
+if (GameManager.CurrentIPS > theoreticalMaxIPS * 1.1) { // допуск 10%
+    Debug.LogError($"[AntiCheat] IPS anomaly: {CurrentIPS} > max {theoreticalMaxIPS}");
+    // Не сохранять подозрительное состояние
+    // Опционально: сбросить IPS до теоретического максимума
+}
+```
+
+---
+
+### 7.5 Что НЕ защищает эта система
+
+| Угроза | Защита | Риск |
+|---|---|---|
+| Перевод часов вперёд | ✅ Серверное время + хардкап | Минимальный |
+| Откат часов назад | ✅ Проверка delta < 0 | Минимальный |
+| Редактирование localStorage | ✅ Яндекс cloud-save авторитетен | Минимальный |
+| Cheat Engine / Memory editor | ❌ Не защищено | **Средний** |
+| Пакетный перехват и редактирование | ❌ Не защищено | Низкий (нет сервера) |
+
+> **Вывод:** Для браузерной F2P idle-игры без PvP данный уровень защиты достаточен. Memory-читы возможны, но не влияют на других игроков и не разрушают экономику (нет торговли). Инвестиции в server-side валидацию нецелесообразны на данном этапе.
 
 ---
 
