@@ -129,7 +129,7 @@ public class SimulationController : MonoBehaviour
         persistentData = retainedData ?? new RetainedData();
 
         string projRoot = string.IsNullOrEmpty(overrideEconomyFolderPath) 
-                            ? Path.Combine(Application.dataPath, "../Economy") 
+                            ? Path.Combine(Application.dataPath, "Resources/GameData") 
                             : overrideEconomyFolderPath;
                             
         LoadJSON(projRoot);
