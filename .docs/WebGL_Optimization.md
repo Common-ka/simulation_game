@@ -110,27 +110,64 @@ IL2CPP:                ✅ (не Mono)   ← быстрее в браузере
 
 ## Производительность UI (Canvas)
 
-### Разделяй Canvas по частоте обновления
+### Почему важно разделять Canvas
+
+Unity перерисовывает Canvas целиком каждый раз, когда **хоть что-то** в нём изменилось (Canvas Rebuild). Если на одном Canvas — фоны, иконки и лейблы с числами, то 60 раз в секунду Unity перерисовывает абсолютно всё, включая статичный фон, который не менялся вообще.
+
+**Решение: три отдельных Canvas, каждый со своей частотой обновления.**
+
+### Иерархия Canvas для Unclaimed Assets
+
 ```
-Canvas "Static"    ← фоны, рамки, иконки, что не меняется
-Canvas "Dynamic"   ← лейблы с цифрами (IPS, валюта) — обновляются каждый тик
-Canvas "Overlay"   ← попапы, рулетка — включается/выключается целиком
+Game (Scene)
+│
+├── Canvas_Static   [Canvas, CanvasScaler, БЕЗ GraphicRaycaster]  SortOrder: 0
+│   ├── Background_Image
+│   ├── ShelfPanel
+│   │   ├── Slot_1 (Image)   ← меняется редко (новый предмет на полку)
+│   │   └── ...
+│   └── ShopPanel
+│       └── CategoryTabs (Images)
+│
+├── Canvas_Dynamic  [Canvas, CanvasScaler, GraphicRaycaster]  SortOrder: 1
+│   ├── HUD
+│   │   ├── Label_Currency  (TMP)  ← каждую секунду
+│   │   ├── Label_IPS       (TMP)  ← каждую секунду
+│   │   └── ProgressBar            ← каждую секунду
+│   └── Buttons (Shop, BlackMarket, Album, Prestige)
+│
+└── Canvas_Overlay  [Canvas, CanvasScaler, GraphicRaycaster]  SortOrder: 2
+    ├── RoulettePanel       (по умолчанию: inactive)
+    ├── BlackMarketPanel    (по умолчанию: inactive)
+    ├── PrestigePanel       (по умолчанию: inactive)
+    └── OfflineRewardPanel  (по умолчанию: inactive)
 ```
 
-Когда меняется один элемент на Canvas — Unity перерисовывает **весь Canvas**. Разделение предотвращает лишние repaint.
+### Что куда класть — правило одного вопроса
 
-### Объединяй обновления UI — не каждую секунду
+> *«Этот элемент меняется чаще одного раза в минуту?»*
+
+| Ответ | Canvas |
+|---|---|
+| Нет, практически никогда | `Canvas_Static` |
+| Да, каждую секунду автоматически | `Canvas_Dynamic` |
+| Это попап / полноэкранная панель | `Canvas_Overlay` |
+
+### Дополнительные правила
+
+- **`GraphicRaycaster` на `Canvas_Static` — выключить.** Фоновые изображения клики не принимают.
+- **Попапы (`Canvas_Overlay`):** когда панель скрыта через `SetActive(false)`, её Canvas полностью выходит из рендера. Анимация рулетки не влияет на Static.
+- **Порядок сортировки:** Static = 0, Dynamic = 1, Overlay = 2. Задаётся в компоненте Canvas → `Sort Order`.
+
+### Объединяй обновления UI — только по событию
+
 ```csharp
-// ❌ — обновляет 60 раз в секунду
+// ❌ — Canvas_Dynamic перестраивается 60 раз в секунду
 void Update() { hudPanel.UpdateIPS(currentIPS); }
 
-// ✅ — обновляет 1 раз в секунду (в GameTick)
-// GameManager вызывает OnGameStateChanged один раз в тик
+// ✅ — перестраивается 1 раз в секунду (в GameTick через событие)
 void OnGameStateChanged(GameSnapshot snap) { hudPanel.Refresh(snap); }
 ```
-
-### GraphicRaycaster — только где нужно
-По умолчанию каждый Canvas проверяет клики по **всем** своим элементам. Отключи `GraphicRaycaster` на Canvas, который не принимает клики (фоновые Canvas).
 
 ---
 
