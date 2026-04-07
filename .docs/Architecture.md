@@ -62,22 +62,40 @@ Assets/
 │   │   └── AnalyticsManager.cs         ← события Yandex Метрики
 │   │
 │   ├── UI/
-│   │   ├── UIManager.cs                ← Show/Hide панелей, стек навигации
+│   │   ├── UIManager.cs                ← Show/Hide панелей через AddToClassList("hidden")
 │   │   ├── Panels/
-│   │   │   ├── HUDPanel.cs             ← верхняя полоса: валюта, IPS
-│   │   │   ├── ShopPanel.cs            ← выбор и покупка лота (1/5/10)
+│   │   │   ├── HUDPanel.cs             ← валюта, IPS (подписка на GameStateChanged)
+│   │   │   ├── ShopPanel.cs            ← выбор категории, кнопки покупки лота
 │   │   │   ├── ShelfPanel.cs           ← витрина 5 слотов
-│   │   │   ├── RoulettePanel.cs        ← экран рулетки (1–10 рулеток)
+│   │   │   ├── RoulettePanel.cs        ← 1–10 рулеток, USS Transitions анимация
 │   │   │   ├── StickerAlbumPanel.cs    ← альбом стикеров по категориям
 │   │   │   ├── BlackMarketPanel.cs     ← ночной режим, артефакты
 │   │   │   ├── PrestigePanel.cs        ← расчёт PP, превью множителя
 │   │   │   ├── OfflineRewardPanel.cs   ← расчёт и показ оффлайн-дохода
 │   │   │   └── SettingsPanel.cs
 │   │   └── Components/
-│   │       ├── RouletteWheel.cs        ← один виджет рулетки (reusable)
-│   │       ├── ItemCard.cs             ← карточка предмета (иконка + название)
-│   │       ├── ShelfSlot.cs            ← один слот на витрине
+│   │       ├── RouletteWheel.cs        ← VisualElement с Custom Painter (Painter2D)
+│   │       ├── ItemCard.cs             ← VisualElement: иконка + название + редкость
+│   │       ├── ShelfSlot.cs            ← VisualElement: один слот витрины
 │   │       └── NumberLabel.cs          ← форматирование 1.2M / 3.4B
+│   │
+│   ├── UI_Toolkit/
+│   │   ├── UXML/                       ← разметка (как HTML)
+│   │   │   ├── HUDPanel.uxml
+│   │   │   ├── ShopPanel.uxml
+│   │   │   ├── ShelfPanel.uxml
+│   │   │   ├── RoulettePanel.uxml
+│   │   │   ├── StickerAlbumPanel.uxml
+│   │   │   ├── BlackMarketPanel.uxml
+│   │   │   ├── PrestigePanel.uxml
+│   │   │   └── OfflineRewardPanel.uxml
+│   │   └── USS/                        ← стили (как CSS)
+│   │       ├── Variables.uss           ← цвета, шрифты, отступы (design tokens)
+│   │       ├── Common.uss              ← базовые классы (.hidden, .button, .card)
+│   │       ├── HUD.uss
+│   │       ├── Shop.uss
+│   │       ├── Roulette.uss            ← transitions для анимации рулетки
+│   │       └── BlackMarket.uss         ← ночная цветовая тема
 │   │
 │   └── Utils/
 │       ├── NumberFormatter.cs
@@ -180,35 +198,57 @@ mode = "remote"  → https://github-pages-url/v1.x.x/*.json
 
 ---
 
-## UI-навигация (панели)
+## UI-навигация (UI Toolkit)
 
-UIManager управляет стеком панелей:
+**Технология:** Unity 6 UI Toolkit. Вся разметка — в UXML-файлах. Все стили — в USS. C# только управляет данными и событиями.
+
+**Единый UIDocument** в сцене `Game.unity`. Все панели существуют одновременно в дереве VisualElement, но скрытые панели имеют CSS-класс `hidden` (`display: none`).
+
+```csharp
+// UIManager: показать/скрыть панель
+public void ShowPanel(string panelName) {
+    _allPanels.ForEach(p => p.AddToClassList("hidden"));
+    _panels[panelName].RemoveFromClassList("hidden");
+}
+```
+
+**Структура видимости:**
 
 ```
-[HUD] — всегда видим поверх всего
+[hud-container]  — всегда видим поверх всего (position: absolute, z-index высокий)
 
-Основной экран:
-  ShopPanel (выбор и покупка лота)
-  ShelfPanel (витрина)
+Основной экран (одновременно):
+  [shop-panel]      ← выбор и покупка лота
+  [shelf-panel]     ← витрина
 
-Открываются поверх основного:
-  RoulettePanel          ← блокирует ShopPanel, НЕ блокирует IPS
-  StickerAlbumPanel
-  BlackMarketPanel
-  PrestigePanel
-  OfflineRewardPanel     ← первый экран после возвращения
-  SettingsPanel
+Открываются поверх (скрывают основной экран):
+  [roulette-panel]         частичная блокировка (см. ниже)
+  [sticker-album-panel]
+  [black-market-panel]     ночная тема через BlackMarket.uss
+  [prestige-panel]
+  [offline-reward-panel]   первый экран после возвращения
+  [settings-panel]
 ```
 
 **Частичная блокировка во время рулетки:**
 
 | Действие | Во время рулетки |
 |---|---|
-| IPS начисление | ✅ продолжается |
+| IPS начисление | ✅ продолжается (GameManager не блокируется) |
 | Покупка следующего лота | ✅ разрешена |
-| Открытие Черного рынка | ❌ заблокировано |
-| Нажатие Престижа | ❌ заблокировано |
+| Открытие Черного рынка | ❌ кнопка `pickingMode = Ignore` |
+| Нажатие Престижа | ❌ кнопка `pickingMode = Ignore` |
 | Кнопка «+шанс дропа» (оффер) | ✅ специально разрешена |
+
+**Ночная тема Черного рынка** — через смену PanelSettings или через USS-переменные:
+```css
+/* BlackMarket.uss */
+.black-market-active {
+    --background-color: #0a0a1a;
+    --accent-color: #00d4ff;
+    transition: background-color 0.5s ease;
+}
+```
 
 ---
 

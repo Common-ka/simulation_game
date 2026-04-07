@@ -108,65 +108,105 @@ IL2CPP:                ✅ (не Mono)   ← быстрее в браузере
 
 ---
 
-## Производительность UI (Canvas)
+## Производительность UI (UI Toolkit, Unity 6)
 
-### Почему важно разделять Canvas
+### Преимущество UI Toolkit перед Canvas для этого проекта
 
-Unity перерисовывает Canvas целиком каждый раз, когда **хоть что-то** в нём изменилось (Canvas Rebuild). Если на одном Canvas — фоны, иконки и лейблы с числами, то 60 раз в секунду Unity перерисовывает абсолютно всё, включая статичный фон, который не менялся вообще.
+UI Toolkit использует **retained mode rendering** — перерисовываются только «грязные» (dirty) элементы, а не весь экран. Проблемы Canvas Rebuild здесь нет по умолчанию. Это делает его более предпочтительным для idle-игры, где числа меняются каждую секунду, а фоны — редко.
 
-**Решение: три отдельных Canvas, каждый со своей частотой обновления.**
-
-### Иерархия Canvas для Unclaimed Assets
+### Структура UI в проекте (UIDocument)
 
 ```
 Game (Scene)
-│
-├── Canvas_Static   [Canvas, CanvasScaler, БЕЗ GraphicRaycaster]  SortOrder: 0
-│   ├── Background_Image
-│   ├── ShelfPanel
-│   │   ├── Slot_1 (Image)   ← меняется редко (новый предмет на полку)
-│   │   └── ...
-│   └── ShopPanel
-│       └── CategoryTabs (Images)
-│
-├── Canvas_Dynamic  [Canvas, CanvasScaler, GraphicRaycaster]  SortOrder: 1
-│   ├── HUD
-│   │   ├── Label_Currency  (TMP)  ← каждую секунду
-│   │   ├── Label_IPS       (TMP)  ← каждую секунду
-│   │   └── ProgressBar            ← каждую секунду
-│   └── Buttons (Shop, BlackMarket, Album, Prestige)
-│
-└── Canvas_Overlay  [Canvas, CanvasScaler, GraphicRaycaster]  SortOrder: 2
-    ├── RoulettePanel       (по умолчанию: inactive)
-    ├── BlackMarketPanel    (по умолчанию: inactive)
-    ├── PrestigePanel       (по умолчанию: inactive)
-    └── OfflineRewardPanel  (по умолчанию: inactive)
+└── UIDocument  [PanelSettings, UXML Root]
+    ├── hud-container          ← валюта, IPS, прогресс (обновляется 1/сек)
+    ├── shop-panel             ← выбор категории и покупка лота
+    ├── shelf-panel            ← витрина 5 слотов (статичная, меняется редко)
+    ├── roulette-panel         ← анимация выпадения (USS Transitions)
+    ├── sticker-album-panel    ← альбом стикеров
+    ├── black-market-panel     ← артефакты (hidden по умолчанию)
+    ├── prestige-panel         ← расчёт PP (hidden по умолчанию)
+    └── offline-reward-panel   ← оффлайн-доход (hidden по умолчанию)
 ```
 
-### Что куда класть — правило одного вопроса
+### Правила оптимизации UI Toolkit
 
-> *«Этот элемент меняется чаще одного раза в минуту?»*
-
-| Ответ | Canvas |
-|---|---|
-| Нет, практически никогда | `Canvas_Static` |
-| Да, каждую секунду автоматически | `Canvas_Dynamic` |
-| Это попап / полноэкранная панель | `Canvas_Overlay` |
-
-### Дополнительные правила
-
-- **`GraphicRaycaster` на `Canvas_Static` — выключить.** Фоновые изображения клики не принимают.
-- **Попапы (`Canvas_Overlay`):** когда панель скрыта через `SetActive(false)`, её Canvas полностью выходит из рендера. Анимация рулетки не влияет на Static.
-- **Порядок сортировки:** Static = 0, Dynamic = 1, Overlay = 2. Задаётся в компоненте Canvas → `Sort Order`.
-
-### Объединяй обновления UI — только по событию
-
+**1. Скрывай через класс, не через style напрямую**
 ```csharp
-// ❌ — Canvas_Dynamic перестраивается 60 раз в секунду
-void Update() { hudPanel.UpdateIPS(currentIPS); }
+// ❌ — прямое изменение style создаёт лишний layout pass
+panel.style.display = DisplayStyle.None;
 
-// ✅ — перестраивается 1 раз в секунду (в GameTick через событие)
-void OnGameStateChanged(GameSnapshot snap) { hudPanel.Refresh(snap); }
+// ✅ — тогgling CSS-класса: дешевле и читаемее
+panel.AddToClassList("hidden");     // в USS: .hidden { display: none; }
+panel.RemoveFromClassList("hidden");
+```
+
+**2. Не изменяй стили в Update() — только по событию**
+```csharp
+// ❌ — каждый кадр запускает layout recalculation
+void Update() { label.text = currentIPS.ToString(); }
+
+// ✅ — обновляем 1 раз в секунду, из GameTick
+void OnGameStateChanged(GameSnapshot snap) {
+    _currencyLabel.text = NumberFormatter.Format(snap.SoftCurrency);
+    _ipsLabel.text      = NumberFormatter.FormatIPS(snap.CurrentIPS);
+}
+```
+
+**3. `PickingMode.Ignore` для неинтерактивных элементов**
+```csharp
+// Фоновые изображения, декорации, разделители
+backgroundElement.pickingMode = PickingMode.Ignore;
+// Аналог отключения GraphicRaycaster в Canvas
+```
+
+**4. Батчи изменений стилей через классы**
+```csharp
+// ❌ — три отдельных layout pass
+element.style.color         = Color.red;
+element.style.fontSize      = 24;
+element.style.borderWidth   = 2;
+
+// ✅ — один layout pass
+element.AddToClassList("error-state"); // всё описано в .uss файле
+```
+
+**5. Анимации через USS Transitions (GPU-ускоренные)**
+```css
+/* В файле .uss */
+.roulette-item {
+    transition: transform 0.3s ease-out, opacity 0.2s linear;
+}
+.roulette-item.spinning {
+    transform: translateY(-200px);
+    opacity: 0;
+}
+```
+Запуск из C#: `element.AddToClassList("spinning")` — анимация стартует автоматически.
+
+**6. Рулетка — Custom Painter для нестандартной графики**
+```csharp
+// Для кастомной отрисовки (градиенты, кривые, сложные эффекты)
+public class RouletteWheel : VisualElement {
+    static RouletteWheel() {
+        // Регистрируем кастомный рендерер
+        CustomStyleRegistry.Register<RouletteWheel>();
+    }
+    void GenerateVisualContent(MeshGenerationContext ctx) {
+        // Рисуем через Painter2D API — аналог Canvas2D в вебе
+        var painter = ctx.painter2D;
+        painter.Arc(center, radius, startAngle, endAngle);
+        painter.Fill();
+    }
+}
+```
+
+**7. Планировщик вместо InvokeRepeating для UI-таймеров**
+```csharp
+// Таймер обратного отсчёта кулдауна ключа ЧР
+_root.schedule.Execute(() => {
+    UpdateKeyTimer();
+}).Every(1000); // каждую секунду, без MonoBehaviour
 ```
 
 ---
