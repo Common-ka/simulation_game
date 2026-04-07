@@ -348,6 +348,42 @@ BM_Bonus = min(RawBmBonus, maxBmBonus)
 | `-Shop_Prices%` | Уменьшает `BoxPrice` текущей категории |
 | `+Offline_Time` | Увеличивает расчётный оффлайн-период (зарезервировано) |
 
+### 4.7 Price Snapshot — фиксация цены при входе
+
+**Правило:** цена в Чёрном рынке рассчитывается **один раз** в момент активации ключа и остаётся неизменной до конца сессии.
+
+**Проблема без фиксации:**
+```
+Игрок входит в ЧР → видит цену 50 000
+Покупает артефакт +200% MPC → его MPC вырастает в 3 раза
+Цена соседнего артефакта → 150 000
+Игрок не может купить то, что секунду назад было доступно → ярость
+```
+Это «наказание за прогресс внутри одной сессии» — один из худших UX-грехов в монетизации.
+
+**Реализация:**
+```csharp
+// BlackMarketManager.cs
+private double _sessionBoxPrice;  // вычисляется один раз
+
+public void ActivateSession() {
+    // Snapshot: фиксируем цену при входе
+    _sessionBoxPrice = (GameManager.CurrentTPS * 120)
+                     + (GameManager.CurrentMPC * 50);
+    ShowPanel(_sessionBoxPrice);
+}
+
+public void BuyArtifact(int artifactId) {
+    if (softCurrency >= _sessionBoxPrice) {
+        softCurrency -= _sessionBoxPrice;
+        ApplyArtifact(artifactId);
+        // _sessionBoxPrice НЕ пересчитываем — цена заморожена до конца сессии
+    }
+}
+```
+
+Пересчёт происходит только при **следующей активации ключа**. Это создаёт дополнительную мотивацию копить ключи: «зайду позже с большим IPS — куплю больше».
+
 ---
 
 ## 5. Таблица категорий и Экономические стены
