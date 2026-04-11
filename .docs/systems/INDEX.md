@@ -18,3 +18,9 @@
 - Статус: ✅ Реализовано
 - Ключевые классы: `GameDataLoader`
 - API: `LoadAsync()`, свойства `Categories`, `GachaMath`, `BlackMarketConfig`, `Upgrades`
+
+## GameManager
+- Файл: `.docs/systems/GameManager.md`
+- Статус: ✅ MVP реализован (тик + событие)
+- Ключевые классы: `GameManager`
+- API: `OnGameStateChanged: Action<GameSnapshot>` (static event), `GameSnapshot.SoftCurrency`
