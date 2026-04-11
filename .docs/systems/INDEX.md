@@ -24,3 +24,9 @@
 - Статус: ✅ MVP реализован (тик + событие)
 - Ключевые классы: `GameManager`
 - API: `OnGameStateChanged: Action<GameSnapshot>` (static event), `GameSnapshot.SoftCurrency`
+
+## SaveManager
+- Файл: `.docs/systems/SaveManager.md`
+- Статус: ✅ Реализовано (Фолбэк локальное сохранение)
+- Ключевые классы: `SaveManager`, `RetainedData`
+- API: `SaveManager.Instance`, `Load()`, `Save()`, `Data` (свойство)
