@@ -16,12 +16,12 @@
 
 НЕ ВЫДУМЫВАЙ архитектуру или баланс из головы. Общие правила лежат в папке `.docs/project/`. **Используй инструменты чтения файлов**, прежде чем начать задачу:
 
-* 🏗️ **Кодстайл, паттерны и правила ассетов:** `.docs/project/AssetConventions.md`, `.docs/project/Architecture.md`
-* ⚖️ **Геймдизайн и Баланс:** `.docs/project/TechnicalGDD.md`, `.docs/project/MacroBalance.md`, `.docs/project/LiveopsArchitecture.md`
-* 🎨 **Интерфейс (UI Toolkit) и Экраны:** `.docs/project/UIScreens.md`
-* ☁️ **Сохранения и Облако:** `.docs/project/SaveData.md`
-* 💰 **Монетизация и Реклама:** `.docs/project/Monetization.md`, `.docs/project/YandexSDK.md`
-* 🚀 **Ограничения платформы:** `.docs/project/WebGLOptimization.md`, `.docs/project/ChurnAnalysis (анализ отвалов).md`
+* 🏗️ **Кодстайл, паттерны и правила ассетов:** `.docs/project/02-asset-conventions.md`, `.docs/project/01-project-architecture.md`
+* ⚖️ **Геймдизайн и Баланс:** `.docs/project/04-high-concept.md`, `.docs/project/03-technical-gdd.md`, `.docs/project/05-macro-balance.md`, `.docs/project/08-liveops-architecture.md`
+* 🎨 **Интерфейс (UI Toolkit) и Экраны:** `.docs/project/09-ui-screens-guidelines.md`
+* ☁️ **Сохранения и Облако:** `.docs/project/10-save-data-architecture.md`
+* 💰 **Монетизация и Реклама:** `.docs/project/06-monetization-design.md`, `.docs/project/07-yandex-sdk-integration.md`
+* 🚀 **Ограничения платформы:** `.docs/project/11-webgl-optimization.md`, `.docs/project/12-analytics-and-churn.md`
 
 ### 🧠 Память ИИ-Агентов (Системы и Контекст)
 Для синхронизации контекста между чатами существует папка `.docs/systems/` и её индекс `.docs/systems/INDEX.md`.
