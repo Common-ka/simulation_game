@@ -1,7 +1,7 @@
 # Bootstrap System
 
 ## Статус
-✅ Реализовано (заглушки)
+✅ Шаг 1 реализован (GameDataLoader), остальные — заглушки
 
 ## Ключевые классы
 - `UnclaimedAssets.Bootstrap.BootstrapController` — `Assets/Scripts/Bootstrap/BootstrapController.cs`
@@ -11,21 +11,21 @@
 
 ## API / Последовательность
 
-| # | Метод | Статус | Описание |
+| # | Вызов | Статус | Описание |
 |---|---|---|---|
-| 1 | `LoadGameData()` | 🟡 Заглушка | Будет загружать JSON через `GameDataLoader` |
+| 1 | `_gameDataLoader.LoadAsync()` | ✅ Реализовано | Загружает JSON через `GameDataLoader` |
 | 2 | `LoadSaveData()` | 🟡 Заглушка | Будет читать сохранения через `SaveManager` |
 | 3 | `PreloadSpriteSheet()` | 🟡 Заглушка | Будет грузить спрайтшит через `SpriteSheetLoader` |
 | 4 | `InitYandexSDK()` | 🟡 Заглушка | Будет инициализировать Yandex SDK (PluginYG2) |
 
+## SerializeField
+- `[SerializeField] GameDataLoader _gameDataLoader` — назначается в Inspector
+
 ## Константы
 - `GameSceneName = "Game"` — имя целевой сцены
 
-## Паттерн
-`IEnumerator Start()` — Unity запускает как корутину автоматически. Шаги выполняются последовательно через `yield return`.
-
-## Зависимости (будущие)
-- `GameDataLoader` (Economy)
-- `SaveManager` (Core)
-- `SpriteSheetLoader` (Icons)
-- PluginYG2 (Yandex SDK)
+## Зависимости
+- `GameDataLoader` (Economy) ✅
+- `SaveManager` (Core) 🟡
+- `SpriteSheetLoader` (Icons) 🟡
+- PluginYG2 (Yandex SDK) 🟡

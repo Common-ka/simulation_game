@@ -1,16 +1,25 @@
 using System.Collections;
+using UnclaimedAssets.Economy;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace UnclaimedAssets.Bootstrap
 {
+    [RequireComponent(typeof(GameDataLoader))]
     public class BootstrapController : MonoBehaviour
     {
         private const string GameSceneName = "Game";
 
+        private GameDataLoader _gameDataLoader;
+
+        private void Awake()
+        {
+            _gameDataLoader = GetComponent<GameDataLoader>();
+        }
+
         private IEnumerator Start()
         {
-            yield return LoadGameData();
+            yield return StartCoroutine(_gameDataLoader.LoadAsync());
             yield return LoadSaveData();
             yield return PreloadSpriteSheet();
             yield return InitYandexSDK();
@@ -19,15 +28,9 @@ namespace UnclaimedAssets.Bootstrap
             SceneManager.LoadScene(GameSceneName);
         }
 
-        private IEnumerator LoadGameData()
-        {
-            Debug.Log("[Bootstrap] Loading GameData...");
-            yield return null;
-        }
-
         private IEnumerator LoadSaveData()
         {
-            Debug.Log("[Bootstrap] Loading SaveData...");
+            Debug.Log("[Bootstrap] Loading SaveData (stub)...");
             yield return null;
         }
 

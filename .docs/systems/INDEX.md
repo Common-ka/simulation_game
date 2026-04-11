@@ -10,5 +10,11 @@
 
 ## Bootstrap
 - Файл: `.docs/systems/Bootstrap.md`
-- Статус: ✅ Реализовано (заглушки)
+- Статус: ✅ Шаг 1 реализован (GameDataLoader), остальные — заглушки
 - Ключевые классы: `BootstrapController`
+
+## GameDataLoader
+- Файл: `.docs/systems/GameDataLoader.md`
+- Статус: ✅ Реализовано
+- Ключевые классы: `GameDataLoader`
+- API: `LoadAsync()`, свойства `Categories`, `GachaMath`, `BlackMarketConfig`, `Upgrades`
