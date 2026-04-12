@@ -17,6 +17,23 @@ namespace UnclaimedAssets.Core
 
         public static event Action<GameSnapshot> OnGameStateChanged;
 
+        public bool TrySpendCurrency(double amount)
+        {
+            if (_softCurrency >= amount)
+            {
+                _softCurrency -= amount;
+                OnGameStateChanged?.Invoke(new GameSnapshot { SoftCurrency = _softCurrency });
+                return true;
+            }
+            return false;
+        }
+
+        public void AddCurrency(double amount)
+        {
+            _softCurrency += amount;
+            OnGameStateChanged?.Invoke(new GameSnapshot { SoftCurrency = _softCurrency });
+        }
+
         private void Start()
         {
             InvokeRepeating(nameof(GameTick), 0f, _tickInterval);

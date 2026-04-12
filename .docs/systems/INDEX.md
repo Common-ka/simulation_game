@@ -42,3 +42,9 @@
 - Статус: ✅ Реализовано
 - Ключевые классы: `IPSCalculator`
 - API: `GetCurrentIPS()`
+
+## GachaController
+- Файл: `.docs/systems/GachaController.md`
+- Статус: ✅ Реализовано
+- Ключевые классы: `GachaController`
+- API: `GachaController.Instance`, `BuyLoot()`, `OnLootBoxOpened` event
