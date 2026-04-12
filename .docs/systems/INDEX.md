@@ -54,3 +54,9 @@
 - Статус: ✅ Реализовано
 - Ключевые классы: `StickerManager`
 - API: `StickerManager.Instance`, `OnSetCompleted`, `AutoCraft()`
+
+## BlackMarketManager
+- Файл: `.docs/systems/BlackMarketManager.md`
+- Статус: ✅ Реализовано (backend-логика)
+- Ключевые классы: `BlackMarketManager`, `BlackMarketArtifact`
+- API: `BlackMarketManager.Instance`, `AddKey()`, `GetBM_IPSBonus()`
