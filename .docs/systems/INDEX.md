@@ -36,3 +36,9 @@
 - Статус: ✅ Реализовано
 - Ключевые классы: `ShelfManager`, `ShelfItemData`
 - API: `ShelfManager.Instance`, `OnShelfUpdated`, `TryAddItem()`, `RemoveItem()`, `ClearShelf()`
+
+## IPSCalculator
+- Файл: `.docs/systems/IPSCalculator.md`
+- Статус: ✅ Реализовано
+- Ключевые классы: `IPSCalculator`
+- API: `GetCurrentIPS()`
