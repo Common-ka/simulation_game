@@ -10,6 +10,7 @@ namespace UnclaimedAssets.Gacha
         public static GachaController Instance { get; private set; }
 
         public static event Action<int> OnLootBoxOpened;
+        public static event Action<ShelfItemData> OnLootItemGenerated;
 
         [Serializable]
         public struct DropRate
@@ -57,8 +58,15 @@ namespace UnclaimedAssets.Gacha
             }
 
             ItemRarity droppedRarity = GetRandomRarity();
-            ProcessLoot(categoryIndex, droppedRarity);
+            int itemId = ProcessLoot(categoryIndex, droppedRarity);
 
+            var lootData = new ShelfItemData
+            {
+                ItemID = itemId,
+                Rarity = droppedRarity,
+                Category = categoryIndex.ToString()
+            };
+            OnLootItemGenerated?.Invoke(lootData);
             OnLootBoxOpened?.Invoke(categoryIndex);
         }
 
@@ -85,7 +93,7 @@ namespace UnclaimedAssets.Gacha
             return ItemRarity.Common; 
         }
 
-        private void ProcessLoot(int categoryIndex, ItemRarity rarity)
+        private int ProcessLoot(int categoryIndex, ItemRarity rarity)
         {
             // Dummy ID for now, since we don't have explicit LootTable matching logic here
             int dummyItemID = UnityEngine.Random.Range(1000, 9999);
@@ -94,6 +102,7 @@ namespace UnclaimedAssets.Gacha
             {
                 // In future: Price is fetched from Assets/Resources/GameData/LootTable.json
                 Debug.Log($"GachaController: Rolled {rarity} item (ID: {dummyItemID}). Added to Inventory.");
+                return dummyItemID;
             }
             else
             {
@@ -121,6 +130,7 @@ namespace UnclaimedAssets.Gacha
                     }
                 }
             }
+            return dummyItemID;
         }
     }
 }

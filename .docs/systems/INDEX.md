@@ -47,4 +47,10 @@
 - Файл: `.docs/systems/GachaController.md`
 - Статус: ✅ Реализовано
 - Ключевые классы: `GachaController`
-- API: `GachaController.Instance`, `BuyLoot()`, `OnLootBoxOpened` event
+- API: `GachaController.Instance`, `BuyLoot()`, `OnLootBoxOpened`, `OnLootItemGenerated` events
+
+## StickerManager
+- Файл: `.docs/systems/StickerManager.md`
+- Статус: ✅ Реализовано
+- Ключевые классы: `StickerManager`
+- API: `StickerManager.Instance`, `OnSetCompleted`, `AutoCraft()`

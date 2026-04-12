@@ -16,7 +16,8 @@
 - `public static GachaController Instance { get; private set; }`
 
 ### События
-- `public static event Action<int> OnLootBoxOpened` — срабатывает после того, как коробка (по `categoryIndex`) была успешно куплена, валюта списана и предмет обработан. Это нужно для мета-систем (добавление стикеров, счетчики).
+- `public static event Action<int> OnLootBoxOpened` — срабатывает после того, как коробка (по `categoryIndex`) была успешно куплена, валюта списана и предмет обработан.
+- `public static event Action<ShelfItemData> OnLootItemGenerated` — срабатывает для **всех** редкостей (Common включительно) со сформированным `ShelfItemData` (ItemID, Rarity, Category). Используется `StickerManager` для мета-механик стикеров.
 
 ### Методы
 - `public void BuyLoot(int categoryIndex, double cost)` — пытается купить лот. Если у `GameManager` хватает валюты, генерируется случайный предмет на базе таблицы вероятностей (Rare+, Common, Uncommon).
