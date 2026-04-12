@@ -30,3 +30,9 @@
 - Статус: ✅ Реализовано (Фолбэк локальное сохранение)
 - Ключевые классы: `SaveManager`, `RetainedData`
 - API: `SaveManager.Instance`, `Load()`, `Save()`, `Data` (свойство)
+
+## ShelfManager
+- Файл: `.docs/systems/ShelfManager.md`
+- Статус: ✅ Реализовано
+- Ключевые классы: `ShelfManager`, `ShelfItemData`
+- API: `ShelfManager.Instance`, `OnShelfUpdated`, `TryAddItem()`, `RemoveItem()`, `ClearShelf()`
