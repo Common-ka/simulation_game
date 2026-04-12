@@ -24,7 +24,22 @@ namespace UnclaimedAssets.Core
 
         private void GameTick()
         {
-            _softCurrency += 1;
+            double ips = 0.0;
+            if (global::SaveManager.Instance != null && global::SaveManager.Instance.Data != null)
+            {
+                var shelf = UnclaimedAssets.Economy.ShelfManager.Instance;
+                double prestigeMult = global::SaveManager.Instance.Data.PermanentPrestigeMultiplier;
+                double blackMarketBonus = 0.0;
+                var completedSets = global::SaveManager.Instance.Data.CompletedSetNames;
+                
+                ips = UnclaimedAssets.Economy.IPSCalculator.GetCurrentIPS(shelf, prestigeMult, blackMarketBonus, completedSets);
+            }
+            else
+            {
+                ips = 1.0;
+            }
+
+            _softCurrency += ips;
             OnGameStateChanged?.Invoke(new GameSnapshot { SoftCurrency = _softCurrency });
         }
     }

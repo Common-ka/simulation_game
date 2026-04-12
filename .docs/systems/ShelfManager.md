@@ -5,7 +5,7 @@
 
 ## Ключевые классы
 - `ShelfManager`
-- `ShelfItemData` (модель данных предмета на полке)
+- `ShelfItemData` (модель данных предмета на полке, содержит: ItemID, Rarity, Category, EffectType, EffectValue)
 - `ItemRarity` (enum редкостей)
 
 ## API ShelfManager

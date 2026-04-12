@@ -21,6 +21,7 @@ namespace UnclaimedAssets.Economy
         public int ItemID;
         public ItemRarity Rarity;
         
+        public string Category;
         public string EffectType; // e.g., "Flat_IPS", "Mult_MPC"
         public double EffectValue;
     }

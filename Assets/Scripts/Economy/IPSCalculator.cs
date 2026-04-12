@@ -16,8 +16,9 @@ namespace UnclaimedAssets.Economy
         /// <param name="shelf">Ссылка на ShelfManager для получения предметов с полки.</param>
         /// <param name="prestigeMultiplier">Множитель престижа (например, 1.0 = нет престижа, 1.02 = 1 PP).</param>
         /// <param name="blackMarketBonus">Глобальный бонус от Черного рынка в долях единицы (например, 0.5 = 50%).</param>
+        /// <param name="completedSets">Список категорий полностью собранных сетов.</param>
         /// <returns>Итоговое значение IPS.</returns>
-        public static double GetCurrentIPS(ShelfManager shelf, double prestigeMultiplier, double blackMarketBonus)
+        public static double GetCurrentIPS(ShelfManager shelf, double prestigeMultiplier, double blackMarketBonus, System.Collections.Generic.List<string> completedSets)
         {
             if (shelf == null)
                 return 0.0;
@@ -30,7 +31,12 @@ namespace UnclaimedAssets.Economy
             {
                 if (item != null && item.EffectType == "Flat_IPS")
                 {
-                    adjustedBaseIPS += item.EffectValue;
+                    double itemValue = item.EffectValue;
+                    if (completedSets != null && completedSets.Contains(item.Category))
+                    {
+                        itemValue *= 1.2;
+                    }
+                    adjustedBaseIPS += itemValue;
                 }
             }
 
