@@ -293,7 +293,7 @@
     {
         "ID": 42,
         "Category": "Барахло",
-        "Name": "Винтажный Спиннер",
+        "Name": "Старый Спиннер",
         "Rarity": "Rare",
         "SellPrice": 2,
         "BoostType": "Flat_IPS",
@@ -302,7 +302,7 @@
     {
         "ID": 43,
         "Category": "Барахло",
-        "Name": "Винтажный Спиннер",
+        "Name": "Старый Спиннер",
         "Rarity": "Rare",
         "SellPrice": 2,
         "BoostType": "Mult_MPC",
@@ -782,7 +782,7 @@
     {
         "ID": 105,
         "Category": "Возвраты электроники",
-        "Name": "Винтажный Наушники Sany",
+        "Name": "Старый Наушники Sany",
         "Rarity": "Rare",
         "SellPrice": 32,
         "BoostType": "Flat_IPS",
@@ -791,7 +791,7 @@
     {
         "ID": 106,
         "Category": "Возвраты электроники",
-        "Name": "Винтажный Наушники Sany",
+        "Name": "Старый Наушники Sany",
         "Rarity": "Rare",
         "SellPrice": 32,
         "BoostType": "Mult_MPC",
@@ -2630,7 +2630,7 @@
     {
         "ID": 345,
         "Category": "Антиквариат",
-        "Name": "Винтажный Ковер самолет",
+        "Name": "Старый Ковер самолет",
         "Rarity": "Rare",
         "SellPrice": 513894,
         "BoostType": "Flat_IPS",
@@ -2639,7 +2639,7 @@
     {
         "ID": 346,
         "Category": "Антиквариат",
-        "Name": "Винтажный Ковер самолет",
+        "Name": "Старый Ковер самолет",
         "Rarity": "Rare",
         "SellPrice": 513894,
         "BoostType": "Mult_MPC",
@@ -2720,7 +2720,7 @@
     {
         "ID": 355,
         "Category": "Антиквариат",
-        "Name": "Винтажный Корона Burger King",
+        "Name": "Старый Корона Burger King",
         "Rarity": "Rare",
         "SellPrice": 510706,
         "BoostType": "Flat_IPS",
@@ -2729,7 +2729,7 @@
     {
         "ID": 356,
         "Category": "Антиквариат",
-        "Name": "Винтажный Корона Burger King",
+        "Name": "Старый Корона Burger King",
         "Rarity": "Rare",
         "SellPrice": 510706,
         "BoostType": "Mult_MPC",
@@ -3155,7 +3155,7 @@
     {
         "ID": 412,
         "Category": "Ювелирный лом",
-        "Name": "Винтажный Цепь рэпера",
+        "Name": "Старый Цепь рэпера",
         "Rarity": "Rare",
         "SellPrice": 639195500,
         "BoostType": "Flat_IPS",
@@ -3164,7 +3164,7 @@
     {
         "ID": 413,
         "Category": "Ювелирный лом",
-        "Name": "Винтажный Цепь рэпера",
+        "Name": "Старый Цепь рэпера",
         "Rarity": "Rare",
         "SellPrice": 639195500,
         "BoostType": "Mult_MPC",
@@ -3626,7 +3626,7 @@
     {
         "ID": 473,
         "Category": "Крипто-фермы",
-        "Name": "Винтажный Биткоин на флешке",
+        "Name": "Старый Биткоин на флешке",
         "Rarity": "Rare",
         "SellPrice": 23367495000,
         "BoostType": "Flat_IPS",
@@ -3635,7 +3635,7 @@
     {
         "ID": 474,
         "Category": "Крипто-фермы",
-        "Name": "Винтажный Биткоин на флешке",
+        "Name": "Старый Биткоин на флешке",
         "Rarity": "Rare",
         "SellPrice": 23367495000,
         "BoostType": "Mult_MPC",
@@ -4043,7 +4043,7 @@
     {
         "ID": 528,
         "Category": "Искусство",
-        "Name": "Винтажный Картина с точкой",
+        "Name": "Старый Картина с точкой",
         "Rarity": "Rare",
         "SellPrice": 629106804000,
         "BoostType": "Flat_IPS",
@@ -4052,7 +4052,7 @@
     {
         "ID": 529,
         "Category": "Искусство",
-        "Name": "Винтажный Картина с точкой",
+        "Name": "Старый Картина с точкой",
         "Rarity": "Rare",
         "SellPrice": 629106804000,
         "BoostType": "Mult_MPC",
@@ -4079,7 +4079,7 @@
     {
         "ID": 532,
         "Category": "Искусство",
-        "Name": "Винтажный Картина с точкой",
+        "Name": "Старый Картина с точкой",
         "Rarity": "Rare",
         "SellPrice": 683414564800,
         "BoostType": "Flat_IPS",
@@ -4088,7 +4088,7 @@
     {
         "ID": 533,
         "Category": "Искусство",
-        "Name": "Винтажный Картина с точкой",
+        "Name": "Старый Картина с точкой",
         "Rarity": "Rare",
         "SellPrice": 683414564800,
         "BoostType": "Mult_MPC",
