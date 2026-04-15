@@ -46,7 +46,9 @@ namespace UnclaimedAssets.Core
             {
                 var shelf = UnclaimedAssets.Economy.ShelfManager.Instance;
                 double prestigeMult = global::SaveManager.Instance.Data.PermanentPrestigeMultiplier;
-                double blackMarketBonus = 0.0;
+                double blackMarketBonus = global::BlackMarketManager.Instance != null
+                    ? global::BlackMarketManager.Instance.GetBM_IPSBonus()
+                    : 0.0;
                 var completedSets = global::SaveManager.Instance.Data.CompletedSetNames;
                 
                 ips = UnclaimedAssets.Economy.IPSCalculator.GetCurrentIPS(shelf, prestigeMult, blackMarketBonus, completedSets);
