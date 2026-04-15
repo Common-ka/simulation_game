@@ -23,7 +23,7 @@
 | `Saves` | Облачные сохранения через Яндекс |
 | `InterstitialAdv` | Полноэкранная реклама |
 | `RewardedAdv` | Реклама с наградой |
-| `Purchases` | IAP (покупка ЯМ, VIP, ключей) |
+| `Purchases` | IAP (покупка Токенов, VIP, ключей) |
 | `Player` | Авторизация, имя/аватар игрока |
 
 ### Настройки проекта под WebGL (плагин ставит автоматически)
@@ -56,7 +56,7 @@ namespace YG {
         public double  SoftCurrency             = 0.0;
         public double  CurrencyStardust          = 0.0;
         public int     BlackMarketKeys           = 0;
-        public int     HardCurrency              = 0;           // ЯМ
+        public int     HardCurrency              = 0;           // Токены (ЯМ)
 
         // --- Прогресс ---
         public int     UnlockedCategoryIndex     = 0;           // текущая открытая категория (0–9)
@@ -205,7 +205,7 @@ void OnRewardEarned(string tag) {
 }
 ```
 
-**UX-правило:** Всегда показывать выбор — реклама ИЛИ ЯМ:
+**UX-правило:** Всегда показывать выбор — реклама ИЛИ Токены:
 ```csharp
 // RewardedOfferUI.cs
 public void ShowOffer(string rewardTag, int hardCurrencyCost) {
@@ -233,10 +233,10 @@ public void OnPayHCClicked()    { SpendHC(_hcCost); ApplyReward(_currentTag); }
 | `keys_small` | consumable | 3 ключа |
 | `keys_medium` | consumable | 7 ключей + 200 ЯМ |
 | `keys_large` | consumable | 20 ключей + 500 ЯМ |
-| `hc_100` | consumable | 100 ЯМ |
-| `hc_500` | consumable | 500 ЯМ |
-| `hc_1500` | consumable | 1 500 ЯМ |
-| `hc_4000` | consumable | 4 000 ЯМ |
+| `hc_100` | consumable | 100 Токенов |
+| `hc_500` | consumable | 500 Токенов |
+| `hc_1500` | consumable | 1 500 Токенов |
+| `hc_4000` | consumable | 4 000 Токенов |
 | `vip_silver` | subscription | VIP Silver (месяц) |
 | `vip_gold` | subscription | VIP Gold (месяц) |
 
