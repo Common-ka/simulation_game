@@ -1,0 +1,21 @@
+# .agent-lock — Список защищённых файлов (Fast-Track Запрет)
+# Если задача затрагивает любой из путей ниже — НЕМЕДЛЕННО прерви выполнение.
+# Потребуй перевода задачи в Full Pipeline (/worker + /reviewer).
+
+## 🔴 PROTECTED PATHS
+
+Assets/Scripts/Core/Economy/
+Assets/Scripts/Core/Simulation/
+Assets/Scripts/SaveSystem/
+Assets/Scripts/Gacha/GachaController.cs
+Assets/Scripts/Managers/GameManager.cs
+Assets/Resources/GameData/
+
+## 📋 Правило проверки (для Fast-Track агента)
+
+Перед написанием ЛЮБОГО кода в Fast-Track режиме:
+1. Прочитай этот файл.
+2. Сравни пути файлов из задачи с путями выше.
+3. Если ХОТЯ БЫ ОДИН файл задачи совпадает с protected path — СТОП.
+   Сообщи пользователю: «⛔ Задача затрагивает защищённую зону. Требуется Full Pipeline (/worker).»
+4. Если путей нет пересечений — продолжай выполнение.
