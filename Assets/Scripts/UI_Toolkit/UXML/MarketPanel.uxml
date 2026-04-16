@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ui="UnityEngine.UIElements"
+    xmlns:vie="UnityEditor.UIElements"
+    xsi:noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd"
+>
+    <ui:Style src="../USS/Variables.uss" />
+    <ui:Style src="../USS/Common.uss" />
+    <ui:Style src="../USS/MainScreen.uss" />
+    <!-- Market Info & Spin Button -->
+    <ui:VisualElement name="market-area" class="market-spin-area panel">
+        <ui:VisualElement name="category-info" class="category-info">
+            <ui:Label text="Current Category: Warehouse Leftovers" />
+        </ui:VisualElement>
+        <ui:Button name="market-spin-btn" text="SPIN (100)" class="spin-button-large" />
+    </ui:VisualElement>
+</ui:UXML>

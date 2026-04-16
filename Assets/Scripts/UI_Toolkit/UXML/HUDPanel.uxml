@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ui="UnityEngine.UIElements"
+    xmlns:vie="UnityEditor.UIElements"
+    xsi:noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd"
+>
+    <ui:Style src="../USS/Variables.uss" />
+    <ui:Style src="../USS/Common.uss" />
+    <ui:Style src="../USS/MainScreen.uss" />
+    <ui:VisualElement name="header" class="header-hud">
+        <ui:VisualElement class="hud-item">
+            <ui:Label text="Soft" class="hud-label" />
+            <ui:Label name="hud-soft-currency" text="1.2M" class="hud-value" />
+            <ui:Label name="hud-ips" text="+150/s" class="hud-label" />
+        </ui:VisualElement>
+        <ui:VisualElement class="hud-item">
+            <ui:Label text="Hard" class="hud-label" />
+            <ui:Label name="hud-hard-currency" text="50" class="hud-value" />
+        </ui:VisualElement>
+        <ui:VisualElement class="hud-item">
+            <ui:Label text="Stardust" class="hud-label" />
+            <ui:Label name="hud-stardust" text="300" class="hud-value" />
+        </ui:VisualElement>
+        <ui:VisualElement class="hud-item">
+            <ui:Label text="Keys" class="hud-label" />
+            <ui:Label name="hud-keys" text="5" class="hud-value" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

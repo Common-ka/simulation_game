@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ui="UnityEngine.UIElements"
+    xmlns:vie="UnityEditor.UIElements"
+    xsi:noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd"
+>
+    <ui:Style src="../USS/Variables.uss" />
+    <ui:Style src="../USS/Common.uss" />
+    <ui:Style src="../USS/MainScreen.uss" />
+    <ui:Template src="HUDPanel.uxml" name="HUDPanel" />
+    <ui:Template src="ShelfPanel.uxml" name="ShelfPanel" />
+    <ui:Template src="MarketPanel.uxml" name="MarketPanel" />
+    <ui:Template src="FooterPanel.uxml" name="FooterPanel" />
+
+    <ui:VisualElement name="MainScreen" class="main-screen">
+        <ui:Instance template="HUDPanel" />
+        <ui:Instance template="ShelfPanel" />
+        <ui:Instance template="MarketPanel" />
+        <ui:Instance template="FooterPanel" />
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ui="UnityEngine.UIElements"
+    xmlns:vie="UnityEditor.UIElements"
+    xsi:noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd"
+>
+    <ui:Style src="../USS/Variables.uss" />
+    <ui:Style src="../USS/Common.uss" />
+    <ui:Style src="../USS/MainScreen.uss" />
+    <!-- Footer Navigation Area -->
+    <ui:VisualElement name="footer" class="footer-nav">
+        <ui:Button name="nav-btn-upgrades" text="Upgrades" class="nav-button" />
+        <ui:Button name="nav-btn-gacha" text="Gacha" class="nav-button" />
+        <ui:Button name="nav-btn-shop" text="Shop" class="nav-button" />
+        <ui:Button name="nav-btn-black-market" text="Black Market" class="nav-button" />
+    </ui:VisualElement>
+</ui:UXML>
