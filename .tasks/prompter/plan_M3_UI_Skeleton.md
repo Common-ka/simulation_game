@@ -1,6 +1,6 @@
-﻿# 📋 План Milestone M3: UI-Скелет (UI Toolkit)
+# 📋 План Milestone M3: UI-Скелет (UI Toolkit)
 
-> **Дата создания:** 2026-04-15  
+> **Дата создания:** 2026-04-16
 > **Автор:** Planner Agent  
 > **Статус:** ✅ Готов к передаче Промптеру
 
@@ -17,130 +17,126 @@
 - ✅ `GachaController` — покупка лота, дроп предметов, события
 - ✅ `StickerManager` — альбом, пыль (без AutoCraft)
 - ✅ `BlackMarketManager` — ключи, бонус IPS
-- ✅ `BootstrapController` — заглушка
+- ✅ `UIManager` — логика переключения панелей (скрытие/показ через классы)
+- ✅ `UI_Foundation` — базовые стили (`Variables.uss`, `Common.uss`)
+- ✅ `BootstrapController` — заглушка под инициализацию
+- ✅ **Task M3.3 (Visual UI Skeleton):** Созданы модульные шаблоны интерфейса `MainScreen.uxml` с инстансами `HUDPanel.uxml`, `ShelfPanel.uxml`, `MarketPanel.uxml` и `FooterPanel.uxml`. 
 
 **Что отсутствует:**
-- ❌ `UIManager` — нет вообще
-- ❌ Все панели UI (UXML/USS пустые директории, `UI/Panels/` пустая)
-- ❌ `UI/Components/` — пустая
-- ❌ Числовые форматтеры, утилиты для UI
-- ❌ `EconomyService` (упомянут в архитектуре, не создан)
-- ❌ Сцена `Game.unity` пока не настроена под реальные компоненты
+- ❌ C#-контроллеры привязки логики (Binding) к этим уже готовым UXML файлам (`HUDPanel.cs`, `ShelfPanel.cs`, `MarketPanel.cs`, `FooterPanel.cs`).
+- ❌ Связь кнопок с `UIManager` для навигации.
+- ❌ Сцена `Game.unity` не настроена, в ней нет привязанного компонента `UIDocument` c собранными контроллерами UI Toolkit.
 
-**Вывод:** Ядро работает, но игру запустить нельзя — нет минимального UI. M3 разблокирует возможность играть в первую версию.
+**Вывод:** Интерфейсная верстка (Mockup) собрана, бэкенд есть. Нужно их правильно "склеить" (привязать данные к `#id` элементов) без нарушения Event-Driven архитектуры.
 
 ---
 
 ## ⚙️ Архитектурный фильтр (Event-Driven анализ)
 
-| Фича | Owner Events | Подписчики |
+| Контроллер | Owner Events | Подписчики (UI) |
 |---|---|---|
-| HUD (валюта, IPS) | `GameManager.OnGameStateChanged` → `GameSnapshot` | `HUDPanel.cs` |
-| Кнопка покупки лота | `HUDPanel/ShopPanel` → вызов `GachaController.BuyLoot()` | `GachaController` выбрасывает `OnLootBoxOpened`, `OnLootItemGenerated` |
-| Полка (обновление) | `ShelfManager.OnShelfUpdated` | `ShelfPanel.cs` |
-| Переключение панелей | `UIManager.ShowPanel(name)` — только навигация, не бизнес-логика | — |
+| `HUDPanel.cs` | `GameManager.OnGameStateChanged` | Подписывается на `OnGameStateChanged`, читает `SoftCurrency`, `IPS` и др. |
+| `MarketPanel.cs` | Клик по кнопке "Buy" | Вызывает `GachaController.BuyLoot()`. Подписыв. на `OnGameStateChanged` (чтобы блокировать кнопку по деньгам). |
+| `ShelfPanel.cs` | `ShelfManager.OnShelfUpdated` | Обновляет слоты на основе вызванного события. |
+| `FooterPanel.cs`| Клики по вкладкам | Вызывает `UIManager.Instance.Show(panelName)` |
 
-**Запрещено:** `HUDPanel` и `ShopPanel` не знают ничего о `ShelfManager`, `IPSCalculator`, `BlackMarketManager`. Только через события `GameManager` или Subscribe.
-
----
-
-## 📦 Декомпозиция задач
+**Запрещено:** 
+1. Воссоздавать или перезаписывать `*.uxml` файлы из папки `UXML`. Они УЖЕ есть! Мы пишем только код.
+2. Прямые вызовы из бизнес-логики в UI-классы (UI должен сам слушать события).
 
 ---
 
-### Task M3.4 — HUDPanel.cs (Logic Binding) ❌
+## 📦 Декомпозиция задач (C# Binding)
 
-**Цель:** Вдохнуть жизнь в шапку (HUD) из `MainScreen.uxml`.
+---
+
+### Task M3.4 — HUD Component Logic (HUDPanel.cs) ❌
+
+**Цель:** Привязать игровые данные (валюты) к существующей панели `HUDPanel.uxml`.
 
 **Архитектурные ограничения:**
-- `HUDPanel` берет корневой `UIDocument` (задается в инспекторе или инициализируется сценой) и достает элементы по `#id`.
-- По событию `GameManager.OnGameStateChanged` читает `GameSnapshot.SoftCurrency`, форматирует через `NumberFormatter`.
-- IPS берёт из `IPSCalculator.GetCurrentIPS(...)`.
-- Stardust и Keys — из `SaveManager.Data` (у них нет своих ивентов? можно проверять в том же OnGameStateChanged или отдельном).
-- Никаких вызовов бизнес-логики, только чтение.
+- Создаем скрипт `HUDPanel.cs` (Monobehaviour).
+- Во время `Start()` он находит в прикрепленном объекте (или глобальном `UIDocument`) корневой элемент HUD, и получает ссылки на лейблы валют (Soft Currency, IPS, Stardust, Keys) по их `#id`.
+- Подписывается на `GameManager.OnGameStateChanged`. При срабатывании - обновляет UI тексты. Для форматирования денег использует написанный ранее `NumberFormatter.Format()`. 
+- Отписывается в `OnDestroy()`.
 
 ---
 
 > 📢 **Промпт для Промптера (Task M3.4):**
 > 
-> Создай ТЗ для `Assets/Scripts/UI/Panels/HUDPanel.cs` — MonoBehaviour, который висит на объекте и биндит данные к UI.
-> Скрипт получает ссылку на `UIDocument`, ищет элементы HUD по `#id` (валюты, stardust, keys, ips). Добавляет Subscribe на `GameManager.OnGameStateChanged`. Обновляет Label'ы через `NumberFormatter`.
+> Создай ТЗ на разработку скрипта логики `HUDPanel.cs`. UXML шаблон уже создан ранее, трогать его не надо. Скрипт (MonoBehaviour) должен найти элементы HUD по их `#id`. Подписаться на `GameManager.OnGameStateChanged` и обновлять тексты SoftCurrency (через `NumberFormatter`), IPS (через `IPSCalculator`), а также доставать Stardust и Keys из `SaveManager.Instance.Data`. Обязательно сделать отписку в `OnDestroy`.
 > Воркер обновляет `INDEX.md`.
 
 ---
 
-### Task M3.5 — FooterPanel.cs (Logic) ❌
+### Task M3.5 — Footer Navigation Logic (FooterPanel.cs) ❌
 
-**Цель:** Привязать логику к кнопкам навигации из подвала `MainScreen.uxml`.
+**Цель:** Реализовать навигацию между вкладками через подвал.
 
 **Архитектурные ограничения:**
-- `FooterPanel` находит кнопки по `#id`.
-- Подписывается на клики `clicked += ...` и вызывает `UIManager.Instance.ShowPanel(name)` (если реализовано скрытие/показ центральной зоны). 
-- На текущем этапе можно просто повесить Debug.Log или вызов UIManager.
+- Создаем скрипт `FooterPanel.cs` (MonoBehaviour).
+- Находит кнопки вкладок по `#id`.
+- При клике на кнопки вызывает `UIManager.Instance.Show("MarketPanel")`, `UIManager.Instance.Show("UpgradesPanel")` и т.д.
 
 ---
 
 > 📢 **Промпт для Промптера (Task M3.5):**
 > 
-> Создай ТЗ для `Assets/Scripts/UI/Panels/FooterPanel.cs`.
-> Получает `UIDocument`, ищет 4 кнопки футера по `#id`. При клике отправляет вызов в `UIManager.Instance` (или пишет `Debug.Log`).
+> Создай ТЗ на разработку скрипта навигации `FooterPanel.cs`. Верстка кнопок уже есть в UXML-шаблоне. В скрипте надо зарегистрировать коллбеки на клики кнопок вкладок (`clicked += ...`) и вызывать через `UIManager.Instance.Show` соответствующие названия панелей (например, `MarketPanel`, `UpgradesPanel` и т.д.).
 > Воркер обновляет `INDEX.md`.
 
 ---
 
-### Task M3.6 — ShopPanel.cs (Logic Binding) ❌
+### Task M3.6 — Market & Gacha Logic (MarketPanel.cs) ❌
 
-**Цель:** Вдохнуть жизнь в блок Геймплей-Магазина из `MainScreen.uxml`.
+**Цель:** Привязать магазин и рулетку к `MarketPanel.uxml`.
 
 **Архитектурные ограничения:**
-- Ищет элементы шоп-блока по `#id`.
-- Подписывается на `GameManager.OnGameStateChanged`, чтобы проверять доступность кнопки "Крутить" по деньгам.
-- Клик по кнопке вызывает `GachaController.Instance.BuyLoot(categoryIndex)`.
+- Создаем `MarketPanel.cs`.
+- Скрипт находит кнопку покупки (Гачи) по её `#id`.
+- Слушает `GameManager.OnGameStateChanged`, чтобы проверять `SoftCurrency >= Price`. Если денег меньше - кнопка покупки получает состояние "Disabled". 
+- На клик покупки вызывает `GachaController.Instance.BuyLoot(categoryId)`.
+- Скрытием/показом этой панели управляет `UIManager`, поэтому скрипт только биндит данные и клики.
 
 ---
 
 > 📢 **Промпт для Промптера (Task M3.6):**
 > 
-> Создай ТЗ для `Assets/Scripts/UI/Panels/ShopPanel.cs`.
-> Получает `UIDocument`, находит элементы шоп-панели. Subscribe на `GameManager.OnGameStateChanged` для проверки `SoftCurrency >= price`. Блокирует кнопку, если денег нет. При клике вызывает `GachaController.Instance.BuyLoot`.
+> Создай ТЗ для скрипта `MarketPanel.cs`. Верстка гачи и магазина уже есть в UXML. В скрипте: по подписке на смену стейта проверять состояние баланса, блокировать/разблокировать кнопку "BuyLoot" (через `SetEnabled` или CSS). При клике вызывать `GachaController.Instance.BuyLoot()`. Подписка/отписка строго по событиям. 
 > Воркер обновляет `INDEX.md`.
 
 ---
 
-### Task M3.7 — ShelfPanel.cs (Logic Binding) ❌
+### Task M3.7 — Shelf Vis Logic (ShelfPanel.cs) ❌
 
-**Цель:** Заполнить витрину (середина экрана) реальными предметами из `ShelfManager`.
+**Цель:** Визуализация 5 полок инвентаря игрока (`ShelfPanel.uxml`).
 
 **Архитектурные ограничения:**
-- `ShelfPanel.cs` — только подписчик `ShelfManager.OnShelfUpdated`.
-- Внутри UXML слоты уже размечены по `#id`. Панель обновляет их содержимое (названия, бусты).
-- Цвет иконки меняет через добавление классов из `Common.uss` (напр. `.card-rare`), убирая предыдущие.
+- Создаем `ShelfPanel.cs`.
+- Находит все 5 слотов по `#id`.
+- Подписка на `ShelfManager.OnShelfUpdated`. Когда событие генерируется, оно возвращает актуальный инвентарь (или словарю можно получить через синглтон). Обновляем в слотах текст (названия, IPS) и задаём нужный CSS класс редкости (из `Variables.uss`).
 
 ---
 
 > 📢 **Промпт для Промптера (Task M3.7):**
 > 
-> Создай ТЗ для `Assets/Scripts/UI/Panels/ShelfPanel.cs`.
-> Получает `UIDocument`, ищет 5 слотов по `#id`. Subscribe на `ShelfManager.OnShelfUpdated`. Когда приходит обновление инвентаря полки, скрипт обновляет Label'ы карточек и CSS-классы редкости.
+> Создай ТЗ для контроллера `ShelfPanel.cs`. Витрина полок уже создана в UXML. Подписка в скрипте на `ShelfManager.OnShelfUpdated`. По событию обходить 5 слотов на экране и менять для каждого текст и класс цвета (добавление класса `.card-rare`, удаление старого). 
 > Воркер обновляет `INDEX.md`.
 
 ---
 
-### Task M3.8 — Сборка сцены Game.unity + Bootstrap → Game ❌
+### Task M3.8 — Интеграция в Scene (Bootstrap → Game) ❌
 
-**Цель:** Настроить сцену `Game.unity` и запуск игры.
+**Цель:** Оживить проект в рабочей сцене Unity. 
 
 **Архитектурные ограничения:**
-- Порядок в `BootstrapController`: `GameDataLoader.LoadAsync()` → `SaveManager.Load()` → `SceneManager.LoadScene("Game")`.
-- GameObject'ы с менеджерами и панелями (HUDPanel, ShopPanel, ShelfPanel, FooterPanel) настроены в сцене со ссылкой на `UIDocument`.
+- В `Game.unity` завести компонент `UIDocument` c загруженным `MainScreen.uxml`.
+- Создать GameObject (или раскидать на сам UIDocument) с компонентами `HUDPanel`, `ShelfPanel`, `FooterPanel`, `MarketPanel`. Каждый должен получить ссылку на корневой `UIDocument`.
+- Настроить `BootstrapController.cs` для правильного цикла: `GameDataLoader.LoadAsync()` -> `SaveManager.Instance.Load()` -> `SceneManager.LoadScene("Game")`. Это обеспечит инициализацию менеджеров ДО того, как загрузится интерфейс.
 
 ---
 
 > 📢 **Промпт для Промптера (Task M3.8):**
 > 
-> Создай ТЗ для настройки сцены `Game.unity` и доработки `BootstrapController.cs`.
-> `BootstrapController` должен реализовать загрузку данных и переход в сцену "Game".
-> В сцене `Game.unity` Воркер должен создать GameObject с компонентом `UIDocument` (с прикрепленным `MainScreen.uxml`) и GameObject'ы контроллеров (`HUDPanel`, `ShelfPanel` и т.д.), которые будут ссылаться на этот UIDocument.
+> Создай ТЗ для настройки сцены `Game.unity`. Собрать сцену так, чтобы там был `UIDocument` (с прилинкованным `MainScreen.uxml`) и все созданные контроллеры (`HUDPanel`, `ShelfPanel`, `MarketPanel`, `FooterPanel`). Доработать скрипт `BootstrapController.cs` (что сейчас в загрузочной сцене Load), чтобы он вызывал инициализацию Data, загрузку сейва, а потом асинхронно переходил в `Game.unity`.
 > Воркер обновляет `INDEX.md`.
-
----
