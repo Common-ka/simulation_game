@@ -7,6 +7,7 @@
 ### `UnclaimedAssets.Core.GameSnapshot`
 Структура, содержащая слепок игровых данных.
 - **`SoftCurrency`** (`double`): Текущее количество мягкой валюты.
+- **`IPS`** (`double`): Текущая прибыль в секунду (Income Per Second). Прокидывается в событие для реактивного обновления UI (например, HUDPanel).
 
 ### `UnclaimedAssets.Core.GameManager`
 Основной монобех, вешается на единственный GameObject в сцене `Game`.

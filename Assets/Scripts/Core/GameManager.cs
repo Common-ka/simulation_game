@@ -6,6 +6,7 @@ namespace UnclaimedAssets.Core
     public struct GameSnapshot
     {
         public double SoftCurrency;
+        public double IPS;
     }
 
     [DisallowMultipleComponent]
@@ -14,6 +15,7 @@ namespace UnclaimedAssets.Core
         [SerializeField] private float _tickInterval = 1f;
 
         private double _softCurrency;
+        private double _lastIPS;
 
         public static event Action<GameSnapshot> OnGameStateChanged;
 
@@ -22,7 +24,7 @@ namespace UnclaimedAssets.Core
             if (_softCurrency >= amount)
             {
                 _softCurrency -= amount;
-                OnGameStateChanged?.Invoke(new GameSnapshot { SoftCurrency = _softCurrency });
+                NotifyStateChanged();
                 return true;
             }
             return false;
@@ -31,7 +33,7 @@ namespace UnclaimedAssets.Core
         public void AddCurrency(double amount)
         {
             _softCurrency += amount;
-            OnGameStateChanged?.Invoke(new GameSnapshot { SoftCurrency = _softCurrency });
+            NotifyStateChanged();
         }
 
         private void Start()
@@ -41,7 +43,6 @@ namespace UnclaimedAssets.Core
 
         private void GameTick()
         {
-            double ips = 0.0;
             if (global::SaveManager.Instance != null && global::SaveManager.Instance.Data != null)
             {
                 var shelf = UnclaimedAssets.Economy.ShelfManager.Instance;
@@ -51,15 +52,24 @@ namespace UnclaimedAssets.Core
                     : 0.0;
                 var completedSets = global::SaveManager.Instance.Data.CompletedSetNames;
                 
-                ips = UnclaimedAssets.Economy.IPSCalculator.GetCurrentIPS(shelf, prestigeMult, blackMarketBonus, completedSets);
+                _lastIPS = UnclaimedAssets.Economy.IPSCalculator.GetCurrentIPS(shelf, prestigeMult, blackMarketBonus, completedSets);
             }
             else
             {
-                ips = 1.0;
+                _lastIPS = 1.0;
             }
 
-            _softCurrency += ips;
-            OnGameStateChanged?.Invoke(new GameSnapshot { SoftCurrency = _softCurrency });
+            _softCurrency += _lastIPS;
+            NotifyStateChanged();
+        }
+
+        private void NotifyStateChanged()
+        {
+            OnGameStateChanged?.Invoke(new GameSnapshot 
+            { 
+                SoftCurrency = _softCurrency,
+                IPS = _lastIPS
+            });
         }
     }
 }
