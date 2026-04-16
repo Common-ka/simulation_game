@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Style src="project://database/Assets/Scripts/UI_Toolkit/USS/Variables.uss?fileID=7433441132597879392&amp;guid=6b6f7e8a9d0c4b448b3b3e2a1c0d9e8f&amp;type=3#Variables" />
+    <ui:Style src="project://database/Assets/Scripts/UI_Toolkit/USS/Common.uss?fileID=7433441132597879392&amp;guid=8c6f7e8a9d0c4b448b3b3e2a1c0d9e8f&amp;type=3#Common" />
+    
+    <ui:VisualElement name="hud-container" class="panel">
+        <ui:Label text="HUD: Currency and IPS" name="HUDLabel" />
+    </ui:VisualElement>
+
+    <ui:VisualElement name="shop-panel" class="panel">
+        <ui:Label text="Shop: Upgrades and Loot" name="ShopLabel" />
+    </ui:VisualElement>
+
+    <ui:VisualElement name="shelf-panel" class="panel">
+        <ui:Label text="Shelf: 5 Items Display" name="ShelfLabel" />
+    </ui:VisualElement>
+
+    <ui:VisualElement name="roulette-panel" class="panel hidden">
+        <ui:Label text="Roulette: Gacha Animation" name="RouletteLabel" />
+    </ui:VisualElement>
+
+    <ui:VisualElement name="sticker-album-panel" class="panel hidden">
+        <ui:Label text="Stickers: Collection Album" name="StickersLabel" />
+    </ui:VisualElement>
+
+    <ui:VisualElement name="black-market-panel" class="panel hidden">
+        <ui:Label text="Black Market: Artifacts" name="BMLabel" />
+    </ui:VisualElement>
+
+    <ui:VisualElement name="prestige-panel" class="panel hidden">
+        <ui:Label text="Prestige: Reset Progress" name="PrestigeLabel" />
+    </ui:VisualElement>
+
+    <ui:VisualElement name="offline-reward-panel" class="panel hidden">
+        <ui:Label text="Offline Rewards" name="OfflineLabel" />
+    </ui:VisualElement>
+
+</ui:UXML>

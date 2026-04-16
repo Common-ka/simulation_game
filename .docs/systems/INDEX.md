@@ -72,3 +72,10 @@
 - Статус: ✅ Реализовано
 - Описание: Переменные и утилитарные классы USS (Variables.uss, Common.uss).
 
+## UIManager
+- Файл: `.docs/systems/UIManager.md`
+- Статус: ✅ Реализовано
+- Ключевые классы: `UIManager`
+- API: `Show(string)`, `Hide(string)`, `ShowOnly(string)`
+
+

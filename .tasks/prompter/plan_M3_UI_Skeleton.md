@@ -88,7 +88,7 @@
 
 ---
 
-### Task M3.2 — UIManager.cs ❌
+### Task M3.2 — UIManager.cs 
 
 **Цель:** Singleton-MonoBehaviour, управляющий показом/скрытием панелей. Находит корневой `UIDocument` и регистрирует все панели по имени USS-класса.
 
