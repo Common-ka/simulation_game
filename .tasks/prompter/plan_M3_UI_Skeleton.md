@@ -1,4 +1,4 @@
-# 📋 План Milestone M3: UI-Скелет (UI Toolkit)
+﻿# 📋 План Milestone M3: UI-Скелет (UI Toolkit)
 
 > **Дата создания:** 2026-04-15  
 > **Автор:** Planner Agent  
@@ -48,158 +48,125 @@
 
 ---
 
-### Task M3.0 — NumberFormatter + Utils (Предварительная задача) 
+### Task M3.3 — Main Screen Skeleton (Visual Only) ❌
 
-**Цель:** Создать `NumberFormatter.cs` для форматирования больших чисел (1.2M, 3.4B).
-
-**Архитектурные ограничения:**
-- `static class`, никаких зависимостей, никаких MonoBehaviour.
-- Поддержать K (тысячи), M (миллионы), B (миллиарды), T (триллионы), Q (квадриллионы).
-
----
-
-> 📢 **Промпт для Промптера (Task M3.0):**
-> 
-> Создай ТЗ для `NumberFormatter.cs` — статический утилитный класс в `Assets/Scripts/Utils/`.  
-> Метод: `public static string Format(double value) → string`.  
-> Форматирование: < 1000 → "123", < 1M → "123.4K", < 1B → "123.4M", < 1T → "1.2B" и т.д. до Q (квадриллион).  
-> Без MonoBehaviour, без зависимостей. Протестировать через `Debug.Log` в Bootstrap.  
-> Воркер обновляет `INDEX.md`.
-
----
-
-### Task M3.1 — Design System: Variables.uss + Common.uss 
-
-**Цель:** Создать базовую дизайн-систему: токены цветов, шрифтов, отступов и общие классы (`.hidden`, `.button`, `.panel`, `.card-rare`, `.card-epic` и т.д.)
+**Цель:** Собрать единый визуальный каркас (Root UI) с плейсхолдерами для HUD, витрины, магазина и навигации, чтобы сразу увидеть всю композицию экрана. Без C# логики.
 
 **Архитектурные ограничения:**
-- Никаких пикселей без переменных CSS. Все числа — через `var(--spacing-md)` и т.д.
-- Класс `.hidden` обязательно: `display: none;`. UIManager будет переключать через Add/RemoveFromClassList.
-- Цветовая схема: тёмная тема (фоны ~#1a1a2e, акценты золото/фиолетовый).
-
----
-
-> 📢 **Промпт для Промптера (Task M3.1):**
-> 
-> Создай ТЗ для создания двух файлов:  
-> 1. `Assets/Scripts/UI_Toolkit/USS/Variables.uss` — CSS-переменные (цвета, шрифты, радиусы, отступы). Тёмная тема, idle-игровой стиль.  
-> 2. `Assets/Scripts/UI_Toolkit/USS/Common.uss` — базовые классы: `.hidden` (display:none), `.btn-primary`, `.card`, `.panel`, цветовые ауры редкостей (`.rarity-rare`, `.rarity-epic`, `.rarity-legendary`, `.rarity-unique`).  
-> USS-файлы — только стили, никаких C#. Воркер создаёт оба файла вручную.
-
----
-
-### Task M3.2 — UIManager.cs 
-
-**Цель:** Singleton-MonoBehaviour, управляющий показом/скрытием панелей. Находит корневой `UIDocument` и регистрирует все панели по имени USS-класса.
-
-**Архитектурные ограничения:**
-- `UIManager` не знает про бизнес-логику. Только `Show(string panelName)` / `Hide(string panelName)`.
-- Скрывает все панели, показывает нужную через Add/RemoveFromClassList("hidden").
-- Публичные события: `OnPanelShown: Action<string>` (для аналитики).
-
----
-
-> 📢 **Промпт для Промптера (Task M3.2):**
-> 
-> Создай ТЗ для `UIManager.cs` в `Assets/Scripts/UI/`.  
-> Класс — Singleton MonoBehaviour. Получает `UIDocument` и кеширует панели по имени (Dictionary).  
-> Публичное API: `Show(string), Hide(string), ShowOnly(string)`.  
-> Всё переключение через AddToClassList/RemoveFromClassList("hidden").  
-> Никакой бизнес-логики. Воркер обновляет `INDEX.md`.
-
----
-
-### Task M3.3 — HUD.uxml + HUD.uss + HUDPanel.cs ❌
-
-**Цель:** Постоянный верхний HUD с: SoftCurrency, IPS, Stardust, Keys. Подписывается на `GameManager.OnGameStateChanged` и `SaveManager.Data`.
-
-**Architerctural ограничения:**
-- `HUDPanel.cs` — подписчик, не производитель событий.
-- В `OnGameStateChanged` — читает `GameSnapshot.SoftCurrency`, форматирует через `NumberFormatter`.
-- IPS берёт из `IPSCalculator.GetCurrentIPS(...)` через `GameSnapshot` или отдельный тик.
-- Stardust и Keys — из `SaveManager.Data` (читать при каждом обновлении снепшота).
-- `HUDPanel.cs` не вызывает ничего из Economy-слоя напрямую.
+- Только UXML и USS (использование Flexbox, абсолютного позиционирования шапки и подвала).
+- Создаем файл `Assets/Scripts/UI_Toolkit/UXML/MainScreen.uxml` и стили `MainScreen.uss` (подключает `Variables.uss` и `Common.uss`).
+- Включает 4 зоны (согласно 09-ui-screens-guidelines.md):
+  1. Шапка (HUD): SoftCurrency, IPS, HardCurrency, Stardust, Keys.
+  2. Геймплей: Центральная витрина на 5 слотов (заглушки).
+  3. Магазин-Геймплей: Блок текущей категории и массивная кнопка "Крутить".
+  4. Подвал: 4 кнопки навигации (Upgrades, Gacha, Shop, Black Market).
+- Каждому логическому элементу задать уникальный `#id` (например, `#hud-soft-currency`, `#shelf-slot-1`, `#shop-spin-btn`), чтобы в будущем C# скрипты могли к ним привязаться.
 
 ---
 
 > 📢 **Промпт для Промптера (Task M3.3):**
 > 
-> Создай ТЗ для триады:  
-> - `Assets/Scripts/UI_Toolkit/UXML/HUDPanel.uxml` — разметка HUD (верхняя шапка): метки для SoftCurrency, IPS, Stardust, Keys. Кнопки навигации в подвале.  
-> - `Assets/Scripts/UI_Toolkit/USS/HUD.uss` — стили HUD, подключает Variables.uss.  
-> - `Assets/Scripts/UI/Panels/HUDPanel.cs` — MonoBehaviour, Subscribe на `GameManager.OnGameStateChanged`. Обновляет Label'ы через `NumberFormatter`. Stardust и Keys — из `SaveManager.Instance.Data`.  
-> Воркер обновляет `INDEX.md`.
+> Создай ТЗ на разработку корневого UXML-документа: `Assets/Scripts/UI_Toolkit/UXML/MainScreen.uxml` и стилей `MainScreen.uss` (подключает `Variables.uss` и `Common.uss`).
+> Основная задача: сверстать весь экран на плейсхолдерах из цветных блоков и dummy-текста (например, '1.5M', квадраты вместо иконок).
+> Разбить на зоны через Flexbox: Header (HUD валют), Middle (Контентная часть - Полка витрины из 5 карточек, ниже Блок покупки Gacha лота), Footer (4 кнопки навигации внизу).
+> Установить всем интерактивным и изменяемым элементам уникальные `#id`.
+> C# скрипты в этой задаче НЕ писать! Только верстка. Проверка: Открытие UXML в UI Builder должно сразу показывать красивый Layout согласно гайдлайну. Воркер обновляет `INDEX.md`.
 
 ---
 
-### Task M3.4 — ShopPanel: UXML + USS + ShopPanel.cs ❌
+### Task M3.4 — HUDPanel.cs (Logic Binding) ❌
 
-**Цель:** Основной экран с категорией (название, цена разблокировки) и кнопкой "Крутить рулетку". Показывает текущую доступную категорию из `GameDataLoader.Categories`.
+**Цель:** Вдохнуть жизнь в шапку (HUD) из `MainScreen.uxml`.
 
 **Архитектурные ограничения:**
-- `ShopPanel.cs` подписывается на `GameManager.OnGameStateChanged` (чтобы знать текущюю валюту и обновлять состояние кнопки "слишком дорого").
-- Кнопка "Крутить" вызывает `GachaController.Instance.BuyLoot(categoryIndex)`. Это допустимо — прямой вызов **команды** от UI к единственному ответственному контроллеру.
-- Не знает про `ShelfManager`, `IPSCalculator`, `SaveManager`.
+- `HUDPanel` берет корневой `UIDocument` (задается в инспекторе или инициализируется сценой) и достает элементы по `#id`.
+- По событию `GameManager.OnGameStateChanged` читает `GameSnapshot.SoftCurrency`, форматирует через `NumberFormatter`.
+- IPS берёт из `IPSCalculator.GetCurrentIPS(...)`.
+- Stardust и Keys — из `SaveManager.Data` (у них нет своих ивентов? можно проверять в том же OnGameStateChanged или отдельном).
+- Никаких вызовов бизнес-логики, только чтение.
 
 ---
 
 > 📢 **Промпт для Промптера (Task M3.4):**
 > 
-> Создай ТЗ для триады:  
-> - `Assets/Scripts/UI_Toolkit/UXML/ShopPanel.uxml` — зона текущей категории (иконка-заглушка, название, прогресс-бар до след. категории, цена) + кнопка [Крутить (x1 / x10)].  
-> - `Assets/Scripts/UI_Toolkit/USS/Shop.uss` — стили ShopPanel.  
-> - `Assets/Scripts/UI/Panels/ShopPanel.cs` — Subscribe на `GameManager.OnGameStateChanged`. Отображает текущую категорию из `GameDataLoader`. Кнопка вызывает `GachaController.Instance.BuyLoot(categoryIndex, 1)`. Кнопка серая если `SoftCurrency < price`.  
+> Создай ТЗ для `Assets/Scripts/UI/Panels/HUDPanel.cs` — MonoBehaviour, который висит на объекте и биндит данные к UI.
+> Скрипт получает ссылку на `UIDocument`, ищет элементы HUD по `#id` (валюты, stardust, keys, ips). Добавляет Subscribe на `GameManager.OnGameStateChanged`. Обновляет Label'ы через `NumberFormatter`.
 > Воркер обновляет `INDEX.md`.
 
 ---
 
-### Task M3.5 — ShelfPanel: UXML + USS + ShelfPanel.cs ❌
+### Task M3.5 — FooterPanel.cs (Logic) ❌
 
-**Цель:** Витрина из 5 слотов. Каждый слот показывает предмет (иконка-заглушка, название, редкость цветом, BoostValue). Подписывается на `ShelfManager.OnShelfUpdated`.
+**Цель:** Привязать логику к кнопкам навигации из подвала `MainScreen.uxml`.
 
 **Архитектурные ограничения:**
-- `ShelfPanel.cs` — только подписчик `ShelfManager.OnShelfUpdated`.
-- Не знает про `GameManager`, `GachaController`, `SaveManager`.
-- Слоты реализовать как 5 VisualElement-карточек (не prefab), переиспользуемых через обновление текста.
+- `FooterPanel` находит кнопки по `#id`.
+- Подписывается на клики `clicked += ...` и вызывает `UIManager.Instance.ShowPanel(name)` (если реализовано скрытие/показ центральной зоны). 
+- На текущем этапе можно просто повесить Debug.Log или вызов UIManager.
 
 ---
 
 > 📢 **Промпт для Промптера (Task M3.5):**
 > 
-> Создай ТЗ для триады:  
-> - `Assets/Scripts/UI_Toolkit/UXML/ShelfPanel.uxml` — 5 слотов-карточек (заглушки). Каждый слот: иконка (Label-заглушка), название, редкость (цветной бейдж), BoostValue.  
-> - `Assets/Scripts/UI_Toolkit/USS/Shelf.uss` — сетка 5 слотов + цвета редкостей.  
-> - `Assets/Scripts/UI/Panels/ShelfPanel.cs` — Subscribe на `ShelfManager.OnShelfUpdated`. Обновляет 5 карточек. Использует CSS-класс редкости (`.rarity-rare` и т.д.) для окраски.  
+> Создай ТЗ для `Assets/Scripts/UI/Panels/FooterPanel.cs`.
+> Получает `UIDocument`, ищет 4 кнопки футера по `#id`. При клике отправляет вызов в `UIManager.Instance` (или пишет `Debug.Log`).
 > Воркер обновляет `INDEX.md`.
 
 ---
 
-### Task M3.6 — Сборка сцены Game.unity + Bootstrap → Game переход ❌
+### Task M3.6 — ShopPanel.cs (Logic Binding) ❌
 
-**Цель:** Настроить сцену `Game.unity`: GameObject с `GameManager`, `UIManager`, `UIDocument`. Настроить `BootstrapController` для загрузки данных и перехода в сцену.
+**Цель:** Вдохнуть жизнь в блок Геймплей-Магазина из `MainScreen.uxml`.
 
 **Архитектурные ограничения:**
-- Порядок инициализации: `GameDataLoader.LoadAsync()` → `SaveManager.Load()` → `SceneManager.LoadScene("Game")`.
-- `UIManager` инициализируется в `Start()` после того как `UIDocument` готов.
-- Все Singleton'ы (`ShelfManager`, `GachaController`, `BlackMarketManager`, `SaveManager`) должны быть на GameObject'ах в сцене.
+- Ищет элементы шоп-блока по `#id`.
+- Подписывается на `GameManager.OnGameStateChanged`, чтобы проверять доступность кнопки "Крутить" по деньгам.
+- Клик по кнопке вызывает `GachaController.Instance.BuyLoot(categoryIndex)`.
 
 ---
 
 > 📢 **Промпт для Промптера (Task M3.6):**
 > 
-> Создай ТЗ для настройки сцены `Game.unity` и доработки `BootstrapController.cs`.  
-> `BootstrapController` должен: 1) запустить `GameDataLoader.LoadAsync()`, 2) вызвать `SaveManager.Instance.Load()`, 3) загрузить сцену "Game" через `SceneManager.LoadSceneAsync`.  
-> В сцене `Game.unity` Воркер должен вручную создать GameObject'ы для: `GameManager`, `UIManager`, `ShelfManager`, `GachaController`, `BlackMarketManager`, `SaveManager`.  
-> Воркер описывает в ТЗ какие компоненты вешать на какие GameObject'ы.  
-> Воркер обновляет `INDEX.md` (Bootstrap, UIManager).
+> Создай ТЗ для `Assets/Scripts/UI/Panels/ShopPanel.cs`.
+> Получает `UIDocument`, находит элементы шоп-панели. Subscribe на `GameManager.OnGameStateChanged` для проверки `SoftCurrency >= price`. Блокирует кнопку, если денег нет. При клике вызывает `GachaController.Instance.BuyLoot`.
+> Воркер обновляет `INDEX.md`.
 
 ---
 
-## ✅ Чеклист Плэннера перед выдачей
+### Task M3.7 — ShelfPanel.cs (Logic Binding) ❌
 
-- [✅] Фаза данных (NumberFormatter) выделена отдельно
-- [✅] Фаза дизайн-системы (Variables/Common USS) — отдельная задача
-- [✅] Каждая задача затрагивает ≤ 3 файлов
-- [x] Event-Driven фильтр: ни одна UI-панель не вызывает другой менеджер напрямую (кроме команд)
-- [x] В каждой задаче напоминание Воркеру обновить `INDEX.md`
-- [x] Нет задач "порефакторь и добавь фичу одновременно"
+**Цель:** Заполнить витрину (середина экрана) реальными предметами из `ShelfManager`.
+
+**Архитектурные ограничения:**
+- `ShelfPanel.cs` — только подписчик `ShelfManager.OnShelfUpdated`.
+- Внутри UXML слоты уже размечены по `#id`. Панель обновляет их содержимое (названия, бусты).
+- Цвет иконки меняет через добавление классов из `Common.uss` (напр. `.card-rare`), убирая предыдущие.
+
+---
+
+> 📢 **Промпт для Промптера (Task M3.7):**
+> 
+> Создай ТЗ для `Assets/Scripts/UI/Panels/ShelfPanel.cs`.
+> Получает `UIDocument`, ищет 5 слотов по `#id`. Subscribe на `ShelfManager.OnShelfUpdated`. Когда приходит обновление инвентаря полки, скрипт обновляет Label'ы карточек и CSS-классы редкости.
+> Воркер обновляет `INDEX.md`.
+
+---
+
+### Task M3.8 — Сборка сцены Game.unity + Bootstrap → Game ❌
+
+**Цель:** Настроить сцену `Game.unity` и запуск игры.
+
+**Архитектурные ограничения:**
+- Порядок в `BootstrapController`: `GameDataLoader.LoadAsync()` → `SaveManager.Load()` → `SceneManager.LoadScene("Game")`.
+- GameObject'ы с менеджерами и панелями (HUDPanel, ShopPanel, ShelfPanel, FooterPanel) настроены в сцене со ссылкой на `UIDocument`.
+
+---
+
+> 📢 **Промпт для Промптера (Task M3.8):**
+> 
+> Создай ТЗ для настройки сцены `Game.unity` и доработки `BootstrapController.cs`.
+> `BootstrapController` должен реализовать загрузку данных и переход в сцену "Game".
+> В сцене `Game.unity` Воркер должен создать GameObject с компонентом `UIDocument` (с прикрепленным `MainScreen.uxml`) и GameObject'ы контроллеров (`HUDPanel`, `ShelfPanel` и т.д.), которые будут ссылаться на этот UIDocument.
+> Воркер обновляет `INDEX.md`.
+
+---
