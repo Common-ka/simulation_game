@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:Style src="project://database/Assets/Scripts/UI_Toolkit/USS/Variables.uss?fileID=7433441132597879392&amp;guid=6b6f7e8a9d0c4b448b3b3e2a1c0d9e8f&amp;type=3#Variables" />
-    <ui:Style src="project://database/Assets/Scripts/UI_Toolkit/USS/Common.uss?fileID=7433441132597879392&amp;guid=8c6f7e8a9d0c4b448b3b3e2a1c0d9e8f&amp;type=3#Common" />
+    <ui:Style src="../USS/Variables.uss" />
+    <ui:Style src="../USS/Common.uss" />
     
     <ui:VisualElement name="hud-container" class="panel">
         <ui:Label text="HUD: Currency and IPS" name="HUDLabel" />
