@@ -48,7 +48,7 @@
 
 ---
 
-### Task M3.0 — NumberFormatter + Utils (Предварительная задача)
+### Task M3.0 — NumberFormatter + Utils (Предварительная задача) 
 
 **Цель:** Создать `NumberFormatter.cs` для форматирования больших чисел (1.2M, 3.4B).
 
@@ -68,7 +68,7 @@
 
 ---
 
-### Task M3.1 — Design System: Variables.uss + Common.uss
+### Task M3.1 — Design System: Variables.uss + Common.uss 
 
 **Цель:** Создать базовую дизайн-систему: токены цветов, шрифтов, отступов и общие классы (`.hidden`, `.button`, `.panel`, `.card-rare`, `.card-epic` и т.д.)
 
@@ -88,7 +88,7 @@
 
 ---
 
-### Task M3.2 — UIManager.cs
+### Task M3.2 — UIManager.cs ❌
 
 **Цель:** Singleton-MonoBehaviour, управляющий показом/скрытием панелей. Находит корневой `UIDocument` и регистрирует все панели по имени USS-класса.
 
@@ -109,7 +109,7 @@
 
 ---
 
-### Task M3.3 — HUD.uxml + HUD.uss + HUDPanel.cs
+### Task M3.3 — HUD.uxml + HUD.uss + HUDPanel.cs ❌
 
 **Цель:** Постоянный верхний HUD с: SoftCurrency, IPS, Stardust, Keys. Подписывается на `GameManager.OnGameStateChanged` и `SaveManager.Data`.
 
@@ -132,7 +132,7 @@
 
 ---
 
-### Task M3.4 — ShopPanel: UXML + USS + ShopPanel.cs
+### Task M3.4 — ShopPanel: UXML + USS + ShopPanel.cs ❌
 
 **Цель:** Основной экран с категорией (название, цена разблокировки) и кнопкой "Крутить рулетку". Показывает текущую доступную категорию из `GameDataLoader.Categories`.
 
@@ -153,7 +153,7 @@
 
 ---
 
-### Task M3.5 — ShelfPanel: UXML + USS + ShelfPanel.cs
+### Task M3.5 — ShelfPanel: UXML + USS + ShelfPanel.cs ❌
 
 **Цель:** Витрина из 5 слотов. Каждый слот показывает предмет (иконка-заглушка, название, редкость цветом, BoostValue). Подписывается на `ShelfManager.OnShelfUpdated`.
 
@@ -174,7 +174,7 @@
 
 ---
 
-### Task M3.6 — Сборка сцены Game.unity + Bootstrap → Game переход
+### Task M3.6 — Сборка сцены Game.unity + Bootstrap → Game переход ❌
 
 **Цель:** Настроить сцену `Game.unity`: GameObject с `GameManager`, `UIManager`, `UIDocument`. Настроить `BootstrapController` для загрузки данных и перехода в сцену.
 
@@ -197,9 +197,9 @@
 
 ## ✅ Чеклист Плэннера перед выдачей
 
-- [x] Фаза данных (NumberFormatter) выделена отдельно
-- [x] Фаза дизайн-системы (Variables/Common USS) — отдельная задача
-- [x] Каждая задача затрагивает ≤ 3 файлов
+- [✅] Фаза данных (NumberFormatter) выделена отдельно
+- [✅] Фаза дизайн-системы (Variables/Common USS) — отдельная задача
+- [✅] Каждая задача затрагивает ≤ 3 файлов
 - [x] Event-Driven фильтр: ни одна UI-панель не вызывает другой менеджер напрямую (кроме команд)
 - [x] В каждой задаче напоминание Воркеру обновить `INDEX.md`
 - [x] Нет задач "порефакторь и добавь фичу одновременно"

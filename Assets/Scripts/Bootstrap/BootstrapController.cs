@@ -24,7 +24,15 @@ namespace UnclaimedAssets.Bootstrap
             yield return PreloadSpriteSheet();
             yield return InitYandexSDK();
 
-            Debug.Log("[Bootstrap] Done. Loading Game scene...");
+            Debug.Log("[Bootstrap] Done. Running tests...");
+            Debug.Log($"[NumberFormatter Test] 123 -> {UnclaimedAssets.Utils.NumberFormatter.Format(123)}");
+            Debug.Log($"[NumberFormatter Test] 1234 -> {UnclaimedAssets.Utils.NumberFormatter.Format(1234)}");
+            Debug.Log($"[NumberFormatter Test] 1234567 -> {UnclaimedAssets.Utils.NumberFormatter.Format(1234567)}");
+            Debug.Log($"[NumberFormatter Test] 1234567890 -> {UnclaimedAssets.Utils.NumberFormatter.Format(1234567890)}");
+            Debug.Log($"[NumberFormatter Test] 1234567890123 -> {UnclaimedAssets.Utils.NumberFormatter.Format(1234567890123)}");
+            Debug.Log($"[NumberFormatter Test] 1234567890123456 -> {UnclaimedAssets.Utils.NumberFormatter.Format(1234567890123456)}");
+
+            Debug.Log("[Bootstrap] Loading Game scene...");
             SceneManager.LoadScene(GameSceneName);
         }
 

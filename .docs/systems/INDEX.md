@@ -60,3 +60,15 @@
 - Статус: ✅ Реализовано (backend-логика)
 - Ключевые классы: `BlackMarketManager`, `BlackMarketArtifact`
 - API: `BlackMarketManager.Instance`, `AddKey()`, `GetBM_IPSBonus()`
+
+## Utils (Утилиты)
+- Файл: (Отсутствует, описано в INDEX.md)
+- Статус: ✅ Реализовано
+- Ключевые классы: `NumberFormatter`
+- API: `NumberFormatter.Format(double value)` - форматирование чисел до Q (квадриллионов) с одним знаком после запятой.
+
+## UI Foundation
+- Файл: `.docs/systems/UI_Foundation.md`
+- Статус: ✅ Реализовано
+- Описание: Переменные и утилитарные классы USS (Variables.uss, Common.uss).
+

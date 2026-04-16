@@ -1,0 +1,109 @@
+/* Require Variables.uss to be attached to the UI Document */
+
+.hidden {
+    display: none;
+}
+
+.panel {
+    background-color: var(--color-bg-panel);
+    border-radius: var(--border-radius-lg);
+    padding-top: var(--spacing-md);
+    padding-right: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+    padding-left: var(--spacing-md);
+    color: var(--color-text-primary);
+}
+
+.card {
+    background-color: var(--color-bg-card);
+    border-radius: var(--border-radius-md);
+    padding-top: var(--spacing-sm);
+    padding-right: var(--spacing-sm);
+    padding-bottom: var(--spacing-sm);
+    padding-left: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
+    margin-right: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+    margin-left: var(--spacing-sm);
+    color: var(--color-text-primary);
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-color: rgba(255, 255, 255, 0.1);
+    border-right-color: rgba(255, 255, 255, 0.1);
+    border-top-color: rgba(255, 255, 255, 0.1);
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-text-highlight);
+    border-radius: var(--border-radius-sm);
+    padding-top: var(--spacing-sm);
+    padding-bottom: var(--spacing-sm);
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+    font-size: var(--font-size-md);
+    -unity-font-style: bold;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    transition-property: background-color, scale;
+    transition-duration: 0.2s, 0.1s;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.btn-primary:active {
+    background-color: var(--color-primary-active);
+    scale: 0.95 0.95;
+}
+
+/* Rarity Auras / Borders */
+.rarity-rare {
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-left-color: var(--color-rarity-rare);
+    border-right-color: var(--color-rarity-rare);
+    border-top-color: var(--color-rarity-rare);
+    border-bottom-color: var(--color-rarity-rare);
+}
+
+.rarity-epic {
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-left-color: var(--color-rarity-epic);
+    border-right-color: var(--color-rarity-epic);
+    border-top-color: var(--color-rarity-epic);
+    border-bottom-color: var(--color-rarity-epic);
+}
+
+.rarity-legendary {
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-left-color: var(--color-rarity-legendary);
+    border-right-color: var(--color-rarity-legendary);
+    border-top-color: var(--color-rarity-legendary);
+    border-bottom-color: var(--color-rarity-legendary);
+}
+
+.rarity-unique {
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-left-color: var(--color-rarity-unique);
+    border-right-color: var(--color-rarity-unique);
+    border-top-color: var(--color-rarity-unique);
+    border-bottom-color: var(--color-rarity-unique);
+}
