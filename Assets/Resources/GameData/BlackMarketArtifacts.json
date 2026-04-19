@@ -1,350 +1,350 @@
 [
     {
         "ID": 1001,
-        "Name": "Теневой Артефакт #1",
+        "Name": "Автономный крио-аккумулятор",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "+Offline_Time",
         "EffectValue": 2.9
     },
     {
         "ID": 1002,
-        "Name": "Теневой Артефакт #2",
+        "Name": "Скиммер-перчатка",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "-Shop_Prices%",
         "EffectValue": 1.5
     },
     {
         "ID": 1003,
-        "Name": "Теневой Артефакт #3",
+        "Name": "Теневой сканер коробок",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "+Gacha_Chance%",
         "EffectValue": 4.1
     },
     {
         "ID": 1004,
-        "Name": "Теневой Артефакт #4",
+        "Name": "Линза «Рентген-взгляд»",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "+Gacha_Chance%",
         "EffectValue": 2.7
     },
     {
         "ID": 1005,
-        "Name": "Теневой Артефакт #5",
+        "Name": "Позолоченная шина данных",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "+Total_IPS%",
         "EffectValue": 4.3
     },
     {
         "ID": 1006,
-        "Name": "Теневой Артефакт #6",
+        "Name": "Эхо-локатор «Золотой глаз»",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "+Gacha_Chance%",
         "EffectValue": 2.2
     },
     {
         "ID": 1007,
-        "Name": "Теневой Артефакт #7",
+        "Name": "Набор спектральных фильтров",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "+Gacha_Chance%",
         "EffectValue": 2.3
     },
     {
         "ID": 1008,
-        "Name": "Теневой Артефакт #8",
+        "Name": "Магнитная «счастливая» монета",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "+Gacha_Chance%",
         "EffectValue": 2.4
     },
     {
         "ID": 1009,
-        "Name": "Теневой Артефакт #9",
+        "Name": "Чемодан с компроматом",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "-Shop_Prices%",
         "EffectValue": 4.4
     },
     {
         "ID": 1010,
-        "Name": "Теневой Артефакт #10",
+        "Name": "Маска перекупщика",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "-Shop_Prices%",
         "EffectValue": 1.8
     },
     {
         "ID": 1011,
-        "Name": "Теневой Артефакт #11",
+        "Name": "Поддельный ключ правительства",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "-Shop_Prices%",
         "EffectValue": 1.5
     },
     {
         "ID": 1012,
-        "Name": "Теневой Артефакт #12",
+        "Name": "Кольцо с теневым кодом",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "-Shop_Prices%",
         "EffectValue": 3.5
     },
     {
         "ID": 1013,
-        "Name": "Теневой Артефакт #13",
+        "Name": "Модуль нейро-ускорения",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "+Total_IPS%",
         "EffectValue": 3.0
     },
     {
         "ID": 1014,
-        "Name": "Теневой Артефакт #14",
+        "Name": "Инфракрасный окуляр",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "+Gacha_Chance%",
         "EffectValue": 3.4
     },
     {
         "ID": 1015,
-        "Name": "Теневой Артефакт #15",
+        "Name": "Отмычка-декодер",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "+Gacha_Chance%",
         "EffectValue": 1.7
     },
     {
         "ID": 1016,
-        "Name": "Теневой Артефакт #16",
+        "Name": "Считыватель магнитных карт",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "-Shop_Prices%",
         "EffectValue": 4.4
     },
     {
         "ID": 1017,
-        "Name": "Теневой Артефакт #17",
+        "Name": "Квантовая призма",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "+Total_IPS%",
         "EffectValue": 4.3
     },
     {
         "ID": 1018,
-        "Name": "Теневой Артефакт #18",
+        "Name": "Резонансное ядро",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "+Total_IPS%",
         "EffectValue": 1.3
     },
     {
         "ID": 1019,
-        "Name": "Теневой Артефакт #19",
+        "Name": "Позолоченный кабель доступа",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "-Shop_Prices%",
         "EffectValue": 3.6
     },
     {
         "ID": 1020,
-        "Name": "Теневой Артефакт #20",
+        "Name": "Гибернационный кокон",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "+Offline_Time",
         "EffectValue": 3.5
     },
     {
         "ID": 1021,
-        "Name": "Теневой Артефакт #21",
+        "Name": "Платиновый крипто-чип",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "+Total_IPS%",
         "EffectValue": 3.0
     },
     {
         "ID": 1022,
-        "Name": "Теневой Артефакт #22",
+        "Name": "Измеритель инфляции",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "-Shop_Prices%",
         "EffectValue": 3.6
     },
     {
         "ID": 1023,
-        "Name": "Теневой Артефакт #23",
+        "Name": "Ключ-карта «Админ»",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "-Shop_Prices%",
         "EffectValue": 2.9
     },
     {
         "ID": 1024,
-        "Name": "Теневой Артефакт #24",
+        "Name": "Хроно-стабилизатор",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "+Offline_Time",
         "EffectValue": 2.2
     },
     {
         "ID": 1025,
-        "Name": "Теневой Артефакт #25",
+        "Name": "Узел «Овердрайв»",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "+Total_IPS%",
         "EffectValue": 3.8
     },
     {
         "ID": 1026,
-        "Name": "Теневой Артефакт #26",
+        "Name": "Вакуумный захват",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "+Gacha_Chance%",
         "EffectValue": 2.8
     },
     {
         "ID": 1027,
-        "Name": "Теневой Артефакт #27",
+        "Name": "Капсула статического сна",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "+Offline_Time",
         "EffectValue": 2.9
     },
     {
         "ID": 1028,
-        "Name": "Теневой Артефакт #28",
+        "Name": "Манипулятор ценами",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "-Shop_Prices%",
         "EffectValue": 3.4
     },
     {
         "ID": 1029,
-        "Name": "Теневой Артефакт #29",
+        "Name": "Золотой кошелек-хаб",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "-Shop_Prices%",
         "EffectValue": 4.4
     },
     {
         "ID": 1030,
-        "Name": "Теневой Артефакт #30",
+        "Name": "Печать «Офшорный рай»",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "-Shop_Prices%",
         "EffectValue": 3.9
     },
     {
         "ID": 1031,
-        "Name": "Теневой Артефакт #31",
+        "Name": "Черный крипто-диск",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "-Shop_Prices%",
         "EffectValue": 4.9
     },
     {
         "ID": 1032,
-        "Name": "Теневой Артефакт #32",
+        "Name": "Окуляр интуиции",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "+Gacha_Chance%",
         "EffectValue": 4.0
     },
     {
         "ID": 1033,
-        "Name": "Теневой Артефакт #33",
+        "Name": "Бионический синапс",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "+Total_IPS%",
         "EffectValue": 2.3
     },
     {
         "ID": 1034,
-        "Name": "Теневой Артефакт #34",
+        "Name": "Хронометр «Вечность»",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "+Offline_Time",
         "EffectValue": 1.5
     },
     {
         "ID": 1035,
-        "Name": "Теневой Артефакт #35",
+        "Name": "Портативный генератор времени",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "+Offline_Time",
         "EffectValue": 2.0
     },
     {
         "ID": 1036,
-        "Name": "Теневой Артефакт #36",
+        "Name": "Топливный элемент «Зенит»",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "+Total_IPS%",
         "EffectValue": 1.2
     },
     {
         "ID": 1037,
-        "Name": "Теневой Артефакт #37",
+        "Name": "Контейнер с холодным синтезом",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "+Offline_Time",
         "EffectValue": 4.5
     },
     {
         "ID": 1038,
-        "Name": "Теневой Артефакт #38",
+        "Name": "Реаниматор систем",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "+Offline_Time",
         "EffectValue": 2.0
     },
     {
         "ID": 1039,
-        "Name": "Теневой Артефакт #39",
+        "Name": "Стеклянный декодер редкости",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "+Gacha_Chance%",
         "EffectValue": 4.3
     },
     {
         "ID": 1040,
-        "Name": "Теневой Артефакт #40",
+        "Name": "Скиммер торговых сетей",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "-Shop_Prices%",
         "EffectValue": 1.8
     },
     {
         "ID": 1041,
-        "Name": "Теневой Артефакт #41",
+        "Name": "Магнит удачи из хрома",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "+Gacha_Chance%",
         "EffectValue": 3.0
     },
     {
         "ID": 1042,
-        "Name": "Теневой Артефакт #42",
+        "Name": "Квантовые часы",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "+Offline_Time",
         "EffectValue": 3.0
     },
     {
         "ID": 1043,
-        "Name": "Теневой Артефакт #43",
+        "Name": "Пропуск в VIP-сектор",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "-Shop_Prices%",
         "EffectValue": 3.0
     },
     {
         "ID": 1044,
-        "Name": "Теневой Артефакт #44",
+        "Name": "Силовой расширитель",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "+Total_IPS%",
         "EffectValue": 4.8
     },
     {
         "ID": 1045,
-        "Name": "Теневой Артефакт #45",
+        "Name": "Инжектор времени",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "+Offline_Time",
         "EffectValue": 4.9
     },
     {
         "ID": 1046,
-        "Name": "Теневой Артефакт #46",
+        "Name": "Детектор аномальной удачи",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "+Gacha_Chance%",
         "EffectValue": 3.3
     },
     {
         "ID": 1047,
-        "Name": "Теневой Артефакт #47",
+        "Name": "Магнитный инжектор",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "+Total_IPS%",
         "EffectValue": 1.2
     },
     {
         "ID": 1048,
-        "Name": "Теневой Артефакт #48",
+        "Name": "Стазис-камера",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "+Offline_Time",
         "EffectValue": 3.4
     },
     {
         "ID": 1049,
-        "Name": "Теневой Артефакт #49",
+        "Name": "Модуль анабиоза",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "+Offline_Time",
         "EffectValue": 2.1
     },
     {
         "ID": 1050,
-        "Name": "Теневой Артефакт #50",
+        "Name": "Усилитель «Октав-9»",
         "Rarity": "Black_Market_Exclusive",
         "EffectType": "+Total_IPS%",
         "EffectValue": 4.4
