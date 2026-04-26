@@ -70,7 +70,7 @@
 ## UI Foundation
 - Файл: `.docs/systems/UI_Foundation.md`
 - Статус: ✅ Реализовано
-- Описание: Переменные и утилитарные классы USS (Variables.uss, Common.uss).
+- Описание: Переменные и утилитарные классы USS (Variables.uss, Common.uss). Включает архитектурные правила совместимости (Margin vs Gap).
 
 ## UIManager
 - Файл: `.docs/systems/UIManager.md`

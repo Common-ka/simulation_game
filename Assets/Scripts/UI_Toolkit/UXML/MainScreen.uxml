@@ -30,6 +30,6 @@
         <ui:Instance template="FooterPanel" />
 
         <!-- ПРАВЫЙ КРАЙ: Плавающий SideBar офферов -->
-        <ui:Instance template="SideBarPanel" style="position: absolute; right: 20px; top: 120px; height: auto;" />
+        <ui:Instance template="SideBarPanel" style="position: absolute; right: 0; top: 120px; height: auto;" />
     </ui:VisualElement>
 </ui:UXML>

@@ -38,4 +38,20 @@
     --font-size-md: 16px;
     --font-size-lg: 24px;
     --font-size-xl: 32px;
+    /* Cyberpunk Theme - HUD */
+    --color-cyan: #08F7FE;
+    --color-cyan-glow: rgba(8, 247, 254, 0.5);
+    --color-accent-green: #00FF88;
+    --color-hud-bg: #1A1A1A;
+    --color-hud-stroke: #4fa6a8;
+    
+    --font-orbitron: url('project://database/Assets/Fonts/Orbitron-Bold.ttf');
+    --font-inter: url('project://database/Assets/Fonts/Inter-Regular.ttf');
+
+    /* Icon Path Variables */
+    --img-soft-currency: url('project://database/Assets/Resources/Icons/ic_soft_currency.png');
+    --img-tokens: url('project://database/Assets/Resources/Icons/ic_tokens.png');
+    --img-stardust: url('project://database/Assets/Resources/Icons/ic_stardust.png');
+    --img-key: url('project://database/Assets/Resources/Icons/ic_key.png');
+    --img-profile: url('project://database/Assets/Resources/Icons/ic_profile_placeholder.png');
 }

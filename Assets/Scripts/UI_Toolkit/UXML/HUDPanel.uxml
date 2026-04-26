@@ -2,29 +2,49 @@
 <ui:UXML
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ui="UnityEngine.UIElements"
-    xmlns:vie="UnityEditor.UIElements"
     xsi:noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd"
 >
     <ui:Style src="../USS/Variables.uss" />
     <ui:Style src="../USS/Common.uss" />
-    <ui:Style src="../USS/MainScreen.uss" />
-    <ui:VisualElement name="header" class="header-hud">
-        <ui:VisualElement class="hud-item">
-            <ui:Label text="Soft" class="hud-label" />
-            <ui:Label name="hud-soft-currency" text="1.2M" class="hud-value" />
-            <ui:Label name="hud-ips" text="+150/s" class="hud-label" />
+    <ui:Style src="../USS/HUD.uss" />
+
+    <ui:VisualElement name="hud-top-panel" class="hud-panel">
+        
+        <!-- LEFT ZONE: Main Balance & Secondary Currencies -->
+        <ui:VisualElement name="zone-left" class="hud-panel__zone hud-panel__left">
+            <!-- Main Balance -->
+            <ui:VisualElement name="money-block" class="hud-currency-block">
+                <ui:VisualElement name="img-soft-icon" class="hud-currency-icon hud-currency-icon--main" />
+                <ui:Label name="lbl-soft-currency" text="$1,250,400" class="hud-value-text hud-value-text--main" />
+                <ui:Label name="lbl-ips-value" text="$450 /sec" class="hud-sub-value-text" />
+            </ui:VisualElement>
+
+            <!-- Secondary Currencies (Tokens, Energy/Stardust, Keys) -->
+            <ui:VisualElement name="secondary-currencies" class="hud-currency-block hud-currency-block--secondary">
+                <!-- Tokens -->
+                <ui:VisualElement name="item-tokens" class="hud-currency-item">
+                    <ui:VisualElement name="img-token-icon" class="hud-currency-icon" />
+                    <ui:Label name="lbl-hard-currency" text="2,500" class="hud-value-text" />
+                </ui:VisualElement>
+
+                <!-- Stardust (Energy) -->
+                <ui:VisualElement name="item-stardust" class="hud-currency-item">
+                    <ui:VisualElement name="img-stardust-icon" class="hud-currency-icon" />
+                    <ui:Label name="lbl-stardust-value" text="850" class="hud-value-text" />
+                </ui:VisualElement>
+
+                <!-- Keys -->
+                <ui:VisualElement name="item-keys" class="hud-currency-item">
+                    <ui:VisualElement name="img-key-icon" class="hud-currency-icon" />
+                    <ui:Label name="lbl-keys-value" text="3" class="hud-value-text" />
+                </ui:VisualElement>
+            </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement class="hud-item">
-            <ui:Label text="Hard" class="hud-label" />
-            <ui:Label name="hud-hard-currency" text="50" class="hud-value" />
+
+        <!-- RIGHT ZONE: Profile / Settings -->
+        <ui:VisualElement name="zone-right" class="hud-panel__zone hud-panel__right">
+            <ui:Button name="btn-profile" class="hud-profile-circle" />
         </ui:VisualElement>
-        <ui:VisualElement class="hud-item">
-            <ui:Label text="Stardust" class="hud-label" />
-            <ui:Label name="hud-stardust" text="300" class="hud-value" />
-        </ui:VisualElement>
-        <ui:VisualElement class="hud-item">
-            <ui:Label text="Keys" class="hud-label" />
-            <ui:Label name="hud-keys" text="5" class="hud-value" />
-        </ui:VisualElement>
+
     </ui:VisualElement>
 </ui:UXML>
