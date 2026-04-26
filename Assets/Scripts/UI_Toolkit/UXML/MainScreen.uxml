@@ -12,11 +12,24 @@
     <ui:Template src="ShelfPanel.uxml" name="ShelfPanel" />
     <ui:Template src="MarketPanel.uxml" name="MarketPanel" />
     <ui:Template src="FooterPanel.uxml" name="FooterPanel" />
+    <ui:Template src="SideBarPanel.uxml" name="SideBarPanel" />
 
     <ui:VisualElement name="MainScreen" class="main-screen">
+        <!-- ВЕРХ: Шапка -->
         <ui:Instance template="HUDPanel" />
-        <ui:Instance template="ShelfPanel" />
-        <ui:Instance template="MarketPanel" />
+
+        <!-- ЦЕНТР: Зона геймплея (Витрина + Покупка лотов) -->
+        <ui:VisualElement class="middle-area" style="flex-direction: row; flex-grow: 1; align-items: center; justify-content: center; padding: 0 40px;">
+            <!-- ЛЕВАЯ ЧАСТЬ: Меню выбора множителей и ящик покупки гачи -->
+            <ui:Instance template="MarketPanel" style="flex-grow: 1; flex-direction: row;" />
+            <!-- ПРАВАЯ ЧАСТЬ: Витрина из 5 слотов -->
+            <ui:Instance template="ShelfPanel" style="flex-grow: 1; justify-content: center;" />
+        </ui:VisualElement>
+
+        <!-- НИЗ: Подвал навигации -->
         <ui:Instance template="FooterPanel" />
+
+        <!-- ПРАВЫЙ КРАЙ: Плавающий SideBar офферов -->
+        <ui:Instance template="SideBarPanel" style="position: absolute; right: 20px; top: 120px; height: auto;" />
     </ui:VisualElement>
 </ui:UXML>

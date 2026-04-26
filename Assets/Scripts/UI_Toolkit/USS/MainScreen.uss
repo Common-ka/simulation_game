@@ -4,6 +4,7 @@
 @import url("Shelf.uss");
 @import url("Roulette.uss");
 @import url("Navigation.uss");
+@import url("SideBar.uss");
 
 .main-screen {
     flex-grow: 1;

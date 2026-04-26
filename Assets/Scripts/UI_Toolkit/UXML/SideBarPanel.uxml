@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ui="UnityEngine.UIElements"
+    xmlns:vie="UnityEditor.UIElements"
+    xsi:noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd"
+>
+    <ui:Style src="../USS/Variables.uss" />
+    <ui:Style src="../USS/SideBar.uss" />
+
+    <ui:VisualElement name="SideBarPanel" class="side-bar-panel">
+        <!-- Будущие плавающие кнопки офферов (Starter Pack, Limited Offer) -->
+    </ui:VisualElement>
+</ui:UXML>

@@ -13,11 +13,13 @@
 - `Assets/Scripts/UI_Toolkit/USS/Shelf.uss` — изолированные стили для витрины игровой зоны.
 - `Assets/Scripts/UI_Toolkit/USS/Roulette.uss` — изолированные стили для магазина гачи и рулеток.
 - `Assets/Scripts/UI_Toolkit/USS/Navigation.uss` — изолированные стили для нижней навигационной панели.
+- `Assets/Scripts/UI_Toolkit/USS/SideBar.uss` — изолированные стили для плавающих предложений (офферов).
 - `Assets/Scripts/UI_Toolkit/UXML/MainScreen.uxml` — корневой файл (сборщик экрана через `<ui:Instance>`).
 - `Assets/Scripts/UI_Toolkit/UXML/HUDPanel.uxml` — шаблон верхней панели с валютами (не скрывается).
 - `Assets/Scripts/UI_Toolkit/UXML/ShelfPanel.uxml` — шаблон центральной игровой зоны (скрывается через `UIManager`).
 - `Assets/Scripts/UI_Toolkit/UXML/MarketPanel.uxml` — шаблон магазина гачи (скрывается через `UIManager`).
 - `Assets/Scripts/UI_Toolkit/UXML/FooterPanel.uxml` — шаблон нижней навигации (не скрывается).
+- `Assets/Scripts/UI_Toolkit/UXML/SideBarPanel.uxml` — шаблон с плавающими офферами (не скрывается, всегда поверх).
 
 ## Использование
 1. Всегда используйте данные классы и переменные (через `var(--name)`) вместо хардкода стилей внутри `.uxml`. 
