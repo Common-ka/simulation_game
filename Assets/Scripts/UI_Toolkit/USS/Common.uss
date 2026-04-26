@@ -45,6 +45,8 @@
     padding-left: var(--spacing-md);
     padding-right: var(--spacing-md);
     font-size: var(--font-size-md);
+    -unity-font: var(--font-russo-one);
+    -unity-font-definition: var(--font-russo-one);
     -unity-font-style: bold;
     border-left-width: 0;
     border-right-width: 0;

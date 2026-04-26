@@ -45,8 +45,9 @@
     --color-hud-bg: #1A1A1A;
     --color-hud-stroke: #4fa6a8;
     
-    --font-orbitron: url('project://database/Assets/Fonts/Orbitron-Bold.ttf');
-    --font-inter: url('project://database/Assets/Fonts/Inter-Regular.ttf');
+
+    --font-russo-one: url('project://database/Assets/Fonts/RussoOne-Regular.ttf');
+    --font-jetbrains-mono: url('project://database/Assets/Fonts/JetBrainsMono-Regular.ttf');
 
     /* Icon Path Variables */
     --img-soft-currency: url('project://database/Assets/Resources/Icons/ic_soft_currency.png');
