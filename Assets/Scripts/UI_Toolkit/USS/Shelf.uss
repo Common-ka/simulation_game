@@ -1,0 +1,25 @@
+@import url("Variables.uss");
+
+.gameplay-area {
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.shelf-container {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.shelf-slot {
+    width: 60px;
+    height: 80px;
+    margin: 5px;
+    background-color: var(--color-bg-panel);
+    border-width: 2px;
+    border-color: var(--color-border);
+    justify-content: center;
+    align-items: center;
+}

@@ -8,7 +8,11 @@
 ## Ключевые файлы
 - `Assets/Scripts/UI_Toolkit/USS/Variables.uss` — переменные (:root) для цветов, шрифтов и редкости.
 - `Assets/Scripts/UI_Toolkit/USS/Common.uss` — общие классы (.hidden, .btn-primary) и редкость.
-- `Assets/Scripts/UI_Toolkit/USS/MainScreen.uss` — стили верстки и позиционирования `MainScreen.uxml`.
+- `Assets/Scripts/UI_Toolkit/USS/MainScreen.uss` — корневой файл для импорта стилей и базового стиля `MainScreen.uxml`.
+- `Assets/Scripts/UI_Toolkit/USS/HUD.uss` — изолированные стили для верхней панели с валютами.
+- `Assets/Scripts/UI_Toolkit/USS/Shelf.uss` — изолированные стили для витрины игровой зоны.
+- `Assets/Scripts/UI_Toolkit/USS/Roulette.uss` — изолированные стили для магазина гачи и рулеток.
+- `Assets/Scripts/UI_Toolkit/USS/Navigation.uss` — изолированные стили для нижней навигационной панели.
 - `Assets/Scripts/UI_Toolkit/UXML/MainScreen.uxml` — корневой файл (сборщик экрана через `<ui:Instance>`).
 - `Assets/Scripts/UI_Toolkit/UXML/HUDPanel.uxml` — шаблон верхней панели с валютами (не скрывается).
 - `Assets/Scripts/UI_Toolkit/UXML/ShelfPanel.uxml` — шаблон центральной игровой зоны (скрывается через `UIManager`).

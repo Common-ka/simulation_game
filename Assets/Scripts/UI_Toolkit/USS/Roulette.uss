@@ -1,0 +1,24 @@
+@import url("Variables.uss");
+
+.market-spin-area {
+    padding: 20px;
+    align-items: center;
+}
+
+.category-info {
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.spin-button-large {
+    width: 200px;
+    height: 60px;
+    background-color: var(--color-rarity-rare); /* Placeholder color from variables */
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.spin-button-large:hover {
+    background-color: var(--color-rarity-epic);
+}
