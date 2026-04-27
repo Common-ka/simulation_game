@@ -19,7 +19,7 @@
         <ui:Instance template="HUDPanel" />
 
         <!-- ЦЕНТР: Зона геймплея (Витрина + Покупка лотов) -->
-        <ui:VisualElement class="middle-area" style="flex-direction: row; flex-grow: 1; align-items: center; justify-content: center; padding: 0 40px;">
+        <ui:VisualElement class="middle-area" style="flex-direction: row; flex-grow: 1; padding: 0 40px;">
             <!-- ЛЕВАЯ ЧАСТЬ: Меню выбора множителей и ящик покупки гачи -->
             <ui:Instance template="MarketPanel" style="flex-grow: 1; flex-direction: row;" />
             <!-- ПРАВАЯ ЧАСТЬ: Витрина из 5 слотов -->

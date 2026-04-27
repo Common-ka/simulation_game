@@ -2,17 +2,73 @@
 <ui:UXML
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ui="UnityEngine.UIElements"
-    xmlns:vie="UnityEditor.UIElements"
     xsi:noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd"
 >
     <ui:Style src="../USS/Variables.uss" />
     <ui:Style src="../USS/Common.uss" />
-    <ui:Style src="../USS/MainScreen.uss" />
-    <!-- Market Info & Spin Button -->
-    <ui:VisualElement name="market-area" class="market-spin-area panel">
-        <ui:VisualElement name="category-info" class="category-info">
-            <ui:Label text="Current Category: Warehouse Leftovers" />
+    <ui:Style src="../USS/Roulette.uss" />
+
+    <ui:VisualElement name="market-panel" class="market-panel-root">
+        
+        <!-- Left Side: Lot Selection -->
+        <ui:VisualElement name="lot-selection-menu" class="lot-menu">
+            <ui:VisualElement name="lot-x1" class="lot-item">
+                <ui:VisualElement name="img-lot-icon-x1" class="lot-icon" />
+                <ui:VisualElement name="lot-info" class="lot-info">
+                    <ui:Label name="lbl-lot-qty-x1" class="lot-qty-text" text="x1" />
+                    <ui:Label name="lbl-lot-price-x1" class="lot-price-text" text="$1,250" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <ui:VisualElement name="lot-x3" class="lot-item">
+                <ui:VisualElement name="img-lot-icon-x3" class="lot-icon" />
+                <ui:VisualElement name="lot-info" class="lot-info">
+                    <ui:Label name="lbl-lot-qty-x3" class="lot-qty-text" text="x3" />
+                    <ui:Label name="lbl-lot-price-x3" class="lot-price-text" text="$3,500" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <ui:VisualElement name="lot-x5" class="lot-item">
+                <ui:VisualElement name="img-lot-icon-x5" class="lot-icon" />
+                <ui:VisualElement name="lot-info" class="lot-info">
+                    <ui:Label name="lbl-lot-qty-x5" class="lot-qty-text" text="x5" />
+                    <ui:Label name="lbl-lot-price-x5" class="lot-price-text" text="$5,000" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <ui:VisualElement name="lot-x8" class="lot-item">
+                <ui:VisualElement name="img-lot-icon-x8" class="lot-icon" />
+                <ui:VisualElement name="lot-info" class="lot-info">
+                    <ui:Label name="lbl-lot-qty-x8" class="lot-qty-text" text="x8" />
+                    <ui:Label name="lbl-lot-price-x8" class="lot-price-text" text="$7,500" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <ui:VisualElement name="lot-x10" class="lot-item">
+                <ui:VisualElement name="img-lot-icon-x10" class="lot-icon" />
+                <ui:VisualElement name="lot-info" class="lot-info">
+                    <ui:Label name="lbl-lot-qty-x10" class="lot-qty-text" text="x10" />
+                    <ui:Label name="lbl-lot-price-x10" class="lot-price-text" text="$9,000" />
+                </ui:VisualElement>
+            </ui:VisualElement>
         </ui:VisualElement>
-        <ui:Button name="market-spin-btn" text="SPIN (100)" class="spin-button-large" />
+
+        <!-- Center: Action Area -->
+        <ui:VisualElement name="action-area" class="action-area">
+            <ui:VisualElement name="open-lot-action" class="open-lot-btn">
+                <ui:VisualElement name="bracket-tl" class="bracket corner-tl" />
+                <ui:VisualElement name="bracket-tr" class="bracket corner-tr" />
+                <ui:VisualElement name="bracket-bl" class="bracket corner-bl" />
+                <ui:VisualElement name="bracket-br" class="bracket corner-br" />
+                <ui:Label name="lbl-open-lot" class="open-lot-text" text="OPEN LOT" />
+            </ui:VisualElement>
+
+            <ui:VisualElement name="price-indicator" class="price-tag">
+                <ui:VisualElement name="tag-bracket-l" class="tag-bracket bracket-l" />
+                <ui:VisualElement name="tag-bracket-r" class="tag-bracket bracket-r" />
+                <ui:Label name="lbl-current-price" class="price-text" text="$1,250" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
     </ui:VisualElement>
 </ui:UXML>

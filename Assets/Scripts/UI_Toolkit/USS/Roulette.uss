@@ -1,24 +1,124 @@
-@import url("Variables.uss");
+/* Roulette.uss */
 
-.market-spin-area {
-    padding: 20px;
+.market-panel-root {
+    flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+}
+
+/* Lot Selection Menu */
+.lot-menu {
+    position: absolute;
+    left: 22px;
+    top: 46px;
+    width: 350px;
+    padding: 16px;
+    background-color: rgba(17, 17, 17, 0.9);
+    border-radius: 12px;
+    border-width: 2px;
+    border-color: var(--color-cyan-glow);
+}
+
+.lot-item {
+    flex-direction: row;
+    align-items: center;
+    height: 110px;
+    padding-left: 24px;
+    padding-right: 24px;
+    background-color: #151515;
+    border-radius: 8px;
+    border-width: 1px;
+    border-color: rgba(79, 166, 168, 0.2);
+    margin-bottom: 12px; /* Gap replacement */
+}
+
+.lot-icon {
+    width: 80px;
+    height: 80px;
+    background-color: #222;
+    border-radius: 4px;
+    margin-right: 24px; /* Gap replacement */
+}
+
+.lot-info {
+    flex-direction: column;
+}
+
+.lot-qty-text {
+    font-size: 32px;
+    color: var(--color-cyan);
+    -unity-font: var(--font-russo-one);
+    -unity-font-definition: var(--font-russo-one);
+    -unity-font-style: bold;
+    text-shadow: 0 0 8px var(--color-cyan-glow);
+}
+
+.lot-price-text {
+    font-size: 24px;
+    color: #FFFFFF;
+    -unity-font: var(--font-jetbrains-mono);
+    -unity-font-definition: var(--font-jetbrains-mono);
+}
+
+.action-area {
+    position: absolute;
+    left: 424px;
+    top: 67px;
     align-items: center;
 }
 
-.category-info {
-    margin-bottom: 10px;
-    align-items: center;
-}
-
-.spin-button-large {
-    width: 200px;
-    height: 60px;
-    background-color: var(--color-rarity-rare); /* Placeholder color from variables */
-    border-radius: 10px;
+.open-lot-btn {
+    width: 586px;
+    height: 100px;
     justify-content: center;
     align-items: center;
 }
 
-.spin-button-large:hover {
-    background-color: var(--color-rarity-epic);
+.open-lot-text {
+    font-size: 48px;
+    color: #FCEE0A;
+    -unity-font: var(--font-russo-one);
+    -unity-font-definition: var(--font-russo-one);
+    -unity-font-style: bold;
+    text-shadow: 0 0 20px rgba(252, 238, 10, 0.6);
 }
+
+/* Brackets for Open Lot */
+.bracket {
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    border-color: #FCEE0A;
+}
+
+.corner-tl { top: 10px; left: 110px; border-top-width: 3px; border-left-width: 3px; }
+.corner-tr { top: 10px; right: 110px; border-top-width: 3px; border-right-width: 3px; }
+.corner-bl { bottom: 10px; left: 110px; border-bottom-width: 3px; border-left-width: 3px; }
+.corner-br { bottom: 10px; right: 110px; border-bottom-width: 3px; border-right-width: 3px; }
+
+/* Price Indicator */
+.price-tag {
+    margin-top: 20px; /* Distance from open-lot-btn */
+    width: 300px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+.price-text {
+    font-size: 36px;
+    color: var(--color-cyan);
+    -unity-font: var(--font-russo-one);
+    -unity-font-definition: var(--font-russo-one);
+    -unity-font-style: bold;
+    text-shadow: 0 0 15px var(--color-cyan-glow);
+}
+
+.tag-bracket {
+    position: absolute;
+    width: 30px;
+    height: 60px;
+    border-color: var(--color-cyan);
+}
+
+.bracket-l { left: 40px; border-left-width: 2px; border-top-width: 2px; border-bottom-width: 2px; }
+.bracket-r { right: 40px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px; }

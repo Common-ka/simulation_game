@@ -25,7 +25,7 @@
 - `Assets/Scripts/UI_Toolkit/UXML/MainScreen.uxml` — корневой файл (сборщик экрана через `<ui:Instance>`).
 - `Assets/Scripts/UI_Toolkit/UXML/HUDPanel.uxml` — шаблон верхней панели с валютами (не скрывается).
 - `Assets/Scripts/UI_Toolkit/UXML/ShelfPanel.uxml` — шаблон центральной игровой зоны (скрывается через `UIManager`).
-- `Assets/Scripts/UI_Toolkit/UXML/MarketPanel.uxml` — шаблон магазина гачи (скрывается через `UIManager`).
+- `Assets/Scripts/UI_Toolkit/UXML/MarketPanel.uxml` — шаблон магазина гачи (реализован по макету gameplay.pen).
 - `Assets/Scripts/UI_Toolkit/UXML/FooterPanel.uxml` — шаблон нижней навигации (не скрывается).
 - `Assets/Scripts/UI_Toolkit/UXML/SideBarPanel.uxml` — шаблон с плавающими офферами (не скрывается, всегда поверх).
 
