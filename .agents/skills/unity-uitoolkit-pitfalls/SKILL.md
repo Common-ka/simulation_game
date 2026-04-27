@@ -3,159 +3,89 @@ name: unity-uitoolkit-pitfalls
 description: Справочник ловушек и ограничений Unity UI Toolkit USS. Вызывается перед написанием любых USS-стилей, чтобы избежать типичных ошибок, связанных с различиями между USS и стандартным CSS.
 ---
 
-# Unity UI Toolkit — Ловушки USS
+# USS Pitfalls Reference
 
-## Когда использовать этот скилл
-- Перед написанием **любого** USS-файла для Unity UI Toolkit.
-- Когда в консоли Unity появляются `warning: Unknown property`.
-- Когда визуальный результат не совпадает с ожидаемым (элементы слиплись, нет отступов, шрифт не загрузился).
+## Когда использовать
+- Перед написанием любого USS-файла.
+- При отладке: стили не применяются, элементы не на своих местах.
 
-## Свойства USS, которые НЕ работают
+## Молчаливые поломки (без ошибок в консоли)
 
-### ❌ `gap` → Используй `margin`
-Unity **не поддерживает** `gap`. Консоль покажет: *"Unknown property 'gap' (did you mean 'top'?)"*
+Следующие конструкции **ломают весь USS-файл целиком** — парсер отбрасывает все правила, без предупреждений:
+
+- `:last-child`, `:first-child`, `:nth-child()`, `:not()`, `:has()`
+- `::before`, `::after`
+- `calc()`, `min()`, `max()`, `clamp()`
+
+Поддерживаемые псевдоклассы: `:hover`, `:active`, `:focus`, `:disabled`, `:checked`, `:root`.
+
+## Запрещённые свойства
+
+| Свойство | Замена |
+|---|---|
+| `gap` | `margin-right` / `margin-bottom` на дочерних |
+| `box-shadow` | `text-shadow` (только текст) или спрайт |
+| `linear-gradient()` | 9-slice спрайт |
+| `display: grid` | `flex-direction` + `flex-wrap` |
+| `border: 2px solid #fff` | `border-width: 2px` + `border-color: #fff` |
+| `z-index` | Порядок элементов в UXML |
+
+## Паттерн замены `gap`
 
 ```css
-/* ❌ СЛОМАЕТСЯ */
-.row { gap: 16px; }
-
-/* ✅ ПРАВИЛЬНО — margin на дочерних */
+/* gap: 16px — не поддерживается */
 .row > .item { margin-right: 16px; }
-
-/* Для вертикальных списков: */
-.column > .item { margin-bottom: 16px; }
+.col > .item { margin-bottom: 16px; }
+/* НЕ убирай margin у последнего через :last-child — сломаешь файл */
 ```
 
-### ❌ `box-shadow` → Нет замены для контейнеров
-`box-shadow` не поддерживается для VisualElement. `text-shadow` работает **только для текста**.
+## Shorthand-свойства
 
-```css
-/* ❌ СЛОМАЕТСЯ */
-.card { box-shadow: 0 4px 8px rgba(0,0,0,0.3); }
+- `padding: 8px 16px` — работает.
+- `padding: 8px 16px 8px 16px` — нестабильно, расписывай по сторонам.
+- `border: ...` — shorthand не работает, всегда расписывай.
 
-/* ✅ Для текстового свечения: */
-.glow-text { text-shadow: 0 0 10px rgba(8, 247, 254, 0.5); }
-```
-
-### ❌ `background: linear-gradient()` → Спрайт
-USS **не поддерживает** CSS-градиенты. Используй 9-slice спрайт или `background-image` с заготовленной текстурой.
-
-### ❌ `display: grid` → Только Flexbox
-USS поддерживает только `flex-direction: row | column | row-reverse | column-reverse` и `flex-wrap: wrap`.
-
-### ❌ Shorthand `border`
-```css
-/* ❌ НЕ работает */
-.card { border: 2px solid white; }
-
-/* ✅ Расписывай отдельно */
-.card {
-    border-width: 2px;
-    border-color: white;
-}
-
-/* Для раздельных сторон: */
-.card {
-    border-left-width: 2px;
-    border-right-width: 2px;
-    border-top-width: 2px;
-    border-bottom-width: 2px;
-    border-left-color: white;
-    border-right-color: white;
-    border-top-color: white;
-    border-bottom-color: white;
-}
-```
-
-### ⚠️ Shorthand `padding` и `margin`
-Двухзначный shorthand (`padding: 8px 16px`) **работает**.
-Но четырёхзначный (`padding: 8px 16px 8px 16px`) может быть нестабильным — лучше расписывать.
-
-```css
-/* ✅ Надёжный вариант */
-.block {
-    padding-top: 8px;
-    padding-right: 16px;
-    padding-bottom: 8px;
-    padding-left: 16px;
-}
-```
-
-## Шрифты — Обязательная пара свойств
-
-Для корректной работы шрифтов **необходимо указывать оба свойства**:
+## Шрифты — обязательная пара
 
 ```css
 .text {
-    -unity-font: var(--font-orbitron);            /* Runtime */
-    -unity-font-definition: var(--font-orbitron); /* Editor (UI Builder) */
-    -unity-font-style: bold;
+    -unity-font: var(--font-name);
+    -unity-font-definition: var(--font-name);
 }
 ```
+Без пары: в Editor отобразится, в Runtime — нет (или наоборот).
 
-Если указать только `-unity-font`, шрифт может не отобразиться в UI Builder.
-Если указать только `-unity-font-definition`, шрифт может не сработать в Runtime.
+## Изображения
 
-## Иконки и изображения
-
-Изображения назначаются через `background-image`, **не** через отдельный Image-элемент.
-
+Путь всегда через `project://database/`:
 ```css
-/* В Variables.uss: */
-:root {
-    --img-icon: url('project://database/Assets/Resources/Icons/ic_name.png');
-}
-
-/* В компонентном USS: */
+:root { --img-icon: url('project://database/Assets/Resources/Icons/ic_name.png'); }
 #my-icon {
     background-image: var(--img-icon);
     -unity-background-scale-mode: scale-to-fit;
-    width: 64px;
-    height: 64px;
 }
 ```
 
-Путь **обязательно** начинается с `project://database/`.
+## Позиционирование
 
-## Масштабирование и hover
+- `position: absolute` — относительно непосредственного родителя (нет `position: relative`).
+- Если родитель имеет `align-items: center` + `justify-content: center`, то `margin-top` отсчитывается от центра, а не от верха. Используй `position: absolute` для pixel-perfect размещения.
+
+## Hover и анимации
 
 ```css
-/* Плавное масштабирование при наведении */
 .btn {
     transition-property: background-color, scale;
     transition-duration: 0.2s;
 }
-.btn:hover {
-    scale: 1.05 1.05;  /* Два значения: X Y */
-}
+.btn:hover { scale: 1.05 1.05; }
 ```
 
-## Рендеринг UI для проверки
+## Чеклист перед сохранением USS
 
-Чтобы сделать скриншот для визуальной проверки, вызови `render_ui` **дважды**:
-```
-# Первый вызов: инициализирует RenderTexture
-manage_ui(action: "render_ui", target: "UI_Root", include_image: true)
-# Второй вызов: фактически захватывает кадр
-manage_ui(action: "render_ui", target: "UI_Root", include_image: true)
-```
-
-## Проверка консоли на USS-ошибки
-
-После сохранения USS-файла **всегда** проверяй консоль:
-```
-read_console(types: ["warning", "error"], filter_text: "USS")
-read_console(types: ["warning", "error"], filter_text: "Unknown property")
-```
-
-Любой `Unknown property` = свойство игнорируется Unity, стиль не применится.
-
-## Быстрый чек-лист перед коммитом USS
-
-- [ ] Нет `gap` → используется `margin` на дочерних
-- [ ] Нет `box-shadow` на контейнерах
-- [ ] Нет `linear-gradient()`
-- [ ] Шрифты: указаны и `-unity-font`, и `-unity-font-definition`
+- [ ] Нет `:last-child` / `:first-child` / `:nth-child`
+- [ ] Нет `calc()` / `min()` / `max()`
+- [ ] Нет `gap`, `box-shadow`, `linear-gradient`, shorthand `border`
+- [ ] Шрифты: оба `-unity-font` и `-unity-font-definition`
 - [ ] Пути к изображениям: `project://database/Assets/...`
-- [ ] `border` расписан отдельно (`border-width` + `border-color`)
-- [ ] Консоль чистая от `Unknown property` warnings
+- [ ] Нет конфликта центрирования родителя + margin на ребёнке
