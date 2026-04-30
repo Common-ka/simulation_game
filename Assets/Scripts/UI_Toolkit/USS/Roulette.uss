@@ -2,16 +2,16 @@
 
 .market-panel-root {
     flex-grow: 1;
+    flex-direction: row;
+    align-items: center; /* Центрирование по Y */
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
 }
 
 /* Lot Selection Menu */
 .lot-menu {
-    position: absolute;
-    left: 22px;
-    top: 46px;
     width: 350px;
     padding: 16px;
+    margin-right: 24px; /* Отступ от action-area */
     background-color: rgba(17, 17, 17, 0.9);
     border-radius: 12px;
     border-width: 2px;
@@ -60,9 +60,6 @@
 }
 
 .action-area {
-    position: absolute;
-    left: 424px;
-    top: 67px;
     align-items: center;
 }
 

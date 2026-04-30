@@ -1,7 +1,8 @@
 .side-bar-panel {
     position: absolute;
-    left: 1660px;
-    top: 150px;
+    right: 40px;          /* Привязка к правому краю вместо хардкода left */
+    top: 50%;
+    translate: 0 -50%;    /* Сдвиг вверх на половину собственной высоты */
     width: 220px;
     height: 808px;
     flex-direction: column;

@@ -2,12 +2,10 @@
 
 .shelf-panel {
     flex-grow: 1;
+    justify-content: center;
 }
 
 .shelf-container {
-    position: absolute;
-    left: 73px;
-    top: 111px;
     width: 586px;
     height: 539px;
     background-image: url('project://database/Assets/Resources/Items/shelf.png');

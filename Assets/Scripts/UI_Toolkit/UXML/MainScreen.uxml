@@ -22,11 +22,11 @@
         <ui:Instance template="HUDPanel" />
 
         <!-- ЦЕНТР: Зона геймплея (Витрина + Покупка лотов) -->
-        <ui:VisualElement class="middle-area" style="flex-direction: row; flex-grow: 1; padding: 0 40px;">
+        <ui:VisualElement class="middle-area">
             <!-- ЛЕВАЯ ЧАСТЬ: Меню выбора множителей и ящик покупки гачи -->
-            <ui:Instance template="MarketPanel" style="flex-grow: 1; flex-direction: row;" />
+            <ui:Instance template="MarketPanel" />
             <!-- ПРАВАЯ ЧАСТЬ: Витрина из 5 слотов -->
-            <ui:Instance template="ShelfPanel" style="flex-grow: 1; justify-content: center;" />
+            <ui:Instance template="ShelfPanel" />
         </ui:VisualElement>
 
         <!-- НИЗ: Подвал навигации -->
