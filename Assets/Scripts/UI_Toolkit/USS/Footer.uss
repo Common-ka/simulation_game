@@ -1,0 +1,115 @@
+@import url("Variables.uss");
+
+.footer-nav {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: var(--footer-height);
+    padding: 0 10px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.nav-button {
+    flex: 1 1 0;
+    min-width: 0;
+    overflow: hidden;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: var(--footer-btn-height);
+    padding: 0 8px;
+    margin: 0 6px;
+    background-color: rgba(17, 17, 17, 0.9);
+    border-radius: var(--footer-btn-radius);
+    border-width: 2px;
+    border-color: var(--color-hud-stroke);
+    transition-property: border-color, background-color, scale;
+    transition-duration: 0.2s;
+}
+
+.nav-button:hover {
+    border-color: var(--color-cyan);
+    background-color: rgba(30, 30, 30, 0.95);
+    scale: 1.02;
+}
+
+.nav-button:active {
+    scale: 0.98;
+}
+
+.nav-button__icon {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    margin-right: 10px;
+    -unity-background-scale-mode: scale-to-fit;
+    -unity-background-image-tint-color: var(--color-cyan);
+}
+
+.nav-button__icon--upgrades {
+    background-image: var(--img-nav-upgrades);
+}
+
+.nav-button__icon--inventory {
+    background-image: var(--img-nav-inventory);
+}
+
+.nav-button__icon--gacha {
+    background-image: var(--img-nav-gacha);
+}
+
+.nav-button__icon--stickers {
+    background-image: var(--img-nav-stickers);
+}
+
+.nav-button__icon--shop {
+    background-image: var(--img-nav-shop);
+}
+
+.nav-button__icon--black-market {
+    background-image: var(--img-nav-black-market);
+    -unity-background-image-tint-color: var(--color-purple);
+}
+
+.nav-button__text-group {
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-button__title {
+    color: var(--color-text-primary);
+    font-size: 24px;
+    -unity-font-definition: var(--font-russo-one);
+    letter-spacing: 1px;
+    white-space: nowrap;
+    margin-bottom: 4px;
+}
+
+.nav-button__sub {
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    -unity-font-definition: var(--font-jetbrains-mono);
+    white-space: nowrap;
+}
+
+/* Black Market Specifics */
+.nav-button--black-market {
+    border-color: var(--color-purple);
+}
+
+.nav-button--black-market .nav-button__title {
+    color: var(--color-purple);
+    text-shadow: 0 0 10px var(--color-purple-glow);
+}
+
+.nav-button__badge {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-color: var(--color-pink);
+    border-radius: 16px;
+    border-width: 2px;
+    border-color: white;
+    right: 20px;
+    top: -10px;
+}

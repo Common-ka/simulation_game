@@ -7,12 +7,62 @@
 >
     <ui:Style src="../USS/Variables.uss" />
     <ui:Style src="../USS/Common.uss" />
-    <ui:Style src="../USS/MainScreen.uss" />
-    <!-- Footer Navigation Area -->
-    <ui:VisualElement name="footer" class="footer-nav">
-        <ui:Button name="nav-btn-upgrades" text="Upgrades" class="nav-button" />
-        <ui:Button name="nav-btn-gacha" text="Gacha" class="nav-button" />
-        <ui:Button name="nav-btn-shop" text="Shop" class="nav-button" />
-        <ui:Button name="nav-btn-black-market" text="Black Market" class="nav-button" />
+    <ui:Style src="../USS/Footer.uss" />
+    
+    <ui:VisualElement name="footer-container" class="footer-nav">
+        <!-- Upgrades -->
+        <ui:Button name="btn-upgrades" class="nav-button">
+            <ui:VisualElement name="icon" class="nav-button__icon nav-button__icon--upgrades" />
+            <ui:VisualElement name="text-group" class="nav-button__text-group">
+                <ui:Label text="UPGRADES" name="lbl-title" class="nav-button__title" />
+                <ui:Label text="(LVL 12)" name="lbl-sub" class="nav-button__sub" />
+            </ui:VisualElement>
+        </ui:Button>
+
+        <!-- Inventory -->
+        <ui:Button name="btn-inventory" class="nav-button">
+            <ui:VisualElement name="icon" class="nav-button__icon nav-button__icon--inventory" />
+            <ui:VisualElement name="text-group" class="nav-button__text-group">
+                <ui:Label text="INVENTORY" name="lbl-title" class="nav-button__title" />
+                <ui:Label text="(82 Slots)" name="lbl-sub" class="nav-button__sub" />
+            </ui:VisualElement>
+        </ui:Button>
+
+        <!-- Gacha -->
+        <ui:Button name="btn-gacha" class="nav-button">
+            <ui:VisualElement name="icon" class="nav-button__icon nav-button__icon--gacha" />
+            <ui:VisualElement name="text-group" class="nav-button__text-group">
+                <ui:Label text="GACHA / SPINS" name="lbl-title" class="nav-button__title" />
+                <ui:Label text="(3 Keys)" name="lbl-sub" class="nav-button__sub" />
+            </ui:VisualElement>
+        </ui:Button>
+
+        <!-- Stickers -->
+        <ui:Button name="btn-stickers" class="nav-button">
+            <ui:VisualElement name="icon" class="nav-button__icon nav-button__icon--stickers" />
+            <ui:VisualElement name="text-group" class="nav-button__text-group">
+                <ui:Label text="STICKER ALBUM" name="lbl-title" class="nav-button__title" />
+                <ui:Label text="(Set: 45%)" name="lbl-sub" class="nav-button__sub" />
+            </ui:VisualElement>
+        </ui:Button>
+
+        <!-- Shop -->
+        <ui:Button name="btn-shop" class="nav-button">
+            <ui:VisualElement name="icon" class="nav-button__icon nav-button__icon--shop" />
+            <ui:VisualElement name="text-group" class="nav-button__text-group">
+                <ui:Label text="SHOP" name="lbl-title" class="nav-button__title" />
+                <ui:Label text="(Sector 4)" name="lbl-sub" class="nav-button__sub" />
+            </ui:VisualElement>
+        </ui:Button>
+
+        <!-- Black Market -->
+        <ui:Button name="btn-black-market" class="nav-button nav-button--black-market">
+            <ui:VisualElement name="icon" class="nav-button__icon nav-button__icon--black-market" />
+            <ui:VisualElement name="text-group" class="nav-button__text-group">
+                <ui:Label text="BLACK MARKET" name="lbl-title" class="nav-button__title" />
+                <ui:Label text="(!) LIMITED" name="lbl-sub" class="nav-button__sub" />
+            </ui:VisualElement>
+            <ui:VisualElement name="notification-badge" class="nav-button__badge" />
+        </ui:Button>
     </ui:VisualElement>
 </ui:UXML>

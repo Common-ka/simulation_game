@@ -55,4 +55,22 @@
     --img-stardust: url('project://database/Assets/Resources/Icons/ic_stardust.png');
     --img-key: url('project://database/Assets/Resources/Icons/ic_key.png');
     --img-profile: url('project://database/Assets/Resources/Icons/ic_profile_placeholder.png');
+    
+    /* Navigation Icons */
+    --img-nav-upgrades: url('project://database/Assets/Resources/Icons/ic_nav_upgrades.png');
+    --img-nav-inventory: url('project://database/Assets/Resources/Icons/ic_nav_inventory.png');
+    --img-nav-gacha: url('project://database/Assets/Resources/Icons/ic_nav_gacha.png');
+    --img-nav-stickers: url('project://database/Assets/Resources/Icons/ic_nav_stickers.png');
+    --img-nav-shop: url('project://database/Assets/Resources/Icons/ic_nav_shop.png');
+    --img-nav-black-market: url('project://database/Assets/Resources/Icons/ic_nav_black_market.png');
+
+    --color-purple: #FE53BB;
+    --color-purple-glow: rgba(254, 83, 187, 0.5);
+    --color-pink: #FE53BB;
+    --color-pink-glow: rgba(254, 83, 187, 0.8);
+
+    /* Footer Metrics */
+    --footer-height: 143px;
+    --footer-btn-height: 117px;
+    --footer-btn-radius: 20px;
 }

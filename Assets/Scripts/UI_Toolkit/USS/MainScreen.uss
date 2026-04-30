@@ -3,7 +3,7 @@
 @import url("HUD.uss");
 @import url("Shelf.uss");
 @import url("Roulette.uss");
-@import url("Navigation.uss");
+@import url("Footer.uss");
 @import url("SideBar.uss");
 
 .main-screen {
