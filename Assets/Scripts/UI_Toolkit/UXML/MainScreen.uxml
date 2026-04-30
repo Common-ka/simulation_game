@@ -15,6 +15,9 @@
     <ui:Template src="SideBarPanel.uxml" name="SideBarPanel" />
 
     <ui:VisualElement name="MainScreen" class="main-screen">
+        <!-- ПРАВЫЙ КРАЙ: Плавающий SideBar офферов -->
+        <ui:Instance template="SideBarPanel" class="side-bar-panel" />
+
         <!-- ВЕРХ: Шапка -->
         <ui:Instance template="HUDPanel" />
 
@@ -29,7 +32,5 @@
         <!-- НИЗ: Подвал навигации -->
         <ui:Instance template="FooterPanel" />
 
-        <!-- ПРАВЫЙ КРАЙ: Плавающий SideBar офферов -->
-        <ui:Instance template="SideBarPanel" style="position: absolute; right: 0; top: 120px; height: auto;" />
     </ui:VisualElement>
 </ui:UXML>

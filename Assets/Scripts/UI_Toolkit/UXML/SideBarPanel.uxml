@@ -2,13 +2,43 @@
 <ui:UXML
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ui="UnityEngine.UIElements"
-    xmlns:vie="UnityEditor.UIElements"
     xsi:noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd"
 >
     <ui:Style src="../USS/Variables.uss" />
+    <ui:Style src="../USS/Common.uss" />
     <ui:Style src="../USS/SideBar.uss" />
 
-    <ui:VisualElement name="SideBarPanel" class="side-bar-panel">
-        <!-- Будущие плавающие кнопки офферов (Starter Pack, Limited Offer) -->
+    <ui:VisualElement name="side-bar-panel">
+        
+        <!-- Starter Pack Offer -->
+        <ui:VisualElement name="offer-starter" class="offer-card offer-card--pink">
+            <ui:VisualElement name="timer-starter" class="timer-badge timer-badge--pink">
+                <ui:VisualElement name="ic-clock" class="timer-icon" />
+                <ui:Label name="lbl-timer-starter" class="timer-label" text="23:59:59" />
+            </ui:VisualElement>
+            <ui:VisualElement name="img-starter-icon" class="offer-icon" />
+            <ui:Label name="lbl-starter-title" class="offer-label" text="Starter Pack" />
+        </ui:VisualElement>
+
+        <!-- Limited Offer -->
+        <ui:VisualElement name="offer-limited" class="offer-card offer-card--pink">
+            <ui:VisualElement name="timer-limited" class="timer-badge timer-badge--pink">
+                <ui:VisualElement name="ic-clock" class="timer-icon" />
+                <ui:Label name="lbl-timer-limited" class="timer-label" text="02:15:30" />
+            </ui:VisualElement>
+            <ui:VisualElement name="img-limited-icon" class="offer-icon" />
+            <ui:Label name="lbl-limited-title" class="offer-label" text="Limited Offer" />
+        </ui:VisualElement>
+
+        <!-- Offline Bonus -->
+        <ui:VisualElement name="offer-offline" class="offer-card offer-card--yellow">
+            <ui:VisualElement name="timer-offline" class="timer-badge timer-badge--yellow">
+                <ui:VisualElement name="ic-clock" class="timer-icon" />
+                <ui:Label name="lbl-timer-offline" class="timer-label" text="00:30:00" />
+            </ui:VisualElement>
+            <ui:VisualElement name="img-offline-icon" class="offer-icon" />
+            <ui:Label name="lbl-offline-title" class="offer-label" text="+30 min Offline" />
+        </ui:VisualElement>
+
     </ui:VisualElement>
 </ui:UXML>

@@ -1,24 +1,22 @@
 ---
 name: pencil-to-uitoolkit
-description: Переводит дизайн-макеты из Pencil (.pen) в верстку Unity UI Toolkit (UXML + USS). Вызывается, когда задача требует собрать UI-компонент по макету из Pencil-файла.
+description: Переводит дизайн-макеты из Pencil (.pen) в верстку Unity UI Toolkit (UXML + USS). Вызывается, когда задача требует сверстать UI-компонент по макету из Pencil-файла.
 ---
 
 # Pencil → UI Toolkit
 
-## Когда использовать
-- Задача требует сверстать UXML/USS по макету из `.pen`-файла.
-- Формулировки: «верстка по макету», «1-к-1 с дизайном».
-
 ## Чеклист
 
 - [ ] 1. Снять метрики из Pencil (`batch_get` + `get_screenshot`).
-- [ ] 2. Выбрать стратегию позиционирования (Flex vs Absolute).
-- [ ] 3. Пересчитать координаты Pencil → USS.
-- [ ] 4. Нарисовать текстовую схему иерархии.
-- [ ] 5. Создать UXML.
-- [ ] 6. Прочитать скилл `unity-uitoolkit-pitfalls`. Создать USS.
-- [ ] 7. `read_console` → проверить ошибки парсинга.
-- [ ] 8. Скриншот Pencil + скриншот Unity → визуальное сравнение.
+- [ ] 2. Прочитать `MainScreen.uxml` — определить родительский контейнер.
+- [ ] 3. Выбрать стратегию позиционирования.
+- [ ] 4. Пересчитать координаты Pencil → USS.
+- [ ] 5. Нарисовать текстовую схему иерархии.
+- [ ] 6. Создать UXML по шаблону.
+- [ ] 7. Прочитать `unity-uitoolkit-pitfalls`. Создать USS.
+- [ ] 8. Проверить интеграцию в `MainScreen.uxml` (класс на `<ui:Instance>`!).
+- [ ] 9. `read_console` → ошибки парсинга.
+- [ ] 10. Скриншот Pencil + скриншот Unity → визуальное сравнение.
 
 ## Снятие метрик
 
@@ -29,54 +27,71 @@ mcp_pencil_get_screenshot(filePath, nodeId: "<id>")
 
 Снимать: `width`, `height`, `x`, `y`, `padding`, `gap`, `layout`, `fill`, `stroke`, `effect`, шрифт.
 
+**Обязательно** сделай `get_screenshot` целевого узла до написания кода.
+
 ## Стратегия позиционирования
 
 | Случай | Стратегия |
 |---|---|
-| Элементы в ряд/колонку (список, строка кнопок) | Flexbox |
-| Элементы на фиксированных позициях поверх фона | `position: absolute` |
-| Привязка к краю родителя | `position: absolute` |
+| Элементы в ряд/колонку | Flexbox |
+| Фиксированные позиции поверх фона | `position: absolute` |
+| Плавающий оверлей (SideBar, Popup) | `position: absolute` на `<ui:Instance>` в MainScreen |
 
-## Пересчёт координат (ОПАСНОСТЬ Flex-Смещения)
-
-Pencil хранит `x, y` как абсолютные координаты от (0,0) экрана.
-USS позиционирует относительно родительского контейнера.
+## Пересчёт координат
 
 ```
-USS_top  = Pencil_Y - Parent_offset_Y
 USS_left = Pencil_X - Parent_offset_X
+USS_top  = Pencil_Y - Parent_offset_Y
 ```
 
-**⚠️ КРИТИЧЕСКАЯ ЛОВУШКА (Flex-Offset):**
-Никогда не копируй `x/y` из Pencil в `left/top` напрямую, если элемент вложен в flex-сетку!
-Если родитель использует `flex-grow: 1` или `padding` (например, экран поделен на левую и правую части через `flex-direction: row`), `Parent_offset_X` будет сдвинут на ширину всех предыдущих элементов!
+### Пример: плавающий оверлей
 
-**Пример (Горизонтальный сдвиг):**
-Экран 1920px поделен пополам. Ваша панель (`ShelfPanel`) — правая половина. Её локальный `X=0` начинается от 960px.
-В Pencil элемент стоит на `x: 1033`.
-Правильный USS: `left = 1033 - 960 (сдвиг левой панели) = 73px;`
-Если написать `left: 1033px`, элемент улетит за край экрана (`960 + 1033 = 1993px`).
-
-**Пример (Вертикальный сдвиг):**
-Элемент `y: 224`, вложен в контейнер после шапки HUD (137px высотой).
-Правильный USS: `top = 224 - 137 = 87px;`
-
-Если родитель центрирует детей (`align-items: center`), `margin-top` считается от центра. Используй `position: absolute` для pixel-perfect размещения, но всегда пересчитывай координаты!
-
-
-## Схема иерархии
-
-Перед написанием UXML — текстовая схема:
+Если компонент — прямой ребёнок корневого `MainScreen`, то `Parent_offset = (0, 0)`:
 ```
-panel (row, space-between)
-├── zone-left (row)
-│   ├── block-a (row) → icon + value
-│   └── block-b (row) → [item1] [item2]
-└── zone-right (row, flex-end)
-    └── btn-action
+Pencil: x=1660, y=150  →  USS: left: 1660px; top: 150px;
+```
+
+### Пример: элемент внутри flex-контейнера
+
+Экран 1920px делится пополам. Правая панель начинается с X=960:
+```
+Pencil: x=1033  →  USS: left = 1033 - 960 = 73px;
+❌ left: 1033px → элемент на 960+1033 = 1993px (за экраном)
+```
+
+## Ловушки
+
+### TemplateContainer
+
+`<ui:Instance>` создаёт скрытый `TemplateContainer` между родителем и корнем UXML.
+
+```xml
+❌ НЕПРАВИЛЬНО — класс на внутреннем элементе (TemplateContainer остаётся flex)
+<ui:Instance template="SideBarPanel" />
+<!-- SideBarPanel.uxml: -->
+<ui:VisualElement class="side-bar-panel"> ← absolute не поможет
+
+✅ ПРАВИЛЬНО — класс на Instance (= на TemplateContainer)
+<ui:Instance template="SideBarPanel" class="side-bar-panel" />
+<!-- SideBarPanel.uxml: -->
+<ui:VisualElement name="side-bar-panel"> ← без класса позиционирования
+```
+
+### Порядок в иерархии
+
+Плавающие элементы — **первыми** в `MainScreen`, до HUD/Content/Footer. Иначе `space-between` сдвинет `TemplateContainer`.
+
+```xml
+<ui:VisualElement name="MainScreen" class="main-screen">
+    <ui:Instance template="SideBarPanel" class="side-bar-panel" />  ← первый
+    <ui:Instance template="HUDPanel" />
+    ...
+</ui:VisualElement>
 ```
 
 ## UXML-шаблон
+
+**Пути к стилям всегда `../USS/`!** Файлы UXML и USS лежат в соседних папках.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -89,23 +104,28 @@ panel (row, space-between)
     <ui:Style src="../USS/Common.uss" />
     <ui:Style src="../USS/<Component>.uss" />
 
-    <ui:VisualElement name="<root>" class="<root-class>">
-        <!-- ... -->
+    <ui:VisualElement name="<root-name>">
+        <!-- контент -->
     </ui:VisualElement>
 </ui:UXML>
 ```
 
+```
+❌ src="Variables.uss"         → стили не загрузятся, элементы невидимы
+✅ src="../USS/Variables.uss"  → корректный относительный путь
+```
+
 Именование: kebab-case. Кнопки `btn-*`, лейблы `lbl-*`, иконки `img-*`.
 
-## USS — архитектура
+## Схема иерархии
 
+Перед UXML — текстовая схема:
 ```
-Variables.uss   → переменные (цвета, шрифты)
-Common.uss      → общие классы (.panel, .card)
-<Component>.uss → стили компонента
+panel (col, center)
+├── card-1 (col) → icon + label + timer-badge(abs)
+├── card-2 (col) → icon + label + timer-badge(abs)
+└── card-3 (col) → icon + label + timer-badge(abs)
 ```
-
-Замена `gap` → `margin` на дочерних. Без `:last-child` (сломает файл).
 
 ## Визуальная проверка
 
@@ -115,10 +135,8 @@ mcp_pencil_get_screenshot(filePath, nodeId: "<screenId>")
 mcp_unityMCP_manage_camera(action: "screenshot", include_image: true)
 ```
 
-Сравнить вертикальное положение, размеры блоков, бордеры.
-
 ## Ресурсы
+
 - `.agents/skills/unity-uitoolkit-pitfalls/SKILL.md` — читать перед USS
 - `.docs/project/02-asset-conventions.md` — именование
-- `.docs/project/09-ui-screens-guidelines.md` — экраны
 - `Assets/Scripts/UI_Toolkit/USS/Variables.uss` — переменные

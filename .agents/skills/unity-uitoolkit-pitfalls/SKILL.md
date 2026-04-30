@@ -1,80 +1,114 @@
 ---
 name: unity-uitoolkit-pitfalls
-description: Справочник ловушек и ограничений Unity UI Toolkit USS. Вызывается перед написанием любых USS-стилей, чтобы избежать типичных ошибок, связанных с различиями между USS и стандартным CSS.
+description: Справочник ловушек Unity UI Toolkit USS, специфичных для этого проекта. Вызывается перед написанием или отладкой любых USS-стилей.
 ---
 
-# USS Pitfalls Reference
+# USS Pitfalls
 
-## Когда использовать
-- Перед написанием любого USS-файла.
-- При отладке: стили не применяются, элементы не на своих местах.
+## Чеклист перед сохранением USS
 
-## Молчаливые поломки (без ошибок в консоли)
+- [ ] Нет `:last-child` / `:first-child` / `:nth-child` / `:not()` / `::before`
+- [ ] Нет `calc()` / `min()` / `max()`
+- [ ] Нет `gap`, `box-shadow`, `linear-gradient`, shorthand `border`
+- [ ] Нет `right` / `bottom` для абсолютного позиционирования
+- [ ] Шрифты: оба `-unity-font` и `-unity-font-definition`
+- [ ] Пути к изображениям: `project://database/Assets/...`
+- [ ] Класс позиционирования — на `<ui:Instance>`, не на внутреннем корне UXML
 
-Следующие конструкции **ломают весь USS-файл целиком** — парсер отбрасывает все правила, без предупреждений:
+## Молчаливые поломки
 
-- `:last-child`, `:first-child`, `:nth-child()`, `:not()`, `:has()`
-- `::before`, `::after`
-- `calc()`, `min()`, `max()`, `clamp()`
+Эти конструкции ломают **весь USS-файл** без ошибок в консоли:
 
-Поддерживаемые псевдоклассы: `:hover`, `:active`, `:focus`, `:disabled`, `:checked`, `:root`.
+```
+:last-child, :first-child, :nth-child(), :not(), :has()
+::before, ::after
+calc(), min(), max(), clamp()
+```
+
+Поддерживаются: `:hover`, `:active`, `:focus`, `:disabled`, `:checked`, `:root`.
 
 ## Запрещённые свойства
 
-| Свойство | Замена |
+| Запрещено | Замена |
 |---|---|
 | `gap` | `margin-right` / `margin-bottom` на дочерних |
-| `box-shadow` | `text-shadow` (только текст) или спрайт |
+| `box-shadow` | спрайт или `border-color` для имитации |
 | `linear-gradient()` | 9-slice спрайт |
 | `display: grid` | `flex-direction` + `flex-wrap` |
-| `border: 2px solid #fff` | `border-width: 2px` + `border-color: #fff` |
+| `border: 2px solid #fff` | `border-width: 2px;` + `border-color: #fff;` |
 | `z-index` | Порядок элементов в UXML |
+| `right` / `bottom` | `left` / `top` с абсолютной координатой |
+| `padding: 8px 16px 8px 16px` | Расписывай по сторонам |
 
-## Паттерн замены `gap`
+## Ловушки с примерами
+
+### `gap` → `margin`
 
 ```css
-/* gap: 16px — не поддерживается */
-.row > .item { margin-right: 16px; }
-.col > .item { margin-bottom: 16px; }
-/* НЕ убирай margin у последнего через :last-child — сломаешь файл */
+❌ .col { gap: 16px; }                        /* Unknown property */
+✅ .col > .item { margin-bottom: 16px; }       /* НЕ убирай у последнего через :last-child! */
 ```
 
-## Shorthand-свойства
-
-- `padding: 8px 16px` — работает.
-- `padding: 8px 16px 8px 16px` — нестабильно, расписывай по сторонам.
-- `border: ...` — shorthand не работает, всегда расписывай.
-
-## Шрифты — обязательная пара
+### `right` → `left`
 
 ```css
-.text {
-    -unity-font: var(--font-name);
-    -unity-font-definition: var(--font-name);
-}
+❌ .panel { position: absolute; right: 40px; }
+/* right ненадёжен при flex-grow родителе */
+
+✅ .panel { position: absolute; left: 1660px; }
+/* Расчёт: 1920 - 220(ширина) - 40(отступ) = 1660 */
 ```
-Без пары: в Editor отобразится, в Runtime — нет (или наоборот).
 
-## Изображения
+### Shorthand `border`
 
-Путь всегда через `project://database/`:
 ```css
-:root { --img-icon: url('project://database/Assets/Resources/Icons/ic_name.png'); }
-#my-icon {
-    background-image: var(--img-icon);
-    -unity-background-scale-mode: scale-to-fit;
+❌ .card { border: 3px solid #FE53BB; }
+
+✅ .card {
+    border-width: 3px;
+    border-color: #FE53BB;
 }
 ```
 
-## Позиционирование
+### Шрифты — обязательная пара
 
-- `position: absolute` — позиционирует элемент относительно его непосредственного родителя (в USS нет `position: relative`, оно по умолчанию).
-- **Скрытая ловушка Absolute + Flex:** Если ты задаешь `position: absolute` элементу, вложенному в flex-контейнер (например, панель делит экран пополам через `flex-grow: 1`), абсолютные `left`/`top` отсчитываются от **границ этой flex-ячейки**, а не от левого верхнего угла экрана!
-  - *Ошибка:* Скопировать из Pencil `left: 1033px` (в 1920 экране) для элемента, чья родительская панель уже сдвинута на 960px вправо. В итоге элемент улетит на `960 + 1033 = 1993px` (за экран).
-  - *Решение:* Вычитай ширину/высоту всех предшествующих flex-элементов (сдвиг контейнера) из абсолютных координат макета.
-- Если родитель имеет `align-items: center` + `justify-content: center`, то `margin-top` отсчитывается от центра, а не от верха. Используй `position: absolute` для pixel-perfect размещения, предварительно пересчитав `left`/`top`.
+```css
+❌ .text { -unity-font-definition: var(--font-jetbrains-mono); }
+/* В Runtime шрифт не отобразится */
 
-## Hover и анимации
+✅ .text {
+    -unity-font: var(--font-jetbrains-mono);
+    -unity-font-definition: var(--font-jetbrains-mono);
+}
+```
+
+### Изображения — путь через `project://database/`
+
+```css
+❌ background-image: url('Assets/Icons/ic_coin.png');
+✅ background-image: url('project://database/Assets/Icons/ic_coin.png');
+```
+
+### TemplateContainer
+
+```xml
+❌ Класс на внутреннем элементе — TemplateContainer остаётся flex-элементом
+<ui:Instance template="Panel" />
+<!-- Panel.uxml: <ui:VisualElement class="my-panel"> -->
+
+✅ Класс на Instance — позиционирование применяется к TemplateContainer
+<ui:Instance template="Panel" class="my-panel" />
+<!-- Panel.uxml: <ui:VisualElement name="my-panel"> -->
+```
+
+### Absolute внутри Flex
+
+```
+❌ Абсолютный элемент внизу flex-списка с space-between → улетает к футеру
+✅ Плавающие панели — первыми в иерархии MainScreen (Parent_offset = 0,0)
+```
+
+## Анимации
 
 ```css
 .btn {
@@ -84,11 +118,7 @@ description: Справочник ловушек и ограничений Unity
 .btn:hover { scale: 1.05 1.05; }
 ```
 
-## Чеклист перед сохранением USS
+## Ресурсы
 
-- [ ] Нет `:last-child` / `:first-child` / `:nth-child`
-- [ ] Нет `calc()` / `min()` / `max()`
-- [ ] Нет `gap`, `box-shadow`, `linear-gradient`, shorthand `border`
-- [ ] Шрифты: оба `-unity-font` и `-unity-font-definition`
-- [ ] Пути к изображениям: `project://database/Assets/...`
-- [ ] Нет конфликта центрирования родителя + margin на ребёнке
+- `Assets/Scripts/UI_Toolkit/USS/Variables.uss` — переменные проекта
+- `.docs/project/02-asset-conventions.md` — именование

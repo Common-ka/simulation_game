@@ -1,18 +1,98 @@
-@import url("Variables.uss");
-
 .side-bar-panel {
+    position: absolute;
+    left: 1660px;
+    top: 150px;
+    width: 220px;
+    height: 808px;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
-/* Base class for offer elements */
-.side-bar-offer {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 15px;
-    background-color: var(--color-bg-panel);
+.offer-card {
+    width: 150px;
+    height: 150px;
+    background-color: #151515;
     border-radius: 12px;
-    border-width: 2px;
-    border-color: var(--color-border);
+    border-width: 3px;
+    margin-bottom: 16px;
+    padding: 12px;
+    align-items: center;
+    justify-content: center;
+    transition-property: scale, border-color;
+    transition-duration: 0.2s;
+}
+
+.offer-card:hover {
+    scale: 1.05 1.05;
+}
+
+.offer-card--pink {
+    border-color: #FE53BB;
+}
+
+.offer-card--yellow {
+    border-color: #FCEE0A;
+}
+
+.offer-icon {
+    width: 101px;
+    height: 105px;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.offer-label {
+    margin-top: 4px;
+    font-size: 21px;
+    -unity-font: var(--font-jetbrains-mono);
+    -unity-font-definition: var(--font-jetbrains-mono);
+    -unity-text-align: middle-center;
+}
+
+.offer-card--pink > .offer-label {
+    color: #FE53BB;
+}
+
+.offer-card--yellow > .offer-label {
+    color: #FCEE0A;
+}
+
+.timer-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    flex-direction: row;
+    align-items: center;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+.timer-badge--pink {
+    background-color: #FF0073;
+}
+
+.timer-badge--yellow {
+    background-color: #FFD500;
+}
+
+.timer-icon {
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.timer-label {
+    font-size: 12px;
+    -unity-font: var(--font-jetbrains-mono);
+    -unity-font-definition: var(--font-jetbrains-mono);
+    -unity-font-style: bold;
+}
+
+.timer-badge--pink > .timer-label {
+    color: #FFFFFF;
+}
+
+.timer-badge--yellow > .timer-label {
+    color: #000000;
 }
