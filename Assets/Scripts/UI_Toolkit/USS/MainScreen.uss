@@ -9,6 +9,8 @@
 .main-screen {
     flex-grow: 1;
     background-color: var(--color-bg-main);
+    background-image: url('project://database/Assets/Resources/Backgrounds/back.jpeg');
+    -unity-background-scale-mode: scale-and-crop;
     color: var(--color-text-primary);
     justify-content: space-between;
     width: 100%;
@@ -18,6 +20,9 @@
 .middle-area {
     flex-direction: row;
     flex-grow: 1;
-    padding: 0 300px 0 40px; /* Резервируем место справа для SideBarPanel (220px + отступ) */
+    padding-top: 0;
+    padding-right: 245px;
+    padding-bottom: 0;
+    padding-left: 25px; /* Резервируем место справа для SideBarPanel (220px + 25px отступ) */
     align-items: center; /* Вертикальное центрирование дочерних элементов */
 }
