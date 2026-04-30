@@ -7,15 +7,35 @@
 >
     <ui:Style src="../USS/Variables.uss" />
     <ui:Style src="../USS/Common.uss" />
-    <ui:Style src="../USS/MainScreen.uss" />
-    <!-- Shelf Gameplay Area -->
-    <ui:VisualElement name="gameplay" class="gameplay-area panel">
-        <ui:VisualElement class="shelf-container">
-            <ui:VisualElement name="shelf-slot-1" class="shelf-slot"><ui:Label text="Slot 1" /></ui:VisualElement>
-            <ui:VisualElement name="shelf-slot-2" class="shelf-slot"><ui:Label text="Slot 2" /></ui:VisualElement>
-            <ui:VisualElement name="shelf-slot-3" class="shelf-slot"><ui:Label text="Slot 3" /></ui:VisualElement>
-            <ui:VisualElement name="shelf-slot-4" class="shelf-slot"><ui:Label text="Slot 4" /></ui:VisualElement>
-            <ui:VisualElement name="shelf-slot-5" class="shelf-slot"><ui:Label text="Slot 5" /></ui:VisualElement>
+    <ui:Style src="../USS/Shelf.uss" />
+    
+    <ui:VisualElement name="shelf-panel" class="shelf-panel">
+        <ui:VisualElement name="shelf-container" class="shelf-container">
+            <ui:VisualElement name="slot-1" class="shelf-slot">
+                <ui:VisualElement name="aura-1" class="slot-aura" />
+                <ui:VisualElement name="icon-1" class="slot-icon" />
+                <ui:Label name="lbl-income-1" class="slot-income" text="+0/s" />
+            </ui:VisualElement>
+            <ui:VisualElement name="slot-2" class="shelf-slot">
+                <ui:VisualElement name="aura-2" class="slot-aura" />
+                <ui:VisualElement name="icon-2" class="slot-icon" />
+                <ui:Label name="lbl-income-2" class="slot-income" text="+0/s" />
+            </ui:VisualElement>
+            <ui:VisualElement name="slot-3" class="shelf-slot">
+                <ui:VisualElement name="aura-3" class="slot-aura" />
+                <ui:VisualElement name="icon-3" class="slot-icon" />
+                <ui:Label name="lbl-income-3" class="slot-income" text="+0/s" />
+            </ui:VisualElement>
+            <ui:VisualElement name="slot-4" class="shelf-slot">
+                <ui:VisualElement name="aura-4" class="slot-aura" />
+                <ui:VisualElement name="icon-4" class="slot-icon" />
+                <ui:Label name="lbl-income-4" class="slot-income" text="+0/s" />
+            </ui:VisualElement>
+            <ui:VisualElement name="slot-5" class="shelf-slot">
+                <ui:VisualElement name="aura-5" class="slot-aura" />
+                <ui:VisualElement name="icon-5" class="slot-icon" />
+                <ui:Label name="lbl-income-5" class="slot-income" text="+0/s" />
+            </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
