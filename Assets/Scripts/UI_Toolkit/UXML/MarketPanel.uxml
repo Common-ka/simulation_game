@@ -68,6 +68,8 @@
                 <ui:VisualElement name="tag-bracket-r" class="tag-bracket bracket-r" />
                 <ui:Label name="lbl-current-price" class="price-text" text="$1,250" />
             </ui:VisualElement>
+
+            <ui:VisualElement name="box-image" class="box-visual" />
         </ui:VisualElement>
 
     </ui:VisualElement>

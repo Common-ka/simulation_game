@@ -119,3 +119,11 @@
 
 .bracket-l { left: 40px; border-left-width: 2px; border-top-width: 2px; border-bottom-width: 2px; }
 .bracket-r { right: 40px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px; }
+
+.box-visual {
+    width: 490px;
+    height: 410px;
+    margin-top: 40px;
+    background-image: url('project://database/Assets/Resources/Items/box.png');
+    -unity-background-scale-mode: scale-to-fit;
+}
